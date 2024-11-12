@@ -162,4 +162,17 @@ body {
     letter-spacing: var(--action-sm-text-letter-spasing);
     line-height: var(--action-sm-text-line-height);
     font-weight: var(--semibold-text-weight);
+    border-radius: 12px;
+    transition:
+            color 0.25s ease-out,
+            background-color 0.25s ease-out;
+}
+
+.menu__item:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-10);
+    color: var(--primary-color);
+    transition:
+            color 0.15s ease-in,
+            background-color 0.15s ease-in;
 }
