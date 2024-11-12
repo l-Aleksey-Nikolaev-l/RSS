@@ -22,40 +22,40 @@
 
     --header-1-size: 32px;
     --header-1-line-height: 150%;
-    --header-1-letter-spasing: 18%;
+    --header-1-letter-spasing: 0.18em;
 
     --header-2-size: 24px;
     --header-2-line-height: 152%;
-    --header-2-letter-spasing: 16%;
+    --header-2-letter-spasing: 0.16em;
 
     --header-3-size: 16px;
     --header-3-line-height: 152%;
-    --header-3-letter-spasing: 8%;
+    --header-3-letter-spasing: 0.08em;
 
     --header-4-size: 12px;
     --header-4-line-height: 130%;
-    --header-4-letter-spasing: 5%;
+    --header-4-letter-spasing: 0.05em;
 
     --paragraph-text-size: 16px;
     --paragraph-text-line-height: 148%;
-    --paragraph-text-letter-spasing: 0%;
+    --paragraph-text-letter-spasing: 0;
 
     --action-lg-text-size: 24px;
     --action-lg-text-line-height: 152%;
-    --action-lg-text-letter-spasing: 16%;
+    --action-lg-text-letter-spasing: 0.16em;
 
     --action-sm-text-size: 12px;
     --action-sm-text-line-height: 130%;
-    --action-sm-text-letter-spasing: 5%;
+    --action-sm-text-letter-spasing: 0.05em;
 
     --slider-text-size: 80px;
     --slider-text-line-height: auto;
-    --slider-text-letter-spasing: 0%;
+    --slider-text-letter-spasing: 0;
 
     --caption-text-font: "Allura";
     --caption-text-size: 24px;
     --caption-text-line-height: 100%;
-    --caption-text-letter-spasing: 5%;
+    --caption-text-letter-spasing: 0.05em;
 
     --static-width: 1440px;
 }
@@ -63,21 +63,25 @@
 
 .header-1 {
     font-size: var(--header-1-size);
+    font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-1-letter-spasing);
     line-height: var(--header-1-line-height);
 }
 .header-2 {
     font-size: var(--header-2-size);
+    font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-2-letter-spasing);
     line-height: var(--header-2-line-height);
 }
 .header-3 {
     font-size: var(--header-3-size);
+    font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-3-letter-spasing);
     line-height: var(--header-3-line-height);
 }
 .header-4 {
     font-size: var(--header-4-size);
+    font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-4-letter-spasing);
     line-height: var(--header-4-line-height);
 }
@@ -88,16 +92,19 @@
 }
 .action-lg-text {
     font-size: var(--action-lg-text-size);
+    font-weight: var(--semibold-text-weight);
     letter-spacing: var(--action-lg-text-letter-spasing);
     line-height: var(--action-lg-text-line-height);
 }
 .action-sm-text {
     font-size: var(--action-sm-text-size);
+    font-weight: var(--semibold-text-weight);
     letter-spacing: var(--action-sm-text-letter-spasing);
     line-height: var(--action-sm-text-line-height);
 }
 .slider-text {
     font-size: var(--slider-text-size);
+    font-weight: var(--semibold-text-weight);
     letter-spacing: var(--slider-text-letter-spasing);
     line-height: var(--slider-text-line-height);
 }
@@ -175,10 +182,6 @@ body {
 
 .logo__text {
     position: relative;
-    font-size: var(--action-sm-text-size);
-    letter-spacing: var(--action-sm-text-letter-spasing);
-    line-height: var(--action-sm-text-line-height);
-    font-weight: var(--semibold-text-weight);
 }
 
 .logo:hover {
@@ -200,6 +203,7 @@ body {
     flex-direction: row;
     column-gap: var(--space-8);
     list-style-type: none;
+    text-transform: uppercase;
 }
 
 .menu__item {
@@ -207,10 +211,6 @@ body {
     width: fit-content;
     height: fit-content;
     padding: var(--space-12) var(--space-20);
-    font-size: var(--action-sm-text-size);
-    letter-spacing: var(--action-sm-text-letter-spasing);
-    line-height: var(--action-sm-text-line-height);
-    font-weight: var(--semibold-text-weight);
     border-radius: 12px;
     transition:
             color 0.25s ease-out,
