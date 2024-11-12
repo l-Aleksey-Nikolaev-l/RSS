@@ -1,4 +1,5 @@
 :root {
+    --main-font: "Montserrat";
     --primary-color: #ff4646;
     --primary-color-10: rgba(255, 70, 70, 0.1);
     --dark-color: #181c29;
@@ -16,6 +17,46 @@
     --space-20: 20px;
     --space-32: 32px;
     --space-60: 60px;
+
+    --semibold-text-weight: 600;
+
+    --header-1-size: 32px;
+    --header-1-line-height: 150%;
+    --header-1-letter-spasing: 18%;
+
+    --header-2-size: 24px;
+    --header-2-line-height: 152%;
+    --header-2-letter-spasing: 16%;
+
+    --header-3-size: 16px;
+    --header-3-line-height: 152%;
+    --header-3-letter-spasing: 8%;
+
+    --header-4-size: 12px;
+    --header-4-line-height: 130%;
+    --header-4-letter-spasing: 5%;
+
+    --paragraph-text-size: 16px;
+    --paragraph-text-line-height: 148%;
+    --paragraph-text-letter-spasing: 0%;
+
+    --action-lg-text-size: 24px;
+    --action-lg-text-line-height: 152%;
+    --action-lg-text-letter-spasing: 16%;
+
+    --action-sm-text-size: 12px;
+    --action-sm-text-line-height: 130%;
+    --action-sm-text-letter-spasing: 5%;
+
+    --slider-text-size: 80px;
+    --slider-text-line-height: auto;
+    --slider-text-letter-spasing: 0%;
+
+    --caption-text-font: "Allura";
+    --caption-text-size: 24px;
+    --caption-text-line-height: 100%;
+    --caption-text-letter-spasing: 5%;
+
     --static-width: 1440px;
 }
 
@@ -26,7 +67,7 @@ html,
     padding: 0;
     box-sizing: border-box;
     background-color: var(--static-white);
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--main-font), sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
