@@ -234,5 +234,9 @@ body {
     justify-content: flex-start;
     width: var(--static-width);
     background-color: var(--primary-color);
+    background-image: url("../images/content/bg-snow.png");
+    background-size: contain;
+    background-repeat: repeat;
     border-radius: 20px;
+    height: 1000px;
 }
