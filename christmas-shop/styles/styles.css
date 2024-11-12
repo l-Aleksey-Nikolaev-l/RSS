@@ -90,3 +90,42 @@ body {
     height: 64px;
     padding: 0 var(--space-8);
 }
+
+.header__nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 1276px;
+    height: 100%
+}
+
+.nav__logo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--space-8) var(--space-20);
+    column-gap: var(--space-8);
+}
+
+.logo__image {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.logo__text {
+    position: relative;
+    font-size: var(--action-sm-text-size);
+    letter-spacing: var(--action-sm-text-letter-spasing);
+    line-height: var(--action-sm-text-line-height);
+    font-weight: var(--semibold-text-weight);
+}
+
+
