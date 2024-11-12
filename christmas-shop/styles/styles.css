@@ -240,3 +240,46 @@ body {
     border-radius: 20px;
     height: 1000px;
 }
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: var(--space-60) var(--space-8);
+    background: url("../images/content/bg-ball.png") center no-repeat;
+    background-size: 100%;
+}
+
+.hero__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    max-width: 426px;
+    height: fit-content;
+    padding: var(--space-60) 0;
+    row-gap: var(--space-12);
+}
+
+.hero__caption {
+    color: var(--static-white);
+}
+.hero__header--1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--static-white);
+}
+
+.hero__button {
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    color: var(--static-white);
+    background-color: var(--dark-color);
+    padding: 20px 32px;
+}
