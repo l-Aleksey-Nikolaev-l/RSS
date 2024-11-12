@@ -277,9 +277,21 @@ body {
 
 .hero__button {
     text-transform: uppercase;
+    padding: var(--space-20) var(--space-32);
     border: none;
     border-radius: 20px;
     color: var(--static-white);
     background-color: var(--dark-color);
-    padding: 20px 32px;
+    transition:
+            color 0.2s ease-in,
+            background-color 0.2s ease-in;
+}
+
+.hero__button:hover {
+    cursor: pointer;
+    color: var(--dark-color);
+    background-color: var(--static-white);
+    transition:
+            color 0.15s ease-in,
+            background-color 0.1s ease-in;
 }
