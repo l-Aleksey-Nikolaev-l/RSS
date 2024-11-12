@@ -68,6 +68,7 @@ html,
     box-sizing: border-box;
     background-color: var(--static-white);
     font-family: var(--main-font), sans-serif;
+    color: var(--dark-color);
     -webkit-font-smoothing: antialiased;
 }
 
