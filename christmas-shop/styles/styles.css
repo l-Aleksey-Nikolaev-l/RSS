@@ -108,6 +108,7 @@ body {
     align-items: center;
     padding: var(--space-8) var(--space-20);
     column-gap: var(--space-8);
+    user-select: none;
 }
 
 .logo__image {
@@ -126,6 +127,10 @@ body {
     letter-spacing: var(--action-sm-text-letter-spasing);
     line-height: var(--action-sm-text-line-height);
     font-weight: var(--semibold-text-weight);
+}
+
+.logo:hover {
+    cursor: pointer;
 }
 
 
