@@ -1,4 +1,4 @@
-root {
+:root {
     --primary-color: #ff4646;
     --primary-color-10: rgba(255, 70, 70, 0.1);
     --dark-color: #181c29;
@@ -16,4 +16,36 @@ root {
     --space-20: 20px;
     --space-32: 32px;
     --space-60: 60px;
+    --static-width: 1440px;
+}
+
+body,
+html,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--static-white);
+    font-family: "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: var(--static-width);
+    height: 64px;
+    padding: 0 var(--space-8);
 }
