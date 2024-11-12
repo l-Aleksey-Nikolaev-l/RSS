@@ -130,6 +130,7 @@ html,
 body {
     background-color: var(--static-white);
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 #top {
@@ -167,7 +168,6 @@ body {
     width: fit-content;
     padding: var(--space-8) var(--space-20);
     column-gap: var(--space-8);
-    user-select: none;
 }
 
 .logo__image {
