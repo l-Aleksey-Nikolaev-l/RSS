@@ -60,6 +60,55 @@
     --static-width: 1440px;
 }
 
+
+.header-1 {
+    font-size: var(--header-1-size);
+    letter-spacing: var(--header-1-letter-spasing);
+    line-height: var(--header-1-line-height);
+}
+.header-2 {
+    font-size: var(--header-2-size);
+    letter-spacing: var(--header-2-letter-spasing);
+    line-height: var(--header-2-line-height);
+}
+.header-3 {
+    font-size: var(--header-3-size);
+    letter-spacing: var(--header-3-letter-spasing);
+    line-height: var(--header-3-line-height);
+}
+.header-4 {
+    font-size: var(--header-4-size);
+    letter-spacing: var(--header-4-letter-spasing);
+    line-height: var(--header-4-line-height);
+}
+.paragraph-text {
+    font-size: var(--paragraph-text-size);
+    letter-spacing: var(--paragraph-text-letter-spasing);
+    line-height: var(--paragraph-text-line-height);
+}
+.action-lg-text {
+    font-size: var(--action-lg-text-size);
+    letter-spacing: var(--action-lg-text-letter-spasing);
+    line-height: var(--action-lg-text-line-height);
+}
+.action-sm-text {
+    font-size: var(--action-sm-text-size);
+    letter-spacing: var(--action-sm-text-letter-spasing);
+    line-height: var(--action-sm-text-line-height);
+}
+.slider-text {
+    font-size: var(--slider-text-size);
+    letter-spacing: var(--slider-text-letter-spasing);
+    line-height: var(--slider-text-line-height);
+}
+.caption-text {
+    font-family: var(--caption-text-font), sans-serif;
+    font-size: var(--caption-text-size);
+    letter-spacing: var(--caption-text-letter-spasing);
+    line-height: var(--caption-text-line-height);
+}
+
+
 body,
 html,
 * {
@@ -182,7 +231,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     width: var(--static-width);
     background-color: var(--primary-color);
     border-radius: 20px;
