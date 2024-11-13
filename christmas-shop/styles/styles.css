@@ -253,12 +253,12 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     width: var(--static-width);
+    height: fit-content;
     background-color: var(--primary-color);
     background-image: url("../images/content/bg-snow.png");
     background-size: contain;
     background-repeat: repeat;
     border-radius: 20px;
-    height: 5000px;
 }
 
 .hero,
