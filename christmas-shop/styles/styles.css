@@ -538,5 +538,15 @@ body {
     height: 342px;
     background-color: var(--contemt-bg-color);
     border-radius: 20px;
+    overflow: hidden;
 }
 
+.bgf__card__image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: 230px;
+}
