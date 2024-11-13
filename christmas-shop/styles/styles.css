@@ -576,3 +576,38 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+.cta,
+.cta--outer--container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--space-60) var(--space-8);
+}
+
+.cta {
+    padding: var(--space-60) var(--space-8);
+    background: url("../images/content/bg-forest.png") center no-repeat;
+    background-size: 100%;
+}
+
+.cta--outer--container {
+    width: 100%;
+    max-width: 1276px;
+    height: fit-content;
+    row-gap: var(--space-20);
+    padding: var(--space-60) var(--space-0);
+}
+
+.cta--container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 426px;
+    height: 428px;
+}
