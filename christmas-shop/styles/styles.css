@@ -253,7 +253,7 @@ body {
     background-size: 100%;
 }
 
-.hero__container {
+.hero--container {
     position: relative;
     display: flex;
     flex-direction: column;
