@@ -260,18 +260,18 @@ body {
     width: fit-content;
     max-width: 426px;
     row-gap: var(--space-12);
-}
-
-.hero__caption {
-    width: 100%;
-    text-align: center;
     color: var(--static-white);
 }
+
+.hero__caption,
 .hero__header--1 {
     width: 100%;
     text-align: center;
+
+}
+
+.hero__header--1 {
     text-transform: uppercase;
-    color: var(--static-white);
 }
 
 .hero__button {
@@ -385,19 +385,18 @@ body {
     width: 100%;
     max-width: 426px;
     height: fit-content;
-}
-
-.slider__caption {
-    width: 100%;
-    text-align: center;
     color: var(--static-white);
 }
 
+.slider__caption,
 .slider__header {
     width: 100%;
     text-align: center;
+
+}
+
+.slider__header {
     text-transform: uppercase;
-    color: var(--static-white);
 }
 
 .slider__carousel {
