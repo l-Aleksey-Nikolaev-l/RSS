@@ -388,10 +388,14 @@ body {
 }
 
 .slider__caption {
+    width: 100%;
+    text-align: center;
     color: var(--static-white);
 }
 
 .slider__header {
+    width: 100%;
+    text-align: center;
     text-transform: uppercase;
     color: var(--static-white);
 }
