@@ -365,6 +365,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: var(--space-60) var(--space-8);
+    overflow: hidden;
 }
 
 .slider--container {
@@ -401,14 +402,38 @@ body {
 .slider__carousel {
     position: relative;
     width: 100%;
-    background-color: #4361ff;
 }
 
 .carousel__list {
     position: relative;
     display: flex;
     flex-direction: row;
+    column-gap: var(--space-20);
+}
 
+.carousel__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+    column-gap: var(--space-20);
+}
+
+.carousel__item__text {
+    color: var(--static-white);
+}
+
+.carousel__item__picture {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .slider__buttons {
