@@ -358,3 +358,43 @@ body {
     border-radius: 20px;
     overflow: hidden;
 }
+
+.slider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-60) var(--space-8);
+}
+
+.slider--container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--space-20);
+    width: 100%;
+    max-width: 1276px;
+}
+
+.slider__top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: var(--space-12);
+    width: 100%;
+    max-width: 426px;
+    height: fit-content;
+}
+
+.slider__caption {
+    color: var(--static-white);
+}
+
+.slider__header {
+    text-transform: uppercase;
+    color: var(--static-white);
+}
