@@ -433,3 +433,19 @@ body {
     color: var(--static-white);
     transition: color 0.2s ease-out;
 }
+
+.slider__button:hover {
+    cursor: pointer;
+    background-color: var(--static-white);
+    transition: background-color 0.1s ease-in;
+}
+
+.slider__button:hover path {
+    color: var(--primary-color);
+    transition: color 0.1s ease-in;
+}
+
+.slider__button__disabled {
+    border: 1px solid var(--static-white-40);
+}
+
