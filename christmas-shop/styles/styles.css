@@ -145,7 +145,7 @@ body {
     justify-content: center;
     width: var(--static-width);
     height: 64px;
-    padding: 0 var(--space-8);
+    padding: var(--space-0) var(--space-8);
 }
 
 .header__nav {
@@ -261,7 +261,7 @@ body {
     width: fit-content;
     max-width: 426px;
     height: fit-content;
-    padding: var(--space-60) 0;
+    padding: var(--space-60) var(--space-0);
     row-gap: var(--space-12);
 }
 
@@ -325,7 +325,7 @@ body {
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
-    padding: 0 var(--space-60);
+    padding: var(--space-0) var(--space-60);
 }
 
 .card--about__text {
@@ -333,7 +333,7 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: var(--space-20);
-    padding: var(--space-60) 0;
+    padding: var(--space-60) var(--space-0);
     width: fit-content;
     max-width: 426px;
 }
