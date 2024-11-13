@@ -484,5 +484,22 @@ body {
 .bgf--container {
     width: 100%;
     max-width: 1276px;
+    height: fit-content;
     padding: var(--space-0);
 }
+
+.bgf__top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--space-12);
+    color: var(--static-white);
+}
+
+
+
+
+
+
+
