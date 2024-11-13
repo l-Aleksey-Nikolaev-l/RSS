@@ -493,6 +493,7 @@ body {
     width: 100%;
     max-width: 1276px;
     height: fit-content;
+    row-gap: var(--space-20);
     padding: var(--space-0);
 }
 
@@ -517,7 +518,25 @@ body {
     text-transform: uppercase;
 }
 
+.bgf__cards {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--space-12);
+    width: 100%;
+}
 
-
-
+.bgf__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 310px;
+    height: 342px;
+    background-color: var(--contemt-bg-color);
+    border-radius: 20px;
+}
 
