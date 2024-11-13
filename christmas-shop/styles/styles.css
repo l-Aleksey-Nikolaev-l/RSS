@@ -263,9 +263,12 @@ body {
 }
 
 .hero__caption {
+    width: 100%;
+    text-align: center;
     color: var(--static-white);
 }
 .hero__header--1 {
+    width: 100%;
     text-align: center;
     text-transform: uppercase;
     color: var(--static-white);
