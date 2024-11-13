@@ -398,3 +398,11 @@ body {
     text-transform: uppercase;
     color: var(--static-white);
 }
+
+.slider__carousel {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #4361ff;
+}
+
