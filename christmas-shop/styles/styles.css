@@ -343,7 +343,7 @@ body {
     color: var(--primary-color);
 }
 
-h2 {
+.card--about__text h2 {
     text-transform: uppercase;
 }
 
