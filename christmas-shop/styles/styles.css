@@ -611,3 +611,9 @@ body {
     max-width: 426px;
     height: 428px;
 }
+
+.cta__header__text {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--static-white);
+}
