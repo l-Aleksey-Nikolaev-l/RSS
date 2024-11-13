@@ -283,8 +283,8 @@ body {
     color: var(--static-white);
     background-color: var(--dark-color);
     transition:
-            color 0.2s ease-in,
-            background-color 0.2s ease-in;
+            color 0.2s ease-out,
+            background-color 0.2s ease-out;
 }
 
 .hero__button:hover {
@@ -292,7 +292,7 @@ body {
     color: var(--dark-color);
     background-color: var(--static-white);
     transition:
-            color 0.15s ease-in,
+            color 0.1s ease-in,
             background-color 0.1s ease-in;
 }
 
@@ -406,3 +406,30 @@ body {
     background-color: #4361ff;
 }
 
+.slider__buttons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    column-gap: var(--space-20);
+    width: 100%;
+}
+
+.slider__button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 20px;
+    border: 1px solid var(--static-white);
+    background: none;
+    transition: background-color 0.2s ease-out;
+}
+
+.slider__button path {
+    color: var(--static-white);
+    transition: color 0.2s ease-out;
+}
