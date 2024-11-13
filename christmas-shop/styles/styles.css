@@ -607,6 +607,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    row-gap: var(--space-20);
     width: 100%;
     max-width: 426px;
     height: 428px;
