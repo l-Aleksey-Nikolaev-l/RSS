@@ -115,7 +115,6 @@
     line-height: var(--caption-text-line-height);
 }
 
-
 body,
 html,
 * {
@@ -131,6 +130,27 @@ body {
     background-color: var(--static-white);
     scroll-behavior: smooth;
     user-select: none;
+}
+
+.christmas__button {
+    text-transform: uppercase;
+    padding: var(--space-20) var(--space-32);
+    border: none;
+    border-radius: 20px;
+    color: var(--static-white);
+    background-color: var(--dark-color);
+    transition:
+            color 0.2s ease-out,
+            background-color 0.2s ease-out;
+}
+
+.christmas__button:hover {
+    cursor: pointer;
+    color: var(--dark-color);
+    background-color: var(--static-white);
+    transition:
+            color 0.1s ease-in,
+            background-color 0.1s ease-in;
 }
 
 #top {
@@ -275,27 +295,6 @@ body {
 .hero__header--1 {
     white-space: nowrap;
     text-transform: uppercase;
-}
-
-.hero__button {
-    text-transform: uppercase;
-    padding: var(--space-20) var(--space-32);
-    border: none;
-    border-radius: 20px;
-    color: var(--static-white);
-    background-color: var(--dark-color);
-    transition:
-            color 0.2s ease-out,
-            background-color 0.2s ease-out;
-}
-
-.hero__button:hover {
-    cursor: pointer;
-    color: var(--dark-color);
-    background-color: var(--static-white);
-    transition:
-            color 0.1s ease-in,
-            background-color 0.1s ease-in;
 }
 
 .about {
