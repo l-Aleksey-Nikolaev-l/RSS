@@ -879,3 +879,27 @@ body {
     text-align: center;
     color: var(--static-white);
 }
+
+.mg--tabs,
+.mg--tab {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: var(--space-8);
+    width: fit-content;
+    height: fit-content;
+}
+
+.mg--tab {
+    list-style-type: none;
+    gap: unset;
+    color: var(--static-white);
+    padding: var(--space-12) var(--space-20);
+    border-radius: 12px;
+}
+
+.mg--tabs > :first-child {
+    background-color: var(--static-white-20);
+}
