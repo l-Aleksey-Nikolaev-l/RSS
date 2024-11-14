@@ -900,6 +900,6 @@ body {
     border-radius: 12px;
 }
 
-.mg--tabs > :first-child {
+.mg--tabs__selected {
     background-color: var(--static-white-20);
 }
