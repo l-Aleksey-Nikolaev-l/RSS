@@ -464,6 +464,10 @@ body {
     object-fit: cover;
 }
 
+.carousel__item:hover {
+    cursor: pointer;
+}
+
 .slider__buttons {
     position: relative;
     display: flex;
