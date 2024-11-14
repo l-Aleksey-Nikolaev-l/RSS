@@ -805,3 +805,15 @@ body {
     height: 24px;
     color: var(--dark-color);
 }
+
+.social__item:hover {
+    cursor: pointer;
+}
+
+.social__item:hover > a {
+    color: var(--primary-color);
+}
+
+.footer__socials > a:hover {
+    color: var(--primary-color);
+}
