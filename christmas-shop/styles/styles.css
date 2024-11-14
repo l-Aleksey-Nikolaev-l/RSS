@@ -587,15 +587,15 @@ body {
     background-color: var(--static-white);
 }
 
-.gift__card__work {
+.tag--work {
     color: var(--tag-purple-color);
 }
 
-.gift__card__health {
+.tag--health {
     color: var(--tag-green-color);
 }
 
-.gift__card__harmony {
+.tag--harmony {
     color: var(--tag-pink-color);
 }
 
