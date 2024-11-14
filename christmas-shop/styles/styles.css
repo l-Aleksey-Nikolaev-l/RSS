@@ -40,7 +40,6 @@
     --action-sm-text-line-height: 130%;
     --action-sm-text-letter-spasing: 0.05em;
     --slider-text-size: 80px;
-    --slider-text-line-height: normal;
     --slider-text-letter-spasing: 0;
     --caption-text-font: "Allura";
     --caption-text-size: 24px;
@@ -101,7 +100,6 @@
     font-size: var(--slider-text-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--slider-text-letter-spasing);
-    line-height: var(--slider-text-line-height);
 }
 
 .caption-text {
