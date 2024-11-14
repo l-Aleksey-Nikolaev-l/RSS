@@ -746,3 +746,19 @@ body {
     background-color: var(--contemt-bg-color);
     border-radius: 20px;
 }
+
+.footer__card__image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+}
+
+.footer__card__image img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
