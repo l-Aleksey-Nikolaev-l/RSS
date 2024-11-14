@@ -66,24 +66,28 @@
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-1-letter-spasing);
     line-height: var(--header-1-line-height);
+    text-transform: uppercase;
 }
 .header-2 {
     font-size: var(--header-2-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-2-letter-spasing);
     line-height: var(--header-2-line-height);
+    text-transform: uppercase;
 }
 .header-3 {
     font-size: var(--header-3-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-3-letter-spasing);
     line-height: var(--header-3-line-height);
+    text-transform: uppercase;
 }
 .header-4 {
     font-size: var(--header-4-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-4-letter-spasing);
     line-height: var(--header-4-line-height);
+    text-transform: uppercase;
 }
 .paragraph-text {
     font-size: var(--paragraph-text-size);
@@ -95,18 +99,21 @@
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--action-lg-text-letter-spasing);
     line-height: var(--action-lg-text-line-height);
+    text-transform: uppercase;
 }
 .action-sm-text {
     font-size: var(--action-sm-text-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--action-sm-text-letter-spasing);
     line-height: var(--action-sm-text-line-height);
+    text-transform: uppercase;
 }
 .slider-text {
     font-size: var(--slider-text-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--slider-text-letter-spasing);
     line-height: var(--slider-text-line-height);
+    text-transform: uppercase;
 }
 .caption-text {
     font-family: var(--caption-text-font), sans-serif;
@@ -133,7 +140,6 @@ body {
 }
 
 .christmas__button {
-    text-transform: uppercase;
     padding: var(--space-20) var(--space-32);
     border: none;
     border-radius: 20px;
@@ -223,7 +229,6 @@ body {
     flex-direction: row;
     column-gap: var(--space-8);
     list-style-type: none;
-    text-transform: uppercase;
 }
 
 .menu__item {
@@ -294,7 +299,6 @@ body {
 
 .hero__header--1 {
     white-space: nowrap;
-    text-transform: uppercase;
 }
 
 .about {
@@ -342,10 +346,6 @@ body {
 
 .card--about__caption {
     color: var(--primary-color);
-}
-
-.card--about__text h2 {
-    text-transform: uppercase;
 }
 
 .card--about__image--container {
@@ -397,10 +397,6 @@ body {
 
 }
 
-.slider__header {
-    text-transform: uppercase;
-}
-
 .slider__carousel {
     position: relative;
     width: 100%;
@@ -418,7 +414,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    text-transform: uppercase;
     column-gap: var(--space-20);
 }
 
@@ -520,10 +515,6 @@ body {
     text-align: center;
 }
 
-.bgf__header {
-    text-transform: uppercase;
-}
-
 .bgf__cards {
     position: relative;
     display: flex;
@@ -577,11 +568,6 @@ body {
     background-color: var(--static-white);
 }
 
-.bgf__card__category,
-.bgf__card__description {
-    text-transform: uppercase;
-}
-
 .bgf__card__description {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -626,7 +612,6 @@ body {
 }
 
 .cta__header__text {
-    text-transform: uppercase;
     text-align: center;
     color: var(--static-white);
 }
@@ -683,3 +668,4 @@ body {
     height: 20px;
     background-color: var(--static-white-40);
 }
+
