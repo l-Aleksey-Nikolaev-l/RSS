@@ -766,3 +766,42 @@ body {
 .footer__card__link {
     text-decoration: none;
 }
+
+.footer__socials {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    row-gap: var(--space-12);
+}
+
+.footer__socials > * {
+    text-transform: unset;
+    text-decoration: none;
+}
+
+.socials__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: var(--space-12);
+    list-style-type: none;
+}
+
+.social__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-8);
+}
+
+.social__item > a {
+    width: 24px;
+    height: 24px;
+    color: var(--dark-color);
+}
