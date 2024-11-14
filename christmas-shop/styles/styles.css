@@ -17,49 +17,37 @@
     --space-20: 20px;
     --space-32: 32px;
     --space-60: 60px;
-
     --semibold-text-weight: 600;
-
     --header-1-size: 32px;
     --header-1-line-height: 150%;
     --header-1-letter-spasing: 0.18em;
-
     --header-2-size: 24px;
     --header-2-line-height: 152%;
     --header-2-letter-spasing: 0.16em;
-
     --header-3-size: 16px;
     --header-3-line-height: 152%;
     --header-3-letter-spasing: 0.08em;
-
     --header-4-size: 12px;
     --header-4-line-height: 130%;
     --header-4-letter-spasing: 0.05em;
-
     --paragraph-text-size: 16px;
     --paragraph-text-line-height: 148%;
     --paragraph-text-letter-spasing: 0;
-
     --action-lg-text-size: 24px;
     --action-lg-text-line-height: 152%;
     --action-lg-text-letter-spasing: 0.16em;
-
     --action-sm-text-size: 12px;
     --action-sm-text-line-height: 130%;
     --action-sm-text-letter-spasing: 0.05em;
-
     --slider-text-size: 80px;
     --slider-text-line-height: auto;
     --slider-text-letter-spasing: 0;
-
     --caption-text-font: "Allura";
     --caption-text-size: 24px;
     --caption-text-line-height: 100%;
     --caption-text-letter-spasing: 0.05em;
-
     --static-width: 1440px;
 }
-
 
 .header-1 {
     font-size: var(--header-1-size);
@@ -159,18 +147,16 @@ body {
     border-radius: 20px;
     color: var(--static-white);
     background-color: var(--dark-color);
-    transition:
-            color 0.2s ease-out,
-            background-color 0.2s ease-out;
+    transition: color 0.2s ease-out,
+                background-color 0.2s ease-out;
 }
 
 .christmas__button:hover {
     cursor: pointer;
     color: var(--dark-color);
     background-color: var(--static-white);
-    transition:
-            color 0.1s ease-in,
-            background-color 0.1s ease-in;
+    transition: color 0.1s ease-in,
+                background-color 0.1s ease-in;
 }
 
 #top {
@@ -229,7 +215,6 @@ body {
     cursor: pointer;
 }
 
-
 .nav__links {
     position: relative;
     display: flex;
@@ -238,6 +223,7 @@ body {
     align-items: center;
     flex-grow: 1;
 }
+
 .menu__list {
     position: relative;
     display: flex;
@@ -253,20 +239,17 @@ body {
     text-decoration: none;
     color: var(--dark-color);
     border-radius: 12px;
-    transition:
-            color 0.25s ease-out,
-            background-color 0.25s ease-out;
+    transition: color 0.25s ease-out,
+                background-color 0.25s ease-out;
 }
 
 .menu__item:hover {
     cursor: pointer;
     background-color: var(--primary-color-10);
     color: var(--primary-color);
-    transition:
-            color 0.15s ease-in,
-            background-color 0.15s ease-in;
+    transition: color 0.15s ease-in,
+                background-color 0.15s ease-in;
 }
-
 
 #main {
     position: relative;
@@ -489,18 +472,16 @@ body {
     border: 1px solid var(--static-white);
     color: var(--static-white);
     background: none;
-    transition:
-            background-color 0.2s ease-out,
-            color 0.2s ease-out;
+    transition: background-color 0.2s ease-out,
+                color 0.2s ease-out;
 }
 
 .slider__button:hover {
     cursor: pointer;
     color: var(--primary-color);
     background-color: var(--static-white);
-    transition:
-            background-color 0.1s ease-in,
-            color 0.1s ease-in;
+    transition: background-color 0.1s ease-in,
+                color 0.1s ease-in;
 }
 
 .slider__button__disabled {
