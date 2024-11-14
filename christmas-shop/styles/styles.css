@@ -242,7 +242,6 @@ body {
     display: flex;
     flex-direction: row;
     column-gap: var(--space-8);
-    list-style-type: none;
 }
 
 .menu__item {
