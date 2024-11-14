@@ -836,3 +836,11 @@ body {
 .footer__socials > a:hover {
     color: var(--primary-color);
 }
+
+.main-gifts {
+    height: 2000px; /* helper */
+    background-color: var(--primary-color);
+    background-image: url("../images/content/bg-garland.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
