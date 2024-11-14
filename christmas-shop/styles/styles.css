@@ -206,8 +206,9 @@ body {
     flex-direction: row;
     align-items: center;
     width: fit-content;
-    padding: var(--space-8) var(--space-20);
     column-gap: var(--space-8);
+    text-decoration: none;
+    padding: var(--space-8) var(--space-20);
 }
 
 .logo__image {
