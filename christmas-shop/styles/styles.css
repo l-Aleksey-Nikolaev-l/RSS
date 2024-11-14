@@ -862,3 +862,20 @@ body {
     max-width: 1276px;
     height: fit-content;
 }
+
+.mg--head--text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    max-width: 426px;
+    row-gap: var(--space-12);
+}
+
+.mg--head--text > h1 {
+    text-align: center;
+    color: var(--static-white);
+}
