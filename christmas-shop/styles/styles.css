@@ -596,6 +596,18 @@ body {
     background-color: var(--static-white);
 }
 
+.bgf__card__work {
+    color: var(--tag-purple-color);
+}
+
+.bgf__card__health {
+    color: var(--tag-green-color);
+}
+
+.bgf__card__harmony {
+    color: var(--tag-pink-color);
+}
+
 .bgf__card__description {
     display: -webkit-box;
     -webkit-line-clamp: 2;
