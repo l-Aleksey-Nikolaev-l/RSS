@@ -701,3 +701,25 @@ body {
     background-color: var(--static-white-40);
 }
 
+#footer,
+.footer--container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+}
+
+#footer {
+    width: var(--static-width);
+    padding: var(--space-60) var(--space-8);
+}
+
+.footer--container {
+    width: 100%;
+    max-width: 1276px;
+    row-gap: var(--space-60);
+    padding: var(--space-0);
+}
+
