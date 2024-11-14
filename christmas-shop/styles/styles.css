@@ -438,6 +438,12 @@ body {
     overflow: hidden;
 }
 
+.carousel__item__picture img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
 .slider__buttons {
     position: relative;
     display: flex;
