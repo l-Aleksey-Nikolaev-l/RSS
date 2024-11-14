@@ -750,6 +750,7 @@ body {
     flex: 1;
     row-gap: var(--space-12);
     padding: var(--space-20);
+    text-decoration: none;
     background-color: var(--contemt-bg-color);
     border-radius: 20px;
 }
