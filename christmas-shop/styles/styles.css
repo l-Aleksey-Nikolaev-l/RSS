@@ -361,6 +361,10 @@ body {
     max-width: 426px;
 }
 
+.card--about__text > *:not(h2) {
+    text-transform: unset;
+}
+
 .card--about__caption {
     color: var(--primary-color);
 }
