@@ -143,13 +143,13 @@ html,
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: var(--main-font), sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
 body {
     background-color: var(--static-white);
-    scroll-behavior: smooth;
     user-select: none;
 }
 
