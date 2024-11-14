@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<path fill="none" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12,16c2.2,0,4-1.8,4-4
+	c0-2.2-1.8-4-4-4c-2.2,0-4,1.8-4,4C8,14.2,9.8,16,12,16z"/>
+<path fill="none" stroke="#181C29" stroke-width="1.5" d="M3,16V8c0-2.8,2.2-5,5-5h8c2.8,0,5,2.2,5,5v8c0,2.8-2.2,5-5,5H8
+	C5.2,21,3,18.8,3,16z"/>
+<path fill="none" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M17.5,6.5L17.5,6.5"/>
+</svg>
