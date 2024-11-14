@@ -656,6 +656,8 @@ body {
 .cta__time__caption {
     width: 100%;
     text-align: center;
+    text-transform: unset;
+    color: var(--static-white);
 }
 
 .cta__timer,
