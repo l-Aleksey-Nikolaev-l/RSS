@@ -304,11 +304,14 @@ body {
     color: var(--static-white);
 }
 
-.hero__caption,
-.hero__header--1 {
+.hero--container > *:not(button) {
     width: 100%;
     text-align: center;
+    color: var(--static-white);
+}
 
+.hero__caption {
+    text-transform: unset;
 }
 
 .hero__header--1 {
