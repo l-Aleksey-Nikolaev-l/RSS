@@ -551,6 +551,12 @@ body {
     height: 230px;
 }
 
+.bgf__card__image img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
 .bgf__card__text {
     position: relative;
     display: flex;
