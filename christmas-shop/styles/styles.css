@@ -163,6 +163,17 @@ body {
     align-items: center;
 }
 
+#top--container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: var(--static-width);
+    height: fit-content;
+    background-color: var(--static-white);
+}
+
 #header {
     position: relative;
     display: flex;
