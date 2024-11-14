@@ -615,6 +615,14 @@ body {
     overflow: hidden;
 }
 
+.bgf__card:hover {
+    cursor: pointer;
+}
+
+.bgf__card:hover h3 {
+    color: var(--primary-color);
+}
+
 .cta,
 .cta--outer--container {
     position: relative;
