@@ -842,8 +842,7 @@ body {
 }
 
 .main-gifts {
-    /*height: fit-content;*/
-    height: 2000px;
+    height: fit-content;
     row-gap: var(--space-20);
     padding: var(--space-60) var(--space-8);
     background-color: var(--primary-color);
