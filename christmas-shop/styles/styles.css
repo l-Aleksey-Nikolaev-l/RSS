@@ -529,13 +529,16 @@ body {
     row-gap: var(--space-12);
     width: 100%;
     max-width: 426px;
+}
+
+.bgf__top > * {
+    width: 100%;
+    text-align: center;
     color: var(--static-white);
 }
 
-.bgf__caption,
-.bgf__header {
-    width: 100%;
-    text-align: center;
+.bgf__caption {
+    text-transform: unset;
 }
 
 .bgf__cards {
