@@ -66,60 +66,74 @@
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-1-letter-spasing);
     line-height: var(--header-1-line-height);
-    text-transform: uppercase;
 }
+
 .header-2 {
     font-size: var(--header-2-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-2-letter-spasing);
     line-height: var(--header-2-line-height);
-    text-transform: uppercase;
 }
+
 .header-3 {
     font-size: var(--header-3-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-3-letter-spasing);
     line-height: var(--header-3-line-height);
-    text-transform: uppercase;
 }
+
 .header-4 {
     font-size: var(--header-4-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--header-4-letter-spasing);
     line-height: var(--header-4-line-height);
-    text-transform: uppercase;
 }
+
 .paragraph-text {
     font-size: var(--paragraph-text-size);
     letter-spacing: var(--paragraph-text-letter-spasing);
     line-height: var(--paragraph-text-line-height);
 }
+
 .action-lg-text {
     font-size: var(--action-lg-text-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--action-lg-text-letter-spasing);
     line-height: var(--action-lg-text-line-height);
-    text-transform: uppercase;
 }
+
 .action-sm-text {
     font-size: var(--action-sm-text-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--action-sm-text-letter-spasing);
     line-height: var(--action-sm-text-line-height);
-    text-transform: uppercase;
 }
+
 .slider-text {
     font-size: var(--slider-text-size);
     font-weight: var(--semibold-text-weight);
     letter-spacing: var(--slider-text-letter-spasing);
     line-height: var(--slider-text-line-height);
-    text-transform: uppercase;
 }
+
 .caption-text {
     font-family: var(--caption-text-font), sans-serif;
     font-size: var(--caption-text-size);
     letter-spacing: var(--caption-text-letter-spasing);
     line-height: var(--caption-text-line-height);
+}
+
+.header-1,
+.header-2,
+.header-3,
+.header-4,
+.paragraph-text,
+.action-lg-text,
+.action-sm-text,
+.slider-text,
+.caption-text {
+    text-transform: uppercase;
+    color: var(--dark-color);
 }
 
 body,
