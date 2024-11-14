@@ -789,6 +789,14 @@ body {
     text-decoration: none;
 }
 
+.footer__card:hover {
+    cursor: pointer;
+}
+
+.footer__card:hover > * {
+    color: var(--primary-color);
+}
+
 .footer__socials {
     position: relative;
     display: flex;
