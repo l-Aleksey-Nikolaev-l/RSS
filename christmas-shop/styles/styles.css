@@ -762,3 +762,7 @@ body {
     height: inherit;
     object-fit: cover;
 }
+
+.footer__card__link {
+    text-decoration: none;
+}
