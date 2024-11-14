@@ -689,6 +689,10 @@ body {
     align-items: center;
 }
 
+.cta__timer__indicator > * {
+    color: var(--static-white);
+}
+
 .cta__timer__separator {
     position: absolute;
     right: 0;
