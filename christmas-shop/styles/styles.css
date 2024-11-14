@@ -408,14 +408,16 @@ body {
     width: 100%;
     max-width: 426px;
     height: fit-content;
+}
+
+.slider__top > * {
+    width: 100%;
+    text-align: center;
     color: var(--static-white);
 }
 
-.slider__caption,
-.slider__header {
-    width: 100%;
-    text-align: center;
-
+.slider__caption {
+    text-transform: unset;
 }
 
 .slider__carousel {
