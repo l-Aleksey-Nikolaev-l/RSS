@@ -723,3 +723,26 @@ body {
     padding: var(--space-0);
 }
 
+.footer__cards {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: var(--space-12);
+    width: 100%;
+    border-radius: 60px;
+}
+
+.footer__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    row-gap: var(--space-12);
+    padding: var(--space-20);
+    background-color: var(--contemt-bg-color);
+    border-radius: 20px;
+}
