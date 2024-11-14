@@ -250,6 +250,8 @@ body {
     width: fit-content;
     height: fit-content;
     padding: var(--space-12) var(--space-20);
+    text-decoration: none;
+    color: var(--dark-color);
     border-radius: 12px;
     transition:
             color 0.25s ease-out,
