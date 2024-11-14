@@ -898,8 +898,17 @@ body {
     color: var(--static-white);
     padding: var(--space-12) var(--space-20);
     border-radius: 12px;
+    transition: color 0.25s ease-out,
+                background-color 0.25s ease-out;
 }
 
 .mg--tabs__selected {
     background-color: var(--static-white-20);
+}
+
+.mg--tab:hover {
+    cursor: pointer;
+    background-color: var(--static-white-20);
+    transition: color 0.15s ease-in,
+                background-color 0.15s ease-in;
 }
