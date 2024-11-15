@@ -308,7 +308,7 @@ li {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
 }
@@ -320,9 +320,11 @@ li {
 }
 
 .hero--container {
+    justify-content: center;
     max-width: 426px;
     row-gap: var(--space-12);
     color: var(--static-white);
+    padding: var(--space-60) var(--space-0);
 }
 
 .hero--container > *:not(button) {
