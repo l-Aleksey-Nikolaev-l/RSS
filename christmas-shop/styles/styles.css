@@ -765,12 +765,10 @@ li {
 }
 
 #footer {
-    width: 100%;
     padding: var(--space-60) var(--space-8);
 }
 
 .footer--container {
-    width: 100%;
     max-width: 1276px;
     row-gap: var(--space-60);
     padding: var(--space-0);
@@ -881,7 +879,6 @@ li {
 }
 
 .main-gifts {
-    height: fit-content;
     row-gap: var(--space-20);
     padding: var(--space-60) var(--space-8);
     background-color: var(--primary-color);
@@ -899,7 +896,6 @@ li {
     row-gap: var(--space-20);
     width: 100%;
     max-width: 1276px;
-    height: fit-content;
 }
 
 .mg--head--text {
@@ -909,7 +905,6 @@ li {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: fit-content;
     max-width: 426px;
     row-gap: var(--space-12);
 }
@@ -927,8 +922,6 @@ li {
     justify-content: flex-start;
     align-items: center;
     column-gap: var(--space-8);
-    width: fit-content;
-    height: fit-content;
 }
 
 .mg--tab {
