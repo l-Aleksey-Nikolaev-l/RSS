@@ -327,8 +327,10 @@ li {
 
 .hero {
     padding: var(--space-60) var(--space-8);
-    background: url("../images/content/bg-ball.png") center no-repeat;
-    background-size: 100%;
+    background:
+            url("../images/content/bg-snow.png") center,
+            url("../images/content/bg-ball.png") center no-repeat;
+    background-size: cover;
 }
 
 .hero--container {
