@@ -688,10 +688,11 @@ li {
     row-gap: var(--space-20);
     width: 100%;
     max-width: 426px;
-    height: 428px;
+    padding: var(--space-60) var(--space-0);
 }
 
 .cta__header__text {
+    width: 100%;
     text-align: center;
     color: var(--static-white);
 }
