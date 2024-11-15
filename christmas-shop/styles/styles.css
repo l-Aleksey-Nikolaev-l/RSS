@@ -417,26 +417,19 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.slider {
     width: 100%;
     padding: var(--space-60) var(--space-8);
     overflow: hidden;
 }
 
 .slider--container {
-    justify-content: normal;
     row-gap: var(--space-20);
-    width: 100%;
     max-width: 1276px;
 }
 
 .slider__top {
     row-gap: var(--space-12);
-    width: 100%;
     max-width: 426px;
-    height: fit-content;
 }
 
 .slider__top > * {
