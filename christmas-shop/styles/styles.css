@@ -415,9 +415,12 @@ li {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
+}
+
+.slider {
     padding: var(--space-60) var(--space-8);
     overflow: hidden;
 }
@@ -444,6 +447,10 @@ li {
 
 .slider__carousel {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -451,6 +458,8 @@ li {
     position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     column-gap: var(--space-20);
 }
 
@@ -492,7 +501,7 @@ li {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     column-gap: var(--space-20);
     width: 100%;
