@@ -139,6 +139,27 @@ body {
     user-select: none;
 }
 
+body,
+header,
+main,
+footer,
+nav,
+img,
+div,
+section,
+button,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+li {
+    width: fit-content;
+    height: fit-content;
+}
+
 .christmas__button {
     padding: var(--space-20) var(--space-32);
     border: none;
