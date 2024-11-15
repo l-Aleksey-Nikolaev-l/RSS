@@ -286,6 +286,12 @@ li {
                 background-color 0.15s ease-in;
 }
 
+.menu__item__selected {
+    background-color: var(--primary-color-10);
+    color: var(--primary-color);
+    pointer-events: none;
+}
+
 #main {
     position: relative;
     display: flex;
