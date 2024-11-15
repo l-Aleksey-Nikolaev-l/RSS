@@ -364,12 +364,6 @@ li {
     background-color: var(--static-white);
 }
 
-.card--about__container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-}
-
 .card--about__text--container {
     position: relative;
     display: flex;
@@ -389,7 +383,6 @@ li {
     align-items: flex-start;
     row-gap: var(--space-20);
     padding: var(--space-60) var(--space-0);
-    width: fit-content;
     max-width: 426px;
 }
 
@@ -411,7 +404,6 @@ li {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: fit-content;
     height: 528px;
     border-radius: 20px;
     overflow: hidden;
