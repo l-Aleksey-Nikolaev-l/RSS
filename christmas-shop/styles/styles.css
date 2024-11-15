@@ -549,7 +549,6 @@ li {
 
 .bgf--container {
     max-width: 1276px;
-    height: fit-content;
     row-gap: var(--space-20);
     padding: var(--space-0);
 }
