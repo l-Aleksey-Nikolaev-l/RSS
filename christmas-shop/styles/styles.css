@@ -940,6 +940,7 @@ li {
 }
 
 .mg--tabs__selected {
+    pointer-events: none;
     background-color: var(--static-white-20);
 }
 
