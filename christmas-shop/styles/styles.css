@@ -857,13 +857,12 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: var(--space-8);
 }
 
 .social__item > a {
-    width: 24px;
-    height: 24px;
+    line-height: 0;
     color: var(--dark-color);
+    padding: var(--space-8);
 }
 
 .social__item:hover {
