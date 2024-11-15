@@ -297,7 +297,6 @@ li {
 }
 
 .main-home {
-    height: fit-content;
     background-color: var(--primary-color);
     background-image: url("../images/content/bg-snow.png");
     background-size: contain;
@@ -312,8 +311,6 @@ li {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: fit-content;
-    padding: var(--space-60) var(--space-0);
 }
 
 .hero {
