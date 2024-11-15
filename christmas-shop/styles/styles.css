@@ -182,6 +182,7 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 #top--container {
@@ -191,7 +192,6 @@ li {
     justify-content: flex-start;
     align-items: center;
     width: var(--static-width);
-    height: fit-content;
     background-color: var(--static-white);
 }
 
