@@ -341,21 +341,25 @@ li {
     white-space: nowrap;
 }
 
-.about {
+.about,
+.card--about__container {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    gap: var(--space-0);
     width: 100%;
     padding: var(--space-60) var(--space-8);
 }
 
-.card--about {
-    position: relative;
+.card--about__container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     max-width: 1276px;
-    height: fit-content;
+    padding: var(--space-0);
     border-radius: 20px;
     background-color: var(--static-white);
 }
@@ -371,7 +375,9 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     flex-grow: 1;
+    height: 100%;
     padding: var(--space-0) var(--space-60);
 }
 
@@ -379,10 +385,16 @@ li {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     row-gap: var(--space-20);
     padding: var(--space-60) var(--space-0);
     width: fit-content;
     max-width: 426px;
+}
+
+.card--about__text > * {
+    width: 100%;
 }
 
 .card--about__text > *:not(h2) {
