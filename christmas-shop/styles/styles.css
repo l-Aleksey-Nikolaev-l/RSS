@@ -274,16 +274,16 @@ li {
     text-decoration: none;
     color: var(--dark-color);
     border-radius: 12px;
-    transition: color 0.25s ease-out,
-                background-color 0.25s ease-out;
+    transition: color 0.1s ease-in,
+                background-color 0.1s ease-in;
 }
 
 .menu__item:hover {
     cursor: pointer;
     background-color: var(--primary-color-10);
     color: var(--primary-color);
-    transition: color 0.15s ease-in,
-                background-color 0.15s ease-in;
+    transition: color 0.1s ease-out,
+                background-color 0.1s ease-out;
 }
 
 .menu__item__selected {
