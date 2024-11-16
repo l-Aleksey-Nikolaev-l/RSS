@@ -815,6 +815,10 @@ li {
     border-radius: 20px;
 }
 
+.footer__card > *:not(div) {
+    transition: color 0.1s ease-in;
+}
+
 .footer__card__image {
     position: relative;
     display: flex;
@@ -839,8 +843,9 @@ li {
     cursor: pointer;
 }
 
-.footer__card:hover > * {
+.footer__card:hover > *:not(div) {
     color: var(--primary-color);
+    transition: color 0.1s ease-out;
 }
 
 .footer__socials {
