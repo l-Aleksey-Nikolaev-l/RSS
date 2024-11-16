@@ -856,11 +856,16 @@ li {
     align-items: center;
     width: 100%;
     row-gap: var(--space-12);
+    transition: color 0.1s ease-in;
 }
 
 .footer__socials > * {
     text-transform: unset;
     text-decoration: none;
+}
+
+.footer__socials > a {
+    transition: color 0.1s ease-in;
 }
 
 .socials__list {
@@ -884,6 +889,7 @@ li {
     line-height: 0;
     color: var(--dark-color);
     padding: var(--space-8);
+    transition: color 0.1s ease-in;
 }
 
 .social__item:hover {
@@ -896,6 +902,7 @@ li {
 
 .footer__socials > a:hover {
     color: var(--primary-color);
+    transition: color 0.1s ease-out;
 }
 
 .main-gifts {
