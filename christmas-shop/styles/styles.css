@@ -166,16 +166,16 @@ li {
     border-radius: 20px;
     color: var(--static-white);
     background-color: var(--dark-color);
-    transition: color 0.2s ease-out,
-                background-color 0.2s ease-out;
+    transition: color 0.1s ease-in,
+                background-color 0.1s ease-in;
 }
 
 .christmas__button:hover {
     cursor: pointer;
     color: var(--dark-color);
     background-color: var(--static-white);
-    transition: color 0.1s ease-in,
-                background-color 0.1s ease-in;
+    transition: color 0.1s ease-out,
+                background-color 0.1s ease-out;
 }
 
 #top {
@@ -274,16 +274,16 @@ li {
     text-decoration: none;
     color: var(--dark-color);
     border-radius: 12px;
-    transition: color 0.25s ease-out,
-                background-color 0.25s ease-out;
+    transition: color 0.1s ease-in,
+                background-color 0.1s ease-in;
 }
 
 .menu__item:hover {
     cursor: pointer;
     background-color: var(--primary-color-10);
     color: var(--primary-color);
-    transition: color 0.15s ease-in,
-                background-color 0.15s ease-in;
+    transition: color 0.1s ease-out,
+                background-color 0.1s ease-out;
 }
 
 .menu__item__selected {
@@ -507,10 +507,6 @@ li {
     object-fit: cover;
 }
 
-.carousel__item:hover {
-    cursor: pointer;
-}
-
 .slider__buttons {
     position: relative;
     display: flex;
@@ -532,16 +528,16 @@ li {
     border: 1px solid var(--static-white);
     color: var(--static-white);
     background: none;
-    transition: background-color 0.2s ease-out,
-                color 0.2s ease-out;
+    transition: background-color 0.1s ease-in,
+                color 0.1s ease-in;
 }
 
 .slider__button:hover {
     cursor: pointer;
     color: var(--primary-color);
     background-color: var(--static-white);
-    transition: background-color 0.1s ease-in,
-                color 0.1s ease-in;
+    transition: background-color 0.1s ease-out,
+                color 0.1s ease-out;
 }
 
 .slider__button__disabled {
@@ -610,6 +606,10 @@ li {
     background-color: var(--contemt-bg-color);
     border-radius: 20px;
     overflow: hidden;
+}
+
+.gift__card h3 {
+    transition: color 0.1s ease-in;
 }
 
 .gift__card__image {
@@ -815,6 +815,10 @@ li {
     border-radius: 20px;
 }
 
+.footer__card > *:not(div) {
+    transition: color 0.1s ease-in;
+}
+
 .footer__card__image {
     position: relative;
     display: flex;
@@ -839,8 +843,9 @@ li {
     cursor: pointer;
 }
 
-.footer__card:hover > * {
+.footer__card:hover > *:not(div) {
     color: var(--primary-color);
+    transition: color 0.1s ease-out;
 }
 
 .footer__socials {
@@ -851,11 +856,16 @@ li {
     align-items: center;
     width: 100%;
     row-gap: var(--space-12);
+    transition: color 0.1s ease-in;
 }
 
 .footer__socials > * {
     text-transform: unset;
     text-decoration: none;
+}
+
+.footer__socials > a {
+    transition: color 0.1s ease-in;
 }
 
 .socials__list {
@@ -879,6 +889,7 @@ li {
     line-height: 0;
     color: var(--dark-color);
     padding: var(--space-8);
+    transition: color 0.1s ease-in;
 }
 
 .social__item:hover {
@@ -891,6 +902,7 @@ li {
 
 .footer__socials > a:hover {
     color: var(--primary-color);
+    transition: color 0.1s ease-out;
 }
 
 .main-gifts {
@@ -945,8 +957,8 @@ li {
     color: var(--static-white);
     padding: var(--space-12) var(--space-20);
     border-radius: 12px;
-    transition: color 0.25s ease-out,
-                background-color 0.25s ease-out;
+    transition: color 0.1s ease-in,
+                background-color 0.1s ease-in;
 }
 
 .mg--tabs__selected {
@@ -957,6 +969,6 @@ li {
 .mg--tab:hover {
     cursor: pointer;
     background-color: var(--static-white-20);
-    transition: color 0.15s ease-in,
-                background-color 0.15s ease-in;
+    transition: color 0.1s ease-out,
+                background-color 0.1s ease-out;
 }
