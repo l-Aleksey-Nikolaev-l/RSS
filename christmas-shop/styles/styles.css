@@ -610,6 +610,11 @@ li {
     background-color: var(--contemt-bg-color);
     border-radius: 20px;
     overflow: hidden;
+    transition: color 0.2s ease-in;
+}
+
+.gift__card h3 {
+    transition: color 0.1s ease-in;
 }
 
 .gift__card__image {
