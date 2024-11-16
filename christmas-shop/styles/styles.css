@@ -166,16 +166,16 @@ li {
     border-radius: 20px;
     color: var(--static-white);
     background-color: var(--dark-color);
-    transition: color 0.2s ease-out,
-                background-color 0.2s ease-out;
+    transition: color 0.1s ease-in,
+                background-color 0.1s ease-in;
 }
 
 .christmas__button:hover {
     cursor: pointer;
     color: var(--dark-color);
     background-color: var(--static-white);
-    transition: color 0.1s ease-in,
-                background-color 0.1s ease-in;
+    transition: color 0.1s ease-out,
+                background-color 0.1s ease-out;
 }
 
 #top {
