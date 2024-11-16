@@ -606,7 +606,6 @@ li {
     background-color: var(--contemt-bg-color);
     border-radius: 20px;
     overflow: hidden;
-    transition: color 0.2s ease-in;
 }
 
 .gift__card h3 {
