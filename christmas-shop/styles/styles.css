@@ -273,6 +273,7 @@ li {
     align-items: center;
     padding: var(--space-12) var(--space-20);
     text-decoration: none;
+    font-size: inherit;
     color: var(--dark-color);
     border-radius: 12px;
     transition: color 0.1s ease-in,
