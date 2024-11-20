@@ -1026,3 +1026,9 @@ li {
         flex-direction: column;
     }
 }
+
+@media screen and (width < 380px) {
+    #top--container {
+        display: none;
+    }
+}
