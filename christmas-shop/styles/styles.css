@@ -1068,6 +1068,13 @@ li {
     .menu__list {
         flex-direction: column;
     }
+
+    .menu__item {
+        font-size: var(--action-lg-text-size);
+        font-weight: var(--semibold-text-weight);
+        letter-spacing: var(--action-lg-text-letter-spasing);
+        line-height: var(--action-lg-text-line-height);
+    }
     }
 }
 
