@@ -1003,6 +1003,20 @@ li {
     }
 }
 
+@media screen and (width <= 768px) {
+    .header__nav {
+        justify-content: space-between;
+    }
+
+    .nav__burger {
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
 @media screen and (width < 768px) {
     .hero__header--1 {
         text-wrap: wrap;
