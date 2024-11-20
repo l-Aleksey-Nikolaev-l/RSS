@@ -1020,3 +1020,9 @@ li {
         padding: var(--space-12) var(--space-8);
     }
 }
+
+@media screen and (width <= 638px) {
+    .card--about__container {
+        flex-direction: column;
+    }
+}
