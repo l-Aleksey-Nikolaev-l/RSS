@@ -282,6 +282,10 @@ li {
     pointer-events: none;
 }
 
+.nav__burger {
+    display: none;
+}
+
 #main {
     position: relative;
     display: flex;
