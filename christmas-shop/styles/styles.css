@@ -195,7 +195,8 @@ li {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: var(--static-width);
+    width: 100%;
+    max-width: var(--static-width);
     background-color: var(--static-white);
 }
 
