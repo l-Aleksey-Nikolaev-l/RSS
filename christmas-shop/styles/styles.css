@@ -533,16 +533,17 @@ li {
     border: 1px solid var(--static-white);
     color: var(--static-white);
     background: none;
-    transition: background-color 0.1s ease-in,
-                color 0.1s ease-in;
+    transition: color 0.1s ease-in,
+                background-color 0.1s ease-in;
+
 }
 
 .slider__button:hover {
     cursor: pointer;
     color: var(--primary-color);
     background-color: var(--static-white);
-    transition: background-color 0.1s ease-out,
-                color 0.1s ease-out;
+    transition: color 0.1s ease-out,
+                background-color 0.1s ease-out;
 }
 
 .slider__button__disabled {
