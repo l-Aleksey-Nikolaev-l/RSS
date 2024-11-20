@@ -1051,6 +1051,23 @@ li {
         width: 20px;
         height: 0;
         outline: 1px solid var(--dark-color);
+
+    .menu__links {
+        position: absolute;
+        top: 64px;
+        left: -8px;
+        justify-content: center;
+        background-color: var(--static-white);
+        width: calc(100vw + 8px);
+        height: 0;
+        z-index: 1;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+    }
+
+    .menu__list {
+        flex-direction: column;
+    }
     }
 }
 
