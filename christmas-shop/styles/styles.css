@@ -1041,4 +1041,8 @@ li {
     #top--container {
         display: none;
     }
+
+    .size__error {
+        display: inline-block;
+    }
 }
