@@ -247,10 +247,6 @@ li {
     height: 24px;
 }
 
-.logo:hover {
-    cursor: pointer;
-}
-
 .menu__links {
     position: relative;
     display: flex;
@@ -282,14 +278,6 @@ li {
     border-radius: var(--b-radius-12);
     transition: color 0.1s ease-in,
                 background-color 0.1s ease-in;
-}
-
-.menu__item:hover {
-    cursor: pointer;
-    background-color: var(--primary-color-10);
-    color: var(--primary-color);
-    transition: color 0.1s ease-out,
-                background-color 0.1s ease-out;
 }
 
 .menu__item__selected {
@@ -539,14 +527,6 @@ li {
 
 }
 
-.slider__button:hover {
-    cursor: pointer;
-    color: var(--primary-color);
-    background-color: var(--static-white);
-    transition: color 0.1s ease-out,
-                background-color 0.1s ease-out;
-}
-
 .slider__button__disabled {
     pointer-events: none;
     border: 1px solid var(--static-white-40);
@@ -666,14 +646,6 @@ li {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-}
-
-.gift__card:hover {
-    cursor: pointer;
-}
-
-.gift__card:hover h3 {
-    color: var(--primary-color);
 }
 
 .cta,
@@ -846,15 +818,6 @@ li {
     text-decoration: none;
 }
 
-.footer__card:hover {
-    cursor: pointer;
-}
-
-.footer__card:hover > *:not(div) {
-    color: var(--primary-color);
-    transition: color 0.1s ease-out;
-}
-
 .footer__socials {
     position: relative;
     display: flex;
@@ -897,19 +860,6 @@ li {
     color: var(--dark-color);
     padding: var(--space-8);
     transition: color 0.1s ease-in;
-}
-
-.social__item:hover {
-    cursor: pointer;
-}
-
-.social__item:hover > a {
-    color: var(--primary-color);
-}
-
-.footer__socials > a:hover {
-    color: var(--primary-color);
-    transition: color 0.1s ease-out;
 }
 
 .main-gifts {
@@ -973,11 +923,71 @@ li {
     background-color: var(--static-white-20);
 }
 
-.mg--tab:hover {
-    cursor: pointer;
-    background-color: var(--static-white-20);
-    transition: color 0.1s ease-out,
-                background-color 0.1s ease-out;
+@media (hover: hover) {
+    .christmas__button:hover {
+        cursor: pointer;
+        color: var(--dark-color);
+        background-color: var(--static-white);
+        transition: color 0.1s ease-out,
+                    background-color 0.1s ease-out;
+    }
+
+    .logo:hover {
+        cursor: pointer;
+    }
+
+    .menu__item:hover {
+        cursor: pointer;
+        background-color: var(--primary-color-10);
+        color: var(--primary-color);
+        transition: color 0.1s ease-out,
+                    background-color 0.1s ease-out;
+    }
+
+    .slider__button:hover {
+        cursor: pointer;
+        color: var(--primary-color);
+        background-color: var(--static-white);
+        transition: color 0.1s ease-out,
+                    background-color 0.1s ease-out;
+    }
+
+    .gift__card:hover {
+        cursor: pointer;
+    }
+
+    .gift__card:hover h3 {
+        color: var(--primary-color);
+    }
+
+    .footer__card:hover {
+        cursor: pointer;
+    }
+
+    .footer__card:hover > *:not(div) {
+        color: var(--primary-color);
+        transition: color 0.1s ease-out;
+    }
+
+    .social__item:hover {
+        cursor: pointer;
+    }
+
+    .social__item:hover > a {
+        color: var(--primary-color);
+    }
+
+    .footer__socials > a:hover {
+        color: var(--primary-color);
+        transition: color 0.1s ease-out;
+    }
+
+    .mg--tab:hover {
+        cursor: pointer;
+        background-color: var(--static-white-20);
+        transition: color 0.1s ease-out,
+                    background-color 0.1s ease-out;
+    }
 }
 
 @media screen and (width < 1440px) {
