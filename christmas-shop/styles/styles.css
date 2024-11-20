@@ -1015,6 +1015,10 @@ li {
         height: 40px;
     }
 
+    #burger__checkbox {
+        display: none;
+    }
+
     .checkbox__label {
         position: absolute;
         display: block;
