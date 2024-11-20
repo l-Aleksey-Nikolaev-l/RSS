@@ -980,7 +980,7 @@ li {
                 background-color 0.1s ease-out;
 }
 
-@media screen and (width >= 768px) and (width < 1440px) {
+@media screen and (width < 1440px) {
     .card--about__text {
         min-width: 256px;
     }
