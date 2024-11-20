@@ -174,12 +174,8 @@ li {
                 background-color 0.1s ease-in;
 }
 
-.christmas__button:hover {
-    cursor: pointer;
-    color: var(--dark-color);
-    background-color: var(--static-white);
-    transition: color 0.1s ease-out,
-                background-color 0.1s ease-out;
+.size__error {
+    display: none;
 }
 
 #top {
