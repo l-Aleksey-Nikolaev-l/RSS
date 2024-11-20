@@ -1,5 +1,7 @@
 :root {
     --main-font: "Montserrat";
+    --primary-font: "Montserrat";
+    --secondary-font: "Allura";
     --primary-color: #ff4646;
     --primary-color-10: rgba(255, 70, 70, 0.1);
     --dark-color: #181c29;
