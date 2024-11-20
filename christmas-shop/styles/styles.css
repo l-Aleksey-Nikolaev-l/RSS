@@ -12,38 +12,37 @@
     --tag-pink-color: #ff43f7;
     --tag-green-color: #06a44f;
     --overlay-color: rgba(24, 28, 41, 0.80);
-    --space-0: 0px;
-    --space-8: 8px;
-    --space-12: 12px;
-    --space-20: 20px;
-    --space-32: 32px;
-    --space-60: 60px;
+    --space-0: 0;
+    --space-8: 0.5rem; /* 8px */
+    --space-12: 0.75rem; /* 12px */
+    --space-20: 1.25rem; /* 20px */
+    --space-32: 2.0rem; /* 32px */
+    --space-60: 3.75rem; /* 60px */
     --semibold-text-weight: 600;
-    --header-1-size: 32px;
+    --header-1-size: 2rem; /* 32px */
     --header-1-line-height: 150%;
     --header-1-letter-spasing: 0.18em;
-    --header-2-size: 24px;
+    --header-2-size: 1.5rem; /* 24px */
     --header-2-line-height: 152%;
     --header-2-letter-spasing: 0.16em;
-    --header-3-size: 16px;
+    --header-3-size: 1rem; /* 16px */
     --header-3-line-height: 152%;
     --header-3-letter-spasing: 0.08em;
-    --header-4-size: 12px;
+    --header-4-size: 0.75rem; /* 12px */
     --header-4-line-height: 130%;
     --header-4-letter-spasing: 0.05em;
-    --paragraph-text-size: 16px;
+    --paragraph-text-size: 1rem; /* 16px */
     --paragraph-text-line-height: 148%;
     --paragraph-text-letter-spasing: 0;
-    --action-lg-text-size: 24px;
+    --action-lg-text-size: 1.5rem; /* 24px */
     --action-lg-text-line-height: 152%;
     --action-lg-text-letter-spasing: 0.16em;
-    --action-sm-text-size: 12px;
+    --action-sm-text-size: 0.75rem; /* 12px */
     --action-sm-text-line-height: 130%;
     --action-sm-text-letter-spasing: 0.05em;
-    --slider-text-size: 80px;
+    --slider-text-size: 5rem; /* 80px */
     --slider-text-letter-spasing: 0;
-    --caption-text-font: "Allura";
-    --caption-text-size: 24px;
+    --caption-text-size: 1.5rem; /* 24px */
     --caption-text-line-height: 100%;
     --caption-text-letter-spasing: 0.05em;
     --static-width: 1440px;
