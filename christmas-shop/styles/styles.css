@@ -1,5 +1,4 @@
 :root {
-    --main-font: "Montserrat";
     --primary-font: "Montserrat";
     --secondary-font: "Allura";
     --primary-color: #ff4646;
@@ -105,7 +104,7 @@
 }
 
 .caption-text {
-    font-family: var(--caption-text-font), sans-serif;
+    font-family: var(--secondary-font), sans-serif;
     font-size: var(--caption-text-size);
     letter-spacing: var(--caption-text-letter-spasing);
     line-height: var(--caption-text-line-height);
@@ -133,6 +132,7 @@ html,
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: var(--main-font), sans-serif;
+    font-family: var(--primary-font), sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
