@@ -167,7 +167,7 @@ li {
 .christmas__button {
     padding: var(--space-20) var(--space-32);
     border: none;
-    border-radius: 20px;
+    border-radius: var(--b-radius-20);
     color: var(--static-white);
     background-color: var(--dark-color);
     transition: color 0.1s ease-in,
@@ -278,7 +278,7 @@ li {
     text-decoration: none;
     font-size: inherit;
     color: var(--dark-color);
-    border-radius: 12px;
+    border-radius: var(--b-radius-12);
     transition: color 0.1s ease-in,
                 background-color 0.1s ease-in;
 }
@@ -304,7 +304,7 @@ li {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    border-radius: 20px;
+    border-radius: var(--b-radius-20);
 }
 
 .main-home {
@@ -379,7 +379,7 @@ li {
     width: 100%;
     max-width: 1276px;
     padding: var(--space-0);
-    border-radius: 20px;
+    border-radius: var(--b-radius-20);
     background-color: var(--static-white);
 }
 
@@ -424,7 +424,7 @@ li {
     justify-content: center;
     align-items: center;
     height: 528px;
-    border-radius: 20px;
+    border-radius: var(--b-radius-20);
     overflow: hidden;
 }
 
@@ -502,7 +502,7 @@ li {
     justify-content: center;
     width: 200px;
     height: 200px;
-    border-radius: 20px;
+    border-radius: var(--b-radius-20);
     overflow: hidden;
 }
 
@@ -529,7 +529,7 @@ li {
     align-items: center;
     width: 56px;
     height: 56px;
-    border-radius: 20px;
+    border-radius: var(--b-radius-20);
     border: 1px solid var(--static-white);
     color: var(--static-white);
     background: none;
@@ -609,7 +609,7 @@ li {
     width: 310px;
     height: 342px;
     background-color: var(--contemt-bg-color);
-    border-radius: 20px;
+    border-radius: var(--b-radius-20);
     overflow: hidden;
 }
 
@@ -643,7 +643,7 @@ li {
     padding: var(--space-20);
     flex-grow: 1;
     width: 100%;
-    border-radius: 20px;
+    border-radius: var(--b-radius-20);
     background-color: var(--static-white);
 }
 
@@ -746,7 +746,7 @@ li {
 
 .cta__timer {
     background-color: var(--static-white-40);
-    border-radius: 20px;
+    border-radius: var(--b-radius-20);
 }
 
 .cta__timer__cell {
@@ -803,7 +803,7 @@ li {
     align-items: center;
     column-gap: var(--space-12);
     width: 100%;
-    border-radius: 60px;
+    border-radius: var(--b-radius-60);
 }
 
 .footer__card {
@@ -817,7 +817,7 @@ li {
     padding: var(--space-20);
     text-decoration: none;
     background-color: var(--contemt-bg-color);
-    border-radius: 20px;
+    border-radius: var(--b-radius-20);
 }
 
 .footer__card > *:not(div) {
@@ -961,7 +961,7 @@ li {
     gap: unset;
     color: var(--static-white);
     padding: var(--space-12) var(--space-20);
-    border-radius: 12px;
+    border-radius: var(--b-radius-12);
     transition: color 0.1s ease-in,
                 background-color 0.1s ease-in;
 }
