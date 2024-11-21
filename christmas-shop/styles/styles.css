@@ -1089,14 +1089,14 @@ li {
         /*noinspection CssInvalidFunction*/
         top: anchor(--header-anchor bottom);
         /*noinspection CssInvalidFunction*/
-        left: anchor(--header-anchor left);
+        left: anchor(--header-anchor right);
         justify-content: center;
         background-color: var(--static-white);
-        width: 100vw;
-        height: 0;
+        width: 0;
+        height: 100dvh;
         z-index: 1;
         overflow: hidden;
-        transition: height 0.3s ease-in-out;
+        transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
     }
 
     .menu__list {
@@ -1115,8 +1115,10 @@ li {
     }
 
     .header__nav:has(#burger__checkbox:checked) .menu__links {
-        height: 100dvh;
-        transition: height 0.3s ease-in-out;
+        /*noinspection CssInvalidFunction*/
+        left: anchor(--header-anchor left);
+        width: 100vw;
+        transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
     }
 }
 
