@@ -1081,7 +1081,9 @@ li {
     .menu__links {
         position: fixed;
         position-anchor: --header-anchor;
+        /*noinspection CssInvalidFunction*/
         top: anchor(--header-anchor bottom);
+        /*noinspection CssInvalidFunction*/
         left: anchor(--header-anchor left);
         justify-content: center;
         background-color: var(--static-white);
