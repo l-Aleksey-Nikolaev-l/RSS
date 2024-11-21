@@ -1051,6 +1051,22 @@ li {
         width: 20px;
         height: 0;
         outline: 1px solid var(--dark-color);
+        transition: all 0.2s ease-in;
+        transition-delay: 0.1s;
+    }
+
+    #burger__checkbox:checked ~ .burger__lines {
+        row-gap: 0;
+        transition: row-gap 0.1s ease-out;
+    }
+
+    #burger__checkbox:checked ~ * .burger__top__line {
+        transform: rotateZ(45deg);
+    }
+
+    #burger__checkbox:checked ~ * .burger__bottom__line {
+        transform: rotateZ(-45deg);
+    }
 
     .menu__links {
         position: absolute;
