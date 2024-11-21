@@ -1086,10 +1086,14 @@ li {
     }
 
     .menu__list {
+        width: 75%;
+        column-gap: var(--space-0);
+        row-gap: var(--space-8);
         flex-direction: column;
     }
 
     .menu__item {
+        width: 100%;
         font-size: var(--action-lg-text-size);
         font-weight: var(--semibold-text-weight);
         letter-spacing: var(--action-lg-text-letter-spasing);
