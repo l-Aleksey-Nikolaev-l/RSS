@@ -325,6 +325,7 @@ li {
             url("../images/content/bg-snow.png") center,
             url("../images/content/bg-ball.png") center no-repeat;
     background-size: cover;
+    transition: all 0.3s ease-out;
 }
 
 .hero--container {
@@ -381,6 +382,7 @@ li {
     flex-grow: 1;
     height: 100%;
     padding: var(--space-0) var(--space-60);
+    transition: padding 0.3s ease-in-out;
 }
 
 .card--about__text {
@@ -778,6 +780,7 @@ li {
     column-gap: var(--space-12);
     width: 100%;
     border-radius: var(--b-radius-60);
+    transition: all 0.3s ease-out;
 }
 
 .footer__card {
@@ -915,7 +918,8 @@ li {
     padding: var(--space-12) var(--space-20);
     border-radius: var(--b-radius-12);
     transition: color 0.1s ease-in,
-                background-color 0.1s ease-in;
+                background-color 0.1s ease-in,
+                padding 0.3s ease-out;
 }
 
 .mg--tabs__selected {
@@ -998,11 +1002,14 @@ li {
     .card--about__text {
         min-width: 256px;
     }
+}
 
+@media screen and (width < 1060px) {
     .footer__cards {
         flex-direction: column;
         column-gap: var(--space-0);
         row-gap: var(--space-12);
+        transition: all 0.3s ease-out;
     }
 
     .footer__card {
@@ -1072,10 +1079,17 @@ li {
         transform: rotateZ(-45deg);
     }
 
+    #header {
+        anchor-name: --header-anchor;
+    }
+
     .menu__links {
-        position: absolute;
-        top: 64px;
-        left: -8px;
+        position: fixed;
+        position-anchor: --header-anchor;
+        /*noinspection CssInvalidFunction*/
+        top: anchor(--header-anchor bottom);
+        /*noinspection CssInvalidFunction*/
+        left: anchor(--header-anchor left);
         justify-content: center;
         background-color: var(--static-white);
         width: 100vw;
@@ -1112,13 +1126,14 @@ li {
     }
 
     .card--about__text--container {
+        width: 50%;
         padding: var(--space-0) var(--space-20);
+        transition: padding 0.3s ease-out;
     }
 
     .card--about__image--container {
-        width: 100%;
+        width: 50%;
         border-radius: var(--b-radius-20);
-        overflow: hidden;
     }
 
     .mg--tabs {
@@ -1127,12 +1142,21 @@ li {
 
     .mg--tab {
         padding: var(--space-12) var(--space-8);
+        transition: all 0.3s ease-out;
     }
 }
 
 @media screen and (width <= 638px) {
     .card--about__container {
         flex-direction: column;
+    }
+
+    .card--about__text--container {
+        width: unset;
+    }
+
+    .card--about__image--container {
+        width: 100%;
     }
 }
 
