@@ -1126,12 +1126,13 @@ li {
     }
 
     .card--about__text--container {
+        width: 50%;
         padding: var(--space-0) var(--space-20);
         transition: padding 0.3s ease-out;
     }
 
     .card--about__image--container {
-        width: 100%;
+        width: 50%;
         border-radius: var(--b-radius-20);
         overflow: hidden;
     }
@@ -1149,6 +1150,14 @@ li {
 @media screen and (width <= 638px) {
     .card--about__container {
         flex-direction: column;
+    }
+
+    .card--about__text--container {
+        width: unset;
+    }
+
+    .card--about__image--container {
+        width: 100%;
     }
 }
 
