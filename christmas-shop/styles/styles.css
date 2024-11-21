@@ -1074,10 +1074,15 @@ li {
         transform: rotateZ(-45deg);
     }
 
+    #header {
+        anchor-name: --header-anchor;
+    }
+
     .menu__links {
-        position: absolute;
-        top: 64px;
-        left: -8px;
+        position: fixed;
+        position-anchor: --header-anchor;
+        top: anchor(--header-anchor bottom);
+        left: anchor(--header-anchor left);
         justify-content: center;
         background-color: var(--static-white);
         width: 100vw;
