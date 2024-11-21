@@ -325,6 +325,7 @@ li {
             url("../images/content/bg-snow.png") center,
             url("../images/content/bg-ball.png") center no-repeat;
     background-size: cover;
+    transition: all 0.3s ease-out;
 }
 
 .hero--container {
@@ -381,6 +382,7 @@ li {
     flex-grow: 1;
     height: 100%;
     padding: var(--space-0) var(--space-60);
+    transition: padding 0.3s ease-in-out;
 }
 
 .card--about__text {
@@ -778,6 +780,7 @@ li {
     column-gap: var(--space-12);
     width: 100%;
     border-radius: var(--b-radius-60);
+    transition: all 0.3s ease-out;
 }
 
 .footer__card {
@@ -915,7 +918,8 @@ li {
     padding: var(--space-12) var(--space-20);
     border-radius: var(--b-radius-12);
     transition: color 0.1s ease-in,
-                background-color 0.1s ease-in;
+                background-color 0.1s ease-in,
+                padding 0.3s ease-out;
 }
 
 .mg--tabs__selected {
@@ -1005,6 +1009,7 @@ li {
         flex-direction: column;
         column-gap: var(--space-0);
         row-gap: var(--space-12);
+        transition: all 0.3s ease-out;
     }
 
     .footer__card {
@@ -1122,6 +1127,7 @@ li {
 
     .card--about__text--container {
         padding: var(--space-0) var(--space-20);
+        transition: padding 0.3s ease-out;
     }
 
     .card--about__image--container {
@@ -1136,6 +1142,7 @@ li {
 
     .mg--tab {
         padding: var(--space-12) var(--space-8);
+        transition: all 0.3s ease-out;
     }
 }
 
