@@ -1134,7 +1134,6 @@ li {
     .card--about__image--container {
         width: 50%;
         border-radius: var(--b-radius-20);
-        overflow: hidden;
     }
 
     .mg--tabs {
