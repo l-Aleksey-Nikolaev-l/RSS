@@ -998,7 +998,9 @@ li {
     .card--about__text {
         min-width: 256px;
     }
+}
 
+@media screen and (width < 1060px) {
     .footer__cards {
         flex-direction: column;
         column-gap: var(--space-0);
