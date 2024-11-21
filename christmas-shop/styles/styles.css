@@ -991,6 +991,10 @@ li {
 }
 
 @media screen and (width < 1440px) {
+    .menu__links{
+        height: 0;
+    }
+
     .card--about__text {
         min-width: 256px;
     }
@@ -1091,6 +1095,10 @@ li {
         letter-spacing: var(--action-lg-text-letter-spasing);
         line-height: var(--action-lg-text-line-height);
     }
+
+    .header__nav:has(#burger__checkbox:checked) .menu__links {
+        height: 100dvh;
+        transition: height 0.3s ease-in-out;
     }
 }
 
