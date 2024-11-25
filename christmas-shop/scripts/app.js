@@ -30,3 +30,5 @@ function showTimeToNewYear() {
 }
 
 showTimeToNewYear();
+
+setInterval(showTimeToNewYear, 1000);
