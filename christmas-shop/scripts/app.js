@@ -26,7 +26,7 @@ function showTimeToNewYear() {
     indicatorsArray[0].textContent = timeLeft.days;
     indicatorsArray[1].textContent = timeLeft.hours;
     indicatorsArray[2].textContent = timeLeft.minutes;
-    indicatorsArray[3].textContent = timeLeft.seconds
+    indicatorsArray[3].textContent = timeLeft.seconds;
 }
 
 showTimeToNewYear();
