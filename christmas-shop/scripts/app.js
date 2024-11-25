@@ -1,3 +1,5 @@
+let indicatorsArray = document.querySelectorAll(".cta__timer__indicator > h2");
+
 function getTimeToNewYear() {
     const currentYear = new Date().getUTCFullYear();
     const currentUTCDate = Date.parse(new Date().toUTCString());
@@ -18,3 +20,13 @@ function getTimeToNewYear() {
         seconds: String(secondsLeft)
     };
 }
+
+function showTimeToNewYear() {
+    const timeLeft = getTimeToNewYear();
+    indicatorsArray[0].textContent = timeLeft.days;
+    indicatorsArray[1].textContent = timeLeft.hours;
+    indicatorsArray[2].textContent = timeLeft.minutes;
+    indicatorsArray[3].textContent = timeLeft.seconds
+}
+
+showTimeToNewYear();
