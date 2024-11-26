@@ -42,3 +42,4 @@ function showTimeToNewYear() {
         indicatorsArray[index].textContent = item;
     });
     setInterval(showTimeToNewYear, 1000);
+}
