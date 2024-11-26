@@ -1,5 +1,12 @@
 let indicatorsArray = document.querySelectorAll(".cta__timer__indicator > h2");
 const indicatorsArray = document.querySelectorAll(".cta__timer__indicator > h2");
+const christmasButton = document.querySelectorAll(".christmas__button");
+
+christmasButton.forEach(function(button) {
+    button.addEventListener("click", () => {
+        location.href='./gifts';
+    })
+});
 
 indicatorsArray.length !== 0 && showTimeToNewYear();
 
