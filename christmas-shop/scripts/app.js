@@ -1,11 +1,16 @@
 const indicatorsArray = document.querySelectorAll(".cta__timer__indicator > h2");
 const christmasButton = document.querySelectorAll(".christmas__button");
+const menuLinksArea = document.querySelector(".menu__links");
 
 christmasButton.forEach(function(button) {
     button.addEventListener('click', () => {
         location.href='./gifts';
     })
 });
+
+menuLinksArea.addEventListener('click', () => {
+    document.getElementById('burger__checkbox').checked = false;
+})
 
 indicatorsArray.length !== 0 && showTimeToNewYear();
 
