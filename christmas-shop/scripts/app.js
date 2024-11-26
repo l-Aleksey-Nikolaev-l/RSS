@@ -5,8 +5,8 @@ const slider = document.querySelector('.slider__carousel');
 const carousel = document.querySelector('.carousel__list');
 const sliderButtons = document.querySelectorAll('.slider__button');
 
-const sliderWidth = Math.floor(slider.offsetWidth);
-const carouselWidth = Math.floor(carousel.offsetWidth);
+let sliderWidth = Math.floor(slider.offsetWidth);
+let carouselWidth = Math.floor(carousel.offsetWidth);
 let carouselPosition = 0;
 
 christmasButton.forEach(function(button) {
