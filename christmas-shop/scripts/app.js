@@ -1,24 +1,30 @@
 let indicatorsArray = document.querySelectorAll(".cta__timer__indicator > h2");
 
-function getTimeToNewYear() {
+function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
     const currentUTCDate = Date.parse(new Date().toUTCString());
     const expireDate = Date.parse(`December 31, ${currentYear} 23:59:59 GMT-00:00`);
-    let secondsLeft = Math.floor((expireDate - currentUTCDate) / 1000);
+    return Math.floor((expireDate - currentUTCDate) / 1000);
+}
 
-    let daysLeft = Math.floor(secondsLeft / (24 * 3600));
-    secondsLeft -= daysLeft * 24 * 3600;
-    let hoursLeft = Math.floor(secondsLeft / 3600);
-    secondsLeft -= hoursLeft * 3600;
-    let minutesLeft = Math.floor(secondsLeft / 60);
-    secondsLeft -= minutesLeft * 60;
-
+function convertSecondsToTime(seconds) {
+    let daysLeft = Math.floor(seconds / (24 * 3600));
+    seconds -= daysLeft * 24 * 3600;
+    let hoursLeft = Math.floor(seconds / 3600);
+    seconds -= hoursLeft * 3600;
+    let minutesLeft = Math.floor(seconds / 60);
+    seconds -= minutesLeft * 60;
     return {
         days: String(daysLeft),
         hours: String(hoursLeft),
         minutes: String(minutesLeft),
-        seconds: String(secondsLeft)
+        seconds: String(seconds)
     };
+}
+
+function getTimeToNewYear() {
+    const secondsLeft = getSecondsToNewYear();
+    return convertSecondsToTime(secondsLeft);
 }
 
 function showTimeToNewYear() {
