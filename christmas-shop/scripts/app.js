@@ -5,6 +5,7 @@ const slider = document.querySelector('.slider__carousel');
 const carousel = document.querySelector('.carousel__list');
 const sliderButtons = document.querySelectorAll('.slider__button');
 
+let viewportWidth = window.innerWidth;
 let sliderWidth = Math.floor(slider.offsetWidth);
 let carouselWidth = Math.floor(carousel.offsetWidth);
 let carouselPosition = 0;
@@ -23,6 +24,10 @@ menuLinksArea.addEventListener('click', () => {
 
 sliderButtons.forEach((button) => {
     button.addEventListener('click', () => {
+        viewportWidth = window.innerWidth;
+        sliderWidth = slider.offsetWidth;
+        carouselWidth = carousel.offsetWidth;
+        const carouselDivider = viewportWidth <= 768 ? 6 : 3;
         const carouselTail = carouselWidth - sliderWidth;
         const carouselDividedTail = carouselTail / 3;
         if (button.classList.contains('slider__button__next')) {
