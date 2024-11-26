@@ -475,6 +475,8 @@ a {
     justify-content: flex-start;
     align-items: center;
     column-gap: var(--space-20);
+    left: 0;
+    transition: all 0.2s linear;
 }
 
 .carousel__item {
