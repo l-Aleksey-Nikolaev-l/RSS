@@ -34,16 +34,16 @@ sliderButtons.forEach((button) => {
         carouselWidth = carousel.offsetWidth;
         const carouselDivider = viewportWidth <= 768 ? 6 : 3;
         const carouselTail = carouselWidth - sliderWidth;
-        const carouselDividedTail = carouselTail / 3;
+        const carouselDividedTail = Math.round(carouselTail / carouselDivider);
         if (button.classList.contains('slider__button__next')) {
             sliderButtons[0].classList.remove('slider__button__disabled');
-            carouselPosition -= Math.round(carouselDividedTail);
             if(Math.abs(carouselPosition) >= carouselTail) {
+            carouselPosition -= carouselDividedTail;
                 button.classList.add('slider__button__disabled');
             }
         } else {
             sliderButtons[1].classList.remove('slider__button__disabled');
-            carouselPosition += Math.round(carouselDividedTail);
+            carouselPosition += carouselDividedTail;
             if(Math.abs(carouselPosition) <= 0) {
                 button.classList.add('slider__button__disabled');
             }
