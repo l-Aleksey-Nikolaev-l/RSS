@@ -5,6 +5,10 @@ const slider = document.querySelector('.slider__carousel');
 const carousel = document.querySelector('.carousel__list');
 const sliderButtons = document.querySelectorAll('.slider__button');
 
+const sliderWidth = Math.floor(slider.offsetWidth);
+const carouselWidth = Math.floor(carousel.offsetWidth);
+let carouselPosition = 0;
+
 christmasButton.forEach(function(button) {
     button.addEventListener('click', () => {
         location.href='./gifts';
@@ -15,25 +19,26 @@ menuLinksArea.addEventListener('click', () => {
     document.getElementById('burger__checkbox').checked = false;
 })
 
+
+
 sliderButtons.forEach((button) => {
     button.addEventListener('click', () => {
-        const sliderWidth = slider.offsetWidth;
-        const carouselWidth = carousel.offsetWidth;
-
-        const carouselProps = getComputedStyle(carousel);
-
-        let currentCarouselPosition = Number(carouselProps.left.slice(0, -2));
-        const carouselVisibleArea = (carouselWidth - sliderWidth) / 3;
-
-        console.log(currentCarouselPosition)
-
-        if(button.classList.contains('slider__button__next')) {
-            currentCarouselPosition -= carouselVisibleArea;
+        const carouselTail = carouselWidth - sliderWidth;
+        const carouselDividedTail = carouselTail / 3;
+        if (button.classList.contains('slider__button__next')) {
+            sliderButtons[0].classList.remove('slider__button__disabled');
+            carouselPosition -= Math.round(carouselDividedTail);
+            if(Math.abs(carouselPosition) >= carouselTail) {
+                button.classList.add('slider__button__disabled');
+            }
+        } else {
+            sliderButtons[1].classList.remove('slider__button__disabled');
+            carouselPosition += Math.round(carouselDividedTail);
+            if(Math.abs(carouselPosition) <= 0) {
+                button.classList.add('slider__button__disabled');
+            }
         }
-        else {
-            currentCarouselPosition += carouselVisibleArea;
-        }
-        carousel.style.left = currentCarouselPosition.toFixed(2) + 'px';
+        carousel.style.left = carouselPosition + 'px';
     })
 });
 
