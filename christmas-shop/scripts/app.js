@@ -35,10 +35,11 @@ sliderButtons.forEach((button) => {
         const carouselDivider = viewportWidth <= 768 ? 6 : 3;
         const carouselTail = carouselWidth - sliderWidth;
         const carouselDividedTail = Math.round(carouselTail / carouselDivider);
+        const tolerance = 3;
         if (button.classList.contains('slider__button__next')) {
             sliderButtons[0].classList.remove('slider__button__disabled');
-            if(Math.abs(carouselPosition) >= carouselTail) {
             carouselPosition -= carouselDividedTail;
+            if(Math.abs(carouselPosition) >= carouselTail - tolerance) {
                 button.classList.add('slider__button__disabled');
             }
         } else {
