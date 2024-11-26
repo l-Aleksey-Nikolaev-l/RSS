@@ -42,9 +42,12 @@ function getTimeToNewYear() {
 }
 
 function showTimeToNewYear() {
+    if (indicatorsArray.length === 0) return 0;
     const timeLeft = getTimeToNewYear();
     Object.values(timeLeft).map((item, index) => {
         indicatorsArray[index].textContent = item;
     });
-    setInterval(showTimeToNewYear, 1000);
 }
+
+showTimeToNewYear();
+setInterval(showTimeToNewYear, 1000);
