@@ -1,4 +1,3 @@
-let indicatorsArray = document.querySelectorAll(".cta__timer__indicator > h2");
 const indicatorsArray = document.querySelectorAll(".cta__timer__indicator > h2");
 const christmasButton = document.querySelectorAll(".christmas__button");
 
@@ -42,9 +41,4 @@ function showTimeToNewYear() {
     Object.values(timeLeft).map((item, index) => {
         indicatorsArray[index].textContent = item;
     });
-}
-
-showTimeToNewYear();
-
-setInterval(showTimeToNewYear, 1000);
     setInterval(showTimeToNewYear, 1000);
