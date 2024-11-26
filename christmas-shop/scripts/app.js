@@ -1,4 +1,7 @@
 let indicatorsArray = document.querySelectorAll(".cta__timer__indicator > h2");
+const indicatorsArray = document.querySelectorAll(".cta__timer__indicator > h2");
+
+indicatorsArray.length !== 0 && showTimeToNewYear();
 
 function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
@@ -37,3 +40,4 @@ function showTimeToNewYear() {
 showTimeToNewYear();
 
 setInterval(showTimeToNewYear, 1000);
+    setInterval(showTimeToNewYear, 1000);
