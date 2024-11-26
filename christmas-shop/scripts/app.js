@@ -1,6 +1,9 @@
 const indicatorsArray = document.querySelectorAll(".cta__timer__indicator > h2");
 const christmasButton = document.querySelectorAll(".christmas__button");
 const menuLinksArea = document.querySelector(".menu__links");
+const slider = document.querySelector(".slider__carousel");
+const carousel = document.querySelector(".carousel__list");
+const sliderButtons = document.querySelectorAll(".slider__button");
 
 christmasButton.forEach(function(button) {
     button.addEventListener('click', () => {
@@ -12,7 +15,29 @@ menuLinksArea.addEventListener('click', () => {
     document.getElementById('burger__checkbox').checked = false;
 })
 
-indicatorsArray.length !== 0 && showTimeToNewYear();
+sliderButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const sliderWidth = slider.offsetWidth;
+        const carouselWidth = carousel.offsetWidth;
+
+        const carouselProps = getComputedStyle(carousel);
+
+        let currentCarouselPosition = Number(carouselProps.left.slice(0, -2));
+        const carouselVisibleArea = (carouselWidth - sliderWidth) / 3;
+
+        console.log(currentCarouselPosition)
+
+        if(button.classList.contains('slider__button__next')) {
+            currentCarouselPosition -= carouselVisibleArea;
+        }
+        else {
+            currentCarouselPosition += carouselVisibleArea;
+        }
+        carousel.style.left = currentCarouselPosition.toFixed(2) + 'px';
+    })
+});
+
+
 
 function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
