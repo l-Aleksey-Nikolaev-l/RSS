@@ -23,10 +23,9 @@ function getTimeToNewYear() {
 
 function showTimeToNewYear() {
     const timeLeft = getTimeToNewYear();
-    indicatorsArray[0].textContent = timeLeft.days;
-    indicatorsArray[1].textContent = timeLeft.hours;
-    indicatorsArray[2].textContent = timeLeft.minutes;
-    indicatorsArray[3].textContent = timeLeft.seconds;
+    Object.values(timeLeft).map((item, index) => {
+        indicatorsArray[index].textContent = item;
+    });
 }
 
 showTimeToNewYear();
