@@ -1,9 +1,9 @@
-const indicatorsArray = document.querySelectorAll(".cta__timer__indicator > h2");
-const christmasButton = document.querySelectorAll(".christmas__button");
-const menuLinksArea = document.querySelector(".menu__links");
-const slider = document.querySelector(".slider__carousel");
-const carousel = document.querySelector(".carousel__list");
-const sliderButtons = document.querySelectorAll(".slider__button");
+const indicatorsArray = document.querySelectorAll('.cta__timer__indicator > h2');
+const christmasButton = document.querySelectorAll('.christmas__button');
+const menuLinksArea = document.querySelector('.menu__links');
+const slider = document.querySelector('.slider__carousel');
+const carousel = document.querySelector('.carousel__list');
+const sliderButtons = document.querySelectorAll('.slider__button');
 
 christmasButton.forEach(function(button) {
     button.addEventListener('click', () => {
