@@ -93,22 +93,6 @@ function showTimeToNewYear() {
     });
 }
 
-showTimeToNewYear();
-setInterval(showTimeToNewYear, 1000);
-
-resources.then(cardsArray => {
-    cardsArray = shuffleCards(cardsArray);
-    if(!isGiftsPage) {
-        for (let i = 0; i < 4; i++) {
-            insertCard(cardsArray[i]);
-        }
-    } else {
-        cardsArray.forEach((card) => {
-            insertCard(card);
-        })
-    }
-});
-
 function shuffleCards(cardsArray) {
     for (let i = cardsArray.length; i-- > 0;) {
         const randomNumber = Math.floor(Math.random() * (i));
@@ -142,5 +126,21 @@ function insertCard(card) {
     document.querySelector('.gift__cards').insertAdjacentHTML("beforeend", cardTemplate);
 }
 
+function addRandomCards() {
+    resources.then(cardsArray => {
+        cardsArray = shuffleCards(cardsArray);
+        if(!isGiftsPage) {
+            for (let i = 0; i < 4; i++) {
+                insertCard(cardsArray[i]);
+            }
+        } else {
+            cardsArray.forEach((card) => {
+                insertCard(card);
+            })
+        }
+    });
+}
 
-
+addRandomCards();
+showTimeToNewYear();
+setInterval(showTimeToNewYear, 1000);
