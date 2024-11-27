@@ -106,7 +106,7 @@ filterTabs?.addEventListener('click', (e) => {
         }
         e.target.classList.add('mg--tabs__selected');
         activeTab = e.target.textContent.toLowerCase();
-        addRandomCards();
+        addRandomCards(false);
     }
 })
 
@@ -174,9 +174,9 @@ function collectCards(cardsArray) {
     return cardCollection;
 }
 
-function addRandomCards() {
+function addRandomCards(shuffle = true) {
     resources.then(cardsArray => {
-        cardsArray = shuffleCards(cardsArray);
+        cardsArray = shuffle ? shuffleCards(cardsArray) : cardsArray;
         cardsArray = filterCards(cardsArray)
         document.querySelector('.gift__cards').innerHTML = collectCards(cardsArray);
     });
