@@ -121,7 +121,7 @@ function shuffleCards(cardsArray) {
 }
 
 function insertCard(card) {
-    const imagePath = "pictures/product/"
+    const imagePath = isGiftsPage ? "../pictures/product/" : "pictures/product/";
     const images = {
         "For Work": "gift-for-work.png",
         "For Health": "gift-for-health.png",
