@@ -121,6 +121,7 @@ function insertCard(card) {
                                 <h3 class="gift__card__description header-3">${card['name']}</h3>
                             </div>
                         </div>`
+    document.querySelector('.gift__cards').insertAdjacentHTML("beforeend", cardTemplate);
 }
 
 
