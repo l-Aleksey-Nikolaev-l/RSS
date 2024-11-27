@@ -37,15 +37,15 @@ class Card {
             'For Harmony': 'tag--harmony',
         }
         return `
-        <div class="gift__card">
-            <div class="gift__card__image">
-              <img src=${imagePath + images[this.category]} alt="Best gift image ${this.category}" width="620" height="460"/>
-            </div>
-            <div class="gift__card__text">
-              <h4 class="header-4 ${categories[this.category]}">${this.category}</h4>
-              <h3 class="gift__card__description header-3">${this.name}</h3>
-            </div>
-        </div>`
+            <div class="gift__card">
+                <div class="gift__card__image">
+                  <img src=${imagePath + images[this.category]} alt="Best gift image ${this.category}" width="620" height="460"/>
+                </div>
+                <div class="gift__card__text">
+                  <h4 class="header-4 ${categories[this.category]}">${this.category}</h4>
+                  <h3 class="gift__card__description header-3">${this.name}</h3>
+                </div>
+            </div>`;
     }
 }
 
