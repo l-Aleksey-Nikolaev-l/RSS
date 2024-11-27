@@ -106,6 +106,7 @@ filterTabs?.addEventListener('click', (e) => {
         }
         e.target.classList.add('mg--tabs__selected');
         activeTab = e.target.textContent.toLowerCase();
+        addRandomCards();
     }
 })
 
