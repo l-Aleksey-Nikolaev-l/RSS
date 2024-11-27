@@ -102,6 +102,7 @@ setInterval(showTimeToNewYear, 1000);
 
 
 resources.then(cardsArray => {
+    cardsArray = shuffleCards(cardsArray);
     if(!isGiftsPage) {
         for (let i = 0; i < 4; i++) {
             insertCard(cardsArray[i]);
@@ -113,6 +114,13 @@ resources.then(cardsArray => {
     }
 });
 
+function shuffleCards(cardsArray) {
+    for (let i = cardsArray.length; i >= 0 ; i--) {
+        const randomNumber = Math.floor(Math.random() * (i));
+        [cardsArray[i], cardsArray[randomNumber]] = [cardsArray[randomNumber], cardsArray[i]];
+    }
+    return cardsArray;
+}
 
 function insertCard(card) {
     const imagePath = "pictures/product/"
