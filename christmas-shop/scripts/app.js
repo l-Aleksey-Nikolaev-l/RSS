@@ -132,7 +132,7 @@ function insertCard(card) {
     const cardTemplate = `
                         <div class="gift__card">
                             <div class="gift__card__image">
-                                <img src=${imagePath + images[card['category']]} alt="Best gift image" width="620" height="460"/>
+                                <img src=${imagePath + images[card['category']]} alt="Best gift image ${card['category']}" width="620" height="460"/>
                             </div>
                             <div class="gift__card__text">
                                 <h4 class="header-4 ${categories[card['category']]}">${card['category']}</h4>
