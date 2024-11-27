@@ -14,7 +14,7 @@ let sliderWidth = 0;
 let carouselWidth = 0;
 let carouselPosition = 0;
 
-let activeTab = '';
+let activeTab = 'all';
 
 class Card {
     constructor({name, description, category, superpowers}) {
