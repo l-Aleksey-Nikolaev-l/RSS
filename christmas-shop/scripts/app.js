@@ -92,3 +92,36 @@ function showTimeToNewYear() {
 
 showTimeToNewYear();
 setInterval(showTimeToNewYear, 1000);
+
+
+
+
+
+
+
+function insertCard(card) {
+    const imagePath = "pictures/product/"
+    const images = {
+        "For Work": "gift-for-work.png",
+        "For Health": "gift-for-health.png",
+        "For Harmony": "gift-for-harmony.png",
+    }
+    const categories = {
+        "For Work": "tag--work",
+        "For Health": "tag--health",
+        "For Harmony": "tag--harmony",
+    }
+    const cardTemplate = `
+                        <div class="gift__card">
+                            <div class="gift__card__image">
+                                <img src=${imagePath + images[card['category']]} alt="Best gift image" width="620" height="460"/>
+                            </div>
+                            <div class="gift__card__text">
+                                <h4 class="header-4 ${categories[card['category']]}">${card['category']}</h4>
+                                <h3 class="gift__card__description header-3">${card['name']}</h3>
+                            </div>
+                        </div>`
+}
+
+
+
