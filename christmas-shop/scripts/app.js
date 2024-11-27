@@ -24,11 +24,13 @@ menuLinksArea.addEventListener('click', () => {
 })
 
 window.addEventListener('resize', () => {
-    carouselPosition = 0;
-    carousel.style.left = carouselPosition;
-    sliderButtons[0].classList.add('slider__button__disabled');
-    sliderButtons[1].classList.remove('slider__button__disabled');
-})
+    if (!isGiftsPage) {
+        carouselPosition = 0;
+        carousel.style.left = carouselPosition;
+        sliderButtons[0].classList.add('slider__button__disabled');
+        sliderButtons[1].classList.remove('slider__button__disabled');
+    }
+});
 
 sliderButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -93,11 +95,6 @@ function showTimeToNewYear() {
 
 showTimeToNewYear();
 setInterval(showTimeToNewYear, 1000);
-
-
-
-
-
 
 resources.then(cardsArray => {
     cardsArray = shuffleCards(cardsArray);
