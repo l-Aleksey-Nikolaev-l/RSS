@@ -7,6 +7,7 @@ const menuLinksArea = document.querySelector('.menu__links');
 const slider = document.querySelector('.slider__carousel');
 const carousel = document.querySelector('.carousel__list');
 const sliderButtons = document.querySelectorAll('.slider__button');
+const filterTabs = document.querySelector(".mg--tabs");
 
 let viewportWidth = 0;
 let sliderWidth = 0;
@@ -92,6 +93,21 @@ sliderButtons.forEach((button) => {
         carousel.style.left = carouselPosition + 'px';
     })
 });
+
+filterTabs?.addEventListener('click', (e) => {
+    if(!e.target.childElementCount) {
+        for (let i = 0; i < filterTabs.childElementCount; i++) {
+            const childClasses = filterTabs.children[i].classList;
+            if (!childClasses.contains('mg--tabs__selected')) {
+                continue;
+            }
+            childClasses.remove('mg--tabs__selected');
+            break;
+        }
+        e.target.classList.add('mg--tabs__selected');
+        activeTab = e.target.textContent.toLowerCase();
+    }
+})
 
 function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
