@@ -13,6 +13,41 @@ let sliderWidth = 0;
 let carouselWidth = 0;
 let carouselPosition = 0;
 
+let activeTab = '';
+
+class Card {
+    constructor({name, description, category, superpowers}) {
+        this.name = name;
+        this.description = description;
+        this.category = category;
+        this.superpowers = superpowers;
+    }
+
+    get createCard() {
+        const imagePath = isGiftsPage ? '../pictures/product/' : 'pictures/product/';
+        const images = {
+            'For Work': 'gift-for-work.png',
+            'For Health': 'gift-for-health.png',
+            'For Harmony': 'gift-for-harmony.png',
+        }
+        const categories = {
+            'For Work': 'tag--work',
+            'For Health': 'tag--health',
+            'For Harmony': 'tag--harmony',
+        }
+        return `
+        <div class="gift__card">
+            <div class="gift__card__image">
+              <img src=${imagePath + images[this.category]} alt="Best gift image ${this.category}" width="620" height="460"/>
+            </div>
+            <div class="gift__card__text">
+              <h4 class="header-4 ${categories[this.category]}">${this.category}</h4>
+              <h3 class="gift__card__description header-3">${this.name}</h3>
+            </div>
+        </div>`
+    }
+}
+
 christmasButton.forEach((button) => {
     button.addEventListener('click', () => {
         location.href = './gifts';
@@ -102,28 +137,8 @@ function shuffleCards(cardsArray) {
 }
 
 function insertCard(card) {
-    const imagePath = isGiftsPage ? "../pictures/product/" : "pictures/product/";
-    const images = {
-        "For Work": "gift-for-work.png",
-        "For Health": "gift-for-health.png",
-        "For Harmony": "gift-for-harmony.png",
-    }
-    const categories = {
-        "For Work": "tag--work",
-        "For Health": "tag--health",
-        "For Harmony": "tag--harmony",
-    }
-    const cardTemplate = `
-                        <div class="gift__card">
-                            <div class="gift__card__image">
-                                <img src=${imagePath + images[card['category']]} alt="Best gift image ${card['category']}" width="620" height="460"/>
-                            </div>
-                            <div class="gift__card__text">
-                                <h4 class="header-4 ${categories[card['category']]}">${card['category']}</h4>
-                                <h3 class="gift__card__description header-3">${card['name']}</h3>
-                            </div>
-                        </div>`
-    document.querySelector('.gift__cards').insertAdjacentHTML("beforeend", cardTemplate);
+    const newGiftCard = new Card(card).createCard;
+    document.querySelector('.gift__cards').insertAdjacentHTML("beforeend", newGiftCard);
 }
 
 function addRandomCards() {
