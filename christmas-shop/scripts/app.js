@@ -152,6 +152,13 @@ function shuffleCards(cardsArray) {
     return cardsArray;
 }
 
+function filterCards(cardsArray) {
+    if(isGiftsPage && activeTab !== 'all') {
+        cardsArray = cardsArray.filter((item) => item['category'].toLowerCase() === activeTab);
+    }
+    return cardsArray;
+}
+
 function insertCard(card) {
     const newGiftCard = new Card(card).createCard;
     document.querySelector('.gift__cards').insertAdjacentHTML("beforeend", newGiftCard);
@@ -160,6 +167,7 @@ function insertCard(card) {
 function addRandomCards() {
     resources.then(cardsArray => {
         cardsArray = shuffleCards(cardsArray);
+        cardsArray = filterCards(cardsArray)
         if(!isGiftsPage) {
             for (let i = 0; i < 4; i++) {
                 insertCard(cardsArray[i]);
