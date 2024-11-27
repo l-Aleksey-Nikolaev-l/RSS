@@ -1,3 +1,5 @@
+const resources = fetch('../res/gifts.json').then(res => res.json());
+
 const indicatorsArray = document.querySelectorAll('.cta__timer__indicator > h2');
 const christmasButton = document.querySelectorAll('.christmas__button');
 const menuLinksArea = document.querySelector('.menu__links');
@@ -97,6 +99,12 @@ setInterval(showTimeToNewYear, 1000);
 
 
 
+
+resources.then(cardsArray => {
+        cardsArray.forEach((card) => {
+            insertCard(card);
+        })
+});
 
 
 function insertCard(card) {
