@@ -13,7 +13,7 @@ let sliderWidth = 0;
 let carouselWidth = 0;
 let carouselPosition = 0;
 
-christmasButton.forEach(function(button) {
+christmasButton.forEach((button) => {
     button.addEventListener('click', () => {
         location.href = './gifts';
     })
