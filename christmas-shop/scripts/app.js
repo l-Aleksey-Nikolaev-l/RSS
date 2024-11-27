@@ -113,7 +113,7 @@ resources.then(cardsArray => {
 });
 
 function shuffleCards(cardsArray) {
-    for (let i = cardsArray.length; i >= 0 ; i--) {
+    for (let i = cardsArray.length; i-- > 0;) {
         const randomNumber = Math.floor(Math.random() * (i));
         [cardsArray[i], cardsArray[randomNumber]] = [cardsArray[randomNumber], cardsArray[i]];
     }
