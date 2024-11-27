@@ -15,7 +15,7 @@ let carouselPosition = 0;
 
 christmasButton.forEach(function(button) {
     button.addEventListener('click', () => {
-        location.href='./gifts';
+        location.href = './gifts';
     })
 });
 
@@ -55,8 +55,6 @@ sliderButtons.forEach((button) => {
         carousel.style.left = carouselPosition + 'px';
     })
 });
-
-
 
 function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
