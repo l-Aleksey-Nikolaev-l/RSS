@@ -160,24 +160,25 @@ function filterCards(cardsArray) {
     return cardsArray;
 }
 
-function insertCard(card) {
-    const newGiftCard = new Card(card).createCard;
-    document.querySelector('.gift__cards').insertAdjacentHTML("beforeend", newGiftCard);
+function collectCards(cardsArray) {
+    let cardCollection = '';
+    if(!isGiftsPage) {
+        for (let i = 0; i < 4; i++) {
+            cardCollection += new Card(cardsArray[i]).createCard;
+        }
+    } else {
+        cardsArray.forEach((card) => {
+            cardCollection += new Card(card).createCard;
+        })
+    }
+    return cardCollection;
 }
 
 function addRandomCards() {
     resources.then(cardsArray => {
         cardsArray = shuffleCards(cardsArray);
         cardsArray = filterCards(cardsArray)
-        if(!isGiftsPage) {
-            for (let i = 0; i < 4; i++) {
-                insertCard(cardsArray[i]);
-            }
-        } else {
-            cardsArray.forEach((card) => {
-                insertCard(card);
-            })
-        }
+        document.querySelector('.gift__cards').innerHTML = collectCards(cardsArray);
     });
 }
 
