@@ -115,7 +115,7 @@ function removeModal(event) {
     }
 }
 
-function scrollFunction() {
+function defineScrollPosition() {
     if(window.innerWidth <= 768 && window.scrollY >= 300) {
         backToTop.style.opacity = "1";
         backToTop.style.transform = "scale(1)";
@@ -207,7 +207,7 @@ christmasButton.forEach((button) => {
     })
 });
 
-window.addEventListener('scroll', scrollFunction);
+window.addEventListener('scroll', defineScrollPosition);
 
 menuLinksArea.addEventListener('click', () => {
     document.getElementById('burger__checkbox').checked = false;
