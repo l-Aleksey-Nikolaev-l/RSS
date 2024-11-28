@@ -112,6 +112,7 @@ filterTabs?.addEventListener('click', (event) => {
         addRandomCards(false);
     }
 })
+
 giftsSection.addEventListener('click', (event) => {
 
     const cardId = Number(event.target.dataset.id);
@@ -120,6 +121,15 @@ giftsSection.addEventListener('click', (event) => {
     selectedCard.classList.add('card__selected');
     giftsSection.insertAdjacentElement('afterbegin', selectedCard);
 })
+
+document.body.addEventListener('click', (event) => {
+    console.log(event.target)
+    if (event.target.className === 'overlay') {
+        body.classList.toggle('overlay');
+        document.querySelector('.card__selected').remove();
+    }
+});
+
 
 function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
