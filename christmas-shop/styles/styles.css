@@ -213,6 +213,7 @@ a {
     width: 100%;
     max-width: var(--static-width);
     background-color: var(--static-white);
+    overflow: hidden;
 }
 
 #header {
