@@ -213,7 +213,10 @@ menuLinksArea.addEventListener('click', () => {
     document.getElementById('burger__checkbox').checked = false;
 })
 
-window.addEventListener('resize', resetSlider);
+window.addEventListener('resize', () => {
+    resetSlider();
+    defineScrollPosition();
+});
 
 sliderButtons.forEach((button) => {
     button.addEventListener('click', clickSliderButton)
