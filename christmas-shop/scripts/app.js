@@ -95,8 +95,8 @@ sliderButtons.forEach((button) => {
     })
 });
 
-filterTabs?.addEventListener('click', (e) => {
-    if(!e.target.childElementCount) {
+filterTabs?.addEventListener('click', (event) => {
+    if(!event.target.childElementCount) {
         for (let i = 0; i < filterTabs.childElementCount; i++) {
             const childClasses = filterTabs.children[i].classList;
             if (!childClasses.contains('mg--tabs__selected')) {
@@ -105,8 +105,8 @@ filterTabs?.addEventListener('click', (e) => {
             childClasses.remove('mg--tabs__selected');
             break;
         }
-        e.target.classList.add('mg--tabs__selected');
-        activeTab = e.target.textContent.toLowerCase();
+        event.target.classList.add('mg--tabs__selected');
+        activeTab = event.target.textContent.toLowerCase();
         addRandomCards(false);
     }
 })
