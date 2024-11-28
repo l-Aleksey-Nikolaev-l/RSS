@@ -999,6 +999,14 @@ a {
         color: var(--primary-color);
     }
 
+    .overlay:hover .gift__card:hover {
+        cursor: default;
+    }
+
+    .overlay:hover .gift__card:hover h3 {
+        color: var(--dark-color);
+    }
+
     .footer__card:hover {
         cursor: pointer;
     }
