@@ -11,9 +11,6 @@ const sliderButtons = document.querySelectorAll('.slider__button');
 const giftsSection = document.querySelector('.gift__cards');
 const filterTabs = document.querySelector(".mg--tabs");
 
-let viewportWidth = 0;
-let sliderWidth = 0;
-let carouselWidth = 0;
 let carouselPosition = 0;
 
 let activeTab = 'all';
