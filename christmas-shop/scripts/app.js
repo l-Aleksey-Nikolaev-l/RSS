@@ -7,6 +7,7 @@ const menuLinksArea = document.querySelector('.menu__links');
 const slider = document.querySelector('.slider__carousel');
 const carousel = document.querySelector('.carousel__list');
 const sliderButtons = document.querySelectorAll('.slider__button');
+const giftsSection = document.querySelector('.gift__cards');
 const filterTabs = document.querySelector(".mg--tabs");
 
 let viewportWidth = 0;
@@ -178,7 +179,7 @@ function addRandomCards(shuffle = true) {
     resources.then(cardsArray => {
         cardsArray = shuffle ? shuffleCards(cardsArray) : cardsArray;
         cardsArray = filterCards(cardsArray)
-        document.querySelector('.gift__cards').innerHTML = collectCards(cardsArray);
+        giftsSection.innerHTML = collectCards(cardsArray);
     });
 }
 
