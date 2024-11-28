@@ -1035,6 +1035,22 @@ a {
     }
 }
 
+.back--to--top {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: var(--space-8);
+    right: var(--space-8);
+    width: 56px;
+    height: 56px;
+    border-radius: 56px;
+    text-decoration: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background-color: var(--static-white);
+}
+
 @media screen and (width < 1440px) {
     .menu__links{
         height: 0;
