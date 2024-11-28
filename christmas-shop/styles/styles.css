@@ -1206,13 +1206,3 @@ a {
         width: 100%;
     }
 }
-
-@media screen and (width < 380px) {
-    #top--container {
-        display: none;
-    }
-
-    .size__error {
-        display: inline-block;
-    }
-}
