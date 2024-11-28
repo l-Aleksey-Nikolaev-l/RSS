@@ -116,7 +116,12 @@ filterTabs?.addEventListener('click', (event) => {
 giftsSection.addEventListener('click', (event) => {
 
     const cardId = Number(event.target.dataset.id);
-
+    if(!body.classList.contains('overlay') && cardId >= 0) {
+        body.classList.toggle('overlay');
+    }
+    else {
+        return;
+    }
     const selectedCard = document.querySelector(`[data-id='${cardId}']`).cloneNode(true);
     selectedCard.classList.add('card__selected');
     giftsSection.insertAdjacentElement('afterbegin', selectedCard);
