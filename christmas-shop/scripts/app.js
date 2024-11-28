@@ -19,7 +19,8 @@ let carouselPosition = 0;
 let activeTab = 'all';
 
 class Card {
-    constructor({name, description, category, superpowers}) {
+    constructor(id, {name, description, category, superpowers}) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.category = category;
@@ -39,7 +40,7 @@ class Card {
             'For Harmony': 'tag--harmony',
         }
         return `
-            <div class="gift__card">
+            <div class="gift__card" data-id=${this.id}>
                 <div class="gift__card__image">
                   <img src=${imagePath + images[this.category]} alt="Best gift image ${this.category}" width="620" height="460"/>
                 </div>
