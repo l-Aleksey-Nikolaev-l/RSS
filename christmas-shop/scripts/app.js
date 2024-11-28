@@ -62,24 +62,22 @@ function resetSlider() {
 }
 
 function clickSliderButton(button) {
-    viewportWidth = window.innerWidth;
-    sliderWidth = slider.offsetWidth;
-    carouselWidth = carousel.offsetWidth;
-    const carouselDivider = viewportWidth <= 768 ? 6 : 3;
-    const carouselTail = carouselWidth - sliderWidth;
+    const carouselDivider = window.innerWidth <= 768 ? 6 : 3;
+    const carouselTail = carousel.offsetWidth - slider.offsetWidth;
     const carouselDividedTail = Math.round(carouselTail / carouselDivider);
     const tolerance = 3;
-    if (button.classList.contains('slider__button__next')) {
+    const direction = button.currentTarget.dataset.direction;
+    if (direction === 'next') {
         sliderButtons[0].classList.remove('slider__button__disabled');
         carouselPosition -= carouselDividedTail;
         if(Math.abs(carouselPosition) >= carouselTail - tolerance) {
-            button.classList.add('slider__button__disabled');
+            button.currentTarget.classList.toggle('slider__button__disabled');
         }
     } else {
         sliderButtons[1].classList.remove('slider__button__disabled');
         carouselPosition += carouselDividedTail;
         if(Math.abs(carouselPosition) <= 0) {
-            button.classList.add('slider__button__disabled');
+            button.currentTarget.classList.toggle('slider__button__disabled');
         }
     }
     carousel.style.left = carouselPosition + 'px';
