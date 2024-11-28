@@ -185,11 +185,11 @@ function collectCards(cardsArray) {
     let cardCollection = '';
     if(!isGiftsPage) {
         for (let i = 0; i < 4; i++) {
-            cardCollection += new Card(cardsArray[i]).createCard;
+            cardCollection += new Card(i, cardsArray[i]).createCard;
         }
     } else {
-        cardsArray.forEach((card) => {
-            cardCollection += new Card(card).createCard;
+        cardsArray.forEach((card, index) => {
+            cardCollection += new Card(index, card).createCard;
         })
     }
     return cardCollection;
