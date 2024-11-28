@@ -112,6 +112,11 @@ filterTabs?.addEventListener('click', (event) => {
         addRandomCards(false);
     }
 })
+giftsSection.addEventListener('click', (event) => {
+
+    const cardId = Number(event.target.dataset.id);
+
+})
 
 function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
