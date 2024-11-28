@@ -10,6 +10,7 @@ const carousel = document.querySelector('.carousel__list');
 const sliderButtons = document.querySelectorAll('.slider__button');
 const giftsSection = document.querySelector('.gift__cards');
 const filterTabs = document.querySelector(".mg--tabs");
+const backToTop = document.querySelector('.back--to--top');
 
 let carouselPosition = 0;
 
@@ -223,3 +224,7 @@ filterTabs?.addEventListener('click', switchTab);
 giftsSection.addEventListener('click', showModal);
 
 document.body.addEventListener('click', removeModal);
+
+backToTop.addEventListener('click',() => {
+    window.scrollTo(0, 0);
+});
