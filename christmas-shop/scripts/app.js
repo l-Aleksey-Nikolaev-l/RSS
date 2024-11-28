@@ -116,6 +116,9 @@ giftsSection.addEventListener('click', (event) => {
 
     const cardId = Number(event.target.dataset.id);
 
+    const selectedCard = document.querySelector(`[data-id='${cardId}']`).cloneNode(true);
+    selectedCard.classList.add('card__selected');
+    giftsSection.insertAdjacentElement('afterbegin', selectedCard);
 })
 
 function getSecondsToNewYear() {
