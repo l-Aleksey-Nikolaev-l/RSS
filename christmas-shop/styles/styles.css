@@ -182,6 +182,21 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
+.overlay {
+    position: absolute;
+    overflow: hidden;
+}
+
+.overlay::after {
+    position: fixed;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: var(--overlay-color);
+}
+
 #top {
     display: flex;
     flex-direction: column;
@@ -658,38 +673,6 @@ a {
     overflow: hidden;
 }
 
-
-.overlay {
-    position: absolute;
-    overflow: hidden;
-}
-
-.overlay::after {
-    position: fixed;
-    display: block;
-    content: '';
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: var(--overlay-color);
-}
-
-.card__selected {
-    position: fixed;
-    width: 100%;
-    max-width: 400px;
-    height: fit-content;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #90beec;
-    z-index: 2;
-
-    .close__card {
-
-    }
-}
-
 .cta,
 .cta--outer--container {
     position: relative;
@@ -965,6 +948,18 @@ a {
 .mg--tabs__selected {
     pointer-events: none;
     background-color: var(--static-white-20);
+}
+
+.card__selected {
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #90beec;
+    z-index: 2;
 }
 
 @media (hover: hover) {
