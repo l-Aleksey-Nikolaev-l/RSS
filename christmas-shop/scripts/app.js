@@ -114,6 +114,16 @@ function removeModal(event) {
     }
 }
 
+function scrollFunction() {
+    if(window.innerWidth <= 768 && window.scrollY >= 300) {
+        backToTop.style.opacity = "1";
+        backToTop.style.transform = "scale(1)";
+    } else {
+        backToTop.style.opacity = "0";
+        backToTop.style.transform = "scale(0)";
+    }
+}
+
 function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
     const currentUTCDate = Date.parse(new Date().toUTCString());
@@ -195,6 +205,8 @@ christmasButton.forEach((button) => {
         location.href = './gifts';
     })
 });
+
+window.addEventListener('scroll', scrollFunction);
 
 menuLinksArea.addEventListener('click', () => {
     document.getElementById('burger__checkbox').checked = false;
