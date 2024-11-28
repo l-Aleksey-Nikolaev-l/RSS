@@ -52,6 +52,83 @@ class Card {
     }
 }
 
+function getSecondsToNewYear() {
+    const currentYear = new Date().getUTCFullYear();
+    const currentUTCDate = Date.parse(new Date().toUTCString());
+    const expireDate = Date.parse(`December 31, ${currentYear} 23:59:59 GMT-00:00`);
+    return Math.floor((expireDate - currentUTCDate) / 1000);
+}
+
+function convertSecondsToTime(seconds) {
+    let daysLeft = Math.floor(seconds / (24 * 3600));
+    seconds -= daysLeft * 24 * 3600;
+    let hoursLeft = Math.floor(seconds / 3600);
+    seconds -= hoursLeft * 3600;
+    let minutesLeft = Math.floor(seconds / 60);
+    seconds -= minutesLeft * 60;
+    return {
+        days: String(daysLeft),
+        hours: String(hoursLeft),
+        minutes: String(minutesLeft),
+        seconds: String(seconds)
+    };
+}
+
+function getTimeToNewYear() {
+    const secondsLeft = getSecondsToNewYear();
+    return convertSecondsToTime(secondsLeft);
+}
+
+function showTimeToNewYear() {
+    if (isGiftsPage) return;
+    const timeLeft = getTimeToNewYear();
+    Object.values(timeLeft).map((item, index) => {
+        indicatorsArray[index].textContent = item;
+    });
+}
+
+function shuffleCards(cardsArray) {
+    for (let i = cardsArray.length; i-- > 0;) {
+        const randomNumber = Math.floor(Math.random() * (i));
+        [cardsArray[i], cardsArray[randomNumber]] = [cardsArray[randomNumber], cardsArray[i]];
+    }
+    return cardsArray;
+}
+
+function filterCards(cardsArray) {
+    if(isGiftsPage && activeTab !== 'all') {
+        cardsArray = cardsArray.filter((item) => item['category'].toLowerCase() === activeTab);
+    }
+    return cardsArray;
+}
+
+function collectCards(cardsArray) {
+    let cardCollection = '';
+    if(!isGiftsPage) {
+        for (let i = 0; i < 4; i++) {
+            cardCollection += new Card(i, cardsArray[i]).createCard;
+        }
+    } else {
+        cardsArray.forEach((card, index) => {
+            cardCollection += new Card(index, card).createCard;
+        })
+    }
+    return cardCollection;
+}
+
+function addRandomCards(shuffle = true) {
+    resources.then(cardsArray => {
+        cardsArray = shuffle ? shuffleCards(cardsArray) : cardsArray;
+        cardsArray = filterCards(cardsArray)
+        giftsSection.innerHTML = collectCards(cardsArray);
+    });
+}
+
+addRandomCards();
+showTimeToNewYear();
+setInterval(showTimeToNewYear, 1000);
+
+
 christmasButton.forEach((button) => {
     button.addEventListener('click', () => {
         location.href = './gifts';
@@ -133,80 +210,3 @@ document.body.addEventListener('click', (event) => {
         document.querySelector('.card__selected').remove();
     }
 });
-
-
-function getSecondsToNewYear() {
-    const currentYear = new Date().getUTCFullYear();
-    const currentUTCDate = Date.parse(new Date().toUTCString());
-    const expireDate = Date.parse(`December 31, ${currentYear} 23:59:59 GMT-00:00`);
-    return Math.floor((expireDate - currentUTCDate) / 1000);
-}
-
-function convertSecondsToTime(seconds) {
-    let daysLeft = Math.floor(seconds / (24 * 3600));
-    seconds -= daysLeft * 24 * 3600;
-    let hoursLeft = Math.floor(seconds / 3600);
-    seconds -= hoursLeft * 3600;
-    let minutesLeft = Math.floor(seconds / 60);
-    seconds -= minutesLeft * 60;
-    return {
-        days: String(daysLeft),
-        hours: String(hoursLeft),
-        minutes: String(minutesLeft),
-        seconds: String(seconds)
-    };
-}
-
-function getTimeToNewYear() {
-    const secondsLeft = getSecondsToNewYear();
-    return convertSecondsToTime(secondsLeft);
-}
-
-function showTimeToNewYear() {
-    if (isGiftsPage) return;
-    const timeLeft = getTimeToNewYear();
-    Object.values(timeLeft).map((item, index) => {
-        indicatorsArray[index].textContent = item;
-    });
-}
-
-function shuffleCards(cardsArray) {
-    for (let i = cardsArray.length; i-- > 0;) {
-        const randomNumber = Math.floor(Math.random() * (i));
-        [cardsArray[i], cardsArray[randomNumber]] = [cardsArray[randomNumber], cardsArray[i]];
-    }
-    return cardsArray;
-}
-
-function filterCards(cardsArray) {
-    if(isGiftsPage && activeTab !== 'all') {
-        cardsArray = cardsArray.filter((item) => item['category'].toLowerCase() === activeTab);
-    }
-    return cardsArray;
-}
-
-function collectCards(cardsArray) {
-    let cardCollection = '';
-    if(!isGiftsPage) {
-        for (let i = 0; i < 4; i++) {
-            cardCollection += new Card(i, cardsArray[i]).createCard;
-        }
-    } else {
-        cardsArray.forEach((card, index) => {
-            cardCollection += new Card(index, card).createCard;
-        })
-    }
-    return cardCollection;
-}
-
-function addRandomCards(shuffle = true) {
-    resources.then(cardsArray => {
-        cardsArray = shuffle ? shuffleCards(cardsArray) : cardsArray;
-        cardsArray = filterCards(cardsArray)
-        giftsSection.innerHTML = collectCards(cardsArray);
-    });
-}
-
-addRandomCards();
-showTimeToNewYear();
-setInterval(showTimeToNewYear, 1000);
