@@ -119,7 +119,9 @@ giftsSection.addEventListener('click', (event) => {
     if(body.classList.contains('overlay') || isNaN(cardId)) return;
 
     body.classList.toggle('overlay');
+    const topPosition = (giftsSection.getBoundingClientRect().top * -1).toString() + 'px';
     const selectedCard = document.querySelector(`[data-id='${cardId}']`).cloneNode(true);
+    selectedCard.style.top = `calc(${topPosition} + var(--height-center))`;
     selectedCard.classList.add('card__selected');
     giftsSection.insertAdjacentElement('afterbegin', selectedCard);
 })
