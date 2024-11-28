@@ -52,6 +52,73 @@ class Card {
     }
 }
 
+function resetSlider() {
+    if (!isGiftsPage) {
+        carouselPosition = 0;
+        carousel.style.left = carouselPosition;
+        sliderButtons[0].classList.add('slider__button__disabled');
+        sliderButtons[1].classList.remove('slider__button__disabled');
+    }
+}
+
+function clickSliderButton(button) {
+    viewportWidth = window.innerWidth;
+    sliderWidth = slider.offsetWidth;
+    carouselWidth = carousel.offsetWidth;
+    const carouselDivider = viewportWidth <= 768 ? 6 : 3;
+    const carouselTail = carouselWidth - sliderWidth;
+    const carouselDividedTail = Math.round(carouselTail / carouselDivider);
+    const tolerance = 3;
+    if (button.classList.contains('slider__button__next')) {
+        sliderButtons[0].classList.remove('slider__button__disabled');
+        carouselPosition -= carouselDividedTail;
+        if(Math.abs(carouselPosition) >= carouselTail - tolerance) {
+            button.classList.add('slider__button__disabled');
+        }
+    } else {
+        sliderButtons[1].classList.remove('slider__button__disabled');
+        carouselPosition += carouselDividedTail;
+        if(Math.abs(carouselPosition) <= 0) {
+            button.classList.add('slider__button__disabled');
+        }
+    }
+    carousel.style.left = carouselPosition + 'px';
+}
+
+function switchTab(event) {
+    if(!event.target.childElementCount) {
+        for (let i = 0; i < filterTabs.childElementCount; i++) {
+            const childClasses = filterTabs.children[i].classList;
+            if (!childClasses.contains('mg--tabs__selected')) {
+                continue;
+            }
+            childClasses.remove('mg--tabs__selected');
+            break;
+        }
+        event.target.classList.add('mg--tabs__selected');
+        activeTab = event.target.textContent.toLowerCase();
+        addRandomCards(false);
+    }
+}
+
+function showModal(event) {
+    const cardId = Number(event.target.dataset.id);
+    if(body.classList.contains('overlay') || isNaN(cardId)) return;
+    body.classList.toggle('overlay');
+    const topPosition = (giftsSection.getBoundingClientRect().top * -1).toString() + 'px';
+    const selectedCard = document.querySelector(`[data-id='${cardId}']`).cloneNode(true);
+    selectedCard.style.top = `calc(${topPosition} + var(--height-center))`;
+    selectedCard.classList.add('card__selected');
+    giftsSection.insertAdjacentElement('afterbegin', selectedCard);
+}
+
+function removeModal(event) {
+    if (event.target.className === 'overlay') {
+        body.classList.toggle('overlay');
+        document.querySelector('.card__selected').remove();
+    }
+}
+
 function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
     const currentUTCDate = Date.parse(new Date().toUTCString());
@@ -128,7 +195,6 @@ addRandomCards();
 showTimeToNewYear();
 setInterval(showTimeToNewYear, 1000);
 
-
 christmasButton.forEach((button) => {
     button.addEventListener('click', () => {
         location.href = './gifts';
@@ -141,79 +207,12 @@ menuLinksArea.addEventListener('click', () => {
 
 window.addEventListener('resize', resetSlider);
 
-function resetSlider() {
-    if (!isGiftsPage) {
-        carouselPosition = 0;
-        carousel.style.left = carouselPosition;
-        sliderButtons[0].classList.add('slider__button__disabled');
-        sliderButtons[1].classList.remove('slider__button__disabled');
-    }
-}
-
 sliderButtons.forEach((button) => {
     button.addEventListener('click', clickSliderButton)
 });
 
-function clickSliderButton(button) {
-    viewportWidth = window.innerWidth;
-    sliderWidth = slider.offsetWidth;
-    carouselWidth = carousel.offsetWidth;
-    const carouselDivider = viewportWidth <= 768 ? 6 : 3;
-    const carouselTail = carouselWidth - sliderWidth;
-    const carouselDividedTail = Math.round(carouselTail / carouselDivider);
-    const tolerance = 3;
-    if (button.classList.contains('slider__button__next')) {
-        sliderButtons[0].classList.remove('slider__button__disabled');
-        carouselPosition -= carouselDividedTail;
-        if(Math.abs(carouselPosition) >= carouselTail - tolerance) {
-            button.classList.add('slider__button__disabled');
-        }
-    } else {
-        sliderButtons[1].classList.remove('slider__button__disabled');
-        carouselPosition += carouselDividedTail;
-        if(Math.abs(carouselPosition) <= 0) {
-            button.classList.add('slider__button__disabled');
-        }
-    }
-    carousel.style.left = carouselPosition + 'px';
-}
-
 filterTabs?.addEventListener('click', switchTab);
-
-function switchTab(event) {
-    if(!event.target.childElementCount) {
-        for (let i = 0; i < filterTabs.childElementCount; i++) {
-            const childClasses = filterTabs.children[i].classList;
-            if (!childClasses.contains('mg--tabs__selected')) {
-                continue;
-            }
-            childClasses.remove('mg--tabs__selected');
-            break;
-        }
-        event.target.classList.add('mg--tabs__selected');
-        activeTab = event.target.textContent.toLowerCase();
-        addRandomCards(false);
-    }
-}
 
 giftsSection.addEventListener('click', showModal);
 
-function showModal(event) {
-    const cardId = Number(event.target.dataset.id);
-    if(body.classList.contains('overlay') || isNaN(cardId)) return;
-    body.classList.toggle('overlay');
-    const topPosition = (giftsSection.getBoundingClientRect().top * -1).toString() + 'px';
-    const selectedCard = document.querySelector(`[data-id='${cardId}']`).cloneNode(true);
-    selectedCard.style.top = `calc(${topPosition} + var(--height-center))`;
-    selectedCard.classList.add('card__selected');
-    giftsSection.insertAdjacentElement('afterbegin', selectedCard);
-}
-
 document.body.addEventListener('click', removeModal);
-
-function removeModal(event) {
-    if (event.target.className === 'overlay') {
-        body.classList.toggle('overlay');
-        document.querySelector('.card__selected').remove();
-    }
-}
