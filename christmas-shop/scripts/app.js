@@ -160,7 +160,7 @@ function showModal(event) {
     const topPosition = (giftsSection.getBoundingClientRect().top * -1).toString() + 'px';
     const selectedCard = document.querySelector(`[data-id='${cardId}']`).cloneNode(true);
     selectedCard.style.top = `calc(${topPosition} + var(--height-center))`;
-    selectedCard.classList.add('card__selected');
+    selectedCard.classList.add('card__selected', 'modal__active');
     giftsSection.insertAdjacentElement('afterbegin', selectedCard);
     closeModalButton = document.querySelector('.gift__card__close');
     giftsSection.removeEventListener('click', showModal);
