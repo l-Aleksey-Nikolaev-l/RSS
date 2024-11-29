@@ -50,6 +50,8 @@ class Card {
                       <p class="gift__card__goal paragraph-text">Uses console.log like a crystal ball to find any issue.</p>
                   </div>
                   
+                  </div>
+                  
                 </div>
             </div>`;
     }
