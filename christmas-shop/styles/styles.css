@@ -641,13 +641,19 @@ a {
     object-fit: cover;
 }
 
-.gift__card__text {
+.gift__card__text,
+.gift__card__title,
+.gift__card__superpowers {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     row-gap: var(--space-8);
+}
+
+.gift__card__text {
+    row-gap: var(--space-20);
     padding: var(--space-20);
     flex-grow: 1;
     width: 100%;
@@ -662,6 +668,11 @@ a {
 
 .gift__card__superpowers > * p {
     text-transform: capitalize;
+}
+
+.gift__card__superpowers {
+    display: flex;
+    flex-direction: column;
 }
 
 .tag--work {
