@@ -639,7 +639,6 @@ a {
     height: 0;
     transform: rotateZ(45deg);
     outline: 1px solid var(--dark-color);
-    pointer-events: none;
 }
 
 .gift__card__close::after {
@@ -727,7 +726,6 @@ a {
     --height-center: calc(100dvh / 2);
     transform: translateY(-50%);
     z-index: 2;
-    pointer-events: all;
 }
 
 .cta,
