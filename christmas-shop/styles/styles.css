@@ -613,7 +613,8 @@ a {
     justify-content: flex-start;
     align-items: center;
     width: 310px;
-    height: 342px;
+    height: fit-content;
+    min-height: 342px;
     background-color: var(--contemt-bg-color);
     border-radius: var(--b-radius-20);
     overflow: hidden;
