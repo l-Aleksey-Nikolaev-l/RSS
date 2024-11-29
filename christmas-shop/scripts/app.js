@@ -45,12 +45,26 @@ class Card {
         return svg;
     }
 
+    #fillStars(score) {
+        score = Number(score) / 100;
+        let blockOfStars = '';
+        const star = this.#getStar();
+        for (let i = 0; i < score; i++) {
+            const activeStar = star.cloneNode(true);
+            activeStar.setAttribute('fill', 'var(--primary-color)');
+            blockOfStars += activeStar.outerHTML;
+        }
+        blockOfStars += star.outerHTML.repeat(5 - score);
+        return blockOfStars;
+    }
+
     #createAdds(adds) {
         let newAdds = '';
         for (let [superpower, score] of Object.entries(adds)) {
             newAdds += `<div class="superpowers__add">
                            <p class="add__text paragraph-text">${superpower}</p>
                            <p class="add__score paragraph-text">${score}</p>
+                           <div class="add__stars">${this.#fillStars(score)}</div>
                         </div>`;
         }
         return newAdds;
