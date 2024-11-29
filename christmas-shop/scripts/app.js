@@ -68,22 +68,22 @@ class Card {
                     
                     <h4 class="header-4">Adds superpowers to:</h4>
                     <div class="superpowers__adds">
-                      <div class="superpowers__add add__live">
+                      <div class="superpowers__add">
                         <p class="add__text paragraph-text">live</p>
                         <p class="add__score paragraph-text">+500</p>
                         <div class="add__stars">${snowStar.repeat(5)}</div>
                       </div>
-                      <div class="superpowers__add add__create">
+                      <div class="superpowers__add">
                         <p class="add__text paragraph-text">create</p>
                         <p class="add__score paragraph-text">+500</p>
                         <div class="add__stars">${snowStar.repeat(5)}</div>
                       </div>
-                      <div class="superpowers__add add__love">
+                      <div class="superpowers__add">
                         <p class="add__text paragraph-text">love</p>
                         <p class="add__score paragraph-text">+500</p>
                         <div class="add__stars">${snowStar.repeat(5)}</div>
                       </div>
-                      <div class="superpowers__add add__dream">
+                      <div class="superpowers__add">
                         <p class="add__text paragraph-text">dream</p>
                         <p class="add__score paragraph-text">+500</p>
                         <div class="add__stars">${snowStar.repeat(5)}</div>
