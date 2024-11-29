@@ -70,22 +70,22 @@ class Card {
                     <div class="superpowers__adds">
                       <div class="superpowers__add">
                         <p class="add__text paragraph-text">live</p>
-                        <p class="add__score paragraph-text">+500</p>
+                        <p class="add__score paragraph-text">${this.superpowers["live"]}</p>
                         <div class="add__stars">${snowStar.repeat(5)}</div>
                       </div>
                       <div class="superpowers__add">
                         <p class="add__text paragraph-text">create</p>
-                        <p class="add__score paragraph-text">+500</p>
+                        <p class="add__score paragraph-text">${this.superpowers["create"]}</p>
                         <div class="add__stars">${snowStar.repeat(5)}</div>
                       </div>
                       <div class="superpowers__add">
                         <p class="add__text paragraph-text">love</p>
-                        <p class="add__score paragraph-text">+500</p>
+                        <p class="add__score paragraph-text">${this.superpowers["love"]}</p>
                         <div class="add__stars">${snowStar.repeat(5)}</div>
                       </div>
                       <div class="superpowers__add">
                         <p class="add__text paragraph-text">dream</p>
-                        <p class="add__score paragraph-text">+500</p>
+                        <p class="add__score paragraph-text">${this.superpowers["dream"]}</p>
                         <div class="add__stars">${snowStar.repeat(5)}</div>
                       </div>
                     </div>
