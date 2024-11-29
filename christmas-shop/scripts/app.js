@@ -11,6 +11,7 @@ const sliderButtons = document.querySelectorAll('.slider__button');
 const giftsSection = document.querySelector('.gift__cards');
 const filterTabs = document.querySelector(".mg--tabs");
 const backToTop = document.querySelector('.back--to--top');
+let closeModalButton = document.querySelector('.gift__card__close');
 
 let carouselPosition = 0;
 
@@ -39,6 +40,7 @@ class Card {
         }
         return `
             <div class="gift__card" data-id=${this.id}>
+            <div class="gift__card__close"></div>
                 <div class="gift__card__image">
                   <img src=${imagePath + images[this.category]} alt="Best gift image ${this.category}" width="620" height="460"/>
                 </div>
@@ -138,12 +140,19 @@ function showModal(event) {
     selectedCard.style.top = `calc(${topPosition} + var(--height-center))`;
     selectedCard.classList.add('card__selected');
     giftsSection.insertAdjacentElement('afterbegin', selectedCard);
+    closeModalButton = document.querySelector('.gift__card__close');
+    giftsSection.removeEventListener('click', showModal);
+    document.querySelector('.overlay').addEventListener('click', removeModal);
+    closeModalButton.addEventListener('click', removeModal);
 }
 
 function removeModal(event) {
-    if (event.target.className === 'overlay') {
-        body.classList.toggle('overlay');
+    if (event.target.className === 'overlay' || event.target.className === 'gift__card__close') {
+        document.querySelector('.overlay').removeEventListener('click', removeModal);
+        closeModalButton.removeEventListener('click', removeModal);
         document.querySelector('.card__selected').remove();
+        giftsSection.addEventListener('click', showModal);
+        body.classList.toggle('overlay');
     }
 }
 
@@ -249,6 +258,7 @@ menuLinksArea.addEventListener('click', () => {
 window.addEventListener('resize', () => {
     resetSlider();
     defineScrollPosition();
+    // TODO: add function for burger
 });
 
 sliderButtons.forEach((button) => {
@@ -258,8 +268,6 @@ sliderButtons.forEach((button) => {
 filterTabs?.addEventListener('click', switchTab);
 
 giftsSection.addEventListener('click', showModal);
-
-document.body.addEventListener('click', removeModal);
 
 backToTop?.addEventListener('click',() => {
     window.scrollTo(0, 0);
