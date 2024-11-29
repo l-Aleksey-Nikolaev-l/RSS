@@ -57,15 +57,12 @@ class Card {
                   <img src=${imagePath + images[this.category]} alt="Best gift image ${this.category}" width="620" height="460"/>
                 </div>
                 <div class="gift__card__text">
-                  
                   <div class="gift__card__title">
                       <h4 class="header-4 ${categories[this.category]}">${this.category}</h4>
                       <h3 class="gift__card__description header-3">${this.name}</h3>
                       <p class="gift__card__goal paragraph-text">Uses console.log like a crystal ball to find any issue.</p>
                   </div>
-                  
                   <div class="gift__card__superpowers">
-                    
                     <h4 class="header-4">Adds superpowers to:</h4>
                     <div class="superpowers__adds">
                       <div class="superpowers__add">
@@ -90,7 +87,6 @@ class Card {
                       </div>
                     </div>
                   </div>
-                  
                 </div>
             </div>`;
     }
