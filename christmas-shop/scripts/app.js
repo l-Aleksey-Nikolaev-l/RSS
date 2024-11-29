@@ -4,6 +4,7 @@ const isGiftsPage = window.location.pathname.includes('/gifts/');
 const body = document.querySelector('#top');
 const indicatorsArray = document.querySelectorAll('.cta__timer__indicator > h2');
 const christmasButton = document.querySelectorAll('.christmas__button');
+const burgerButton = document.querySelector('#burger__checkbox');
 const menuLinksArea = document.querySelector('.menu__links');
 const slider = document.querySelector('.slider__carousel');
 const carousel = document.querySelector('.carousel__list');
@@ -188,6 +189,12 @@ function defineScrollPosition() {
     }
 }
 
+function closeMobileMenu() {
+    if(window.innerWidth > 768) {
+        burgerButton.checked = false;
+    }
+}
+
 function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
     const currentUTCDate = Date.parse(new Date().toUTCString());
@@ -279,7 +286,7 @@ menuLinksArea.addEventListener('click', () => {
 window.addEventListener('resize', () => {
     resetSlider();
     defineScrollPosition();
-    // TODO: add function for burger
+    closeMobileMenu();
 });
 
 sliderButtons.forEach((button) => {
