@@ -622,7 +622,7 @@ a {
 
 .gift__card__close {
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -709,11 +709,16 @@ a {
 }
 
 .gift__card__goal {
+    display: none;
     text-transform: unset;
 }
 
 .gift__card__superpowers > * p {
     text-transform: capitalize;
+}
+
+.gift__card__superpowers {
+    display: none;
 }
 
 .modal__active {
