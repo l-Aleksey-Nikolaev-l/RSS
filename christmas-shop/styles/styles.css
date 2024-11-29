@@ -720,6 +720,16 @@ a {
     flex-direction: column;
 }
 
+.card__selected {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    --height-center: calc(100dvh / 2);
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: all;
+}
+
 .cta,
 .cta--outer--container {
     position: relative;
@@ -995,15 +1005,6 @@ a {
 .mg--tabs__selected {
     pointer-events: none;
     background-color: var(--static-white-20);
-}
-
-.card__selected {
-    position: absolute;
-    width: 100%;
-    max-width: 400px;
-    --height-center: calc(100dvh / 2);
-    transform: translateY(-50%);
-    z-index: 2;
 }
 
 @media (hover: hover) {
