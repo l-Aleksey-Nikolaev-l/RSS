@@ -716,6 +716,18 @@ a {
     text-transform: capitalize;
 }
 
+.modal__active {
+    & .gift__card__close {
+        display: flex;
+    }
+    & .gift__card__superpowers {
+        display: flex;
+    }
+    & .gift__card__goal {
+        display: inline;
+    }
+}
+
 .superpowers__adds {
     row-gap: var(--space-0);
 }
