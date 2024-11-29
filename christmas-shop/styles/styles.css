@@ -641,6 +641,25 @@ a {
     object-fit: cover;
 }
 
+.tag--work {
+    color: var(--tag-purple-color);
+}
+
+.tag--health {
+    color: var(--tag-green-color);
+}
+
+.tag--harmony {
+    color: var(--tag-pink-color);
+}
+
+.gift__card__description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .gift__card__text,
 .gift__card__title,
 .gift__card__superpowers {
@@ -673,25 +692,6 @@ a {
 .gift__card__superpowers {
     display: flex;
     flex-direction: column;
-}
-
-.tag--work {
-    color: var(--tag-purple-color);
-}
-
-.tag--health {
-    color: var(--tag-green-color);
-}
-
-.tag--harmony {
-    color: var(--tag-pink-color);
-}
-
-.gift__card__description {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .cta,
