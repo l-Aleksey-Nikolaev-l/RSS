@@ -656,6 +656,14 @@ a {
     pointer-events: none;
 }
 
+.gift__card__goal {
+    text-transform: unset;
+}
+
+.gift__card__superpowers > * p {
+    text-transform: capitalize;
+}
+
 .tag--work {
     color: var(--tag-purple-color);
 }
