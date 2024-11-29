@@ -47,6 +47,7 @@ class Card {
                   <div class="gift__card__title">
                       <h4 class="header-4 ${categories[this.category]}">${this.category}</h4>
                       <h3 class="gift__card__description header-3">${this.name}</h3>
+                      <p class="gift__card__goal paragraph-text">Uses console.log like a crystal ball to find any issue.</p>
                   </div>
                   
                 </div>
