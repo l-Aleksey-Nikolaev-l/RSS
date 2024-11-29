@@ -280,7 +280,7 @@ christmasButton.forEach((button) => {
 window.addEventListener('scroll', defineScrollPosition);
 
 menuLinksArea.addEventListener('click', () => {
-    document.getElementById('burger__checkbox').checked = false;
+    burgerButton.checked = false;
 })
 
 window.addEventListener('resize', () => {
