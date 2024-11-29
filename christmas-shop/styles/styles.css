@@ -737,7 +737,6 @@ a {
     column-gap: var(--space-8);
     width: fit-content;
     height: 24px;
-    color: var(--primary-color);
 }
 
 .add__stars > * {
