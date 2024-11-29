@@ -69,28 +69,24 @@ class Card {
                     <h4 class="header-4">Adds superpowers to:</h4>
                     <div class="superpowers__adds">
                       <div class="superpowers__add add__live">
-                        <p class="add__live__text paragraph-text">live</p>
-                        <p class="add__live__score paragraph-text"></p>
                         <p class="add__text paragraph-text">live</p>
                         <p class="add__score paragraph-text">+500</p>
+                        <div class="add__stars">${snowStar.repeat(5)}</div>
                       </div>
                       <div class="superpowers__add add__create">
-                        <p class="add__create__text paragraph-text">create</p>
-                        <p class="add__create__score paragraph-text"></p>
                         <p class="add__text paragraph-text">create</p>
                         <p class="add__score paragraph-text">+500</p>
+                        <div class="add__stars">${snowStar.repeat(5)}</div>
                       </div>
                       <div class="superpowers__add add__love">
-                        <p class="add__love__text paragraph-text">love</p>
-                        <p class="add__love__score paragraph-text"></p>
                         <p class="add__text paragraph-text">love</p>
                         <p class="add__score paragraph-text">+500</p>
+                        <div class="add__stars">${snowStar.repeat(5)}</div>
                       </div>
                       <div class="superpowers__add add__dream">
-                        <p class="add__dream__text paragraph-text">dream</p>
-                        <p class="add__dream__score paragraph-text"></p>
                         <p class="add__text paragraph-text">dream</p>
                         <p class="add__score paragraph-text">+500</p>
+                        <div class="add__stars">${snowStar.repeat(5)}</div>
                       </div>
                     </div>
                   </div>
