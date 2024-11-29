@@ -687,13 +687,15 @@ a {
 
 .gift__card__text,
 .gift__card__title,
-.gift__card__superpowers {
+.gift__card__superpowers,
+.superpowers__adds {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     row-gap: var(--space-8);
+    width: 100%;
 }
 
 .gift__card__text {
@@ -714,9 +716,41 @@ a {
     text-transform: capitalize;
 }
 
-.gift__card__superpowers {
+.superpowers__adds {
+    row-gap: var(--space-0);
+}
+
+.superpowers__add {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    column-gap: var(--space-12);
+}
+
+.add__stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: var(--space-8);
+    width: fit-content;
+    height: 24px;
+    color: var(--primary-color);
+}
+
+.add__stars > * {
+    width: 16px;
+    height: 16px;
+}
+
+.add__text {
+    width: 100%;
+}
+
+.add__score {
+    width: fit-content;
 }
 
 .card__selected {
