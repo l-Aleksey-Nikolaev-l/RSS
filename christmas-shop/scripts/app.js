@@ -26,6 +26,17 @@ class Card {
         this.superpowers = superpowers;
     }
 
+    #createAdds(adds) {
+        let newAdds = '';
+        for (let [superpower, score] of Object.entries(adds)) {
+            newAdds += `<div class="superpowers__add">
+                           <p class="add__text paragraph-text">${superpower}</p>
+                           <p class="add__score paragraph-text">${score}</p>
+                        </div>`;
+        }
+        return newAdds;
+    }
+
     get createCard() {
         const imagePath = isGiftsPage ? '../pictures/product/' : 'pictures/product/';
         const images = {
@@ -65,26 +76,7 @@ class Card {
                   <div class="gift__card__superpowers">
                     <h4 class="header-4">Adds superpowers to:</h4>
                     <div class="superpowers__adds">
-                      <div class="superpowers__add">
-                        <p class="add__text paragraph-text">live</p>
-                        <p class="add__score paragraph-text">${this.superpowers["live"]}</p>
-                        <div class="add__stars">${snowStar.repeat(5)}</div>
-                      </div>
-                      <div class="superpowers__add">
-                        <p class="add__text paragraph-text">create</p>
-                        <p class="add__score paragraph-text">${this.superpowers["create"]}</p>
-                        <div class="add__stars">${snowStar.repeat(5)}</div>
-                      </div>
-                      <div class="superpowers__add">
-                        <p class="add__text paragraph-text">love</p>
-                        <p class="add__score paragraph-text">${this.superpowers["love"]}</p>
-                        <div class="add__stars">${snowStar.repeat(5)}</div>
-                      </div>
-                      <div class="superpowers__add">
-                        <p class="add__text paragraph-text">dream</p>
-                        <p class="add__score paragraph-text">${this.superpowers["dream"]}</p>
-                        <div class="add__stars">${snowStar.repeat(5)}</div>
-                      </div>
+                      ${this.#createAdds(this.superpowers)}
                     </div>
                   </div>
                 </div>
