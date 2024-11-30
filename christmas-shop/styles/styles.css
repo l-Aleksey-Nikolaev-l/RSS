@@ -1281,6 +1281,10 @@ a {
     #top:has(#burger__checkbox:checked) {
         position: fixed;
     }
+    
+    #top:has(#burger__checkbox:checked) {
+        position: fixed;
+    }
 }
 
 @media screen and (width < 768px) {
