@@ -166,6 +166,9 @@ function showModal(event) {
     giftsSection.removeEventListener('click', showModal);
     document.querySelector('.overlay').addEventListener('click', removeModal);
     closeModalButton.addEventListener('click', removeModal);
+    setTimeout(() => {
+        selectedCard.style.opacity = '1';
+    },0);
 }
 
 function removeModal(event) {
