@@ -181,17 +181,6 @@ function removeModal(event) {
     }
 }
 
-function defineScrollPosition() {
-    if(!isGiftsPage) return;
-    if(window.innerWidth <= 768 && window.scrollY >= 300) {
-        backToTop.style.opacity = "1";
-        backToTop.style.transform = "scale(1)";
-    } else {
-        backToTop.style.opacity = "0";
-        backToTop.style.transform = "scale(0)";
-    }
-}
-
 function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
     const currentUTCDate = Date.parse(new Date().toUTCString());
@@ -295,5 +284,4 @@ filterTabs?.addEventListener('click', switchTab);
 giftsSection.addEventListener('click', showModal);
 
 backToTop?.addEventListener('click',() => {
-    window.scrollTo(0, 0);
 });
