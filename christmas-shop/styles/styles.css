@@ -492,7 +492,7 @@ a {
     align-items: center;
     column-gap: var(--space-20);
     left: 0;
-    transition: all 0.2s linear;
+    transition: left 0.2s ease;
 }
 
 .carousel__item {
@@ -1259,14 +1259,14 @@ a {
     }
 
     .menu__list {
-        width: 75%;
+        width: fit-content;
         column-gap: var(--space-0);
         row-gap: var(--space-8);
         flex-direction: column;
     }
 
     .menu__item {
-        width: 100%;
+        width: fit-content;
         font-size: var(--action-lg-text-size);
         font-weight: var(--semibold-text-weight);
         letter-spacing: var(--action-lg-text-letter-spasing);
