@@ -72,7 +72,7 @@ class Card {
     }
 
     get createCard() {
-        const imagePath = isGiftsPage ? '../pictures/product/' : 'pictures/product/';
+        const imagePath = 'pictures/product/';
         const images = {
             'For Work': 'gift-for-work.png',
             'For Health': 'gift-for-health.png',
