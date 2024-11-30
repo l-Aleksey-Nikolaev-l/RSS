@@ -721,18 +721,6 @@ a {
     display: none;
 }
 
-.modal__active {
-    & .gift__card__close {
-        display: flex;
-    }
-    & .gift__card__superpowers {
-        display: flex;
-    }
-    & .gift__card__goal {
-        display: inline;
-    }
-}
-
 .superpowers__adds {
     row-gap: var(--space-0);
 }
@@ -776,6 +764,15 @@ a {
     --height-center: calc(100dvh / 2);
     transform: translateY(-50%);
     z-index: 2;
+    & .gift__card__close {
+        display: flex;
+    }
+    & .gift__card__superpowers {
+        display: flex;
+    }
+    & .gift__card__goal {
+        display: inline;
+    }
 }
 
 .cta,
