@@ -192,12 +192,6 @@ function defineScrollPosition() {
     }
 }
 
-function closeMobileMenu() {
-    if(window.innerWidth > 768) {
-        burgerButton.checked = false;
-    }
-}
-
 function getSecondsToNewYear() {
     const currentYear = new Date().getUTCFullYear();
     const currentUTCDate = Date.parse(new Date().toUTCString());
