@@ -1,4 +1,4 @@
-const resources = fetch('../res/gifts.json').then(res => res.json());
+const resources = fetch('./res/gifts.json').then(res => res.json());
 const isGiftsPage = window.location.pathname.includes('/gifts/');
 
 const body = document.querySelector('#top');
