@@ -4,7 +4,7 @@ let closeModalButton = document.querySelector('.gift__card__close');
 
 function showModal(event) {
     const cardId = Number(event.target.dataset.id);
-    if(body.classList.contains('overlay') || isNaN(cardId)) return;
+    if (body.classList.contains('overlay') || isNaN(cardId)) return;
     body.classList.toggle('overlay');
     const topPosition = (giftsSection.getBoundingClientRect().top * -1).toString() + 'px';
     const selectedCard = document.querySelector(`[data-id='${cardId}']`).cloneNode(true);
@@ -17,7 +17,7 @@ function showModal(event) {
     closeModalButton.addEventListener('click', removeModal);
     setTimeout(() => {
         selectedCard.style.opacity = '1';
-    },0);
+    }, 0);
 }
 
 function removeModal(event) {
