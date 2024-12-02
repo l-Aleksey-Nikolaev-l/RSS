@@ -35,4 +35,6 @@ function showTimeToNewYear() {
     });
 }
 
+setInterval(showTimeToNewYear, 1000);
+
 export default showTimeToNewYear;
