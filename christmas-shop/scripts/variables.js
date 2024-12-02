@@ -28,7 +28,8 @@ export {
     giftsSection,
     filterTabs,
     backToTopButton,
-    activeTab };
+    activeTab
+};
 
 export function setTab(tab) {
     activeTab = tab;
