@@ -1,8 +1,8 @@
 import {isGiftsPage, backToTopButton} from './variables.js'
 
 function defineScrollPosition() {
-    if(!isGiftsPage) return;
-    if(window.innerWidth <= 768 && window.scrollY >= 300) {
+    if (!isGiftsPage) return;
+    if (window.innerWidth <= 768 && window.scrollY >= 300) {
         backToTopButton.style.opacity = "1";
         backToTopButton.style.transform = "scale(1)";
     } else {

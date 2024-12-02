@@ -1,4 +1,4 @@
-import { resources, isGiftsPage, giftsSection, activeTab} from './variables.js';
+import {resources, isGiftsPage, giftsSection, activeTab} from './variables.js';
 
 class Card {
     constructor(id, {name, description, category, superpowers}) {

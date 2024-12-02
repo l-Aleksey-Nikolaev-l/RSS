@@ -20,13 +20,13 @@ function clickSliderButton(button) {
     if (direction === 'next') {
         sliderButtons[0].classList.remove('slider__button__disabled');
         carouselPosition -= carouselDividedTail;
-        if(Math.abs(carouselPosition) >= carouselTail - tolerance) {
+        if (Math.abs(carouselPosition) >= carouselTail - tolerance) {
             button.currentTarget.classList.toggle('slider__button__disabled');
         }
     } else {
         sliderButtons[1].classList.remove('slider__button__disabled');
         carouselPosition += carouselDividedTail;
-        if(Math.abs(carouselPosition) <= 0) {
+        if (Math.abs(carouselPosition) <= 0) {
             button.currentTarget.classList.toggle('slider__button__disabled');
         }
     }
