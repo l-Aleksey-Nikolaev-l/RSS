@@ -53,8 +53,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     row-gap: var(--space-32);
     flex-grow: 1;
+    width: 100%;
 }
 
 .main__header_text {
