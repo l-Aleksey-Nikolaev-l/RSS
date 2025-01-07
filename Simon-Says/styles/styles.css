@@ -3,6 +3,7 @@
     --primary-bg-color: #e1d5c4;
     --space-0: 0;
     --space-8: 8px;
+    --space-32: 32px;
 }
 
 *,
@@ -54,4 +55,10 @@ body {
     justify-content: center;
     row-gap: var(--space-32);
     flex-grow: 1;
+}
+
+.main__header_text {
+    text-align: center;
+    font-size: 64px;
+    font-weight: 400;
 }
