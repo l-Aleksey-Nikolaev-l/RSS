@@ -74,4 +74,9 @@ body {
     background-color: #f5f5f5;
     font-size: 1.6rem;
     border: 1px solid #dbd4cc;
+    box-shadow: -6px 8px 8px 2px #d3c1aa,
+                inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
+    transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
+}
+
 }
