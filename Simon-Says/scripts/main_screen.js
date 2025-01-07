@@ -45,7 +45,7 @@ class MainScreen {
 }
 
 function showMainScreen() {
-    return 0;
+    return new MainScreen().show();
 }
 
 export default showMainScreen;
