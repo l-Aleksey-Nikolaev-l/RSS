@@ -1,3 +1,5 @@
+import {wrapper} from './variables.js';
+
 class Rules {
 
     #rulesArray = [
@@ -11,8 +13,7 @@ class Rules {
     ]
 
     #rulesSection() {
-        const rulesSection = document.createElement('section');
-        rulesSection.classList.add('rules__section');
+        const rulesSection = this.#mainSection();
         const rulesList = document.createElement('ul');
         rulesList.classList.add('rules__list');
         const backButton = this.#addBackButton();
