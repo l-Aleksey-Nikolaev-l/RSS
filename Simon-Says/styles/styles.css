@@ -65,6 +65,10 @@ body {
     font-weight: 400;
 }
 
+.main__bottom_section {
+    transform: rotate(-48deg) skew(20deg, 21deg);
+}
+
 .main__button {
     width: 100%;
     max-width: 300px;
