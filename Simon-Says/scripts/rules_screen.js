@@ -12,6 +12,12 @@ class Rules {
         'Hard: letters (A-Z) and numbers (0-9).'
     ]
 
+    #mainSection() {
+        const main = document.createElement('main');
+        main.classList.add('main', 'main__rules_section');
+        return main;
+    }
+
     #rulesSection() {
         const rulesSection = this.#mainSection();
         const rulesList = document.createElement('ul');
