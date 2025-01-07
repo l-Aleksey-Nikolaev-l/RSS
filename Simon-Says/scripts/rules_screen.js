@@ -53,9 +53,8 @@ class Rules {
 }
 
 function showRules() {
-    const main = document.getElementsByClassName('main');
     const rules = new Rules().show();
-    main[0].append(rules);
+    wrapper[0].append(rules);
 }
 
 export default showRules;
