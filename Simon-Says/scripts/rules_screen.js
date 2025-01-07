@@ -49,7 +49,6 @@ function showRules() {
     const main = document.getElementsByClassName('main');
     const rules = new Rules().show();
     main[0].append(rules);
-    console.log('Show Rules');
 }
 
 export default showRules;
