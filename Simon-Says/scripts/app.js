@@ -7,5 +7,5 @@ wrapper.classList.add('wrapper');
 body.insertAdjacentElement('afterbegin', wrapper);
 
 body.onload = () => {
-    showMainScreen();
+    wrapper.append(showMainScreen());
 };
