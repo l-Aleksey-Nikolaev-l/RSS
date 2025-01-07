@@ -17,6 +17,23 @@ class MainScreen {
         topSection.append(headerText);
         return topSection;
     }
+
+    #bottomSection() {
+        const bottomSection = document.createElement('section');
+        bottomSection.classList.add('main__bottom_section');
+        for (const button of this.#buttons) {
+            const newButton = this.#mainButton(button);
+            bottomSection.append(newButton);
+        }
+        return bottomSection;
+    }
+
+    #mainButton(button = '') {
+        const mainButton = document.createElement('button');
+        mainButton.classList.add(`main__button_${button.toLowerCase()}`);
+        mainButton.textContent = button;
+        return mainButton;
+    }
 }
 
 function showMainScreen() {
