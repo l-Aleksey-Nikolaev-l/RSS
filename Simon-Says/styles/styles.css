@@ -83,4 +83,14 @@ body {
     transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
 }
 
+
+@media (hover: hover) {
+    .main__button:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        transform: translate(-8px, 8px);
+        box-shadow: 0 0 0 0 #d3c1aa,
+        inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
+        transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    }
 }
