@@ -34,6 +34,14 @@ class MainScreen {
         mainButton.textContent = button;
         return mainButton;
     }
+
+    show() {
+        const main = this.#mainSection();
+        const topSection = this.#topSection();
+        const bottomSection = this.#bottomSection();
+        main.append(topSection, bottomSection);
+        return main;
+    }
 }
 
 function showMainScreen() {
