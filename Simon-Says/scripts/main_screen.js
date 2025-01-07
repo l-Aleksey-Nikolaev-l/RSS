@@ -10,7 +10,7 @@ class MainScreen {
 
     #topSection() {
         const topSection = document.createElement('section');
-        topSection.classList.add('main__top_section');
+        topSection.classList.add('main__section', 'main__top_section');
         const headerText = document.createElement('h1');
         headerText.classList.add('main__header_text');
         headerText.textContent = 'Simon Says Game'
@@ -20,7 +20,7 @@ class MainScreen {
 
     #bottomSection() {
         const bottomSection = document.createElement('section');
-        bottomSection.classList.add('main__bottom_section');
+        bottomSection.classList.add('main__section', 'main__bottom_section');
         for (const button of this.#buttons) {
             const newButton = this.#mainButton(button);
             bottomSection.append(newButton);
@@ -30,7 +30,7 @@ class MainScreen {
 
     #mainButton(button = '') {
         const mainButton = document.createElement('button');
-        mainButton.classList.add(`main__button_${button.toLowerCase()}`);
+        mainButton.classList.add('main__button', `main__button_${button.toLowerCase()}`);
         mainButton.textContent = button;
         return mainButton;
     }
