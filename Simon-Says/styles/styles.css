@@ -1,3 +1,10 @@
+:root {
+    --desktop-width: 1440px;
+    --primary-bg-color: #e1d5c4;
+    --space-0: 0;
+    --space-8: 8px;
+}
+
 *,
 html,
 body {
