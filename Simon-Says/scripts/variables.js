@@ -9,5 +9,5 @@ export {
 };
 
 export function setDifficulty(level) {
-    difficulty = level
+    difficulty = level;
 }
