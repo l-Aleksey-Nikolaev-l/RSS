@@ -17,6 +17,13 @@ class Settings {
     #createSettingsList() {
         return '';
     }
+
+    #createSettingContainer() {
+        const settingContainer = document.createElement('div');
+        settingContainer.classList.add('setting__container');
+        return settingContainer;
+    }
+
     #createSettingLabel(labelFor = '', labelText = '') {
         const settingLabel = document.createElement('label');
         settingLabel.classList.add('setting__label');
