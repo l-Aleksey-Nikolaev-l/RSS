@@ -1,4 +1,4 @@
-import {wrapper, difficulty} from "./variables";
+import {wrapper, difficulty} from './variables.js';
 
 class PlayScreen {
 
