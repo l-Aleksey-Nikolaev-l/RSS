@@ -19,19 +19,21 @@ class Rules {
         return main;
     }
 
-    #rulesSection() {
-        const rulesSection = this.#mainSection();
+    #rulesSection(rulesArray) {
         const rulesList = document.createElement('ul');
         rulesList.classList.add('rules__list');
-        const backButton = this.#addBackButton();
-
-        for (let index = 0; index < this.#rulesArray.length; index += 1) {
-            const rule = this.#rulesArray[index];
-            const ruleItem = this.#addRule(rule, index + 1);
-            rulesList.append(ruleItem);
+        for (let index = 0; index < rulesArray.length; index += 1) {
+            if (typeof rulesArray[index] !== 'string') {
+                const subList = this.#rulesSection(rulesArray[index]);
+                subList.classList.add('rules__list_sublist')
+                rulesList.append(subList);
+            } else {
+                const rule = rulesArray[index];
+                const ruleItem = this.#addRule(rule, index + 1);
+                rulesList.append(ruleItem);
+            }
         }
-        rulesSection.append(rulesList, backButton);
-        return rulesSection;
+        return rulesList;
     }
 
     #addRule(rule = '', index = 0) {
