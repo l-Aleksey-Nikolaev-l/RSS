@@ -64,7 +64,7 @@ class Rules {
 }
 
 function showRules() {
-    const rules = new Rules().show();
+    const rules = new Rules(rulesArray).createRules();
     wrapper[0].append(rules);
 }
 
