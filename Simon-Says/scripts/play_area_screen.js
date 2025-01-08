@@ -11,6 +11,13 @@ class PlayScreen {
         main.classList.add('main', 'main__play_section');
         return main;
     }
+
+    #createControlButton(button = '') {
+        const controlButton = document.createElement('button');
+        controlButton.classList.add('main__button', `control__button_${button.toLowerCase()}`);
+        controlButton.textContent = button;
+        return controlButton;
+    }
 }
 
 function showPlayArea() {
