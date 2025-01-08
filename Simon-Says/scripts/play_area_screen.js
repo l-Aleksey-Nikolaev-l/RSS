@@ -6,6 +6,11 @@ class PlayScreen {
         this.difficulty = difficulty;
     }
 
+    #createMainSection() {
+        const main = document.createElement('main');
+        main.classList.add('main', 'main__play_section');
+        return main;
+    }
 }
 
 function showPlayArea() {
