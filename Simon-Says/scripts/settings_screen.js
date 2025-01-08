@@ -15,7 +15,14 @@ class Settings {
     }
 
     #createSettingsList() {
-        return '';
+        const settingsList = document.createElement('div');
+        settingsList.classList.add('settings__list')
+        const difficultySettingContainer = this.#createSettingContainer();
+        const difficultyLabel = this.#createSettingLabel('difficulty__list', 'Difficulty level is');
+        const difficultySetting = this.#createDifficultySetting();
+        difficultySettingContainer.append(difficultyLabel, difficultySetting);
+        settingsList.append(difficultySettingContainer);
+        return settingsList;
     }
 
     #createSettingContainer() {
