@@ -113,6 +113,17 @@ body {
     column-gap: var(--space-8);
 }
 
+.difficulty__list {
+    height: 24px;
+    border: none;
+    border-radius: 4px;
+}
+
+.difficulty__list:focus-visible {
+    border: none;
+    outline: none;
+}
+
 .rules__list {
     margin: var(--space-0) var(--space-24);
 }
