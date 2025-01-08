@@ -93,6 +93,14 @@ body {
     align-items: flex-start;
 }
 
+.rules__list {
+    margin: var(--space-0) var(--space-24);
+}
+
+.rule__item {
+    margin: var(--space-16) var(--space-0);
+}
+
 .back__button {
     width: 100%;
     max-width: 200px;
