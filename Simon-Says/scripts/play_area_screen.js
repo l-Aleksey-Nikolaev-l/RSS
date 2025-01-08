@@ -18,6 +18,14 @@ class PlayScreen {
         controlButton.textContent = button;
         return controlButton;
     }
+
+    createPlayScreen() {
+        const mainSection = this.#createMainSection();
+        const backButton = this.#createControlButton('Back');
+        backButton.classList.add('back__button');
+        mainSection.append(backButton);
+        return mainSection;
+    }
 }
 
 function showPlayArea() {
