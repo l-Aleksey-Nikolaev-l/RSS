@@ -209,6 +209,11 @@ body {
         transform: translate(0, 0);
     }
 
+    .top__indicator {
+        flex-direction: column;
+        column-gap: var(--space-0);
+    }
+
     @media screen and (hover: hover){
         .main__button:hover {
             cursor: pointer;
