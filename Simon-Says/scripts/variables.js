@@ -7,3 +7,7 @@ export {
     body,
     wrapper
 };
+
+export function setDifficulty(level) {
+    difficulty = level
+}
