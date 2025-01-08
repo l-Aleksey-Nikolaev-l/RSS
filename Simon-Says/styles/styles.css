@@ -83,6 +83,14 @@ body {
     transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
 }
 
+.main__rules_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
 
 @media (hover: hover) {
     .main__button:hover {
@@ -92,5 +100,9 @@ body {
         box-shadow: 0 0 0 0 #d3c1aa,
         inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
         transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    }
+
+    .back__button:hover {
+        transform: translate(0, 0);
     }
 }
