@@ -14,18 +14,26 @@ class PlayScreen {
 
     #createTopSection() {
         const topSection = document.createElement('section');
+        const difficultySection = document.createElement('div');
         const attemptSection = document.createElement('div');
         const roundSection = document.createElement('div');
+        const difficultyText = document.createElement('p');
         const attemptText = document.createElement('p');
+        const difficultyLevel = document.createElement('p');
         const attemptNumber = document.createElement('p');
         const roundText = document.createElement('p');
         const roundNumber = document.createElement('p');
 
         topSection.classList.add('top__play_section');
+        difficultySection.classList.add('top__indicator', 'play__level');
         attemptSection.classList.add('top__indicator', 'play__attempt');
         roundSection.classList.add('top__indicator', 'play__round');
+        difficultyText.classList.add('attempt__text');
+        difficultyText.textContent = 'Level:';
         attemptText.classList.add('attempt__text');
         attemptText.textContent = 'Attempt left:';
+        difficultyLevel.classList.add('difficulty__level');
+        difficultyLevel.textContent = this.difficulty;
         attemptNumber.classList.add('attempt__number');
         attemptNumber.textContent = '1';
         roundText.classList.add('round__text');
@@ -33,9 +41,10 @@ class PlayScreen {
         roundNumber.classList.add('round__number');
         roundNumber.textContent = '1/5';
 
+        difficultySection.append(difficultyText, difficultyLevel);
         attemptSection.append(attemptText, attemptNumber);
         roundSection.append(roundText, roundNumber);
-        topSection.append(attemptSection, roundSection);
+        topSection.append(attemptSection, difficultySection, roundSection);
         return topSection;
     }
 
