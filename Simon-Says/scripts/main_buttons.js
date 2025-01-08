@@ -7,7 +7,7 @@ import startListeners from './listeners.js';
 function clickMainButton(event) {
     const buttonName = event.target.textContent.toLowerCase();
     switch (buttonName) {
-        case 'play':
+        case 'start':
             showPlayArea();
             break;
         case 'settings':

@@ -2,7 +2,7 @@ import {wrapper} from './variables.js';
 
 class MainScreen {
 
-    #buttons = ['Play', 'Settings', 'Rules'];
+    #buttons = ['Start', 'Settings', 'Rules'];
 
     #createMainSection() {
         const main = document.createElement('main');
