@@ -35,7 +35,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: var(--desktop-width);
-    padding: var(--space-0) var(--space-8);
+    padding: var(--space-8);
     background-color: var(--primary-bg-color);
     overflow: hidden;
     height: 700px; /* <----- Temporary height */
