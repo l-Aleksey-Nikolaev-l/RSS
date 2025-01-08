@@ -6,10 +6,11 @@ class Rules {
         'The game consists of 5 rounds and 3 levels of difficulty. ' +
         'In each round, the user must repeat a sequence of keyboard ' +
         'symbols based on the level of difficulty.',
-        'The levels of difficulty are:' +
-        'Easy: only numbers (0-9);' +
-        'Medium: only letters (A-Z);' +
+        'The levels of difficulty are:',
+        ['Easy: only numbers (0-9);',
+        'Medium: only letters (A-Z);',
         'Hard: letters (A-Z) and numbers (0-9).'
+        ]
     ]
 
     #mainSection() {
