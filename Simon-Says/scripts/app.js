@@ -10,5 +10,6 @@ function createWrapper() {
 
 body.onload = () => {
     createWrapper();
+    showMainScreen();
     startListeners();
 };
