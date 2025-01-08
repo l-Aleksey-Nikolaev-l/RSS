@@ -1,4 +1,4 @@
-import {wrapper} from './variables.js';
+import {wrapper, difficulty} from './variables.js';
 
 const difficultySettings = {
     'easy': 'only numbers (0-9)',
@@ -20,6 +20,7 @@ class Settings {
         const difficultySettingContainer = this.#createSettingContainer();
         const difficultyLabel = this.#createSettingLabel('difficulty__list', 'Difficulty level is');
         const difficultySetting = this.#createDifficultySetting();
+        difficultySetting.value = difficulty;
         difficultySettingContainer.append(difficultyLabel, difficultySetting);
         settingsList.append(difficultySettingContainer);
         return settingsList;
