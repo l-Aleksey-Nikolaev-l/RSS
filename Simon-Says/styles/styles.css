@@ -138,6 +138,11 @@ body {
 
 /* Mobile screen */
 @media screen and (width < 768px) and (width >= 360px) {
+    .main__rules_section {
+        align-items: center;
+        padding-bottom: var(--space-16);
+    }
+
     .main__button {
         box-shadow: 0 8px 8px 2px #d3c1aa,
                     inset 0 -6px 10px -8px rgba(66, 68, 90, .4);
