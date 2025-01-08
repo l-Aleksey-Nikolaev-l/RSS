@@ -1,6 +1,7 @@
+import {wrapper} from './variables.js';
+
 class Settings {
 
-}
     #createMainSection() {
         const main = document.createElement('main');
         main.classList.add('main', 'main__settings_section');
@@ -29,6 +30,8 @@ class Settings {
 
 
 function showSettings() {
+    const settingsScreen = new Settings().createSettings();
+    wrapper[0].append(settingsScreen);
     console.log('Snow Settings');
 }
 
