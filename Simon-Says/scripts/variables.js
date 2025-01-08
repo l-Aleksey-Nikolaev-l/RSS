@@ -5,7 +5,8 @@ let difficulty = 'easy';
 
 export {
     body,
-    wrapper
+    wrapper,
+    difficulty
 };
 
 export function setDifficulty(level) {
