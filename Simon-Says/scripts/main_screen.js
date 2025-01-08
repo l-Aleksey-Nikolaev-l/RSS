@@ -4,13 +4,13 @@ class MainScreen {
 
     #buttons = ['Play', 'Settings', 'Rules'];
 
-    #mainSection() {
+    #createMainSection() {
         const main = document.createElement('main');
         main.classList.add('main');
         return main;
     }
 
-    #topSection() {
+    #createTopSection() {
         const topSection = document.createElement('section');
         topSection.classList.add('main__section', 'main__top_section');
         const headerText = document.createElement('h1');
@@ -20,34 +20,34 @@ class MainScreen {
         return topSection;
     }
 
-    #bottomSection() {
+    #createBottomSection() {
         const bottomSection = document.createElement('section');
         bottomSection.classList.add('main__section', 'main__bottom_section');
         for (const button of this.#buttons) {
-            const newButton = this.#mainButton(button);
+            const newButton = this.#createMainButton(button);
             bottomSection.append(newButton);
         }
         return bottomSection;
     }
 
-    #mainButton(button = '') {
+    #createMainButton(button = '') {
         const mainButton = document.createElement('button');
         mainButton.classList.add('main__button', `main__button_${button.toLowerCase()}`);
         mainButton.textContent = button;
         return mainButton;
     }
 
-    show() {
-        const main = this.#mainSection();
-        const topSection = this.#topSection();
-        const bottomSection = this.#bottomSection();
-        main.append(topSection, bottomSection);
-        return main;
+    createMainScreen() {
+        const mainSection = this.#createMainSection();
+        const topSection = this.#createTopSection();
+        const bottomSection = this.#createBottomSection();
+        mainSection.append(topSection, bottomSection);
+        return mainSection;
     }
 }
 
 function showMainScreen() {
-    const mainScreen = new MainScreen().show();
+    const mainScreen = new MainScreen().createMainScreen();
     wrapper[0].append(mainScreen);
 }
 
