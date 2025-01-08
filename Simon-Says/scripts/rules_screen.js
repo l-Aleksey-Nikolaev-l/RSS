@@ -51,7 +51,10 @@ class Rules {
     }
 
     show() {
-        return this.#rulesSection();
+        const mainSection = this.#mainSection();
+        const ruleSection = this.#rulesSection(this.#rulesArray);
+        mainSection.append(ruleSection);
+        return mainSection;
     }
 }
 
