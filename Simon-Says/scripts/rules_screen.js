@@ -19,12 +19,12 @@ class Rules {
         return main;
     }
 
-    #rulesSection(rulesArray) {
+    #addRulesList(rulesArray) {
         const rulesList = document.createElement('ul');
         rulesList.classList.add('rules__list');
         for (let index = 0; index < rulesArray.length; index += 1) {
             if (typeof rulesArray[index] !== 'string') {
-                const subList = this.#rulesSection(rulesArray[index]);
+                const subList = this.#addRulesList(rulesArray[index]);
                 subList.classList.add('rules__list_sublist')
                 rulesList.append(subList);
             } else {
@@ -52,7 +52,7 @@ class Rules {
 
     show() {
         const mainSection = this.#mainSection();
-        const ruleSection = this.#rulesSection(this.#rulesArray);
+        const ruleSection = this.#addRulesList(this.#rulesArray);
         const backButton = this.#addBackButton();
         mainSection.append(ruleSection, backButton);
         return mainSection;
