@@ -1,3 +1,4 @@
+import showMainScreen from './main_screen.js';
 import showPlayArea from './play_area_screen.js';
 import showSettings from './settings_screen.js';
 import showRules from './rules_screen.js';
@@ -13,6 +14,9 @@ function clickMainButton(event) {
             break;
         case 'rules':
             showRules();
+            break;
+        case 'back':
+            showMainScreen();
             break;
     }
 }
