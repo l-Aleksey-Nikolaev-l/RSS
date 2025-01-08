@@ -106,6 +106,13 @@ body {
     padding-top: var(--space-48);
 }
 
+.setting__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: var(--space-8);
+}
+
 .rules__list {
     margin: var(--space-0) var(--space-24);
 }
