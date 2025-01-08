@@ -17,6 +17,14 @@ class Settings {
     #createSettingsList() {
         return '';
     }
+    #createSettingLabel(labelFor = '', labelText = '') {
+        const settingLabel = document.createElement('label');
+        settingLabel.classList.add('setting__label');
+        settingLabel.setAttribute('for', labelFor);
+        settingLabel.textContent = labelText;
+        return settingLabel;
+    }
+
     #createDifficultySetting() {
         const settingList = document.createElement('select');
         settingList.classList.add('difficulty__list');
