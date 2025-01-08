@@ -53,7 +53,8 @@ class Rules {
     show() {
         const mainSection = this.#mainSection();
         const ruleSection = this.#rulesSection(this.#rulesArray);
-        mainSection.append(ruleSection);
+        const backButton = this.#addBackButton();
+        mainSection.append(ruleSection, backButton);
         return mainSection;
     }
 }
