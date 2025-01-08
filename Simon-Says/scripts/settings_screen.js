@@ -17,6 +17,21 @@ class Settings {
     #createSettingsList() {
         return '';
     }
+    #createDifficultySetting() {
+        const settingList = document.createElement('select');
+        settingList.classList.add('difficulty__list');
+        settingList.id = 'difficulty__list';
+
+        for (const option in difficultySettings) {
+            const description = difficultySettings[option];
+            const difficultyOption = document.createElement('option');
+            difficultyOption.classList.add('difficulty__option')
+            difficultyOption.setAttribute('value', option);
+            difficultyOption.textContent = option + ': ' + description;
+            settingList.append(difficultyOption);
+        }
+        return settingList
+    }
 
     #createBackButton() {
         const backButton = document.createElement('button');
