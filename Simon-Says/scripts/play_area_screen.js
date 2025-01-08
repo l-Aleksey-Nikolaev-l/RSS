@@ -1,4 +1,4 @@
-import {difficulty, setDifficulty} from './variables.js';
+import {wrapper, difficulty} from "./variables";
 
 function showPlayArea() {
     console.log('Play The Game');
