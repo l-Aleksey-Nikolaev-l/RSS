@@ -91,7 +91,8 @@ body {
 }
 
 .main__rules_section,
-.main__settings_section {
+.main__settings_section,
+.main__play_section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
