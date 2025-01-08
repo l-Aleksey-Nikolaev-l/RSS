@@ -89,7 +89,8 @@ body {
     transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
 }
 
-.main__rules_section {
+.main__rules_section,
+.main__settings_section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -138,7 +139,8 @@ body {
 
 /* Mobile screen */
 @media screen and (width < 768px) and (width >= 360px) {
-    .main__rules_section {
+    .main__rules_section,
+    .main__settings_section {
         align-items: center;
         padding-bottom: var(--space-16);
     }
