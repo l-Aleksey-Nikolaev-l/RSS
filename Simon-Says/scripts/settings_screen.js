@@ -18,6 +18,16 @@ class Settings {
         return backButton;
     }
 
+    createSettings() {
+        const mainSection = this.#createMainSection();
+        const settingsSection = this.#createSettingsList();
+        const backButton = this.#createBackButton();
+        mainSection.append(settingsSection, backButton);
+        return mainSection;
+    }
+}
+
+
 function showSettings() {
     console.log('Snow Settings');
 }
