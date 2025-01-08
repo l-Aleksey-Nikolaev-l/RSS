@@ -7,6 +7,9 @@ class Settings {
         return main;
     }
 
+    #createSettingsList() {
+        return '';
+    }
 
 function showSettings() {
     console.log('Snow Settings');
