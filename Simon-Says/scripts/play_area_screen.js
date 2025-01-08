@@ -29,7 +29,9 @@ class PlayScreen {
 }
 
 function showPlayArea() {
-    console.log('Play The Game');
+    const playScreen = new PlayScreen(difficulty).createPlayScreen();
+    wrapper[0].append(playScreen);
+    console.log(`Play The Game on ${difficulty} level`);
 }
 
 export default showPlayArea;
