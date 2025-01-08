@@ -9,6 +9,6 @@ function createWrapper() {
 }
 
 body.onload = () => {
-    wrapper.append(showMainScreen());
+    createWrapper();
     startListeners();
 };
