@@ -1,5 +1,11 @@
 import {wrapper} from './variables.js';
 
+const difficultySettings = {
+    'easy': 'only numbers (0-9)',
+    'medium': 'only letters (A-Z)',
+    'hard': 'easy + medium'
+};
+
 class Settings {
 
     #createMainSection() {
