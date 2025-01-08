@@ -3,7 +3,10 @@
     --primary-bg-color: #e1d5c4;
     --space-0: 0;
     --space-8: 8px;
+    --space-16: 16px;
+    --space-24: 24px;
     --space-32: 32px;
+    --space-48: 48px;
 }
 
 *,
