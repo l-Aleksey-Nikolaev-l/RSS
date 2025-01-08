@@ -144,6 +144,18 @@ body {
                 inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
 }
 
+.top__play_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.top__indicator {
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--space-8);
+}
 
 @media (hover: hover) {
     .main__button:hover {
