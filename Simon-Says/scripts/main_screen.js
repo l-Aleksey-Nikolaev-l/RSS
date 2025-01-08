@@ -1,3 +1,5 @@
+import {wrapper} from './variables.js';
+
 class MainScreen {
 
     #buttons = ['Play', 'Settings', 'Rules'];
@@ -45,7 +47,8 @@ class MainScreen {
 }
 
 function showMainScreen() {
-    return new MainScreen().show();
+    const mainScreen = new MainScreen().show();
+    wrapper[0].append(mainScreen);
 }
 
 export default showMainScreen;
