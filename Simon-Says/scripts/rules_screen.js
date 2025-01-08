@@ -83,8 +83,8 @@ class Rules {
 }
 
 function showRules() {
-    const rules = new Rules(rulesArray).createRules();
-    wrapper[0].append(rules);
+    const rulesScreen = new Rules(rulesArray).createRules();
+    wrapper[0].append(rulesScreen);
 }
 
 export default showRules;
