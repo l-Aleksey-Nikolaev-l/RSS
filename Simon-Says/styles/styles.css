@@ -41,8 +41,8 @@ body {
     max-width: var(--desktop-width);
     padding: var(--space-8);
     background-color: var(--primary-bg-color);
-    overflow: hidden;
-    height: 700px; /* <----- Temporary height */
+    overflow: auto;
+    height: 100%
 }
 
 .main {
