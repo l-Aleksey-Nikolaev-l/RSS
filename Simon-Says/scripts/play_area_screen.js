@@ -115,8 +115,9 @@ class PlayScreen {
     createPlayScreen() {
         const mainSection = this.#createMainSection();
         const topSection = this.#createTopSection();
+        const middleSection = this.#createMiddleSection();
         const bottomSection = this.#createBottomSection();
-        mainSection.append(topSection, bottomSection);
+        mainSection.append(topSection, middleSection, bottomSection);
         return mainSection;
     }
 }
