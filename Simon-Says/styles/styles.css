@@ -208,6 +208,16 @@ body {
     box-shadow 0.05s ease-in-out;
 }
 
+.keyboard__correct_key {
+    background: #bcd7b8;
+    box-shadow:
+            0 0 4px 4px #a1bec894,
+            inset 3px -3px 3px 0 #bcd7b8,
+            inset 0 0 0 2px rgb(202, 231, 212, 45%),
+            inset -7px 7px 5px 0 rgb(142, 214, 154, 45%),
+            inset 4px -4px 10px 4px rgb(100, 170, 110, 39%);
+}
+
 .bottom__play_section {
     display: flex;
     flex-direction: row;
