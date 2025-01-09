@@ -48,6 +48,24 @@ class PlayScreen {
         return topSection;
     }
 
+    #createBottomSection() {
+        const bottomSection = document.createElement('section');
+        const rightContainer = document.createElement('div');
+        const backButton = this.#createControlButton('Back');
+        const repeatButton = this.#createControlButton('Repeat');
+        const newGameButton = this.#createControlButton('New Game');
+
+        bottomSection.classList.add('bottom__play_section');
+        rightContainer.classList.add('bottom__right_container');
+        backButton.classList.add('back__button');
+        repeatButton.classList.add('repeat__button');
+        newGameButton.classList.add('new_game__button');
+
+        rightContainer.append(repeatButton, newGameButton);
+        bottomSection.append(backButton, rightContainer);
+        return bottomSection;
+    }
+
     #createControlButton(button = '') {
         const controlButton = document.createElement('button');
         controlButton.classList.add('main__button', `control__button_${button.toLowerCase()}`);
