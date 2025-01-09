@@ -177,6 +177,13 @@ body {
     .back__button:hover {
         transform: translate(0, 0);
     }
+
+    .repeat__button:hover {
+        transform: translate(0, 0);
+    }
+    .new_game__button:hover {
+        transform: translate(0, 0);
+    }
 }
 
 /* Tablet screen */
