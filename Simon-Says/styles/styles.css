@@ -169,6 +169,27 @@ body {
     width: 100%;
 }
 
+.keyboard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+    width: 100%;
+    border: 1px solid black;
+}
+
+.keyboard__easy {
+    max-width: 25%;
+}
+
+.keyboard__medium {
+    max-width: 70%;
+}
+
+.keyboard__hard {
+    max-width: 80%;
+}
+
 .bottom__play_section {
     display: flex;
     flex-direction: row;
