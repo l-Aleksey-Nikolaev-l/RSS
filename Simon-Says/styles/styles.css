@@ -190,6 +190,12 @@ body {
     max-width: 80%;
 }
 
+.keyboard__key {
+    flex-grow: 1;
+    width: 100px;
+    height: 100px;
+}
+
 .bottom__play_section {
     display: flex;
     flex-direction: row;
