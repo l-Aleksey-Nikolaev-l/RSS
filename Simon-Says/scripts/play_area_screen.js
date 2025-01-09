@@ -66,6 +66,14 @@ class PlayScreen {
         return bottomSection;
     }
 
+    #createKey(code = '') {
+        const key = document.createElement('button');
+        key.classList.add('keyboard__key');
+        key.setAttribute('data-key', code);
+        key.textContent = code.slice(-1);
+        return key;
+    }
+
     #createControlButton(button = '') {
         const controlButton = document.createElement('button');
         controlButton.classList.add('main__button');
