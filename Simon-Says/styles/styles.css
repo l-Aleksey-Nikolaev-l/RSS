@@ -137,7 +137,9 @@ body {
     margin: var(--space-16) var(--space-0);
 }
 
-.back__button {
+.back__button,
+.repeat__button,
+.new_game__button {
     width: 200px;
     min-height: 48px;
     border-radius: 24px;
