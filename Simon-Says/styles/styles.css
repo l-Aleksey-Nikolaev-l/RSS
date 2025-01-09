@@ -211,7 +211,7 @@ body {
     .main__settings_section,
     .main__play_section {
         align-items: center;
-        padding-bottom: var(--space-16);
+        /*padding-bottom: var(--space-16);*/
     }
 
     .setting__container {
