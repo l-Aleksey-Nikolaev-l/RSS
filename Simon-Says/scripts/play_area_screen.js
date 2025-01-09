@@ -68,7 +68,7 @@ class PlayScreen {
 
     #createControlButton(button = '') {
         const controlButton = document.createElement('button');
-        controlButton.classList.add('main__button', `control__button_${button.toLowerCase()}`);
+        controlButton.classList.add('main__button');
         controlButton.textContent = button;
         return controlButton;
     }
