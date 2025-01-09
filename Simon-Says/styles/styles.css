@@ -162,6 +162,20 @@ body {
     column-gap: var(--space-8);
 }
 
+.bottom__play_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: var(--space-8);
+    width: 100%;
+}
+
+.bottom__right_container {
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--space-8);
+}
+
 @media (hover: hover) {
     .main__button:hover {
         cursor: pointer;
@@ -225,6 +239,14 @@ body {
     .top__indicator {
         flex-direction: column;
         column-gap: var(--space-0);
+    }
+
+    .bottom__right_container {
+        display: contents;
+    }
+
+    .bottom__play_section {
+        justify-content: space-evenly;
     }
 
     @media screen and (hover: hover){
