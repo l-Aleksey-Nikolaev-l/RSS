@@ -222,10 +222,6 @@ body {
         transition: transform 0.25s ease-in-out;
     }
 
-    .back__button {
-        transform: translate(0, 0);
-    }
-
     .top__indicator {
         flex-direction: column;
         column-gap: var(--space-0);
