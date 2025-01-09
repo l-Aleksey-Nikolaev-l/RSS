@@ -162,6 +162,13 @@ body {
     column-gap: var(--space-8);
 }
 
+.middle__play_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .bottom__play_section {
     display: flex;
     flex-direction: row;
