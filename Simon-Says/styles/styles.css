@@ -87,7 +87,10 @@ body {
     border: 1px solid #dbd4cc;
     box-shadow: -6px 8px 8px 2px #d3c1aa,
                 inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
-    transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
+    transition: font-size 0.1s ease-in-out,
+                background 0.05s ease-in-out,
+                transform 0.05s ease-in-out,
+                box-shadow 0.05s ease-in-out;
 }
 
 .main__rules_section,
@@ -164,7 +167,9 @@ body {
         transform: translate(-8px, 8px);
         box-shadow: 0 0 0 0 #d3c1aa,
                     inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
-        transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+        transition: background 0.1s ease-in-out,
+                    transform 0.1s ease-in-out,
+                    box-shadow 0.1s ease-in-out;
     }
 
     .back__button:hover {
@@ -195,9 +200,12 @@ body {
     }
 
     .main__button {
-        box-shadow: 0 8px 8px 2px #d3c1aa,
-                    inset 0 -6px 10px -8px rgba(66, 68, 90, .4);
-        transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
+        min-width: unset;
+        font-size: 3vw;
+        transform: translate(0, 0);
+        transition: font-size 0.2s ease-in-out,
+                    transform 0.05s ease-in-out,
+                    box-shadow 0.05s ease-in-out;
     }
 
     .main__bottom_section {
@@ -216,12 +224,10 @@ body {
 
     @media screen and (hover: hover){
         .main__button:hover {
-            cursor: pointer;
-            background-color: #ffffff;
-            transform: translate(0, 4px);
+            transform: translate(0, 0);
             box-shadow: 0 0 0 0 #d3c1aa,
-            inset 0 -6px 10px -8px rgba(66, 68, 90, .4);
-            transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+                        inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
+            transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
         }
     }
 }
