@@ -48,6 +48,37 @@ class PlayScreen {
         return topSection;
     }
 
+    #createMiddleSection() {
+        const middleSection = document.createElement('section');
+        const keyBoard = document.createElement('div');
+
+        middleSection.classList.add('middle__play_section');
+        keyBoard.classList.add('keyboard', `keyboard__${this.difficulty}`);
+
+        const numeric = [48, 57]; // from 0 to 9
+        const letters = [65, 90]; // from A to Z
+        let keysArray = [];
+
+        if (difficulty === 'easy') {
+            keysArray.push(numeric);
+        } else if (difficulty === 'medium') {
+            keysArray.push(letters);
+        } else if (difficulty === 'hard') {
+            keysArray.push(numeric, letters);
+        }
+
+        keysArray.forEach((pack) => {
+            for (let code = pack[0]; code <= pack[1]; code += 1) {
+                const symbol = String.fromCharCode(code).toUpperCase();
+                const key = this.#createKey('Key' + symbol);
+                keyBoard.append(key);
+            }
+        })
+
+        middleSection.append(keyBoard);
+        return middleSection;
+    }
+
     #createBottomSection() {
         const bottomSection = document.createElement('section');
         const rightContainer = document.createElement('div');
