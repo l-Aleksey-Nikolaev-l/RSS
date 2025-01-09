@@ -76,9 +76,8 @@ class PlayScreen {
     createPlayScreen() {
         const mainSection = this.#createMainSection();
         const topSection = this.#createTopSection();
-        const backButton = this.#createControlButton('Back');
-        backButton.classList.add('back__button');
-        mainSection.append(topSection, backButton);
+        const bottomSection = this.#createBottomSection();
+        mainSection.append(topSection, bottomSection);
         return mainSection;
     }
 }
