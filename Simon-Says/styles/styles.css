@@ -85,12 +85,14 @@ body {
     background-color: #f5f5f5;
     font-size: 1.6rem;
     border: 1px solid #dbd4cc;
-    box-shadow: -6px 8px 8px 2px #d3c1aa,
-                inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
-    transition: font-size 0.1s ease-in-out,
-                background 0.05s ease-in-out,
-                transform 0.05s ease-in-out,
-                box-shadow 0.05s ease-in-out;
+    box-shadow:
+            -6px 8px 8px 2px #d3c1aa,
+            inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
+    transition:
+            font-size 0.1s ease-in-out,
+            background 0.05s ease-in-out,
+            transform 0.05s ease-in-out,
+            box-shadow 0.05s ease-in-out;
 }
 
 .main__rules_section,
@@ -145,8 +147,9 @@ body {
     border-radius: 24px;
     font-size: 1.2rem;
     text-align: center;
-    box-shadow: 0 0 0 0 #d3c1aa,
-                inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
+    box-shadow:
+            0 0 0 0 #d3c1aa,
+            inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
 }
 
 .top__play_section {
@@ -237,11 +240,13 @@ body {
         cursor: pointer;
         background-color: #ffffff;
         transform: translate(-8px, 8px);
-        box-shadow: 0 0 0 0 #d3c1aa,
-                    inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
-        transition: background 0.1s ease-in-out,
-                    transform 0.1s ease-in-out,
-                    box-shadow 0.1s ease-in-out;
+        box-shadow:
+                0 0 0 0 #d3c1aa,
+                inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
+        transition:
+                background 0.1s ease-in-out,
+                transform 0.1s ease-in-out,
+                box-shadow 0.1s ease-in-out;
     }
 
     .back__button:hover {
@@ -251,6 +256,7 @@ body {
     .repeat__button:hover {
         transform: translate(0, 0);
     }
+
     .new_game__button:hover {
         transform: translate(0, 0);
     }
@@ -279,7 +285,6 @@ body {
     .main__settings_section,
     .main__play_section {
         align-items: center;
-        /*padding-bottom: var(--space-16);*/
     }
 
     .setting__container {
@@ -294,9 +299,10 @@ body {
         min-width: unset;
         font-size: 3vw;
         transform: translate(0, 0);
-        transition: font-size 0.2s ease-in-out,
-                    transform 0.05s ease-in-out,
-                    box-shadow 0.05s ease-in-out;
+        transition:
+                font-size 0.2s ease-in-out,
+                transform 0.05s ease-in-out,
+                box-shadow 0.05s ease-in-out;
     }
 
     .main__bottom_section {
@@ -320,9 +326,12 @@ body {
     @media screen and (hover: hover){
         .main__button:hover {
             transform: translate(0, 0);
-            box-shadow: 0 0 0 0 #d3c1aa,
-                        inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
-            transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
+            box-shadow:
+                    0 0 0 0 #d3c1aa,
+                    inset 6px -6px 10px -8px rgba(66, 68, 90, .4);
+            transition:
+                    transform 0.05s ease-in-out,
+                    box-shadow 0.05s ease-in-out;
         }
     }
 }
