@@ -224,6 +224,18 @@ body {
             inset 4px -4px 10px 4px rgb(100, 170, 110, 39%);
 }
 
+.key__pressed {
+    background-color: rgb(255, 255, 255);
+    box-shadow:
+            inset 2px -2px 2px -2px rgb(0, 0, 0, 64%),
+            inset -1px 1px 4px 4px rgba(255, 255, 255, 1),
+            inset -4px 4px 3px 0 rgb(0, 0, 0, 50%),
+            inset 6px -6px 4px 0 rgb(255 255 255);
+    cursor: pointer;
+    transition: background 0.1s ease-in-out,
+    box-shadow 0.1s ease-in-out;
+}
+
 .bottom__play_section {
     display: flex;
     flex-direction: row;
