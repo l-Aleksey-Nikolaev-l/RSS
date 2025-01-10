@@ -42,6 +42,11 @@ function startKeysListeners() {
     });
 }
 
+function clearKeysListeners() {
+    document?.removeEventListener('keydown', keyDown);
+    keyboard?.removeEventListener('mousedown', keyDown);
+}
+
 function pressKey(keyboard, code) {
     if (keyboardKey) {
         return;
