@@ -76,7 +76,7 @@ function startNewGame() {
 }
 
 function repeatGame() {
-    console.log('Repeat game');
+    startKeysListeners();
 }
 
 
