@@ -4,18 +4,9 @@ let currentDeviceUp = '';
 
 function startKeysListeners() {
     keyboard = document.getElementById('keyboard');
-    let isMouseDown = false;
-    let isKeyDown = false;
-
-
-    keyboard.addEventListener('mouseout', (event) => {
-        if (!isKeyDown && isMouseDown) {
-            isMouseDown = false;
-            releaseKey(keyboard, event.target.dataset.key.slice(-1));
-        }
-    });
     document.addEventListener('keydown', keyDown);
     keyboard.addEventListener('mousedown', keyDown);
+    keyboard.addEventListener('mouseout', mouseOut);
 }
 
 function clearKeysListeners() {
@@ -44,6 +35,18 @@ function keyUp(event) {
     if (keyboardKey === code) {
         releaseKey(keyboard, code);
         this.removeEventListener(currentDeviceUp, keyUp);
+        startKeysListeners();
+    }
+}
+
+function mouseOut(event) {
+    const code = event.type.includes('key') ?
+        event.code.slice(-1) :
+        event.target.dataset.key;
+
+    if (currentDeviceUp === 'mouseup') {
+        releaseKey(keyboard, code);
+        keyboard.removeEventListener(currentDeviceUp, keyUp);
         startKeysListeners();
     }
 }
