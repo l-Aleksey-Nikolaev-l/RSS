@@ -72,8 +72,11 @@ function startNewGame() {
 }
 
 function repeatGame() {
-    console.log('Repeat game')
+    console.log('Repeat game');
 }
 
 
-export  {startNewGame, repeatGame}
+export  {
+    startNewGame,
+    repeatGame
+};
