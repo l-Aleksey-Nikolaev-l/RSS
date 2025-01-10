@@ -6,33 +6,6 @@ function startKeysListeners() {
     let isMouseDown = false;
     let isKeyDown = false;
 
-    document.addEventListener('keydown', (event) => {
-        if (!isMouseDown && !isKeyDown) {
-            isKeyDown = true;
-            pressKey(keyboard, event.code.slice(-1));
-        }
-    });
-
-    document.addEventListener('keyup', (event) => {
-        if (!isMouseDown) {
-            isKeyDown = false;
-            releaseKey(keyboard, event.code.slice(-1));
-        }
-    });
-
-    keyboard.addEventListener('mousedown', (event) => {
-        if (!isMouseDown && !isKeyDown) {
-            isMouseDown = true;
-            pressKey(keyboard, event.target.dataset.key.slice(-1));
-        }
-    });
-
-    keyboard.addEventListener('mouseup', (event) => {
-        if (!isKeyDown) {
-            isMouseDown = false;
-            releaseKey(keyboard, event.target.dataset.key.slice(-1));
-        }
-    });
 
     keyboard.addEventListener('mouseout', (event) => {
         if (!isKeyDown && isMouseDown) {
@@ -40,11 +13,19 @@ function startKeysListeners() {
             releaseKey(keyboard, event.target.dataset.key.slice(-1));
         }
     });
+    document.addEventListener('keydown', keyDown);
+    keyboard.addEventListener('mousedown', keyDown);
 }
 
 function clearKeysListeners() {
     document?.removeEventListener('keydown', keyDown);
     keyboard?.removeEventListener('mousedown', keyDown);
+}
+
+function keyDown(event) {
+}
+
+function keyUp(event) {
 }
 
 function pressKey(keyboard, code) {
