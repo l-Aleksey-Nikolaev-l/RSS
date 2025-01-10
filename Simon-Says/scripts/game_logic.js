@@ -68,7 +68,7 @@ function releaseKey(keyboard, code) {
 }
 
 function startNewGame() {
-    console.log('Start new game');
+    startKeysListeners();
 }
 
 function repeatGame() {
