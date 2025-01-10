@@ -1,4 +1,10 @@
+function startKeysListeners() {
+    const keyboard = document.getElementById('keyboard');
+    let isMouseDown = false;
+    let isKeyDown = false;
 
+
+}
 
 
 function startNewGame() {
