@@ -1,42 +1,43 @@
+let keyboard = null;
 let keyboardKey = null;
 
 function startKeysListeners() {
-    const keyboard = document.getElementById('keyboard');
+    keyboard = document.getElementById('keyboard');
     let isMouseDown = false;
     let isKeyDown = false;
 
     document.addEventListener('keydown', (event) => {
         if (!isMouseDown && !isKeyDown) {
             isKeyDown = true;
-            pressKey(keyboard, event.code);
+            pressKey(keyboard, event.code.slice(-1));
         }
     });
 
     document.addEventListener('keyup', (event) => {
         if (!isMouseDown) {
             isKeyDown = false;
-            releaseKey(keyboard, event.code);
+            releaseKey(keyboard, event.code.slice(-1));
         }
     });
 
     keyboard.addEventListener('mousedown', (event) => {
         if (!isMouseDown && !isKeyDown) {
             isMouseDown = true;
-            pressKey(keyboard, event.target.dataset.key);
+            pressKey(keyboard, event.target.dataset.key.slice(-1));
         }
     });
 
     keyboard.addEventListener('mouseup', (event) => {
         if (!isKeyDown) {
             isMouseDown = false;
-            releaseKey(keyboard, event.target.dataset.key);
+            releaseKey(keyboard, event.target.dataset.key.slice(-1));
         }
     });
 
     keyboard.addEventListener('mouseout', (event) => {
         if (!isKeyDown && isMouseDown) {
             isMouseDown = false;
-            releaseKey(keyboard, event.target.dataset.key);
+            releaseKey(keyboard, event.target.dataset.key.slice(-1));
         }
     });
 }
