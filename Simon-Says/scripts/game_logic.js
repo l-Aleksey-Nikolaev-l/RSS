@@ -1,5 +1,6 @@
 let keyboard = null;
 let keyboardKey = null;
+let currentDeviceUp = '';
 
 function startKeysListeners() {
     keyboard = document.getElementById('keyboard');
@@ -23,6 +24,16 @@ function clearKeysListeners() {
 }
 
 function keyDown(event) {
+    currentDeviceUp = event.type.includes('key') ? 'keyup' : 'mouseup';
+    const code = event.type.includes('key') ?
+        event.code.slice(-1) :
+        event.target.dataset.key;
+
+    pressKey(keyboard, code);
+    if (keyboardKey) {
+        clearKeysListeners();
+        this.addEventListener(currentDeviceUp, keyUp);
+    }
 }
 
 function keyUp(event) {
