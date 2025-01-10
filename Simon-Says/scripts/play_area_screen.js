@@ -68,13 +68,12 @@ class PlayScreen {
             keysArray.push(numeric, letters);
         }
 
-        keysArray.forEach((pack, index) => {
+        keysArray.forEach((pack) => {
             for (let code = pack[0]; code <= pack[1]; code += 1) {
                 const symbol = String.fromCharCode(code).toUpperCase();
                 const key = this.#createKey(symbol);
                 keyBoard.append(key);
             }
-            console.log(index);
         })
 
         middleSection.append(keyBoard);
@@ -127,7 +126,6 @@ class PlayScreen {
 function showPlayArea() {
     const playScreen = new PlayScreen(difficulty).createPlayScreen();
     wrapper[0].append(playScreen);
-    console.log(`Play The Game on ${difficulty} level`);
 }
 
 export default showPlayArea;
