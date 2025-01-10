@@ -210,6 +210,10 @@ body {
     box-shadow 0.05s ease-in-out;
 }
 
+.keyboard__key:focus-visible {
+    outline: none;
+}
+
 .keyboard__correct_key {
     background: #bcd7b8;
     box-shadow:
