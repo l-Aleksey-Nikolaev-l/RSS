@@ -3,6 +3,7 @@ let keyboardKey = null;
 let currentDeviceUp = '';
 
 function startKeysListeners() {
+    clearKeysListeners();
     keyboard = document.getElementById('keyboard');
     document.addEventListener('keydown', keyDown);
     keyboard.addEventListener('mousedown', keyDown);
