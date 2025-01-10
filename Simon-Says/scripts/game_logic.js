@@ -52,9 +52,6 @@ function mouseOut(event) {
 }
 
 function pressKey(keyboard, code) {
-    if (keyboardKey) {
-        return;
-    }
     for (const key of keyboard.children) {
         if (code === key.dataset.key) {
             key.classList.add('key__pressed');
@@ -65,9 +62,6 @@ function pressKey(keyboard, code) {
 }
 
 function releaseKey(keyboard, code) {
-    if (keyboardKey !== code) {
-        return;
-    }
     for (const key of keyboard.children) {
         if (code === key.dataset.key) {
             key.classList.remove('key__pressed');
