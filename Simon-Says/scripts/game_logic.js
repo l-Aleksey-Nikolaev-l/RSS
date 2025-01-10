@@ -12,6 +12,13 @@ function startKeysListeners() {
         }
     });
 
+    document.addEventListener('keyup', (event) => {
+        if (!isMouseDown) {
+            isKeyDown = false;
+            releaseKey(keyboard, event.code);
+        }
+    });
+
 
 }
 
@@ -28,6 +35,18 @@ function pressKey(keyboard, code) {
     }
 }
 
+function releaseKey(keyboard, code) {
+    if (keyboardKey !== code) {
+        return;
+    }
+    for (const key of keyboard.children) {
+        if (code === key.dataset.key) {
+            key.classList.remove('key__pressed');
+            keyboardKey = null;
+            break;
+        }
+    }
+}
 
 function startNewGame() {
     console.log('Start new game');
