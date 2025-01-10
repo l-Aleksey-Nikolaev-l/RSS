@@ -57,6 +57,7 @@ class PlayScreen {
 
         const numeric = [48, 57]; // from 0 to 9
         const letters = [65, 90]; // from A to Z
+        const keyPrefix = ['Digit', 'Key'];
         let keysArray = [];
 
         if (difficulty === 'easy') {
@@ -67,12 +68,14 @@ class PlayScreen {
             keysArray.push(numeric, letters);
         }
 
-        keysArray.forEach((pack) => {
+        keysArray.forEach((pack, index) => {
             for (let code = pack[0]; code <= pack[1]; code += 1) {
                 const symbol = String.fromCharCode(code).toUpperCase();
-                const key = this.#createKey('Key' + symbol);
+                const keyCode = keyPrefix[index] + symbol;
+                const key = this.#createKey(keyCode);
                 keyBoard.append(key);
             }
+            console.log(index);
         })
 
         middleSection.append(keyBoard);
