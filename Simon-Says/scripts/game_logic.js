@@ -19,7 +19,26 @@ function startKeysListeners() {
         }
     });
 
+    keyboard.addEventListener('mousedown', (event) => {
+        if (!isMouseDown && !isKeyDown) {
+            isMouseDown = true;
+            pressKey(keyboard, event.target.dataset.key);
+        }
+    });
 
+    keyboard.addEventListener('mouseup', (event) => {
+        if (!isKeyDown) {
+            isMouseDown = false;
+            releaseKey(keyboard, event.target.dataset.key);
+        }
+    });
+
+    keyboard.addEventListener('mouseout', (event) => {
+        if (!isKeyDown && isMouseDown) {
+            isMouseDown = false;
+            releaseKey(keyboard, event.target.dataset.key);
+        }
+    });
 }
 
 function pressKey(keyboard, code) {
