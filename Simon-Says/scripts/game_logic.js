@@ -37,6 +37,15 @@ function keyDown(event) {
 }
 
 function keyUp(event) {
+    const code = event.type.includes('key') ?
+        event.code.slice(-1) :
+        event.target.dataset.key;
+
+    if (keyboardKey === code) {
+        releaseKey(keyboard, code);
+        this.removeEventListener(currentDeviceUp, keyUp);
+        startKeysListeners();
+    }
 }
 
 function pressKey(keyboard, code) {
