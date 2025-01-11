@@ -171,6 +171,13 @@ function startDisplayingKeys() {
     }, timeForShowing);
 }
 
+function resetVariables() {
+    randomSequence = [];
+    setLevelAttempt(defaultAttempts);
+    const attemptNumber = document.getElementsByClassName('attempt__number');
+    attemptNumber[0].textContent = levelAttempt.toString();
+}
+
 function startNewGame() {
     startKeysListeners();
     createSequence();
