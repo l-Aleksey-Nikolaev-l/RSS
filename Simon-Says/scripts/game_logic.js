@@ -33,7 +33,6 @@ function keyDown(event) {
 }
 
 function keyUp(event) {
-
     eventKey(event);
     if (keyCode) {
         keyboardKey = null;
@@ -43,7 +42,6 @@ function keyUp(event) {
 }
 
 function mouseOut(event) {
-
     if (currentDeviceUp === 'mouseup') {
         eventKey(event);
         keyboardKey = null;
@@ -51,7 +49,6 @@ function mouseOut(event) {
         startKeysListeners();
     }
 }
-
 
 function eventKey(event) {
     const isDevicePressed = event.type.includes('down');
