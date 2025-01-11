@@ -95,6 +95,7 @@ function checkAnswer(key) {
         setGameOver();
     } else {
         answer = 'keyboard__incorrect_key';
+        setLevelAttempt(levelAttempt - 1);
         setGameOver();
     }
 
