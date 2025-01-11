@@ -149,6 +149,7 @@ function startDisplaying() {
 
 function startNewGame() {
     startKeysListeners();
+    createSequence();
 }
 
 function repeatGame() {
