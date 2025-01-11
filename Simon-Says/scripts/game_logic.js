@@ -55,6 +55,7 @@ function mouseOut(event) {
 function eventKey(keyboard, event, code) {
 
     const isDevicePressed = event.type.includes('down');
+    keyCode = getKeyCode(event);
 
     for (const key of keyboard.children) {
         if (keyCode === key.dataset.key && isDevicePressed) {
