@@ -52,19 +52,16 @@ function mouseOut(event) {
     }
 }
 
-function pressKey(keyboard, code) {
+function eventKey(keyboard, event, code) {
+
+    const isDevicePressed = event.type.includes('down');
+
     for (const key of keyboard.children) {
-        if (code === key.dataset.key) {
+        if (code === key.dataset.key && isDevicePressed) {
             key.classList.add('key__pressed');
             keyboardKey = code;
             break;
-        }
-    }
-}
-
-function releaseKey(keyboard, code) {
-    for (const key of keyboard.children) {
-        if (code === key.dataset.key) {
+        } else if (code === key.dataset.key && !isDevicePressed) {
             key.classList.remove('key__pressed');
             keyboardKey = null;
             break;
