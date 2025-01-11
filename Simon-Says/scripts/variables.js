@@ -7,6 +7,10 @@ let keysCollection = new Map();
 let timeForShowing = 300;
 let timeBetweenShows = 300;
 
+function setDifficulty(level) {
+    difficulty = level;
+}
+
 function addKeyToCollection(key) {
     keysCollection.set(key.dataset.key, key);
 }
@@ -18,9 +22,6 @@ export {
     keysCollection,
     timeForShowing,
     timeBetweenShows,
-    addKeyToCollection
+    setDifficulty,
+    addKeyToCollection,
 };
-
-export function setDifficulty(level) {
-    difficulty = level;
-}
