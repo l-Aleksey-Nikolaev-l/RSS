@@ -100,9 +100,7 @@ function checkAnswer(key) {
         setGameOver();
     }
 
-    const attemptNumber = document.getElementsByClassName('attempt__number');
-    attemptNumber[0].textContent = levelAttempt.toString();
-
+    updateScreenAttempts();
     keyBlink(key, answer);
 }
 
@@ -197,6 +195,10 @@ function startDisplayingKeys() {
 function resetVariables() {
     randomSequence = [];
     setLevelAttempt(defaultAttempts);
+    updateScreenAttempts();
+}
+
+function updateScreenAttempts() {
     const attemptNumber = document.getElementsByClassName('attempt__number');
     attemptNumber[0].textContent = levelAttempt.toString();
 }
