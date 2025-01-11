@@ -100,6 +100,9 @@ function checkAnswer(key) {
         setGameOver();
     }
 
+    const attemptNumber = document.getElementsByClassName('attempt__number');
+    attemptNumber[0].textContent = levelAttempt.toString();
+
     keyBlink(key, answer);
 }
 
