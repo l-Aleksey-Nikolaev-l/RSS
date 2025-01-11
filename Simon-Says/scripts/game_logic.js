@@ -24,8 +24,6 @@ function getKeyCode(event) {
 
 function keyDown(event) {
     currentDeviceUp = event.type.includes('key') ? 'keyup' : 'mouseup';
-    const code = getKeyCode(event);
-
     eventKey(keyboard, event, code);
     if (keyboardKey) {
         keyboardKey = keyCode;
@@ -35,7 +33,6 @@ function keyDown(event) {
 }
 
 function keyUp(event) {
-    const code = getKeyCode(event);
 
         eventKey(keyboard, event, code);
     if (keyCode) {
@@ -45,7 +42,6 @@ function keyUp(event) {
 }
 
 function mouseOut(event) {
-    const code = getKeyCode(event);
 
     if (currentDeviceUp === 'mouseup') {
         eventKey(keyboard, event, code);
