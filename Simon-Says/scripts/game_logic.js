@@ -36,6 +36,7 @@ function keyUp(event) {
 
         eventKey(keyboard, event, code);
     if (keyCode) {
+        keyboardKey = null;
         this.removeEventListener(currentDeviceUp, keyUp);
         startKeysListeners();
     }
@@ -45,6 +46,7 @@ function mouseOut(event) {
 
     if (currentDeviceUp === 'mouseup') {
         eventKey(keyboard, event, code);
+        keyboardKey = null;
         keyboard.removeEventListener(currentDeviceUp, keyUp);
         startKeysListeners();
     }
@@ -57,11 +59,9 @@ function eventKey(keyboard, event, code) {
     for (const key of keyboard.children) {
         if (keyCode === key.dataset.key && isDevicePressed) {
             key.classList.add('key__pressed');
-            keyboardKey = code;
             break;
         } else if (keyCode === key.dataset.key && !isDevicePressed) {
             key.classList.remove('key__pressed');
-            keyboardKey = null;
             break;
         }
     }
