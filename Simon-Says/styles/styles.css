@@ -224,6 +224,16 @@ body {
             inset 4px -4px 10px 4px rgb(100, 170, 110, 39%);
 }
 
+.keyboard__incorrect_key {
+    background: #d7b8b8;
+    box-shadow:
+            0 0 4px 4px rgba(200, 161, 161, 0.58),
+            inset 3px -3px 3px 0 #d7b8b8,
+            inset 0 0 0 2px rgba(231, 202, 202, 0.45),
+            inset -7px 7px 5px 0 rgba(214, 142, 142, 0.45),
+            inset 4px -4px 10px 4px rgba(170, 100, 100, 0.39);
+}
+
 .key__pressed {
     background-color: rgb(255, 255, 255);
     box-shadow:
