@@ -286,7 +286,7 @@ body {
         transform: translate(0, 0);
     }
 
-    .keyboard__key:hover {
+    .keyboard__key:not(.keyboard__correct_key, .keyboard__incorrect_key):hover {
         background-color: rgb(255, 255, 255);
         box-shadow:
                 inset 2px -2px 2px -2px rgb(0, 0, 0, 64%),
