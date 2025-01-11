@@ -144,12 +144,12 @@ function getRandomSequence() {
 
 function displayRandomSequence() {
     let waitingBeforeStart = setTimeout(() => {
-        startDisplaying();
+        startDisplayingKeys();
         clearTimeout(waitingBeforeStart);
     }, 500);
 }
 
-function startDisplaying() {
+function startDisplayingKeys() {
     const button = keysCollection.get(randomSequence[indexOfSymbol]);
     button.classList.toggle('keyboard__correct_key');
     let showTime = setTimeout(() => {
@@ -162,7 +162,7 @@ function startDisplaying() {
                 clearTimeout(showTime);
                 return;
             }
-            startDisplaying();
+            startDisplayingKeys();
         }, timeBetweenShows);
     }, timeForShowing);
 }
