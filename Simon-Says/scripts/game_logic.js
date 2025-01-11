@@ -1,4 +1,4 @@
-import {difficulty} from './variables.js';
+import {difficulty, keysCollection} from './variables.js';
 
 let keyCode = null;
 let keyboard = null;
