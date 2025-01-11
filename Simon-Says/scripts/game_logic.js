@@ -86,6 +86,12 @@ function eventKey(event) {
             break;
         }
     }
+    unblockRepeatButton();
+}
+
+function unblockRepeatButton() {
+    const repeatButton = document.getElementsByClassName('repeat__button');
+    repeatButton[0].classList.remove('main__button_block');
 }
 
 function checkAnswer(key) {
