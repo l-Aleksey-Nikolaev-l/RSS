@@ -94,6 +94,13 @@ function unblockRepeatButton() {
     repeatButton[0].classList.remove('main__button_block');
 }
 
+function replaceButtonName() {
+    const repeatButton = document.getElementsByClassName('repeat__button');
+    repeatButton[0].classList.remove('main__button_repeat');
+    repeatButton[0].classList.add('main__button_next');
+    repeatButton[0].textContent = 'Next';
+}
+
 function checkAnswer(key) {
     let answer = '';
     if (randomSequence[0] === keyCode) {
@@ -116,6 +123,7 @@ function setGameOver() {
         return;
     } else if (!randomSequence.length) {
         middleSection[0].classList.add('game__won');
+        replaceButtonName();
     } else if (levelAttempt === 0) {
         middleSection[0].classList.add('game__lose');
     }
