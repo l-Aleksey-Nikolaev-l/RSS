@@ -104,11 +104,8 @@ function getNextLevelSequence() {
 }
 
 function getRandomSequence() {
-    const seqLength = directSequence.length;
-    let randomSequence = [];
-
     for (let index = 0; index < randomSequenceLength; index += 1) {
-        const randomNumber = Math.floor(Math.random() * (seqLength - 1));
+        const randomNumber = Math.floor(Math.random() * (directSequence.length - 1));
         randomSequence.push(directSequence[randomNumber]);
     }
 
