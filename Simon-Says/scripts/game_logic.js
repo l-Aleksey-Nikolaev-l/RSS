@@ -1,8 +1,8 @@
 import {
     difficulty,
     keysCollection,
-    timeBetweenShowing,
-    timeForShowing
+    timeForShowing,
+    timeBetweenShows
 } from './variables.js';
 
 let keyCode = null;
