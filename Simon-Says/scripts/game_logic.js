@@ -99,6 +99,18 @@ function checkAnswer(key) {
     keyBlink(key, answer);
 }
 
+function setGameOver() {
+    const middleSection = document.getElementsByClassName('middle__play_section');
+    if (randomSequence.length && levelAttempt) {
+        return;
+    } else if (!randomSequence.length) {
+        middleSection[0].classList.add('game__won');
+    } else if (levelAttempt === 0) {
+        middleSection[0].classList.add('game__lose');
+    }
+    keyboard.classList.add('keyboard__block');
+}
+
 function keyBlink(key, answer) {
     key.classList.toggle(answer);
     let showTime = setTimeout(() => {
