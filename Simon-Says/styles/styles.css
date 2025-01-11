@@ -233,6 +233,19 @@ body {
             inset -7px 7px 5px 0 rgba(214, 142, 142, 0.45),
             inset 4px -4px 10px 4px rgba(170, 100, 100, 0.39);
 }
+.game__lose:before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "Game Over";
+    width: 100%;
+    color: #d34242;
+    font-size: 10rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px 0 #000000;
+}
+
 .game__won:before {
     position: absolute;
     display: flex;
