@@ -96,6 +96,10 @@ function checkAnswer(key) {
         answer = 'keyboard__incorrect_key';
     }
 
+    keyBlink(key, answer);
+}
+
+function keyBlink(key, answer) {
     key.classList.toggle(answer);
     let showTime = setTimeout(() => {
         key.classList.toggle(answer);
