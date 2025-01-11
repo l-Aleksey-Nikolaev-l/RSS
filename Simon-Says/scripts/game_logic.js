@@ -155,7 +155,7 @@ function createSequence() {
 
 function getNextLevelSequence() {
     randomSequenceLength += 2;
-    randomSequence = [];
+    resetVariables();
     getRandomSequence();
 }
 
