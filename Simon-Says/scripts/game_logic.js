@@ -76,10 +76,30 @@ function eventKey(event) {
             key.classList.add('key__pressed');
             break;
         } else if (keyCode === key.dataset.key && !isDevicePressed) {
+            checkAnswer(key);
             key.classList.remove('key__pressed');
             break;
         }
     }
+}
+
+function checkAnswer(key) {
+    let answer = '';
+    if (randomSequence[0] === keyCode) {
+        randomSequence.shift();
+        answer = 'keyboard__correct_key';
+    } else {
+        answer = 'keyboard__incorrect_key';
+    }
+
+    key.classList.toggle(answer);
+    let showTime = setTimeout(() => {
+        key.classList.toggle(answer);
+        let hideTime = setTimeout(() => {
+            clearTimeout(hideTime);
+            clearTimeout(showTime);
+        }, timeBetweenShows);
+    }, timeForShowing);
 }
 
 function createSequence() {
