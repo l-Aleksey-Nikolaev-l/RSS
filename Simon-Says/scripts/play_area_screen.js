@@ -91,7 +91,7 @@ class PlayScreen {
         bottomSection.classList.add('bottom__play_section');
         rightContainer.classList.add('bottom__right_container');
         backButton.classList.add('back__button');
-        repeatButton.classList.add('repeat__button');
+        repeatButton.classList.add('main__button_block', 'repeat__button');
         newGameButton.classList.add('new_game__button');
 
         rightContainer.append(repeatButton, newGameButton);
