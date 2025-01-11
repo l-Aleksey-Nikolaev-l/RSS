@@ -123,21 +123,24 @@ function getRandomSequence() {
 }
 
 function displayRandomSequence() {
-    let keyShowing = setInterval(() => {
-        const button = keysCollection.get(randomSequence[index]);
-        button.classList.add('keyboard__correct_key');
-        let intervalID = setInterval(() => {
-            const button = keysCollection.get(randomSequence[index]);
-            button.classList.remove('keyboard__correct_key');
-            clearInterval(intervalID);
-            index += 1;
-        }, timeForShowing);
+}
 
-        if (index === randomSequence.length - 1) {
-            clearInterval(keyShowing)
-        }
-
-    }, timeBetweenShowing)
+function startDisplaying() {
+    const button = keysCollection.get(randomSequence[indexOfSymbol]);
+    button.classList.toggle('keyboard__correct_key');
+    let showTime = setTimeout(() => {
+        button.classList.toggle('keyboard__correct_key');
+        let hideTime = setTimeout(() => {
+            indexOfSymbol += 1;
+            if (indexOfSymbol === randomSequence.length) {
+                indexOfSymbol = 0;
+                clearTimeout(hideTime);
+                clearTimeout(showTime);
+                return;
+            }
+            startDisplaying();
+        }, timeBetweenShows);
+    }, timeForShowing);
 }
 
 function startNewGame() {
