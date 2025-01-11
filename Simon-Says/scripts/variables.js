@@ -7,8 +7,9 @@ let keysCollection = new Map();
 let timeForShowing = 300;
 let timeBetweenShows = 300;
 
+const defaultAttempts = 2;
 let levelRound = 1;
-let levelAttempt = 1;
+let levelAttempt = defaultAttempts;
 
 function setDifficulty(level) {
     difficulty = level;
@@ -35,6 +36,7 @@ export {
     timeBetweenShows,
     levelRound,
     levelAttempt,
+    defaultAttempts,
     setDifficulty,
     addKeyToCollection,
     setLevelRound,
