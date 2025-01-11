@@ -4,8 +4,8 @@ const wrapper = document.getElementsByClassName('wrapper');
 let difficulty = 'easy';
 let keysCollection = new Map();
 
-let timeForShowing = 500;
-let timeBetweenShows = 1000;
+let timeForShowing = 300;
+let timeBetweenShows = 300;
 
 function addKeyToCollection(key) {
     keysCollection.set(key.dataset.key, key);
