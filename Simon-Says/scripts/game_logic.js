@@ -23,9 +23,7 @@ function getKeyCode(event) {
 
 function keyDown(event) {
     currentDeviceUp = event.type.includes('key') ? 'keyup' : 'mouseup';
-    const code = event.type.includes('key') ?
-        event.code.slice(-1) :
-        event.target.dataset.key;
+    const code = getKeyCode(event);
 
     pressKey(keyboard, code);
     if (keyboardKey) {
@@ -35,9 +33,7 @@ function keyDown(event) {
 }
 
 function keyUp(event) {
-    const code = event.type.includes('key') ?
-        event.code.slice(-1) :
-        event.target.dataset.key;
+    const code = getKeyCode(event);
 
     if (keyboardKey === code) {
         releaseKey(keyboard, code);
@@ -47,9 +43,7 @@ function keyUp(event) {
 }
 
 function mouseOut(event) {
-    const code = event.type.includes('key') ?
-        event.code.slice(-1) :
-        event.target.dataset.key;
+    const code = getKeyCode(event);
 
     if (currentDeviceUp === 'mouseup') {
         releaseKey(keyboard, code);
