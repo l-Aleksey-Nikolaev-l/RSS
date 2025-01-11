@@ -75,7 +75,7 @@ class PlayScreen {
                 addKeyToCollection(key);
                 keyBoard.append(key);
             }
-        })
+        });
 
         middleSection.append(keyBoard);
         return middleSection;
