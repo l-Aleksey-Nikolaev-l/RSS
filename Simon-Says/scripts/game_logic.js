@@ -7,6 +7,7 @@ let currentDeviceUp = '';
 
 let directSequence = [];
 let randomSequence = [];
+let randomSequenceLength = 2;
 
 function startKeysListeners() {
     clearKeysListeners();
@@ -95,6 +96,11 @@ function createSequence() {
         }
     });
     randomSequence = getRandomSequence();
+}
+
+function getNextLevelSequence() {
+    randomSequenceLength += 2;
+    return getRandomSequence();
 }
 
 function getRandomSequence() {
