@@ -80,6 +80,8 @@ function createSequence() {
     const numeric = [48, 57]; // from 0 to 9
     const letters = [65, 90]; // from A to Z
     let keysArray = [];
+    randomSequence = [];
+    randomSequenceLength = 2;
 
     if (difficulty === 'easy') {
         keysArray.push(numeric);
@@ -100,6 +102,7 @@ function createSequence() {
 
 function getNextLevelSequence() {
     randomSequenceLength += 2;
+    randomSequence = [];
     getRandomSequence();
 }
 
