@@ -123,6 +123,10 @@ function getRandomSequence() {
 }
 
 function displayRandomSequence() {
+    let waitingBeforeStart = setTimeout(() => {
+        startDisplaying();
+        clearTimeout(waitingBeforeStart);
+    }, 500);
 }
 
 function startDisplaying() {
