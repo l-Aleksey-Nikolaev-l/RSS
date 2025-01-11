@@ -185,6 +185,7 @@ function startDisplayingKeys() {
                 indexOfSymbol = 0;
                 clearTimeout(hideTime);
                 clearTimeout(showTime);
+                startKeysListeners();
                 keyboard.classList.remove('keyboard__block');
                 return;
             }
