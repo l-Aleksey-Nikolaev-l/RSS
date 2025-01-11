@@ -100,7 +100,7 @@ function createSequence() {
 
 function getNextLevelSequence() {
     randomSequenceLength += 2;
-    return getRandomSequence();
+    getRandomSequence();
 }
 
 function getRandomSequence() {
