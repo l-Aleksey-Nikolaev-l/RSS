@@ -5,6 +5,7 @@ import {
     timeBetweenShows,
     levelRound,
     levelAttempt,
+    defaultAttempts,
     setLevelRound,
     setLevelAttempt
 } from './variables.js';
