@@ -1,3 +1,4 @@
+let keyCode = null;
 let keyboard = null;
 let keyboardKey = null;
 let currentDeviceUp = '';
@@ -27,6 +28,7 @@ function keyDown(event) {
 
     eventKey(keyboard, event, code);
     if (keyboardKey) {
+        keyboardKey = keyCode;
         clearKeysListeners();
         this.addEventListener(currentDeviceUp, keyUp);
     }
@@ -35,8 +37,8 @@ function keyDown(event) {
 function keyUp(event) {
     const code = getKeyCode(event);
 
-    if (keyboardKey === code) {
         eventKey(keyboard, event, code);
+    if (keyCode) {
         this.removeEventListener(currentDeviceUp, keyUp);
         startKeysListeners();
     }
@@ -57,11 +59,11 @@ function eventKey(keyboard, event, code) {
     const isDevicePressed = event.type.includes('down');
 
     for (const key of keyboard.children) {
-        if (code === key.dataset.key && isDevicePressed) {
+        if (keyCode === key.dataset.key && isDevicePressed) {
             key.classList.add('key__pressed');
             keyboardKey = code;
             break;
-        } else if (code === key.dataset.key && !isDevicePressed) {
+        } else if (keyCode === key.dataset.key && !isDevicePressed) {
             key.classList.remove('key__pressed');
             keyboardKey = null;
             break;
