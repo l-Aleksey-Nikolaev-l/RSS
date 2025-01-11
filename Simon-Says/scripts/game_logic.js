@@ -13,6 +13,7 @@ let currentDeviceUp = '';
 let directSequence = [];
 let randomSequence = [];
 let randomSequenceLength = 2;
+let indexOfSymbol = 0;
 
 function startKeysListeners() {
     clearKeysListeners();
@@ -122,7 +123,6 @@ function getRandomSequence() {
 }
 
 function displayRandomSequence() {
-    let index = 0;
     let keyShowing = setInterval(() => {
         const button = keysCollection.get(randomSequence[index]);
         button.classList.add('keyboard__correct_key');
