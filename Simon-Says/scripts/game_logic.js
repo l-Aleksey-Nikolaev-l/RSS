@@ -95,7 +95,7 @@ function createSequence() {
             directSequence.push(symbol);
         }
     });
-    randomSequence = getRandomSequence();
+    getRandomSequence();
 }
 
 function getNextLevelSequence() {
