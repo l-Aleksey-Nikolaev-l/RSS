@@ -1,4 +1,4 @@
-import {wrapper, difficulty} from './variables.js';
+import {wrapper, difficulty, addKeyToCollection} from './variables.js';
 
 class PlayScreen {
 
@@ -72,6 +72,7 @@ class PlayScreen {
             for (let code = pack[0]; code <= pack[1]; code += 1) {
                 const symbol = String.fromCharCode(code).toUpperCase();
                 const key = this.#createKey(symbol);
+                addKeyToCollection(key);
                 keyBoard.append(key);
             }
         })
