@@ -239,6 +239,9 @@ body {
 }
 
 .keyboard__block {
+    padding: 8px;
+    border: 4px solid #d34242;
+    border-radius: 16px;
     pointer-events: none;
 }
 
