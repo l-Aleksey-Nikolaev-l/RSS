@@ -113,7 +113,7 @@ function getRandomSequence() {
     }
 
     console.log(randomSequence);
-    return randomSequence;
+    displayRandomSequence();
 }
 
 function displayRandomSequence() {
