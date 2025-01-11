@@ -53,7 +53,7 @@ class PlayScreen {
         const keyBoard = document.createElement('div');
 
         middleSection.classList.add('middle__play_section');
-        keyBoard.classList.add('keyboard', `keyboard__${this.difficulty}`);
+        keyBoard.classList.add('keyboard', 'keyboard__block', `keyboard__${this.difficulty}`);
         keyBoard.id = 'keyboard';
 
         const numeric = [48, 57]; // from 0 to 9
