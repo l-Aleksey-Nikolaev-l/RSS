@@ -57,6 +57,11 @@ function eventKey(keyboard, event, code) {
     const isDevicePressed = event.type.includes('down');
     keyCode = getKeyCode(event);
 
+    if (!isDevicePressed && (keyboardKey !== keyCode)) {
+        keyCode = null;
+        return;
+    }
+
     for (const key of keyboard.children) {
         if (keyCode === key.dataset.key && isDevicePressed) {
             key.classList.add('key__pressed');
