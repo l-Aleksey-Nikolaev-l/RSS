@@ -24,8 +24,8 @@ function getKeyCode(event) {
 
 function keyDown(event) {
     currentDeviceUp = event.type.includes('key') ? 'keyup' : 'mouseup';
-    if (keyboardKey) {
     eventKey(event);
+    if (!keyboardKey) {
         keyboardKey = keyCode;
         clearKeysListeners();
         this.addEventListener(currentDeviceUp, keyUp);
