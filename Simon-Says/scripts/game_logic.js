@@ -122,11 +122,22 @@ function getRandomSequence() {
 }
 
 function displayRandomSequence() {
-
-    randomSequence.forEach((symbol) => {
-        const button = keysCollection.get(symbol);
+    let index = 0;
+    let keyShowing = setInterval(() => {
+        const button = keysCollection.get(randomSequence[index]);
         button.classList.add('keyboard__correct_key');
-    })
+        let intervalID = setInterval(() => {
+            const button = keysCollection.get(randomSequence[index]);
+            button.classList.remove('keyboard__correct_key');
+            clearInterval(intervalID);
+            index += 1;
+        }, timeForShowing);
+
+        if (index === randomSequence.length - 1) {
+            clearInterval(keyShowing)
+        }
+
+    }, timeBetweenShowing)
 }
 
 function startNewGame() {
