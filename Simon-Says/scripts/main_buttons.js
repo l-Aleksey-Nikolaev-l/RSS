@@ -3,7 +3,7 @@ import showPlayArea from './play_area_screen.js';
 import showSettings from './settings_screen.js';
 import showRules from './rules_screen.js';
 import startListeners from './listeners.js';
-import {startNewGame, repeatGame} from './game_logic.js';
+import {startNewGame, repeatGame, startNextRound} from './game_logic.js';
 
 function clickMainButton(event) {
     const buttonName = event.target.textContent.toLowerCase();
@@ -16,6 +16,10 @@ function clickMainButton(event) {
         case 'repeat':
             showPlayArea();
             repeatGame();
+            break;
+        case 'next':
+            showPlayArea();
+            startNextRound();
             break;
         case 'settings':
             showSettings();

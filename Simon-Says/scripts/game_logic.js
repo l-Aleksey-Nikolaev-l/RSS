@@ -227,8 +227,16 @@ function repeatGame() {
 
 }
 
+function startNextRound() {
+    getNextRoundSequence();
+}
+
+
+// add popover  https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/togglePopover
+
 
 export  {
     startNewGame,
-    repeatGame
+    repeatGame,
+    startNextRound
 };
