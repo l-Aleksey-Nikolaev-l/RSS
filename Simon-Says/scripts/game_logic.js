@@ -1,4 +1,9 @@
-import {difficulty, keysCollection} from './variables.js';
+import {
+    difficulty,
+    keysCollection,
+    timeBetweenShowing,
+    timeForShowing
+} from './variables.js';
 
 let keyCode = null;
 let keyboard = null;
