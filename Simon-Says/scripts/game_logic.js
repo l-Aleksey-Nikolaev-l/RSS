@@ -113,6 +113,14 @@ function getRandomSequence() {
     return randomSequence;
 }
 
+function displayRandomSequence() {
+
+    randomSequence.forEach((symbol) => {
+        const button = keysCollection.get(symbol);
+        button.classList.add('keyboard__correct_key');
+    })
+}
+
 function startNewGame() {
     startKeysListeners();
 }
