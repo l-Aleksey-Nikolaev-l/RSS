@@ -1,7 +1,12 @@
+import {difficulty} from './variables.js';
+
 let keyCode = null;
 let keyboard = null;
 let keyboardKey = null;
 let currentDeviceUp = '';
+
+let directSequence = [];
+let randomSequence = [];
 
 function startKeysListeners() {
     clearKeysListeners();
@@ -68,6 +73,28 @@ function eventKey(event) {
             break;
         }
     }
+}
+
+function createSequence() {
+    const numeric = [48, 57]; // from 0 to 9
+    const letters = [65, 90]; // from A to Z
+    let keysArray = [];
+
+    if (difficulty === 'easy') {
+        keysArray.push(numeric);
+    } else if (difficulty === 'medium') {
+        keysArray.push(letters);
+    } else if (difficulty === 'hard') {
+        keysArray.push(numeric, letters);
+    }
+
+    keysArray.forEach((pack) => {
+        for (let code = pack[0]; code <= pack[1]; code += 1) {
+            const symbol = String.fromCharCode(code).toUpperCase();
+            directSequence.push(symbol);
+        }
+    });
+    randomSequence = getRandomSequence();
 }
 
 function startNewGame() {
