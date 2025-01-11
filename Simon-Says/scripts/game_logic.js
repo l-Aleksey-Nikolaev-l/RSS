@@ -24,8 +24,8 @@ function getKeyCode(event) {
 
 function keyDown(event) {
     currentDeviceUp = event.type.includes('key') ? 'keyup' : 'mouseup';
-    eventKey(keyboard, event, code);
     if (keyboardKey) {
+    eventKey(event);
         keyboardKey = keyCode;
         clearKeysListeners();
         this.addEventListener(currentDeviceUp, keyUp);
@@ -34,7 +34,7 @@ function keyDown(event) {
 
 function keyUp(event) {
 
-        eventKey(keyboard, event, code);
+    eventKey(event);
     if (keyCode) {
         keyboardKey = null;
         this.removeEventListener(currentDeviceUp, keyUp);
@@ -45,15 +45,15 @@ function keyUp(event) {
 function mouseOut(event) {
 
     if (currentDeviceUp === 'mouseup') {
-        eventKey(keyboard, event, code);
+        eventKey(event);
         keyboardKey = null;
         keyboard.removeEventListener(currentDeviceUp, keyUp);
         startKeysListeners();
     }
 }
 
-function eventKey(keyboard, event, code) {
 
+function eventKey(event) {
     const isDevicePressed = event.type.includes('down');
     keyCode = getKeyCode(event);
 
