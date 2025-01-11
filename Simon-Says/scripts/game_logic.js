@@ -90,10 +90,12 @@ function eventKey(event) {
 function checkAnswer(key) {
     let answer = '';
     if (randomSequence[0] === keyCode) {
-        randomSequence.shift();
         answer = 'keyboard__correct_key';
+        randomSequence.shift();
+        setGameOver();
     } else {
         answer = 'keyboard__incorrect_key';
+        setGameOver();
     }
 
     keyBlink(key, answer);
