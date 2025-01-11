@@ -15,6 +15,12 @@ function clearKeysListeners() {
     keyboard?.removeEventListener('mousedown', keyDown);
 }
 
+function getKeyCode(event) {
+    return event.type.includes('key') ?
+        event.code.slice(-1) :
+        event.target.dataset.key;
+}
+
 function keyDown(event) {
     currentDeviceUp = event.type.includes('key') ? 'keyup' : 'mouseup';
     const code = event.type.includes('key') ?
