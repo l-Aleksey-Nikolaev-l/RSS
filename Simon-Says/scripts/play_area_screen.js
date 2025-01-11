@@ -1,4 +1,4 @@
-import {wrapper, difficulty, addKeyToCollection} from './variables.js';
+import {wrapper, difficulty, levelAttempt, addKeyToCollection} from './variables.js';
 
 class PlayScreen {
 
@@ -35,7 +35,7 @@ class PlayScreen {
         difficultyLevel.classList.add('difficulty__level');
         difficultyLevel.textContent = this.difficulty;
         attemptNumber.classList.add('attempt__number');
-        attemptNumber.textContent = '1';
+        attemptNumber.textContent = levelAttempt.toString();
         roundText.classList.add('round__text');
         roundText.textContent = 'Round:';
         roundNumber.classList.add('round__number');
