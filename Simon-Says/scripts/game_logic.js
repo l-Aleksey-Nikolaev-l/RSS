@@ -2,7 +2,11 @@ import {
     difficulty,
     keysCollection,
     timeForShowing,
-    timeBetweenShows
+    timeBetweenShows,
+    levelRound,
+    levelAttempt,
+    setLevelRound,
+    setLevelAttempt
 } from './variables.js';
 
 let keyCode = null;
