@@ -146,6 +146,7 @@ body {
 }
 
 .back__button,
+.next__button,
 .repeat__button,
 .new_game__button {
     width: 200px;
@@ -317,6 +318,10 @@ body {
     }
 
     .back__button:hover {
+        transform: translate(0, 0);
+    }
+
+    .next__button:hover {
         transform: translate(0, 0);
     }
 
