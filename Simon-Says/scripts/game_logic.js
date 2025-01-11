@@ -206,7 +206,6 @@ function updateScreenAttempts() {
 }
 
 function startNewGame() {
-    startKeysListeners();
     createSequence();
 }
 
