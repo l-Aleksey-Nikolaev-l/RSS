@@ -216,7 +216,7 @@ function startNewGame() {
 }
 
 function repeatGame() {
-    startKeysListeners();
+
 }
 
 
