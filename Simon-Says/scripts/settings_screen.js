@@ -5,7 +5,9 @@ import {
     backgroundVolume,
     effectsVolume,
     timeForShowing,
-    timeBetweenShows, isPlayMusic
+    timeBetweenShows,
+    isPlayMusic,
+    isShowAnswer
 } from './variables.js';
 
 class Settings {
@@ -116,7 +118,7 @@ class Settings {
         answerCheckbox.type = 'checkbox';
         answerCheckbox.id = 'answer__setting';
         answerCheckbox.name = 'answer__setting';
-        answerCheckbox.checked = isPlayMusic;
+        answerCheckbox.checked = isShowAnswer;
         showAnswerContainer.append(answerLabel, answerCheckbox);
         return showAnswerContainer;
     }
