@@ -96,6 +96,11 @@ function unblockRepeatButton() {
     repeatButton[0].classList.remove('main__button_block');
 }
 
+function unblockNewGameButton() {
+    const newGameButton = document.getElementsByClassName('new_game__button');
+    newGameButton[0].classList.remove('main__button_block');
+}
+
 function replaceButtonName() {
     const repeatButton = document.getElementsByClassName('repeat__button');
     repeatButton[0].classList.remove('main__button_repeat');
@@ -207,6 +212,7 @@ function startDisplayingKeys() {
                 clearTimeout(hideTime);
                 clearTimeout(showTime);
                 startKeysListeners();
+                unblockNewGameButton();
                 keyboard.classList.remove('keyboard__block');
                 return;
             }
