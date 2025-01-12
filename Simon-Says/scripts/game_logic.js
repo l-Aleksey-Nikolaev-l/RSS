@@ -77,7 +77,7 @@ function eventKey(event) {
         keyCode = null;
         return;
     }
-    unblockRepeatButton();
+    unblockButton('Repeat');
     for (const key of keyboard.children) {
         if (keyCode === key.dataset.key && isDevicePressed) {
             key.classList.add('key__pressed');
@@ -212,7 +212,7 @@ function startDisplayingKeys() {
                 clearTimeout(hideTime);
                 clearTimeout(showTime);
                 startKeysListeners();
-                unblockNewGameButton();
+                unblockButton('New Game');
                 keyboard.classList.remove('keyboard__block');
                 return;
             }
