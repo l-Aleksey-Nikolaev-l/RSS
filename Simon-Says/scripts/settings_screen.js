@@ -78,6 +78,21 @@ class Settings {
         return audioSettingsList;
     }
 
+    #createRangeElement(labelText, rangeName, min, max, step, value) {
+        const rangeSettingContainer = this.#createSettingContainer();
+        const rangeSettingLabel = this.#createSettingLabel(`${rangeName}__setting`, labelText);
+        const rangeSetting = document.createElement('input');
+        rangeSetting.type = 'range';
+        rangeSetting.id = `${rangeName}__setting`;
+        rangeSetting.name = `${rangeName}__setting`;
+        rangeSetting.min = min;
+        rangeSetting.max = max;
+        rangeSetting.step = step;
+        rangeSetting.value = value;
+        rangeSettingContainer.append(rangeSettingLabel, rangeSetting);
+        return rangeSettingContainer;
+    }
+
     #createBackButton() {
         const backButton = document.createElement('button');
         backButton.classList.add('main__button', 'back__button');
