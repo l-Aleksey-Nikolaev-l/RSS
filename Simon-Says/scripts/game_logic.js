@@ -6,6 +6,7 @@ import {
     levelRound,
     levelAttempt,
     defaultAttempts,
+    defaultLevelRound,
     setLevelRound,
     setLevelAttempt
 } from './variables.js';
@@ -212,6 +213,7 @@ function startDisplayingKeys() {
 function resetVariables() {
     randomSequence = [];
     setLevelAttempt(defaultAttempts);
+    setLevelRound(defaultLevelRound);
     updateScreenAttempts();
 }
 
