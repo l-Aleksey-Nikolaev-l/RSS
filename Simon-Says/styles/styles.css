@@ -420,6 +420,14 @@ body {
         justify-content: space-evenly;
     }
 
+    .game__lose:before {
+        font-size: 14vw;
+    }
+
+    .game__won:before {
+        font-size: 14vw;
+    }
+
     @media screen and (hover: hover){
         .main__button:hover {
             transform: translate(0, 0);
