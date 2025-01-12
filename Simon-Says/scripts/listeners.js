@@ -16,6 +16,8 @@ function startListeners() {
     const playSetting = document.getElementById('music__play');
     const musicSetting = document.getElementById('audio__setting');
     const effectSetting = document.getElementById('effect__setting');
+    const showSetting = document.getElementById('show__setting');
+    const hideSetting = document.getElementById('hide__setting');
 
     mainButtons.forEach((button) => {
         button.addEventListener('click', (event) => {
@@ -44,6 +46,16 @@ function startListeners() {
     effectSetting?.addEventListener('input', (event) => {
         const level = event.target.value;
         setEffectsVolume(level);
+    });
+
+    showSetting?.addEventListener('input', (event) => {
+        const level = event.target.value;
+        setTimeToShow(level);
+    });
+
+    hideSetting?.addEventListener('input', (event) => {
+        const level = event.target.value;
+        setTimeBetweenShow(level);
     });
 }
 
