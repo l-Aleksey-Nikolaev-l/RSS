@@ -216,8 +216,10 @@ function startDisplayingKeys() {
 }
 
 function resetValues() {
+    indexOfSymbol = 0;
     randomSequence = [];
     setLevelAttempt(defaultAttempts);
+    updateScreenAttempts();
     updateScreenRound();
 }
 
