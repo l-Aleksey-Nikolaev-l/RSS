@@ -25,7 +25,22 @@ function playKeyEffectAudio(isCorrectKey) {
     audioPlayer.play().then();
 }
 
+function playGameOverAudio(state) {
+    if (state === 'round_won') {
+        audioFile = './assets/sounds/success/round_won.wav';
+    } else if (state === 'game_won') {
+        audioFile = './assets/sounds/success/game_won.wav';
+    }
+    else if (state === 'game_lose') {
+        audioFile = './assets/sounds/fail/game_lose.wav';
+    }
+    audioPlayer.src = audioFile;
+    audioPlayer.volume = effectsVolume;
+    audioPlayer.play().then();
+}
+
 export {
     playBackgroundAudio,
-    playEffectAudio
+    playKeyEffectAudio,
+    playGameOverAudio
 }
