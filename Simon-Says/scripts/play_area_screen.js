@@ -1,4 +1,12 @@
 import {wrapper, difficulty, levelAttempt, addKeyToCollection, levelRound, maxLevelRounds} from './variables.js';
+import {
+    wrapper,
+    difficulty,
+    levelAttempt,
+    levelRound,
+    maxLevelRounds,
+    addKeyToCollection
+} from './variables.js';
 
 class PlayScreen {
 
