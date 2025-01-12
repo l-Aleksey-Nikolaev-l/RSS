@@ -1,17 +1,17 @@
 import {backgroundVolume, effectsVolume} from './variables.js';
 
-let audioFile = '';
-const audioPlayer = new Audio(audioFile);
-audioPlayer.loop = false;
-audioPlayer.volume = 0;
+const audioPlayer = new Audio();
+audioPlayer.loop = true;
 
 function playBackgroundAudio() {
     const randomNumber = Math.ceil(Math.random() * 3);
-    audioFile = `./assets/sounds/background/bg_sound_${randomNumber}.mp3`;
-    audioPlayer.loop = true;
-    audioPlayer.src = audioFile;
+    audioPlayer.src = `./assets/sounds/background/bg_sound_${randomNumber}.mp3`;
     audioPlayer.volume = backgroundVolume;
-    return audioPlayer;
+    if (state) {
+        audioPlayer.play().then();
+    } else {
+        audioPlayer.pause();
+    }
 }
 
 function playKeyEffectAudio(isCorrectKey) {
