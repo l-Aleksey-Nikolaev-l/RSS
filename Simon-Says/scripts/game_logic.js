@@ -146,7 +146,7 @@ function createSequence() {
     const numeric = [48, 57]; // from 0 to 9
     const letters = [65, 90]; // from A to Z
     let keysArray = [];
-    resetVariables()
+    resetValues()
     randomSequenceLength = 2;
 
     if (difficulty === 'easy') {
@@ -168,7 +168,7 @@ function createSequence() {
 
 function getNextRoundSequence() {
     randomSequenceLength += 2;
-    resetVariables();
+    resetValues();
     setLevelRound(levelRound + 1);
     getRandomSequence();
 }
@@ -210,7 +210,7 @@ function startDisplayingKeys() {
     }, timeForShowing);
 }
 
-function resetVariables() {
+function resetValues() {
     randomSequence = [];
     setLevelAttempt(defaultAttempts);
     setLevelRound(defaultLevelRound);
