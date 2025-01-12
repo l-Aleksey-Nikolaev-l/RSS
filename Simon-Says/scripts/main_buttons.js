@@ -4,7 +4,12 @@ import showSettings from './settings_screen.js';
 import showRules from './rules_screen.js';
 import startListeners from './listeners.js';
 import {clearCollection} from './variables.js';
-import {startNewGame, repeatGame, startNextRound, resetAllVariables} from './game_logic.js';
+import {
+    startNewGame,
+    repeatGame,
+    startNextRound,
+    resetAllVariables
+} from './game_logic.js';
 
 function clickMainButton(event) {
     const buttonName = event.target.textContent.toLowerCase();
