@@ -70,13 +70,12 @@ class Settings {
         audioSettingsList.classList.add('settings__container_audio')
 
         const musicPlayContainer = this.#createSettingContainer();
-        const musicPlayLabel = this.#createSettingLabel('', 'Play background music');
+        const musicPlayLabel = this.#createSettingLabel('music__play', 'Play background music');
         const musicPlayCheckbox = document.createElement('input');
         musicPlayCheckbox.type = 'checkbox';
         musicPlayCheckbox.id = 'music__play';
         musicPlayCheckbox.name = 'music__play';
         musicPlayCheckbox.checked = isPlayMusic;
-        musicPlayLabel.setAttribute('for', 'music__play');
 
         const musicSetting = this.#createRangeElement('Background music volume', 'audio', 0, 1, 0.1, backgroundVolume);
         const effectsSetting = this.#createRangeElement('Effects volume', 'effect', 0, 1, 0.1, effectsVolume);
