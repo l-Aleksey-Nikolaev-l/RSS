@@ -64,7 +64,7 @@ class PlayScreen {
         keyBoard.classList.add('keyboard', 'keyboard__block', `keyboard__${this.difficulty}`);
         keyBoard.id = 'keyboard';
 
-        let keysArray = createKeysArray();
+        const keysArray = createKeysArray();
 
         keysArray.forEach((pack) => {
             for (let code = pack[0]; code <= pack[1]; code += 1) {
