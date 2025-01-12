@@ -2,7 +2,7 @@ const body = document.getElementById('top');
 const wrapper = document.getElementsByClassName('wrapper');
 
 let difficulty = 'easy';
-let keysCollection = new Map();
+let buttonsCollection = new Map();
 
 let timeForShowing = 300;
 let timeBetweenShows = 300;
@@ -18,12 +18,12 @@ function setDifficulty(level) {
     difficulty = level;
 }
 
-function clearCollection() {
-    keysCollection.clear();
+function clearButtonsCollection() {
+    buttonsCollection.clear();
 }
 
-function addKeyToCollection(key) {
-    keysCollection.set(key.dataset.key, key);
+function addButtonToCollection(button) {
+    buttonsCollection.set(button.dataset.key, button);
 }
 
 function setLevelRound(round) {
@@ -42,7 +42,7 @@ export {
     body,
     wrapper,
     difficulty,
-    keysCollection,
+    buttonsCollection,
     timeForShowing,
     timeBetweenShows,
     maxLevelRounds,
@@ -52,8 +52,8 @@ export {
     defaultLevelRound,
     isShowAnswer,
     setDifficulty,
-    clearCollection,
-    addKeyToCollection,
+    clearButtonsCollection,
+    addButtonToCollection,
     setLevelRound,
     setLevelAttempt,
     setShowAnswer
