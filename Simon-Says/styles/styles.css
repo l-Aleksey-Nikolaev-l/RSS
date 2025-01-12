@@ -428,6 +428,15 @@ body {
         justify-content: space-evenly;
     }
 
+
+    .keyboard__key {
+        width: 8vh;
+        height: 8vh;
+        font-size: 1.6rem;
+        border-radius: var(--space-4);
+        transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
+    }
+
     .game__lose:before {
         font-size: 14vw;
     }
