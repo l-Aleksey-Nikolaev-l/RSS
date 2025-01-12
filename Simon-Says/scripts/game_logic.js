@@ -77,7 +77,7 @@ function eventKey(event) {
         keyCode = null;
         return;
     }
-
+    unblockRepeatButton();
     for (const key of keyboard.children) {
         if (keyCode === key.dataset.key && isDevicePressed) {
             key.classList.add('key__pressed');
@@ -88,7 +88,6 @@ function eventKey(event) {
             break;
         }
     }
-    unblockRepeatButton();
 }
 
 function unblockRepeatButton() {
