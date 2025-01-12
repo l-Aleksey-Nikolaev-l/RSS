@@ -470,7 +470,7 @@ body {
 }
 
 /* Extra small screen */
-@media screen and (width < 360px) {
+@media screen and (width < 325px) {
     .wrapper {
         display: none;
     }
