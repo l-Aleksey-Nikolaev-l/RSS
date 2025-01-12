@@ -262,12 +262,14 @@ function startNewGame() {
 
 function repeatGame() {
     randomSequence = [...roundRandomSequence];
+    clearKeysListeners();
     setLevelAttempt(defaultAttempts);
     updateScreenAttempts();
     displayRandomSequence();
 }
 
 function startNextRound() {
+    clearKeysListeners();
     getNextRoundSequence();
 }
 
