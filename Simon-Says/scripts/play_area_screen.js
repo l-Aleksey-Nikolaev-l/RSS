@@ -1,4 +1,4 @@
-import {wrapper, difficulty, levelAttempt, addKeyToCollection} from './variables.js';
+import {wrapper, difficulty, levelAttempt, addKeyToCollection, levelRound, maxLevelRounds} from './variables.js';
 
 class PlayScreen {
 
@@ -39,7 +39,7 @@ class PlayScreen {
         roundText.classList.add('round__text');
         roundText.textContent = 'Round:';
         roundNumber.classList.add('round__number');
-        roundNumber.textContent = '1/5';
+        roundNumber.textContent = levelRound.toString() + '/' + maxLevelRounds.toString();
 
         difficultySection.append(difficultyText, difficultyLevel);
         attemptSection.append(attemptText, attemptNumber);
