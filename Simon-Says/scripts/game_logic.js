@@ -129,17 +129,20 @@ function checkAnswer(key) {
 }
 
 function setGameOver() {
-    const middleSection = document.getElementsByClassName('middle__play_section');
-    if (randomSequence.length && levelAttempt) {
-        return;
-    } else if (!randomSequence.length) {
-        middleSection[0].classList.add('game__won');
-        checkLastRound();
-    } else if (levelAttempt === 0) {
-        middleSection[0].classList.add('game__lose');
-        blockRepeatButton();
-    }
-    keyboard.classList.add('keyboard__block');
+    let waitResult = setTimeout(() => {
+        const middleSection = document.getElementsByClassName('middle__play_section');
+        if (randomSequence.length && levelAttempt) {
+            return;
+        } else if (!randomSequence.length) {
+            middleSection[0].classList.add('game__won');
+            checkLastRound();
+        } else if (levelAttempt === 0) {
+            middleSection[0].classList.add('game__lose');
+            blockRepeatButton();
+        }
+        keyboard.classList.add('keyboard__block');
+        clearTimeout(waitResult);
+    }, 100);
 }
 
 function checkLastRound() {
