@@ -163,14 +163,8 @@ function keyBlink(key, answer) {
 function createSequence() {
     resetAllVariables();
     resetValues();
-
-    let keysArray = createKeysArray();
-
-    keysArray.forEach((pack) => {
-        for (let code = pack[0]; code <= pack[1]; code += 1) {
-            const symbol = String.fromCharCode(code).toUpperCase();
-            directSequence.push(symbol);
-        }
+    buttonsCollection.forEach((button) => {
+        directSequence.push(button.dataset.key);
     });
     getRandomSequence();
 }
