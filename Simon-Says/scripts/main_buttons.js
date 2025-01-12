@@ -3,7 +3,7 @@ import showPlayArea from './play_area_screen.js';
 import showSettings from './settings_screen.js';
 import showRules from './rules_screen.js';
 import startListeners from './listeners.js';
-import {clearCollection} from './variables.js';
+import {clearButtonsCollection} from './variables.js';
 import {
     startNewGame,
     repeatGame,
@@ -35,7 +35,7 @@ function clickMainButton(event) {
             break;
         case 'back':
             showMainScreen();
-            clearCollection();
+            clearButtonsCollection();
             resetAllVariables();
             break;
     }
