@@ -463,6 +463,10 @@ body {
         font-size: 14vw;
     }
 
+    .settings__list > .setting__container:last-of-type {
+        display: none;
+    }
+
     @media screen and (hover: hover){
         .main__button:hover {
             transform: translate(0, 0);
