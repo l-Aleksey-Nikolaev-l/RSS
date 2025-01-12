@@ -78,6 +78,15 @@ class Settings {
         return audioSettingsList;
     }
 
+    #createTimingSettings() {
+        const timingSettingsList = document.createElement('div');
+        timingSettingsList.classList.add('settings__container_timing')
+        const showSetting = this.#createRangeElement('Time to show key', 'show', 300, 1000, 100, timeForShowing);
+        const hideSetting = this.#createRangeElement('Time between shows', 'hide', 300, 1000, 100, timeBetweenShows);
+        timingSettingsList.append(showSetting, hideSetting);
+        return timingSettingsList;
+    }
+
     #createRangeElement(labelText, rangeName, min, max, step, value) {
         const rangeSettingContainer = this.#createSettingContainer();
         const rangeSettingLabel = this.#createSettingLabel(`${rangeName}__setting`, labelText);
