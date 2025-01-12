@@ -43,8 +43,8 @@ function setLevelAttempt(attempt) {
     levelAttempt = attempt;
 }
 
-function setShowAnswer(value) {
-    isShowAnswer = value;
+function setShowAnswer(state) {
+    isShowAnswer = state;
 }
 
 function setMusicPlay(state) {
