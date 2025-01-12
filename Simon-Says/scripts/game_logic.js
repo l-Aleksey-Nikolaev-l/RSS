@@ -178,8 +178,8 @@ function getNextRoundSequence() {
 
 function getRandomSequence() {
     for (let index = 0; index < randomSequenceLength; index += 1) {
-        const randomNumber = Math.floor(Math.random() * (directSequence.length - 1));
-        randomSequence.push(directSequence[randomNumber]);
+        const randomNumber = Math.floor(Math.random() * (buttonsCollection.size)).toString();
+        randomSequence.push(buttonsCollection.get(randomNumber).dataset.key);
     }
 
     roundRandomSequence = [...randomSequence];
