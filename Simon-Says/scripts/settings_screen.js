@@ -18,11 +18,12 @@ class Settings {
         const settingsList = document.createElement('div');
         settingsList.classList.add('settings__list')
         const difficultySettingContainer = this.#createSettingContainer();
+        const audionSettingContainer = this.#createAudioSettings();
         const difficultyLabel = this.#createSettingLabel('difficulty__list', 'Difficulty level is');
         const difficultySetting = this.#createDifficultySetting();
         difficultySetting.value = difficulty;
         difficultySettingContainer.append(difficultyLabel, difficultySetting);
-        settingsList.append(difficultySettingContainer);
+        settingsList.append(difficultySettingContainer, audionSettingContainer);
         return settingsList;
     }
 
