@@ -1,4 +1,4 @@
-import {playKeyEffectAudio} from './audio.js';
+import {playKeyEffectAudio, playGameOverAudio} from './audio.js';
 import {
     buttonsCollection,
     timeForShowing,
@@ -138,6 +138,7 @@ function setGameOver() {
             checkLastRound();
         } else if (levelAttempt === 0) {
             middleSection[0].classList.add('game__lose');
+            playGameOverAudio('game_lose');
             blockRepeatButton();
         }
         keyboard.classList.add('keyboard__block');
@@ -147,8 +148,10 @@ function setGameOver() {
 
 function checkLastRound() {
     if (levelRound !== maxLevelRounds) {
+        playGameOverAudio('round_won');
         replaceButtonName();
     } else {
+        playGameOverAudio('game_won');
         blockRepeatButton();
     }
 }
