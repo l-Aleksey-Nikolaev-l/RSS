@@ -169,8 +169,8 @@ function createSequence() {
 
 function getNextRoundSequence() {
     randomSequenceLength += 2;
-    resetValues();
     setLevelRound(levelRound + 1);
+    resetValues();
     getRandomSequence();
 }
 
