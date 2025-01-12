@@ -54,6 +54,14 @@ function setEffectsVolume(value) {
     effectsVolume = value;
 }
 
+function setTimeToShow(value) {
+    timeForShowing = value;
+}
+
+function setTimeBetweenShow(value) {
+    timeBetweenShows = value;
+}
+
 export {
     body,
     wrapper,
@@ -76,6 +84,9 @@ export {
     setLevelRound,
     setLevelAttempt,
     setShowAnswer,
-    setBackgroundVolume,
-    setEffectsVolume
+    setMusicPlay,
+    setMusicVolume,
+    setEffectsVolume,
+    setTimeToShow,
+    setTimeBetweenShow
 };
