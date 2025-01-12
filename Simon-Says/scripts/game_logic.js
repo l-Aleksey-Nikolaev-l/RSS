@@ -114,19 +114,16 @@ function replaceButtonName() {
 }
 
 function checkAnswer(key) {
-    let answer = '';
     if (randomSequence[0] === keyCode) {
-        answer = 'keyboard__correct_key';
+        keyBlink(key, 'keyboard__correct_key');
         randomSequence.shift();
         setGameOver();
     } else {
-        answer = 'keyboard__incorrect_key';
+        keyBlink(key, 'keyboard__incorrect_key');
         setLevelAttempt(levelAttempt - 1);
         setGameOver();
     }
-
     updateScreenAttempts();
-    keyBlink(key, answer);
 }
 
 function setGameOver() {
