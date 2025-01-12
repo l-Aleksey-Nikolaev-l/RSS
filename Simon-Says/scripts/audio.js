@@ -14,11 +14,15 @@ function playBackgroundAudio() {
     return audioPlayer;
 }
 
-function playEffectAudio() {
-    audioFile = './assets/sounds/background/bg_sound_1.mp3';
+function playEffectAudio(state) {
+    if (state) {
+        audioFile = './assets/sounds/success/correct_key.wav';
+    } else {
+        audioFile = './assets/sounds/fail/fail_key.wav';
+    }
     audioPlayer.src = audioFile;
     audioPlayer.volume = effectsVolume;
-    return audioPlayer;
+    audioPlayer.play().then();
 }
 
 export {
