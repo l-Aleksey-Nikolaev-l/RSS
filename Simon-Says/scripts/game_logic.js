@@ -193,6 +193,9 @@ function displayRandomSequence() {
 }
 
 function startDisplayingKeys() {
+    if (!randomSequence.length) {
+        return;
+    }
     const button = keysCollection.get(randomSequence[indexOfSymbol]);
     button.classList.toggle('keyboard__correct_key');
     let showTime = setTimeout(() => {
