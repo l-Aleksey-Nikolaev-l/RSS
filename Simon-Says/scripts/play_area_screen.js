@@ -69,9 +69,9 @@ class PlayScreen {
         keysArray.forEach((pack) => {
             for (let code = pack[0]; code <= pack[1]; code += 1) {
                 const symbol = String.fromCharCode(code).toUpperCase();
-                const key = this.#createKey(symbol);
                 addKeyToCollection(key);
-                keyBoard.append(key);
+                const button = this.#createButton(symbol);
+                keyBoard.append(button);
             }
         });
 
@@ -99,12 +99,12 @@ class PlayScreen {
         return bottomSection;
     }
 
-    #createKey(code = '') {
-        const key = document.createElement('button');
-        key.classList.add('keyboard__key');
-        key.setAttribute('data-key', code);
-        key.textContent = code.slice(-1);
-        return key;
+    #createButton(code = '') {
+        const button = document.createElement('button');
+        button.classList.add('keyboard__key');
+        button.setAttribute('data-key', code);
+        button.textContent = code.slice(-1);
+        return button;
     }
 
     #createControlButton(button = '') {
