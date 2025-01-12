@@ -56,6 +56,15 @@ class Settings {
         return settingList
     }
 
+    #createAudioSettings() {
+        const audionSettingContainer = this.#createSettingContainer();
+        const audioSettingLabel = this.#createSettingLabel('', 'Music');
+        const backgroundAudioSetting = document.createElement('input');
+        backgroundAudioSetting.type = 'range';
+        audionSettingContainer.append(audioSettingLabel, backgroundAudioSetting);
+        return audionSettingContainer;
+    }
+
     #createBackButton() {
         const backButton = document.createElement('button');
         backButton.classList.add('main__button', 'back__button');
