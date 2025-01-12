@@ -1,17 +1,12 @@
 import {
     wrapper,
     difficulty,
+    difficultySettings,
     backgroundVolume,
     effectsVolume,
     timeForShowing,
     timeBetweenShows, isPlayMusic
 } from './variables.js';
-
-const difficultySettings = {
-    'easy': 'only numbers (0-9)',
-    'medium': 'only letters (A-Z)',
-    'hard': 'easy + medium'
-};
 
 class Settings {
 

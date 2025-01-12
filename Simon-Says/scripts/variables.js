@@ -1,6 +1,11 @@
 const body = document.getElementById('top');
 const wrapper = document.getElementsByClassName('wrapper');
 
+const difficultySettings = {
+    'easy': 'only numbers (0-9)',
+    'medium': 'only letters (A-Z)',
+    'hard': 'easy + medium'
+};
 let difficulty = 'easy';
 let buttonsCollection = new Map();
 
@@ -66,6 +71,7 @@ export {
     body,
     wrapper,
     difficulty,
+    difficultySettings,
     buttonsCollection,
     timeForShowing,
     timeBetweenShows,
