@@ -1,4 +1,3 @@
-import {createKeysArray} from './heplers.js';
 import {
     buttonsCollection,
     timeForShowing,
