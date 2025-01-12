@@ -18,7 +18,6 @@ let keyboard = null;
 let keyboardKey = null;
 let currentDeviceUp = '';
 
-let directSequence = [];
 let randomSequence = [];
 let roundRandomSequence = [];
 let randomSequenceLength = 2;
@@ -163,9 +162,6 @@ function keyBlink(key, answer) {
 function createSequence() {
     resetAllVariables();
     resetValues();
-    buttonsCollection.forEach((button) => {
-        directSequence.push(button.dataset.key);
-    });
     getRandomSequence();
 }
 
@@ -239,7 +235,6 @@ function resetAllVariables() {
     keyboard = null;
     keyboardKey = null;
     currentDeviceUp = '';
-    directSequence = [];
     randomSequence = [];
     roundRandomSequence = [];
     randomSequenceLength = 2;
