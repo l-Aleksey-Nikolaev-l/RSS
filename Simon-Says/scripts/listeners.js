@@ -1,6 +1,14 @@
 import clickMainButton from './main_buttons.js';
 import clearScreen from './clear_screen.js';
-import {setDifficulty} from './variables.js';
+import {playBackgroundAudio, setBackgroundVolume} from './audio.js';
+import {
+    setMusicVolume,
+    setDifficulty,
+    setEffectsVolume,
+    setTimeBetweenShow,
+    setTimeToShow,
+    setMusicPlay
+} from './variables.js';
 
 function startListeners() {
     const mainButtons = document.querySelectorAll('.main__button');
