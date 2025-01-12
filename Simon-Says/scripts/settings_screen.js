@@ -26,11 +26,12 @@ class Settings {
         settingsList.classList.add('settings__list')
         const difficultySettingContainer = this.#createSettingContainer();
         const audionSettingContainer = this.#createAudioSettings();
+        const timingSettingContainer = this.#createTimingSettings();
         const difficultyLabel = this.#createSettingLabel('difficulty__list', 'Difficulty level is');
         const difficultySetting = this.#createDifficultySetting();
         difficultySetting.value = difficulty;
         difficultySettingContainer.append(difficultyLabel, difficultySetting);
-        settingsList.append(difficultySettingContainer, audionSettingContainer);
+        settingsList.append(difficultySettingContainer, audionSettingContainer, timingSettingContainer);
         return settingsList;
     }
 
