@@ -14,6 +14,9 @@ let levelRound = defaultLevelRound;
 let levelAttempt = defaultAttempts;
 let isShowAnswer = false;
 
+let backgroundVolume = 0.2;
+let effectsVolume = 0.2;
+
 function setDifficulty(level) {
     difficulty = level;
 }
@@ -38,6 +41,14 @@ function setShowAnswer(value) {
     isShowAnswer = value;
 }
 
+function setBackgroundVolume(value) {
+    backgroundVolume = value;
+}
+
+function setEffectsVolume(value) {
+    effectsVolume = value;
+}
+
 export {
     body,
     wrapper,
@@ -51,10 +62,14 @@ export {
     defaultAttempts,
     defaultLevelRound,
     isShowAnswer,
+    backgroundVolume,
+    effectsVolume,
     setDifficulty,
     clearButtonsCollection,
     addButtonToCollection,
     setLevelRound,
     setLevelAttempt,
-    setShowAnswer
+    setShowAnswer,
+    setBackgroundVolume,
+    setEffectsVolume
 };
