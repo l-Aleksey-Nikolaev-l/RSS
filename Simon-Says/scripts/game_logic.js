@@ -215,6 +215,7 @@ function startDisplayingKeys() {
 function resetValues() {
     randomSequence = [];
     setLevelAttempt(defaultAttempts);
+    updateScreenRound();
 }
 
 function resetAllVariables() {
@@ -235,6 +236,11 @@ function resetAllVariables() {
 function updateScreenAttempts() {
     const attemptNumber = document.getElementsByClassName('attempt__number');
     attemptNumber[0].textContent = levelAttempt.toString();
+}
+
+function updateScreenRound() {
+    const roundNumber = document.getElementsByClassName('round__number');
+    roundNumber[0].textContent = levelRound.toString() + '/5';
 }
 
 function startNewGame() {
