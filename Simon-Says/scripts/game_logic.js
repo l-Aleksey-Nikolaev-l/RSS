@@ -8,6 +8,7 @@ import {
     defaultAttempts,
     defaultLevelRound,
     maxLevelRounds,
+    isShowAnswer,
     setLevelRound,
     setLevelAttempt
 } from './variables.js';
@@ -197,8 +198,16 @@ function getRandomSequence() {
     }
 
     roundRandomSequence = [...randomSequence];
-    console.log(randomSequence);
+    showAnswer();
     displayRandomSequence();
+}
+
+function showAnswer() {
+    if (isShowAnswer) {
+        const roundName = ['first', 'second', 'third', 'fourth', 'fifth'];
+        const message = `Answer for ${roundName[levelRound - 1]} round is:`;
+        console.log(message, randomSequence.join(' '));
+    }
 }
 
 function displayRandomSequence() {
