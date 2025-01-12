@@ -135,6 +135,7 @@ function setGameOver() {
         checkLastRound();
     } else if (levelAttempt === 0) {
         middleSection[0].classList.add('game__lose');
+        blockRepeatButton();
     }
     keyboard.classList.add('keyboard__block');
 }
