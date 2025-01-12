@@ -428,6 +428,14 @@ body {
         justify-content: space-evenly;
     }
 
+    .keyboard__medium {
+        max-width: 100%;
+    }
+
+    .keyboard__hard {
+        max-width: 100%;
+        gap: var(--space-4);
+    }
 
     .keyboard__key {
         width: 8vh;
