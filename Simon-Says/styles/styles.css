@@ -367,6 +367,13 @@ body {
 /* Tablet screen */
 @media screen and (width < 1440px) and (width >= 768px) {
 
+    .game__lose:before {
+        font-size: 12vw;
+    }
+
+    .game__won:before {
+        font-size: 12vw;
+    }
 }
 
 /* Mobile screen */
