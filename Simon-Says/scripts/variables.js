@@ -16,6 +16,10 @@ function setDifficulty(level) {
     difficulty = level;
 }
 
+function clearCollection() {
+    keysCollection.clear();
+}
+
 function addKeyToCollection(key) {
     keysCollection.set(key.dataset.key, key);
 }
@@ -40,6 +44,7 @@ export {
     defaultAttempts,
     defaultLevelRound,
     setDifficulty,
+    clearCollection,
     addKeyToCollection,
     setLevelRound,
     setLevelAttempt
