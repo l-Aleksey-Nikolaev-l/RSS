@@ -1,4 +1,11 @@
-import {wrapper, difficulty} from './variables.js';
+import {
+    wrapper,
+    difficulty,
+    backgroundVolume,
+    effectsVolume,
+    timeForShowing,
+    timeBetweenShows, isPlayMusic
+} from './variables.js';
 
 const difficultySettings = {
     'easy': 'only numbers (0-9)',
