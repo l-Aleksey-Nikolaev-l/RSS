@@ -14,6 +14,7 @@ let levelRound = defaultLevelRound;
 let levelAttempt = defaultAttempts;
 let isShowAnswer = false;
 
+let isPlayMusic = false;
 let backgroundVolume = 0.2;
 let effectsVolume = 0.2;
 
@@ -41,7 +42,11 @@ function setShowAnswer(value) {
     isShowAnswer = value;
 }
 
-function setBackgroundVolume(value) {
+function setMusicPlay(state) {
+    isPlayMusic = state;
+}
+
+function setMusicVolume(value) {
     backgroundVolume = value;
 }
 
@@ -62,6 +67,7 @@ export {
     defaultAttempts,
     defaultLevelRound,
     isShowAnswer,
+    isPlayMusic,
     backgroundVolume,
     effectsVolume,
     setDifficulty,
