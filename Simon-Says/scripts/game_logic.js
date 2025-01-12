@@ -1,6 +1,6 @@
 import {createKeysArray} from './heplers.js';
 import {
-    keysCollection,
+    buttonsCollection,
     timeForShowing,
     timeBetweenShows,
     levelRound,
@@ -212,7 +212,7 @@ function startDisplayingKeys() {
     if (!randomSequence.length) {
         return;
     }
-    const button = keysCollection.get(randomSequence[indexOfSymbol]);
+    const button = buttonsCollection.get(randomSequence[indexOfSymbol]);
     button.classList.toggle('keyboard__correct_key');
     let showTime = setTimeout(() => {
         button.classList.toggle('keyboard__correct_key');
