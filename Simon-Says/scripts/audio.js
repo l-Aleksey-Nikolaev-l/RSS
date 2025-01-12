@@ -1,4 +1,4 @@
-import {backgroundVolume} from './variables.js';
+import {backgroundVolume, effectsVolume} from './variables.js';
 
 let audioFile = '';
 const audioPlayer = new Audio(audioFile);
@@ -14,9 +14,14 @@ function playBackgroundAudio() {
     return audioPlayer;
 }
 
-
+function playEffectAudio() {
+    audioFile = './assets/sounds/background/bg_sound_1.mp3';
+    audioPlayer.src = audioFile;
+    audioPlayer.volume = effectsVolume;
+    return audioPlayer;
+}
 
 export {
-    backgroundPlayer
     playBackgroundAudio,
+    playEffectAudio
 }
