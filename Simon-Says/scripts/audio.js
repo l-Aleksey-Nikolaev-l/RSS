@@ -14,8 +14,8 @@ function playBackgroundAudio() {
     return audioPlayer;
 }
 
-function playEffectAudio(state) {
-    if (state) {
+function playKeyEffectAudio(isCorrectKey) {
+    if (isCorrectKey) {
         audioFile = './assets/sounds/success/correct_key.wav';
     } else {
         audioFile = './assets/sounds/fail/fail_key.wav';
