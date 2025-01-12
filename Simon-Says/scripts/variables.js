@@ -12,6 +12,7 @@ const defaultLevelRound = 1;
 const defaultAttempts = 2;
 let levelRound = defaultLevelRound;
 let levelAttempt = defaultAttempts;
+let isShowAnswer = false;
 
 function setDifficulty(level) {
     difficulty = level;
@@ -33,6 +34,10 @@ function setLevelAttempt(attempt) {
     levelAttempt = attempt;
 }
 
+function setShowAnswer(value) {
+    isShowAnswer = value;
+}
+
 export {
     body,
     wrapper,
@@ -45,9 +50,11 @@ export {
     levelAttempt,
     defaultAttempts,
     defaultLevelRound,
+    isShowAnswer,
     setDifficulty,
     clearCollection,
     addKeyToCollection,
     setLevelRound,
-    setLevelAttempt
+    setLevelAttempt,
+    setShowAnswer
 };
