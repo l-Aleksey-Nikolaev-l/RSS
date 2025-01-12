@@ -7,6 +7,7 @@ import {
     levelAttempt,
     defaultAttempts,
     defaultLevelRound,
+    maxLevelRounds,
     setLevelRound,
     setLevelAttempt
 } from './variables.js';
@@ -139,6 +140,14 @@ function setGameOver() {
         middleSection[0].classList.add('game__lose');
     }
     keyboard.classList.add('keyboard__block');
+}
+
+function checkLastRound() {
+    if (levelRound !== maxLevelRounds) {
+        replaceButtonName();
+    } else {
+        blockRepeatButton();
+    }
 }
 
 function keyBlink(key, answer) {
