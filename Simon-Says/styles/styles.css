@@ -116,6 +116,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: var(--space-48);
     width: 100%;
     padding-top: var(--space-48);
 }
@@ -123,8 +124,17 @@ body {
 .setting__container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     column-gap: var(--space-8);
+    width: 500px;
+}
+
+.settings__container_audio,
+.settings__container_timing {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-8);
 }
 
 .difficulty__list {
