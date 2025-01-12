@@ -215,8 +215,21 @@ function startDisplayingKeys() {
 function resetValues() {
     randomSequence = [];
     setLevelAttempt(defaultAttempts);
+}
+
+function resetAllVariables() {
+    keyCode = null;
+    keyboard = null;
+    keyboardKey = null;
+    currentDeviceUp = '';
+    directSequence = [];
+    randomSequence = [];
+    roundRandomSequence = [];
+    randomSequenceLength = 2;
+    indexOfSymbol = 0;
+
     setLevelRound(defaultLevelRound);
-    updateScreenAttempts();
+    setLevelAttempt(defaultAttempts);
 }
 
 function updateScreenAttempts() {
