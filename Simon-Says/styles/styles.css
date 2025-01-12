@@ -202,11 +202,12 @@ body {
 }
 
 .keyboard__easy {
-    max-width: 25%;
+    width: clamp(340px, 40%, 356px);
 }
 
 .keyboard__medium {
     max-width: 70%;
+    width: clamp(678px, 100%, 995px);
 }
 
 .keyboard__hard {
