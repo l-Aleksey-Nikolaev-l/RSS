@@ -96,7 +96,7 @@ body {
             box-shadow 0.05s ease-in-out;
 }
 
-.main__button_block {
+.main__button[disabled] {
     pointer-events: none;
     opacity: 0.5;
 }
