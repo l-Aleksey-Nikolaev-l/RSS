@@ -90,19 +90,19 @@ function eventKey(event) {
     }
 }
 
-function unblockRepeatButton() {
-    const repeatButton = document.getElementsByClassName('repeat__button');
-    repeatButton[0].removeAttribute('disabled');
+function unblockButton(buttonName) {
+    let  buttonForUnblock = null;
+    if (buttonName === 'Repeat') {
+        buttonForUnblock = document.getElementsByClassName('repeat__button');
+    } else if (buttonName === 'New Game') {
+        buttonForUnblock = document.getElementsByClassName('new_game__button');
+    }
+    buttonForUnblock[0].removeAttribute('disabled');
 }
 
 function blockRepeatButton() {
     const repeatButton = document.getElementsByClassName('repeat__button');
     repeatButton[0].setAttribute('disabled','');
-}
-
-function unblockNewGameButton() {
-    const newGameButton = document.getElementsByClassName('new_game__button');
-    newGameButton[0].removeAttribute('disabled');
 }
 
 function replaceButtonName() {
