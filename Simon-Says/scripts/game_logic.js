@@ -253,7 +253,10 @@ function startNewGame() {
 }
 
 function repeatGame() {
-
+    randomSequence = [...roundRandomSequence];
+    setLevelAttempt(defaultAttempts);
+    updateScreenAttempts();
+    displayRandomSequence();
 }
 
 function startNextRound() {
