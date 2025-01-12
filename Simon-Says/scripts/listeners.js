@@ -7,7 +7,8 @@ import {
     setEffectsVolume,
     setTimeBetweenShow,
     setTimeToShow,
-    setMusicPlay
+    setMusicPlay,
+    setShowAnswer
 } from './variables.js';
 
 function startListeners() {
@@ -18,6 +19,7 @@ function startListeners() {
     const effectSetting = document.getElementById('effect__setting');
     const showSetting = document.getElementById('show__setting');
     const hideSetting = document.getElementById('hide__setting');
+    const answerSetting = document.getElementById('answer__setting');
 
     mainButtons.forEach((button) => {
         button.addEventListener('click', (event) => {
@@ -56,6 +58,11 @@ function startListeners() {
     hideSetting?.addEventListener('input', (event) => {
         const level = event.target.value;
         setTimeBetweenShow(level);
+    });
+
+    answerSetting?.addEventListener('change', (event) => {
+        const state = event.target.checked;
+        setShowAnswer(state);
     });
 }
 
