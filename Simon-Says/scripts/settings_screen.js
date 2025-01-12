@@ -139,7 +139,6 @@ class Settings {
     }
 }
 
-
 function showSettings() {
     const settingsScreen = new Settings().createSettings();
     wrapper[0].append(settingsScreen);
