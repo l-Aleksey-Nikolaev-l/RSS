@@ -163,8 +163,8 @@ function keyBlink(key, answer) {
         let hideTime = setTimeout(() => {
             clearTimeout(hideTime);
             clearTimeout(showTime);
-        }, timeBetweenShows);
-    }, timeForShowing);
+        }, 150);
+    }, 150);
 }
 
 function createSequence() {
