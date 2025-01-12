@@ -262,5 +262,6 @@ function startNextRound() {
 export  {
     startNewGame,
     repeatGame,
-    startNextRound
+    startNextRound,
+    resetAllVariables
 };
