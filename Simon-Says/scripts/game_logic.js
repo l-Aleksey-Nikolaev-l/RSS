@@ -1,4 +1,4 @@
-import {playEffectAudio} from './audio.js';
+import {playKeyEffectAudio} from './audio.js';
 import {
     buttonsCollection,
     timeForShowing,
@@ -115,12 +115,12 @@ function replaceButtonName() {
 
 function checkAnswer(key) {
     if (randomSequence[0] === keyCode) {
-        playEffectAudio(true);
+        playKeyEffectAudio(true);
         keyBlink(key, 'keyboard__correct_key');
         randomSequence.shift();
         setGameOver();
     } else {
-        playEffectAudio(false);
+        playKeyEffectAudio(false);
         keyBlink(key, 'keyboard__incorrect_key');
         setLevelAttempt(levelAttempt - 1);
         setGameOver();
