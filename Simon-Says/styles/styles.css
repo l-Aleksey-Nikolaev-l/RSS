@@ -216,8 +216,11 @@ body {
             inset -4px 4px 3px 0 rgb(0 0 0 / 15%),
             inset 4px -4px 3px 0 rgb(255 255 255 / 80%);
     cursor: pointer;
-    transition: background 0.05s ease-in-out,
-    box-shadow 0.05s ease-in-out;
+    transition:
+            width 0.25s ease-in-out,
+            height 0.25s ease-in-out,
+            background 0.05s ease-in-out,
+            box-shadow 0.05s ease-in-out;
 }
 
 .keyboard__key:focus-visible {
