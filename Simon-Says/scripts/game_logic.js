@@ -181,9 +181,10 @@ function getNextRoundSequence() {
 }
 
 function getRandomSequence() {
+    const keysArray = [...buttonsCollection.keys()];
     for (let index = 0; index < randomSequenceLength; index += 1) {
-        const randomNumber = Math.floor(Math.random() * (buttonsCollection.size)).toString();
-        randomSequence.push(buttonsCollection.get(randomNumber).dataset.key);
+        const randomNumber = Math.floor(Math.random() * (keysArray.length)).toString();
+        randomSequence.push(keysArray[randomNumber]);
     }
 
     roundRandomSequence = [...randomSequence];
