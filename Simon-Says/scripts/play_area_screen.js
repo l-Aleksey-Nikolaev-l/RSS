@@ -5,7 +5,7 @@ import {
     levelAttempt,
     levelRound,
     maxLevelRounds,
-    addKeyToCollection
+    addButtonToCollection
 } from './variables.js';
 
 class PlayScreen {
@@ -69,8 +69,8 @@ class PlayScreen {
         keysArray.forEach((pack) => {
             for (let code = pack[0]; code <= pack[1]; code += 1) {
                 const symbol = String.fromCharCode(code).toUpperCase();
-                addKeyToCollection(key);
                 const button = this.#createButton(symbol);
+                addButtonToCollection(button);
                 keyBoard.append(button);
             }
         });
