@@ -367,6 +367,14 @@ body {
 /* Tablet screen */
 @media screen and (width < 1440px) and (width >= 768px) {
 
+    .keyboard__key {
+        width: 80px;
+        height: 80px;
+        font-size: 1.6rem;
+        border-radius: var(--space-8);
+        transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
+    }
+
     .game__lose:before {
         font-size: 12vw;
     }
