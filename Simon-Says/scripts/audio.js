@@ -14,6 +14,10 @@ function playBackgroundAudio() {
     }
 }
 
+function setBackgroundVolume() {
+    audioPlayer.volume = backgroundVolume;
+}
+
 function playKeyEffectAudio(isCorrectKey) {
     if (isCorrectKey) {
         audioFile = './assets/sounds/success/correct_key.wav';
@@ -42,5 +46,6 @@ function playGameOverAudio(state) {
 export {
     playBackgroundAudio,
     playKeyEffectAudio,
-    playGameOverAudio
+    playGameOverAudio,
+    setBackgroundVolume
 }
