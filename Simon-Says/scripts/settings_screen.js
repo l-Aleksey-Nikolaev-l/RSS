@@ -110,6 +110,18 @@ class Settings {
         return rangeSettingContainer;
     }
 
+    #createShowAnswerSetting() {
+        const showAnswerContainer = this.#createSettingContainer();
+        const answerLabel = this.#createSettingLabel('answer__setting', 'Show answers in console');
+        const answerCheckbox = document.createElement('input');
+        answerCheckbox.type = 'checkbox';
+        answerCheckbox.id = 'answer__setting';
+        answerCheckbox.name = 'answer__setting';
+        answerCheckbox.checked = isPlayMusic;
+        showAnswerContainer.append(answerLabel, answerCheckbox);
+        return showAnswerContainer;
+    }
+
     #createBackButton() {
         const backButton = document.createElement('button');
         backButton.classList.add('main__button', 'back__button');
