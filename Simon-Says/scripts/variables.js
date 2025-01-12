@@ -7,6 +7,7 @@ let keysCollection = new Map();
 let timeForShowing = 300;
 let timeBetweenShows = 300;
 
+const maxLevelRounds = 5;
 const defaultLevelRound = 1;
 const defaultAttempts = 2;
 let levelRound = defaultLevelRound;
@@ -39,6 +40,7 @@ export {
     keysCollection,
     timeForShowing,
     timeBetweenShows,
+    maxLevelRounds,
     levelRound,
     levelAttempt,
     defaultAttempts,
