@@ -18,6 +18,7 @@ let currentDeviceUp = '';
 
 let directSequence = [];
 let randomSequence = [];
+let roundRandomSequence = [];
 let randomSequenceLength = 2;
 let indexOfSymbol = 0;
 
@@ -179,6 +180,7 @@ function getRandomSequence() {
         randomSequence.push(directSequence[randomNumber]);
     }
 
+    roundRandomSequence = [...randomSequence];
     console.log(randomSequence);
     displayRandomSequence();
 }
