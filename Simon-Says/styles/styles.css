@@ -304,8 +304,9 @@ body {
             inset -4px 4px 3px 0 rgb(0, 0, 0, 50%),
             inset 6px -6px 4px 0 rgb(255 255 255);
     cursor: pointer;
-    transition: background 0.1s ease-in-out,
-    box-shadow 0.1s ease-in-out;
+    transition:
+            background 0.1s ease-in-out,
+            box-shadow 0.1s ease-in-out;
 }
 
 .bottom__play_section {
@@ -399,8 +400,9 @@ body {
                 inset -4px 4px 3px 0 rgb(0, 0, 0, 50%),
                 inset 6px -6px 4px 0 rgb(255 255 255);
         cursor: pointer;
-        transition: background 0.1s ease-in-out,
-        box-shadow 0.1s ease-in-out;
+        transition:
+                background 0.1s ease-in-out,
+                box-shadow 0.1s ease-in-out;
     }
 }
 
