@@ -146,6 +146,7 @@ function setGameOver() {
             blockRepeatButton();
         }
         keyboard.classList.add('keyboard__block');
+        clearKeysListeners();
         clearTimeout(waitResult);
     }, 100);
 }
