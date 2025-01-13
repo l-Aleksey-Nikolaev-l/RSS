@@ -23,6 +23,7 @@ let roundRandomSequence = [];
 let randomSequenceLength = 2;
 let indexOfSymbol = 0;
 let isRepeatRound = true;
+let isIgnoreKey = false;
 
 function startKeysListeners() {
     keyboard = document.getElementById('keyboard');
@@ -40,15 +41,26 @@ function clearKeysListeners() {
 }
 
 function getKeyCode(event) {
-    return event.type.includes('key') ?
-        event.code.slice(-1) :
-        event.target.dataset.key;
+    if (event.type.includes('key')) {
+        const code = event.code.toLowerCase();
+        if (code.includes('shift') || code.includes('caps')) {
+            isIgnoreKey = true;
+        }
+        else {
+            isIgnoreKey = false;
+            return event.code.slice(-1);
+        }
+    } else {
+        isIgnoreKey = false;
+        return event.target.dataset.key;
+    }
+    return null;
 }
 
 function keyDown(event) {
     currentDeviceUp = event.type.includes('key') ? 'keyup' : 'mouseup';
     eventKey(event);
-    if (!keyboardKey) {
+    if (!keyboardKey && !isIgnoreKey) {
         keyboardKey = keyCode;
         clearKeysListeners();
         this.addEventListener(currentDeviceUp, keyUp);
@@ -77,7 +89,8 @@ function eventKey(event) {
     const isDevicePressed = event.type.includes('down');
     keyCode = getKeyCode(event);
 
-    if (!isDevicePressed && (keyboardKey !== keyCode)) {
+    if (isIgnoreKey ||
+        (!isDevicePressed && (keyboardKey !== keyCode))) {
         keyCode = null;
         return;
     }
