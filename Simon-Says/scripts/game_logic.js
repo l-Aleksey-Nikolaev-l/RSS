@@ -151,8 +151,7 @@ function setGameOver() {
         if (randomSequence.length && levelAttempt) {
             return;
         } else if (!randomSequence.length) {
-            middleSection[0].classList.add('game__won');
-            checkLastRound();
+            checkLastRound(middleSection);
         } else if (levelAttempt === 0) {
             middleSection[0].classList.add('game__lose');
             playGameOverAudio('game_lose');
@@ -164,11 +163,13 @@ function setGameOver() {
     }, 100);
 }
 
-function checkLastRound() {
+function checkLastRound(middleSection) {
     if (levelRound !== maxLevelRounds) {
+        middleSection[0].classList.add('round__won');
         playGameOverAudio('round_won');
         replaceButtonName();
     } else {
+        middleSection[0].classList.add('game__won');
         playGameOverAudio('game_won');
         blockRepeatButton();
     }
