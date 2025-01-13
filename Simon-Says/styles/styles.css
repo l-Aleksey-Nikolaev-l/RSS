@@ -153,7 +153,15 @@ body {
 }
 
 .rule__item {
+    font-family: "SansSerif", sans-serif;
+    font-size: 1.2rem;
     margin: var(--space-16) var(--space-0);
+}
+
+.setting__label,
+.difficulty__list {
+    font-family: "SansSerif", sans-serif;
+    font-size: 1.2rem;
 }
 
 .back__button,
