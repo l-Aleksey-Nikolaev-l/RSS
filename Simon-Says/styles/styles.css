@@ -299,7 +299,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    content: "You Won!";
+    content: "Game Won!";
+    width: 100%;
+    height: 80vh;
+    color: #3c8232;
+    font-size: 10vw;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 20px 0 #000000;
+}
+
+.round__won:before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "Round Won!";
     width: 100%;
     height: 80vh;
     color: #3c8232;
@@ -440,6 +455,10 @@ body {
     .game__won:before {
         font-size: 12vw;
     }
+
+    .round__won:before {
+        font-size: 12vw;
+    }
 }
 
 /* Mobile screen */
@@ -514,6 +533,10 @@ body {
     }
 
     .game__won:before {
+        font-size: 14vw;
+    }
+
+    .round__won:before {
         font-size: 14vw;
     }
 
