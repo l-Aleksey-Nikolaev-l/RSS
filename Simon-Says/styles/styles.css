@@ -322,6 +322,45 @@ body {
     column-gap: var(--space-8);
 }
 
+.fail__popover {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    font-size: 5rem;
+    color: #d34242;
+    border: none;
+    border-radius: var(--space-16);
+    background-color: rgba(255, 255, 255, 0.75);
+    transform: translate(-50%, 20%);
+    pointer-events: none;
+    opacity: 0;
+    animation: popover 0.75s ease-in-out;
+}
+
+@keyframes popover {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 44%);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(-50%, 20%);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(-50%, 20%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -2%);
+    }
+}
+
 @media (hover: hover) {
     .main__button:hover {
         cursor: pointer;
