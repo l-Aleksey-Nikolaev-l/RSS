@@ -79,8 +79,8 @@ class Settings {
         musicPlayCheckbox.name = 'music__play';
         musicPlayCheckbox.checked = isPlayMusic;
 
-        const musicSetting = this.#createRangeElement('Background music volume', 'audio', 0, 1, 0.1, backgroundVolume);
-        const effectsSetting = this.#createRangeElement('Effects volume', 'effect', 0, 1, 0.1, effectsVolume);
+        const musicSetting = this.#createRangeElement('Music volume (0 - 100%)', 'audio', 0, 1, 0.1, backgroundVolume);
+        const effectsSetting = this.#createRangeElement('Effects volume (0 - 100%)', 'effect', 0, 1, 0.1, effectsVolume);
 
         musicPlayContainer.append(musicPlayLabel, musicPlayCheckbox);
         audioSettingsList.append(musicPlayContainer, musicSetting, effectsSetting);
@@ -90,8 +90,8 @@ class Settings {
     #createTimingSettings() {
         const timingSettingsList = document.createElement('div');
         timingSettingsList.classList.add('settings__container_timing')
-        const showSetting = this.#createRangeElement('Time to show key', 'show', 300, 1000, 100, timeForShowing);
-        const hideSetting = this.#createRangeElement('Time between shows', 'hide', 300, 1000, 100, timeBetweenShows);
+        const showSetting = this.#createRangeElement('Time to show key (0.3 - 1sec)', 'show', 300, 1000, 100, timeForShowing);
+        const hideSetting = this.#createRangeElement('Time between shows (0.3 - 1sec)', 'hide', 300, 1000, 100, timeBetweenShows);
         timingSettingsList.append(showSetting, hideSetting);
         return timingSettingsList;
     }
