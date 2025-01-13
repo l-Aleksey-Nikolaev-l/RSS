@@ -34,6 +34,9 @@ function startKeysListeners() {
 function clearKeysListeners() {
     document?.removeEventListener('keydown', keyDown);
     keyboard?.removeEventListener('mousedown', keyDown);
+    if (!randomSequence.length || !levelAttempt) {
+        keyboard.removeEventListener('mouseout', mouseOut);
+    }
 }
 
 function getKeyCode(event) {
