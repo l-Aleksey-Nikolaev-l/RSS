@@ -188,7 +188,6 @@ function getRandomSequence() {
         randomSequence.push(keysArray[randomNumber]);
     }
     roundRandomSequence = [...randomSequence];
-    showAnswer();
     displayRandomSequence();
 }
 
@@ -201,6 +200,7 @@ function showAnswer() {
 }
 
 function displayRandomSequence() {
+    showAnswer();
     let waitingBeforeStart = setTimeout(() => {
         startDisplayingKeys();
         clearTimeout(waitingBeforeStart);
