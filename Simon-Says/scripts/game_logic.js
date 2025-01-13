@@ -18,7 +18,6 @@ let keyCode = null;
 let keyboard = null;
 let keyboardKey = null;
 let currentDeviceUp = '';
-
 let randomSequence = [];
 let roundRandomSequence = [];
 let randomSequenceLength = 2;
@@ -188,7 +187,6 @@ function getRandomSequence() {
         const randomNumber = Math.floor(Math.random() * (keysArray.length)).toString();
         randomSequence.push(keysArray[randomNumber]);
     }
-
     roundRandomSequence = [...randomSequence];
     showAnswer();
     displayRandomSequence();
@@ -250,7 +248,6 @@ function resetAllVariables() {
     roundRandomSequence = [];
     randomSequenceLength = 2;
     indexOfSymbol = 0;
-
     setLevelRound(defaultLevelRound);
     setLevelAttempt(defaultAttempts);
 }
@@ -281,10 +278,6 @@ function startNextRound() {
     clearKeysListeners();
     getNextRoundSequence();
 }
-
-
-// add popover  https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/togglePopover
-
 
 export  {
     startNewGame,
