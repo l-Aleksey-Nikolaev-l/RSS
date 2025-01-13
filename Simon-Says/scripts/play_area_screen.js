@@ -60,6 +60,10 @@ class PlayScreen {
         const middleSection = document.createElement('section');
         const keyBoard = document.createElement('div');
 
+        const sequenceField = document.createElement('p');
+        sequenceField.classList.add('sequence__field');
+        sequenceField.textContent = 'Tried:';
+
         middleSection.classList.add('middle__play_section');
         keyBoard.classList.add('keyboard', 'keyboard__block', `keyboard__${this.difficulty}`);
         keyBoard.id = 'keyboard';
@@ -75,7 +79,7 @@ class PlayScreen {
             }
         });
 
-        middleSection.append(keyBoard);
+        middleSection.append(keyBoard, sequenceField);
         return middleSection;
     }
 

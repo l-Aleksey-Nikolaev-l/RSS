@@ -76,7 +76,9 @@ function mouseOut(event) {
 function eventKey(event) {
     const isDevicePressed = event.type.includes('down');
     keyCode = getKeyCode(event);
-
+    if (isDevicePressed) {
+        addToSequenceField(keyCode);
+    }
     if (!isDevicePressed && (keyboardKey !== keyCode)) {
         keyCode = null;
         return;
@@ -92,6 +94,11 @@ function eventKey(event) {
             break;
         }
     }
+}
+
+function addToSequenceField(value) {
+    const sequenceField = document.getElementsByClassName('sequence__field');
+    sequenceField[0].innerText += ` ${value}`;
 }
 
 function unblockButton(buttonName) {
