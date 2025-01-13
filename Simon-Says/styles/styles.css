@@ -198,6 +198,10 @@ body {
     width: 100%;
 }
 
+.sequence__field {
+    padding-top: var(--space-8);
+}
+
 .keyboard {
     display: flex;
     flex-direction: row;
