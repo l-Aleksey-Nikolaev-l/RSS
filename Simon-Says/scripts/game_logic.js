@@ -1,3 +1,4 @@
+import {popover} from './popover.js';
 import {playKeyEffectAudio, playGameOverAudio} from './audio.js';
 import {
     buttonsCollection,
@@ -124,6 +125,7 @@ function checkAnswer(key) {
         keyBlink(key, 'keyboard__incorrect_key');
         setLevelAttempt(levelAttempt - 1);
         setGameOver();
+        popover.showFailPopover(levelAttempt);
     }
     updateScreenAttempts();
 }
