@@ -443,7 +443,7 @@ body {
         align-items: center;
         column-gap: var(--space-0);
         row-gap: var(--space-8);
-        width: 300px;
+        width: 320px;
     }
 
     .settings__container_audio,
