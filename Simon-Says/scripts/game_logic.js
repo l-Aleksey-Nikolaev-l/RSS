@@ -76,16 +76,16 @@ function mouseOut(event) {
 function eventKey(event) {
     const isDevicePressed = event.type.includes('down');
     keyCode = getKeyCode(event);
-    if (isDevicePressed) {
-        addToSequenceField(keyCode);
-    }
+
     if (!isDevicePressed && (keyboardKey !== keyCode)) {
         keyCode = null;
         return;
     }
-    unblockButton('Repeat');
+
     for (const key of keyboard.children) {
         if (keyCode === key.dataset.key && isDevicePressed) {
+            addToSequenceField(keyCode);
+            unblockButton('Repeat');
             key.classList.add('key__pressed');
             break;
         } else if (keyCode === key.dataset.key && !isDevicePressed) {
