@@ -22,6 +22,7 @@ let randomSequence = [];
 let roundRandomSequence = [];
 let randomSequenceLength = 2;
 let indexOfSymbol = 0;
+let isRepeatRound = true;
 
 function startKeysListeners() {
     keyboard = document.getElementById('keyboard');
@@ -95,10 +96,13 @@ function eventKey(event) {
 
 function unblockButton(buttonName) {
     let  buttonForUnblock = null;
-    if (buttonName === 'Repeat') {
+    if (buttonName === 'Repeat' && (isRepeatRound || !randomSequence.length)) {
+        isRepeatRound = !isRepeatRound;
         buttonForUnblock = document.getElementsByClassName('repeat__button');
     } else if (buttonName === 'New Game') {
         buttonForUnblock = document.getElementsByClassName('new_game__button');
+    } else {
+        return;
     }
     buttonForUnblock[0].removeAttribute('disabled');
 }
@@ -106,13 +110,16 @@ function unblockButton(buttonName) {
 function blockRepeatButton() {
     const repeatButton = document.getElementsByClassName('repeat__button');
     repeatButton[0].setAttribute('disabled','');
+    isRepeatRound = !isRepeatRound;
 }
 
 function replaceButtonName() {
     const repeatButton = document.getElementsByClassName('repeat__button');
     repeatButton[0].classList.remove('main__button_repeat');
+    repeatButton[0].removeAttribute('disabled');
     repeatButton[0].classList.add('main__button_next');
     repeatButton[0].textContent = 'Next';
+    isRepeatRound = !isRepeatRound;
 }
 
 function checkAnswer(key) {
