@@ -24,7 +24,6 @@ let randomSequenceLength = 2;
 let indexOfSymbol = 0;
 
 function startKeysListeners() {
-    clearKeysListeners();
     keyboard = document.getElementById('keyboard');
     document.addEventListener('keydown', keyDown);
     keyboard.addEventListener('mousedown', keyDown);
