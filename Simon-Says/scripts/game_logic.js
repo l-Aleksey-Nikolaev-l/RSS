@@ -262,6 +262,7 @@ function startDisplayingKeys() {
                 clearTimeout(showTime);
                 startKeysListeners();
                 unblockButton('New Game');
+                unblockButton('Repeat');
                 keyboard.classList.remove('keyboard__block');
                 return;
             }
