@@ -11,7 +11,10 @@ function playBackgroundAudio(state) {
     audioPlayer.src = `./assets/sounds/background/bg_sound_${randomNumber}.mp3`;
     audioPlayer.volume = backgroundVolume;
     if (state) {
-        audioPlayer.play().then();
+        const playPromise = audioPlayer.play();
+        if (playPromise !== undefined) {
+            playPromise.then().catch(() => {});
+        }
     } else {
         audioPlayer.pause();
     }
@@ -28,7 +31,11 @@ function playKeyEffectAudio(isCorrectKey) {
         effectPlayer.src = './assets/sounds/fail/fail_key.wav';
     }
     effectPlayer.volume = effectsVolume;
-    effectPlayer.play().then();
+
+    const playPromise = effectPlayer.play();
+    if (playPromise !== undefined) {
+        playPromise.then().catch(() => {});
+    }
 }
 
 function playGameOverAudio(state) {
@@ -41,7 +48,11 @@ function playGameOverAudio(state) {
         effectPlayer.src = './assets/sounds/fail/game_lose.wav';
     }
     effectPlayer.volume = effectsVolume;
-    effectPlayer.play().then();
+
+    const playPromise = effectPlayer.play();
+    if (playPromise !== undefined) {
+        playPromise.then().catch(() => {});
+    }
 }
 
 export {

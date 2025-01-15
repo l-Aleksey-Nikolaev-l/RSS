@@ -24,6 +24,7 @@ let randomSequenceLength = 2;
 let indexOfSymbol = 0;
 let isRepeatRound = true;
 let isIgnoreKey = false;
+let isRoundOver = false;
 
 function startKeysListeners() {
     keyboard = document.getElementById('keyboard');
@@ -89,6 +90,11 @@ function eventKey(event) {
     const isDevicePressed = event.type.includes('down');
     keyCode = getKeyCode(event);
 
+    if (isRoundOver) {
+        isIgnoreKey = true;
+        return;
+    }
+
     if (isIgnoreKey ||
         (!isDevicePressed && (keyboardKey !== keyCode))) {
         keyCode = null;
@@ -143,6 +149,7 @@ function replaceButtonName() {
 }
 
 function checkAnswer(key) {
+    isRoundOver = true;
     if (randomSequence[0] === keyCode) {
         playKeyEffectAudio(true);
         keyBlink(key, 'keyboard__correct_key');
@@ -162,6 +169,7 @@ function setGameOver() {
     let waitResult = setTimeout(() => {
         const middleSection = document.getElementsByClassName('middle__play_section');
         if (randomSequence.length && levelAttempt) {
+            isRoundOver = false;
             return;
         } else if (!randomSequence.length) {
             checkLastRound(middleSection);
@@ -254,6 +262,7 @@ function startDisplayingKeys() {
                 clearTimeout(showTime);
                 startKeysListeners();
                 unblockButton('New Game');
+                unblockButton('Repeat');
                 keyboard.classList.remove('keyboard__block');
                 return;
             }
@@ -265,6 +274,7 @@ function startDisplayingKeys() {
 function resetValues() {
     indexOfSymbol = 0;
     randomSequence = [];
+    isRoundOver = false;
     setLevelAttempt(defaultAttempts);
     updateScreenAttempts();
     updateScreenRound();
@@ -300,8 +310,6 @@ function startNewGame() {
 function repeatGame() {
     randomSequence = [...roundRandomSequence];
     clearKeysListeners();
-    setLevelAttempt(defaultAttempts);
-    updateScreenAttempts();
     displayRandomSequence();
 }
 
