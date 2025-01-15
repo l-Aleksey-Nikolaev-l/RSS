@@ -309,8 +309,6 @@ function startNewGame() {
 function repeatGame() {
     randomSequence = [...roundRandomSequence];
     clearKeysListeners();
-    setLevelAttempt(defaultAttempts);
-    updateScreenAttempts();
     displayRandomSequence();
 }
 
