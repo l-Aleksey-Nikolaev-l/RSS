@@ -12,20 +12,11 @@ class Popover {
             const keyboard = document.getElementById('keyboard');
             const failPopover = this.#createFailPopover();
             keyboard.append(failPopover);
-            this.#removeFailPopover();
         }
-    }
-
-    #removeFailPopover() {
-        let removePopover = setTimeout(() => {
-            const popover = document.getElementById('fail__popover');
-            popover.remove()
-            clearTimeout(removePopover);
-        }, 1000);
     }
 }
 
-const popover = new Popover()
+const popover = new Popover();
 
 export {
     popover

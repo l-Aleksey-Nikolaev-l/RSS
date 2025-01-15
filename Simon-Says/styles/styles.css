@@ -368,25 +368,20 @@ body {
     transform: translate(-50%, 20%);
     pointer-events: none;
     opacity: 0;
-    animation: popover 0.75s ease-in-out;
+    animation: popover 0.3s ease-in-out forwards;
 }
 
 @keyframes popover {
     0% {
         opacity: 0;
-        transform: translate(-50%, 44%);
+        transform: translate(-50%, 45%);
     }
     20% {
         opacity: 1;
-        transform: translate(-50%, 20%);
-    }
-    80% {
-        opacity: 1;
-        transform: translate(-50%, 20%);
     }
     100% {
-        opacity: 0;
-        transform: translate(-50%, -2%);
+        opacity: 1;
+        transform: translate(-50%, 20%);
     }
 }
 
