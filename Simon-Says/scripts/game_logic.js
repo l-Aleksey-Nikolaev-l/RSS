@@ -70,19 +70,23 @@ function keyDown(event) {
 
 function keyUp(event) {
     eventKey(event);
+    if (!isIgnoreKey) {
+        startKeysListeners();
+    }
     if (keyCode) {
         keyboardKey = null;
         this.removeEventListener(currentDeviceUp, keyUp);
-        startKeysListeners();
     }
 }
 
 function mouseOut(event) {
     if (currentDeviceUp === 'mouseup') {
         eventKey(event);
+        if (!isRoundOver) {
+            startKeysListeners();
+        }
         keyboardKey = null;
         keyboard.removeEventListener(currentDeviceUp, keyUp);
-        startKeysListeners();
     }
 }
 
@@ -160,6 +164,10 @@ function checkAnswer(key) {
         keyBlink(key, 'keyboard__incorrect_key');
         setLevelAttempt(levelAttempt - 1);
         setGameOver();
+        keyboard.classList.add('keyboard__block');
+        isRoundOver = true;
+        isIgnoreKey = true;
+        clearKeysListeners();
         popover.showFailPopover(levelAttempt);
     }
     updateScreenAttempts();
@@ -289,6 +297,7 @@ function resetAllVariables() {
     roundRandomSequence = [];
     randomSequenceLength = 2;
     indexOfSymbol = 0;
+    isRepeatRound = true;
     setLevelRound(defaultLevelRound);
     setLevelAttempt(defaultAttempts);
 }
@@ -304,6 +313,7 @@ function updateScreenRound() {
 }
 
 function startNewGame() {
+    resetAllVariables()
     createSequence();
 }
 
