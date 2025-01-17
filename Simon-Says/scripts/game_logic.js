@@ -70,7 +70,7 @@ function keyDown(event) {
 
 function keyUp(event) {
     eventKey(event);
-    if (!isIgnoreKey) {
+    if (!isIgnoreKey && keyCode) {
         startKeysListeners();
     }
     if (keyCode) {
