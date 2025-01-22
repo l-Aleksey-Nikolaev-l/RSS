@@ -48,6 +48,23 @@
     padding: 14px 0;
 }
 
+.tips,
+.field__cell {
+    font-size: 1.4rem;
+    border: var(--border-thin);
+}
+
+.field__cell {
+    font-weight: 100;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+}
+
+.field__cell:nth-child(5n+1) {
+    border-right: var(--border-thick);
+}
+
 .footer {
     display: none;
     min-height: 50px;
