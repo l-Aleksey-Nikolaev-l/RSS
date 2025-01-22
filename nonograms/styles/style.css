@@ -23,3 +23,15 @@
     flex-direction: column;
     height: 100vh;
 }
+
+.header {
+    min-height: 70px;
+}
+
+.game__section {
+    height: 100%;
+}
+
+.footer {
+    min-height: 50px;
+}
