@@ -14,7 +14,20 @@ class MainScreen {
   #createGameSection() {
     const gameSection = document.createElement('section');
     gameSection.classList.add('game__section');
+    const table = this.#createTable();
+    gameSection.append(table);
     return gameSection;
+  }
+
+  #createTable() {
+    const table = document.createElement('table');
+    const caption = document.createElement('caption');
+    table.classList.add('nonograms__table');
+    caption.classList.add('table__caption');
+    caption.textContent = '00:00';
+
+    table.append(caption);
+    return table;
   }
 
   #createFooterSection() {
