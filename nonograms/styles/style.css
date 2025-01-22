@@ -11,6 +11,8 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     font-weight: 100;
+    color: var(--font-color);
+    user-select: none;
 }
 
 
