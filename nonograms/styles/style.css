@@ -127,7 +127,7 @@
 }
 
 @media (hover: hover){
-    .field__cell:hover:not(.fill, .cross) {
+    .field__cell:hover:not(.fill) {
         background-color: var(--hover-color);
     }
 }
