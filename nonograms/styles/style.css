@@ -61,6 +61,23 @@
     text-align: center;
 }
 
+.col__tips {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-align: end;
+    padding: 8px 8px 4px 8px;
+    border-top: var(--border-thick);
+    border-bottom: var(--border-thick);
+}
+
+.col__tips:nth-child(2) {
+    border-left: var(--border-thick);
+}
+
+.col__tips:nth-child(5n+1) {
+    border-right: var(--border-thick);
+}
+
 .field__cell:nth-child(5n+1) {
     border-right: var(--border-thick);
 }
