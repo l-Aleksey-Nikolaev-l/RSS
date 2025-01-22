@@ -7,7 +7,6 @@ function tableListeners() {
 
   table[0].addEventListener('contextmenu', (event) => {
     event.preventDefault();
-    setStatus(event);
   });
 
 function setStatus(event) {
