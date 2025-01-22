@@ -12,6 +12,10 @@ function tableListeners() {
     event.preventDefault();
   });
 
+  table[0].addEventListener('mousemove', (event) => {
+  });
+}
+
 function setStatus(event) {
   const cell = event.target;
   const cellId = cell.dataset.id;
