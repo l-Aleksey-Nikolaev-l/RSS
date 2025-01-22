@@ -27,6 +27,7 @@
 }
 
 .header {
+    display: none;
     min-height: 70px;
 }
 
@@ -35,5 +36,6 @@
 }
 
 .footer {
+    display: none;
     min-height: 50px;
 }
