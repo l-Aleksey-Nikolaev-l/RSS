@@ -1,4 +1,7 @@
 class MainScreen {
+
+  tempSize = 15;
+
   #createMainContainer() {
     const main = document.createElement('main');
     main.classList.add('main');
@@ -27,7 +30,23 @@ class MainScreen {
     caption.textContent = '00:00';
 
     table.append(caption);
+    this.#addTopTips(table);
     return table;
+  }
+
+  #addTopTips(table) {
+    const tr = document.createElement('tr');
+    tr.classList.add('top__tips');
+    for (let index = 0; index <= this.tempSize; index += 1) {
+      const th = document.createElement('th');
+      if (index !== 0) {
+        th.classList.add('tips', 'col__tips');
+        th.setAttribute('data-col_tips', String(index));
+        th.textContent = '122';
+      }
+      tr.append(th);
+    }
+    table.append(tr);
   }
 
   #createFooterSection() {
