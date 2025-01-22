@@ -31,6 +31,7 @@ class MainScreen {
 
     table.append(caption);
     this.#addTopTips(table);
+    this.#addRows(table);
     return table;
   }
 
@@ -47,6 +48,27 @@ class MainScreen {
       tr.append(th);
     }
     table.append(tr);
+  }
+
+  #addRows(table) {
+    let cellId = 1;
+    for (let rowIndex = 0; rowIndex < this.tempSize; rowIndex += 1) {
+      const tr = document.createElement('tr');
+      tr.classList.add('row__cells');
+      const th = document.createElement('th');
+      th.classList.add('tips', 'row__tips');
+      th.setAttribute('data-row_tips', String(rowIndex + 1));
+      th.textContent = '232';
+      tr.append(th);
+      for (let cellIndex = 0; cellIndex < this.tempSize; cellIndex += 1) {
+        const td = document.createElement('td');
+        td.classList.add('field__cell');
+        td.setAttribute('data-id', String(cellId));
+        tr.append(td);
+        cellId += 1;
+      }
+      table.append(tr);
+    }
   }
 
   #createFooterSection() {
