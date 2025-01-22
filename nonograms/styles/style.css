@@ -87,6 +87,14 @@
     border-left: var(--border-thick);
 }
 
+.row__cells:nth-child(3) {
+    border-top: var(--border-thick);
+}
+
+.row__cells:nth-child(5n+2) {
+    border-bottom: var(--border-thick);
+}
+
 .field__cell:nth-child(5n+1) {
     border-right: var(--border-thick);
 }
