@@ -1,33 +1,33 @@
 class MainScreen {
-  createMainContainer() {
+  #createMainContainer() {
     const main = document.createElement('main');
     main.classList.add('main');
     return main;
   }
 
-  createHeaderSection() {
+  #createHeaderSection() {
     const header = document.createElement('header');
     header.classList.add('header');
     return header;
   }
 
-  createGameSection() {
+  #createGameSection() {
     const gameSection = document.createElement('section');
     gameSection.classList.add('game__section');
     return gameSection;
   }
 
-  createFooterSection() {
+  #createFooterSection() {
     const footer = document.createElement('footer');
     footer.classList.add('footer');
     return footer;
   }
 
   createMainScreen() {
-    const mainContainer = this.createMainContainer();
-    const header = this.createHeaderSection();
-    const gameSection = this.createGameSection();
-    const footer = this.createFooterSection();
+    const mainContainer = this.#createMainContainer();
+    const header = this.#createHeaderSection();
+    const gameSection = this.#createGameSection();
+    const footer = this.#createFooterSection();
     mainContainer.append(header, gameSection, footer);
     return mainContainer;
   }
