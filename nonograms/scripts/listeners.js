@@ -5,6 +5,9 @@ function tableListeners() {
     setStatus(event);
   });
 
+  table[0].addEventListener('mouseup', () => {
+  });
+
   table[0].addEventListener('contextmenu', (event) => {
     event.preventDefault();
   });
