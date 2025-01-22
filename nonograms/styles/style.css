@@ -3,6 +3,7 @@
     --font-color: #5c5c5c;
     --border-thin: 1px solid #a0a0a0;
     --border-thick: 2px solid #5c5c5c;
+    --mark-color: #202020;
 }
 
 * {
@@ -100,7 +101,7 @@
 }
 
 .fill {
-    background-color: #202020;
+    background-color: var(--mark-color);
 }
 
 .cross:before,
@@ -110,7 +111,7 @@
     flex-direction: column;
     content: "";
     width: 42px;
-    border-bottom: 1px solid #202020;
+    border-bottom: 1px solid var(--mark-color);
     transform: rotateZ(45deg);
 }
 
