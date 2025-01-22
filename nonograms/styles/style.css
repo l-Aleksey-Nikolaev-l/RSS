@@ -78,6 +78,15 @@
     border-right: var(--border-thick);
 }
 
+.row__tips {
+    text-align: end;
+    vertical-align: bottom;
+    letter-spacing: 4px;
+    padding: 8px 0 8px 14px;
+    border-right: var(--border-thick);
+    border-left: var(--border-thick);
+}
+
 .field__cell:nth-child(5n+1) {
     border-right: var(--border-thick);
 }
