@@ -99,6 +99,25 @@
     border-right: var(--border-thick);
 }
 
+.fill {
+    background-color: #202020;
+}
+
+.cross:before,
+.cross:after {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    content: "";
+    width: 42px;
+    border-bottom: 1px solid #202020;
+    transform: rotateZ(45deg);
+}
+
+.cross:after {
+    transform: rotateZ(-45deg);
+}
+
 .footer {
     display: none;
     min-height: 50px;
