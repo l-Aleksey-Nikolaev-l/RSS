@@ -25,7 +25,7 @@ class MainScreen {
     const allLevelImages = [];
     for (let index = 0; index < 3; index += 1) {
       const levelImages =
-        this.#createListBlock('images', 'Images', 'Easy_1', 5, null);
+        this.#createListBlock('images', 'image', 'Easy_1', 5, null);
       allLevelImages.push(levelImages);
     }
     const levelItems =
