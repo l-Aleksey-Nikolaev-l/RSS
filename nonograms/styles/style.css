@@ -50,8 +50,12 @@
 }
 
 .header {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
     min-height: 70px;
+    padding: 0 24px;
 }
 
 .game__section {
