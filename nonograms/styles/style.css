@@ -90,6 +90,10 @@
     border-radius: 0 0 14px 14px;
 }
 
+.level__items .level__item:last-child {
+    border-radius: 0 0 13px 13px;
+}
+
 .level__menu_item {
     display: block;
     padding: 0 20px;
@@ -97,8 +101,8 @@
     font-size: 1rem;
     line-height: 48px;
     color: var(--font-color);
-    background-color: rgba(251, 242, 242, 0.98);
-    border: var(--border-thick);
+    background-color: var(--bg-color-second);
+    border: var(--border-thin);
     border-radius: 14px;
 }
 
@@ -106,18 +110,19 @@
 .level__image {
     padding: 16px 20px;
     line-height: 150%;
-    color: #ffffff;
-    border: 1px solid #837d7d;
-    border-top: 0 none;
-    background: #9c9797;
+    color: var(--font-color);
+    border-top: var(--border-thin);
+    background-color: var(--bg-color-second);
 }
 
 .level__images {
     position: absolute;
     display: none;
-    top: 0;
+    top: -1px;
     left: -130px;
     width: 130px;
+    border: var(--border-thin);
+    border-radius: 14px 0 14px 14px;
 }
 
 .level__menu_item:hover > .level__items {
