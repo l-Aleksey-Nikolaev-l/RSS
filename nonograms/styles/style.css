@@ -58,6 +58,19 @@
     padding: 0 24px;
 }
 
+.level__menu * {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.level__menu {
+    text-align: center;
+    min-width: 130px;
+    anchor-name: --header-anchor;
+}
+
 .game__section {
     display: flex;
     flex-direction: column;
