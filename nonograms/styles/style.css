@@ -85,6 +85,9 @@
     right: anchor(--menu-anchor right);
     text-transform: none;
     text-align: left;
+    border: var(--border-thin);
+    border-top: none;
+    border-radius: 0 0 14px 14px;
 }
 
 .level__menu_item {
