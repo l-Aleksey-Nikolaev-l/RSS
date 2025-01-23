@@ -115,12 +115,19 @@
     background-color: var(--bg-color-second);
 }
 
+.level__item {
+    anchor-name: --menu-level-anchor;
+}
+
 .level__images {
-    position: absolute;
+    position: fixed;
     display: none;
-    top: -1px;
-    left: -130px;
-    width: 130px;
+    position-anchor: --menu-level-anchor;
+    /*noinspection CssInvalidFunction*/
+    top: anchor(--menu-level-anchor top);
+    /*noinspection CssInvalidFunction*/
+    right: anchor(--menu-level-anchor left);
+    text-align: left;
     border: var(--border-thin);
     border-radius: 14px 0 14px 14px;
 }
