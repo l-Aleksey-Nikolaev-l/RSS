@@ -68,7 +68,31 @@
 .level__menu {
     text-align: center;
     min-width: 130px;
-    anchor-name: --header-anchor;
+    anchor-name: --menu-anchor;
+}
+
+.level__items {
+    display: none;
+    position: fixed;
+    position-anchor: --menu-anchor;
+    /*noinspection CssInvalidFunction*/
+    top: anchor(--menu-anchor bottom);
+    /*noinspection CssInvalidFunction*/
+    left: anchor(--menu-anchor left);
+    /*noinspection CssInvalidFunction*/
+    right: anchor(--menu-anchor right);
+    text-transform: none;
+    text-align: left;
+}
+
+.level__menu_item {
+    display: block;
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 48px;
+    color: #CBCBCB;
+    background: #333;
 }
 
 .game__section {
