@@ -21,7 +21,10 @@ class MainScreen {
     listBlock.classList.add('level__menu');
     const listItem = document.createElement('li');
     listItem.classList.add('level__menu_item');
-    listItem.textContent = 'Levels';
+    const listText = document.createElement('span');
+    listText.classList.add('level__menu_text');
+    listText.textContent = 'Levels ▼';
+    listItem.append(listText);
     const allLevelImages = [];
     for (let index = 0; index < 3; index += 1) {
       const levelImages =
