@@ -57,14 +57,14 @@
 
 .tips,
 .field__cell {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     border: var(--border-thin);
 }
 
 .field__cell {
     font-weight: 100;
-    width: 45px;
-    height: 45px;
+    width: 32px;
+    height: 32px;
     text-align: center;
     cursor: pointer;
 }
@@ -73,7 +73,7 @@
     writing-mode: vertical-lr;
     text-orientation: upright;
     text-align: end;
-    padding: 8px 8px 4px 8px;
+    padding: 8px 4px 2px 4px;
     border-top: var(--border-thick);
     border-bottom: var(--border-thick);
 }
@@ -90,7 +90,7 @@
     text-align: end;
     vertical-align: bottom;
     letter-spacing: 4px;
-    padding: 8px 0 8px 14px;
+    padding: 4px 0 4px 12px;
     border-right: var(--border-thick);
     border-left: var(--border-thick);
 }
