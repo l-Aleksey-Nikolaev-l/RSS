@@ -1,6 +1,13 @@
+import { difficultySettings, picturesNames } from './variables.js';
 class MainScreen {
 
+  constructor({...mainsSettings}) {
+    this.diffSettings = mainsSettings.difficultySettings;
+    this.picsNames = mainsSettings.picturesNames;
+  }
+
   tempSize = 15;
+  picturesCount = 0;
 
   #createMainContainer() {
     const main = document.createElement('main');
@@ -25,26 +32,34 @@ class MainScreen {
     listText.classList.add('level__menu_text');
     listText.textContent = 'Levels ▼';
     listItem.append(listText);
-    const allLevelImages = [];
+    const allImages = [];
+
     for (let index = 0; index < 3; index += 1) {
       const levelImages =
-        this.#createListBlock('images', 'image', 'Easy_1', 5, null);
-      allLevelImages.push(levelImages);
+        this.#createListBlock('images', 'image', this.picsNames[index], null);
+      allImages.push(levelImages);
     }
     const levelItems =
-      this.#createListBlock('items', 'item', 'Easy', 3, allLevelImages);
+      this.#createListBlock('items', 'item', this.diffSettings, allImages);
+
     listItem.append(levelItems);
     listBlock.append(listItem);
+    this.picturesCount = 0;
     return listBlock;
   }
 
-  #createListBlock(listName, itemName, itemText, itemsQuantity, subItem) {
+  #createListBlock(listName, itemName, itemsObject, subItem) {
     const listBlock = document.createElement('ul');
     listBlock.classList.add(`level__${listName}`);
+    const itemsQuantity = Object.keys(itemsObject).length;
     for (let index = 0; index < itemsQuantity; index += 1) {
       const listItem = document.createElement('li');
       listItem.classList.add(`level__${itemName}`);
-      listItem.textContent = 'Test_1';
+      listItem.textContent = itemsObject[index];
+      if (itemName === 'image') {
+        listItem.setAttribute('data-level-id', String(this.picturesCount));
+        this.picturesCount += 1;
+      }
       if (subItem) {
         listItem.append(subItem[index]);
       }
@@ -126,7 +141,12 @@ class MainScreen {
   }
 }
 
-const mainScreen = new MainScreen().createMainScreen();
+const mainScreen = new MainScreen(
+  {
+    difficultySettings,
+    picturesNames
+  }
+).createMainScreen();
 
 export {
   mainScreen
