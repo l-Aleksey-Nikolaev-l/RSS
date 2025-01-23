@@ -95,6 +95,11 @@
     background: #333;
 }
 
+.level__menu_item:hover > .level__items {
+    display: block;
+    cursor: default;
+}
+
 .game__section {
     display: flex;
     flex-direction: column;
