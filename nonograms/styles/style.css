@@ -107,6 +107,7 @@
 
 .level__images {
     position: absolute;
+    display: none;
     top: 0;
     left: -130px;
     width: 130px;
@@ -115,6 +116,11 @@
 .level__menu_item:hover > .level__items {
     display: block;
     cursor: default;
+}
+
+.level__item:hover > .level__images {
+    display: block;
+    cursor: pointer;
 }
 
 .game__section {
