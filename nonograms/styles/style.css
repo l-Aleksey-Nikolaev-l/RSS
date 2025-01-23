@@ -95,6 +95,23 @@
     background: #333;
 }
 
+.level__item,
+.level__image {
+    padding: 16px 20px;
+    line-height: 150%;
+    color: #ffffff;
+    border: 1px solid #837d7d;
+    border-top: 0 none;
+    background: #9c9797;
+}
+
+.level__images {
+    position: absolute;
+    top: 0;
+    left: -130px;
+    width: 130px;
+}
+
 .level__menu_item:hover > .level__items {
     display: block;
     cursor: default;
