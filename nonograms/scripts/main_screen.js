@@ -14,6 +14,40 @@ class MainScreen {
     return header;
   }
 
+  #createLevelsList() {
+    const listBlock = document.createElement('ul');
+    listBlock.classList.add('level__menu');
+    const listItem = document.createElement('li');
+    listItem.classList.add('level__menu_item');
+    listItem.textContent = 'Levels';
+    const allLevelImages = [];
+    for (let index = 0; index < 3; index += 1) {
+      const levelImages =
+        this.#createListBlock('images', 'Images', 'Easy_1', 5, null);
+      allLevelImages.push(levelImages);
+    }
+    const levelItems =
+      this.#createListBlock('items', 'item', 'Easy', 3, allLevelImages);
+    listItem.append(levelItems);
+    listBlock.append(listItem);
+    return listBlock;
+  }
+
+  #createListBlock(listName, itemName, itemText, itemsQuantity, subItem) {
+    const listBlock = document.createElement('ul');
+    listBlock.classList.add(`level__${listName}`);
+    for (let index = 0; index < itemsQuantity; index += 1) {
+      const listItem = document.createElement('li');
+      listItem.classList.add(`level__${itemName}`);
+      listItem.textContent = 'Test_1';
+      if (subItem) {
+        listItem.append(subItem[index]);
+      }
+      listBlock.append(listItem);
+    }
+    return listBlock;
+  }
+
   #createGameSection() {
     const gameSection = document.createElement('section');
     gameSection.classList.add('game__section');
