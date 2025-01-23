@@ -11,6 +11,8 @@ class MainScreen {
   #createHeaderSection() {
     const header = document.createElement('header');
     header.classList.add('header');
+    const tableSettings = this.#createLevelsList();
+    header.append(tableSettings);
     return header;
   }
 
