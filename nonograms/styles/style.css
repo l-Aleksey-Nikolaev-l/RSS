@@ -125,6 +125,15 @@
     border-radius: 14px 0 14px 14px;
 }
 
+.level__images .level__image:first-child {
+    border-top: none;
+    border-radius: 13px 0 0 0;
+}
+
+.level__images .level__image:last-child {
+    border-radius: 0 0 13px 13px;
+}
+
 .level__menu_item:hover > .level__items {
     display: block;
     cursor: default;
