@@ -42,7 +42,12 @@
 }
 
 .nonograms__table {
+    display: block;
     border-collapse: collapse;
+    background-color: rgba(251, 242, 242, 0.98);
+    padding: 36px;
+    border: 2px solid;
+    border-radius: 14px;
 }
 
 .table__caption {
