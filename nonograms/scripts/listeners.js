@@ -1,5 +1,6 @@
 import { MainScreen } from './main_screen.js';
 import { clearCellsMap, setLevelGrid } from './variables.js';
+import { manageCell } from './game_logic.js';
 
 const levelsMenu = document.getElementsByClassName('level__menu');
 const table = document.getElementsByClassName('nonograms__table');
@@ -60,6 +61,7 @@ function setCellStatus(event) {
     cell.classList.toggle('cross');
     cell.classList.remove('fill');
   }
+  manageCell(cell);
 }
 
 export {
