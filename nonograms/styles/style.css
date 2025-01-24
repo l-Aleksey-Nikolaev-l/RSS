@@ -143,15 +143,39 @@
 
 .level__menu_item:hover {
     display: block;
-    border-radius: 14px 14px 0 0;
     background-color: var(--bg-color-second);
     border-bottom: 2px solid var(--bg-color-second);
     cursor: default;
+    animation-name: levelsButton;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.1s;
+}
+
+@keyframes levelsButton {
+    100% {
+        border-radius: 14px 14px 0 0;
+    }
 }
 
 .level__menu_item:hover > .level__items {
     display: block;
     cursor: default;
+    opacity: 0;
+    animation-name: menuItems;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-delay: 0.1s;
+}
+
+@keyframes menuItems {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .level__items:hover {
@@ -165,6 +189,21 @@
 .level__item:hover > .level__images {
     display: block;
     cursor: pointer;
+    opacity: 0;
+    animation-name: subMenuItems;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-delay: 0.15s;
+}
+
+@keyframes subMenuItems {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .level__image:hover {
