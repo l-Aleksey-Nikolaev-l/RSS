@@ -5,22 +5,16 @@ let currentCell = null;
 let prevCell = null;
 
 function tableListeners() {
-  table[0].addEventListener('mousedown', (event) => {
-    setStatus(event);
-  });
+  table[0].addEventListener('mousedown', setStatus);
 
   table[0].addEventListener('mouseup', () => {
     currentCell = null;
     prevCell = null;
   });
 
-  table[0].addEventListener('contextmenu', (event) => {
-    event.preventDefault();
-  });
+  table[0].addEventListener('contextmenu', (event) => event.preventDefault());
 
-  table[0].addEventListener('mousemove', (event) => {
-    setStatus(event);
-  });
+  table[0].addEventListener('mousemove', setStatus);
 }
 
 function setStatus(event) {
