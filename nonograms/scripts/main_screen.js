@@ -1,11 +1,11 @@
 import {
   difficultySettings as diffSettings,
   picturesNames as picsNames,
+  gridSize
 } from './variables.js';
 
 class MainScreen {
 
-  tempSize = 15;
   picturesCount = 0;
 
   #createMainContainer() {
@@ -91,7 +91,7 @@ class MainScreen {
   #addTopTips(table) {
     const tr = document.createElement('tr');
     tr.classList.add('top__tips');
-    for (let index = 0; index <= this.tempSize; index += 1) {
+    for (let index = 0; index <= gridSize; index += 1) {
       const th = document.createElement('th');
       if (index !== 0) {
         th.classList.add('tips', 'col__tips');
@@ -105,7 +105,7 @@ class MainScreen {
 
   #addRows(table) {
     let cellId = 1;
-    for (let rowIndex = 0; rowIndex < this.tempSize; rowIndex += 1) {
+    for (let rowIndex = 0; rowIndex < gridSize; rowIndex += 1) {
       const tr = document.createElement('tr');
       tr.classList.add('row__cells');
       const th = document.createElement('th');
@@ -113,7 +113,7 @@ class MainScreen {
       th.setAttribute('data-row_tips', String(rowIndex + 1));
       th.textContent = '232';
       tr.append(th);
-      for (let cellIndex = 0; cellIndex < this.tempSize; cellIndex += 1) {
+      for (let cellIndex = 0; cellIndex < gridSize; cellIndex += 1) {
         const td = document.createElement('td');
         td.classList.add('field__cell');
         td.setAttribute('data-id', String(cellId));
