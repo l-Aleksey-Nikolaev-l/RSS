@@ -28,9 +28,11 @@ const picturesNames = {
   }
 };
 
+let currentLevelId = 0;
 let gridSize = 5;
 
 function setLevelGrid(levelId) {
+  currentLevelId = levelId;
   if (levelId >= 0 && levelId <= 4 ) {
     gridSize = 5;
   } else if (levelId >= 5 && levelId <= 9 ) {
@@ -43,6 +45,7 @@ function setLevelGrid(levelId) {
 export {
   difficultySettings,
   picturesNames,
+  currentLevelId,
   gridSize,
   setLevelGrid
 };
