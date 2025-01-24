@@ -81,11 +81,17 @@ class MainScreen {
     table.classList.add('nonograms__table');
     caption.classList.add('table__caption');
     caption.textContent = '00:00';
-
     table.append(caption);
-    this.#addTopTips(table);
-    this.#addRows(table);
-    return table;
+    return this.createTableGrid(table);
+  }
+
+  createTableGrid(newTable) {
+    if (!newTable) {
+      return;
+    }
+    this.#addTopTips(newTable);
+    this.#addRows(newTable);
+    return newTable;
   }
 
   #addTopTips(table) {
