@@ -105,7 +105,7 @@ class MainScreen {
       if (index !== 0) {
         th.classList.add('tips', 'col__tips');
         th.setAttribute('data-col_tips', String(index));
-        th.textContent = picture.col_tips[index - 1].join('');
+        th.textContent = picture.col_tips[index - 1].join(' ');
       }
       tr.append(th);
     }
@@ -121,7 +121,7 @@ class MainScreen {
       const th = document.createElement('th');
       th.classList.add('tips', 'row__tips');
       th.setAttribute('data-row_tips', String(rowIndex + 1));
-      th.textContent = picture.row_tips[rowIndex].join('');
+      th.textContent = picture.row_tips[rowIndex].join(' ');
       tr.append(th);
       for (let cellIndex = 0; cellIndex < gridSize; cellIndex += 1) {
         const td = document.createElement('td');
