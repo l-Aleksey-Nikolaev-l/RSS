@@ -1,7 +1,8 @@
-import { mainScreen } from './main_screen.js';
+import { MainScreen } from './main_screen.js';
 import { tableListeners } from './listeners.js';
 
 const body = document.getElementsByClassName('body')[0];
+const mainScreen = new MainScreen().createMainScreen();
 body.append(mainScreen);
 
 tableListeners();
