@@ -29,6 +29,7 @@ const picturesNames = {
 };
 
 let currentLevelId = 0;
+const currentCellsMap = new Map();
 let gridSize = 5;
 
 function setLevelGrid(levelId) {
@@ -42,10 +43,21 @@ function setLevelGrid(levelId) {
   }
 }
 
+function addCellToMap(key, value) {
+  currentCellsMap.set(key, value);
+}
+
+function removeCellFromMap(key) {
+  currentCellsMap.delete(key);
+}
+
 export {
   difficultySettings,
+  currentCellsMap,
   picturesNames,
   currentLevelId,
   gridSize,
-  setLevelGrid
+  setLevelGrid,
+  addCellToMap,
+  removeCellFromMap
 };
