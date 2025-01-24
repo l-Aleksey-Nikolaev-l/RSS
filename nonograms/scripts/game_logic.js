@@ -28,10 +28,14 @@ function checkWinnings(cellsOfPic) {
           throw '';
         }
       });
-      console.log('Win!');
+      showPopUp();
     }
   } catch {
   }
+}
+
+function showPopUp() {
+  console.log('Win!');
 }
 
 export {
