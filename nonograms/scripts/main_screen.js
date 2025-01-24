@@ -1,4 +1,8 @@
-import { difficultySettings, picturesNames } from './variables.js';
+import {
+  difficultySettings as diffSettings,
+  picturesNames as picsNames,
+} from './variables.js';
+
 class MainScreen {
 
   tempSize = 15;
@@ -31,11 +35,11 @@ class MainScreen {
 
     for (let index = 0; index < 3; index += 1) {
       const levelImages =
-        this.#createListBlock('images', 'image', this.picsNames[index], null);
+        this.#createListBlock('images', 'image', picsNames[index], null);
       allImages.push(levelImages);
     }
     const levelItems =
-      this.#createListBlock('items', 'item', this.diffSettings, allImages);
+      this.#createListBlock('items', 'item', diffSettings, allImages);
 
     listItem.append(levelItems);
     listBlock.append(listItem);
