@@ -39,7 +39,7 @@ function setCellStatus(event) {
   const mouseButton = event.which;
   const mouseEventType = event.type;
   currentCell = cellId;
-  if (!cellId || currentCell === prevCell) {
+  if (!cellId || currentCell === prevCell || !mouseButton) {
     return;
   }
 
