@@ -1,14 +1,15 @@
 import { MainScreen } from './main_screen.js';
 import { setLevelGrid } from './variables.js';
-const menuLevels = document.getElementsByClassName('level__menu');
+const levelsMenu = document.getElementsByClassName('level__menu');
 const table = document.getElementsByClassName('nonograms__table');
+
 let currentCell = null;
 let prevCell = null;
 
-function tableListeners() {
-  menuLevels[0].addEventListener('click', setLevel);
+function gameListeners() {
+  levelsMenu[0].addEventListener('click', setGameLevel);
 
-  table[0].addEventListener('mousedown', setStatus);
+  table[0].addEventListener('mousedown', setCellStatus);
 
   table[0].addEventListener('mouseup', () => {
     currentCell = null;
@@ -17,10 +18,10 @@ function tableListeners() {
 
   table[0].addEventListener('contextmenu', (event) => event.preventDefault());
 
-  table[0].addEventListener('mousemove', setStatus);
+  table[0].addEventListener('mousemove', setCellStatus);
 }
 
-function setLevel(event) {
+function setGameLevel(event) {
   const levelId = event.target.dataset.levelId;
   if (levelId) {
     setLevelGrid(levelId);
@@ -32,7 +33,7 @@ function setLevel(event) {
   }
 }
 
-function setStatus(event) {
+function setCellStatus(event) {
   const cell = event.target;
   const cellId = cell.dataset.id;
   const mouseButton = event.which;
@@ -60,5 +61,5 @@ function setStatus(event) {
 }
 
 export {
-  tableListeners
+  gameListeners
 };
