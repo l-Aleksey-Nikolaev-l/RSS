@@ -1,5 +1,6 @@
 import {
   currentLevelId,
+  currentCellsMap,
   addCellToMap,
   removeCellFromMap
 } from './variables.js';
@@ -15,6 +16,21 @@ function manageCell(targetCell) {
     addCellToMap(targetCellId, isIdFound);
   } else {
     removeCellFromMap(targetCellId);
+  }
+  checkWinnings(cellsOfPic);
+}
+
+function checkWinnings(cellsOfPic) {
+  try {
+    if (currentCellsMap.size === cellsOfPic.length) {
+      currentCellsMap.forEach((value) => {
+        if (!value) {
+          throw '';
+        }
+      });
+      console.log('Win!');
+    }
+  } catch {
   }
 }
 
