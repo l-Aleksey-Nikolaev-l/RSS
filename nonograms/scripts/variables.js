@@ -51,6 +51,10 @@ function removeCellFromMap(key) {
   currentCellsMap.delete(key);
 }
 
+function clearCellsMap() {
+  currentCellsMap.clear();
+}
+
 export {
   difficultySettings,
   currentCellsMap,
@@ -59,5 +63,6 @@ export {
   gridSize,
   setLevelGrid,
   addCellToMap,
-  removeCellFromMap
+  removeCellFromMap,
+  clearCellsMap
 };
