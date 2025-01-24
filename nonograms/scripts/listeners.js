@@ -1,3 +1,5 @@
+import { MainScreen } from './main_screen.js';
+import { setLevelGrid } from './variables.js';
 const table = document.getElementsByClassName('nonograms__table');
 let currentCell = null;
 let prevCell = null;
