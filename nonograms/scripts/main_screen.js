@@ -1,11 +1,6 @@
 import { difficultySettings, picturesNames } from './variables.js';
 class MainScreen {
 
-  constructor({...mainsSettings}) {
-    this.diffSettings = mainsSettings.difficultySettings;
-    this.picsNames = mainsSettings.picturesNames;
-  }
-
   tempSize = 15;
   picturesCount = 0;
 
@@ -141,13 +136,6 @@ class MainScreen {
   }
 }
 
-const mainScreen = new MainScreen(
-  {
-    difficultySettings,
-    picturesNames
-  }
-).createMainScreen();
-
 export {
-  mainScreen
+  MainScreen
 };
