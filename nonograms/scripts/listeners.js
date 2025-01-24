@@ -21,6 +21,15 @@ function tableListeners() {
 }
 
 function setLevel(event) {
+  const levelId = event.target.dataset.levelId;
+  if (levelId) {
+    setLevelGrid(levelId);
+    const mainScreen = new MainScreen();
+    while (table[0].rows.length) {
+      table[0].deleteRow(0);
+    }
+    mainScreen.createTableGrid(table[0]);
+  }
 }
 
 function setStatus(event) {
