@@ -1,10 +1,13 @@
 import { MainScreen } from './main_screen.js';
 import { setLevelGrid } from './variables.js';
+const menuLevels = document.getElementsByClassName('level__menu');
 const table = document.getElementsByClassName('nonograms__table');
 let currentCell = null;
 let prevCell = null;
 
 function tableListeners() {
+  menuLevels[0].addEventListener('click', setLevel);
+
   table[0].addEventListener('mousedown', setStatus);
 
   table[0].addEventListener('mouseup', () => {
@@ -15,6 +18,9 @@ function tableListeners() {
   table[0].addEventListener('contextmenu', (event) => event.preventDefault());
 
   table[0].addEventListener('mousemove', setStatus);
+}
+
+function setLevel(event) {
 }
 
 function setStatus(event) {
