@@ -6,11 +6,11 @@ const difficultySettings = {
 
 const picturesNames = {
   0: {
-    0: 'Heart',
-    1: 'Smile',
-    2: 'Arrow',
-    3: 'House',
-    4: 'TV'
+    0: 'Heart (5x5)',
+    1: 'Smile (5x5)',
+    2: 'Arrow (5x5)',
+    3: 'House (5x5)',
+    4: 'TV (5x5)'
   },
   1: {
     0: 'TV medium 1',
