@@ -253,9 +253,9 @@
 }
 
 .col__tips {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    text-align: end;
+    white-space: pre-line;
+    text-align: center;
+    vertical-align: bottom;
     padding: 8px 4px 2px 4px;
     border-top: var(--border-thick);
     border-bottom: var(--border-thick);
