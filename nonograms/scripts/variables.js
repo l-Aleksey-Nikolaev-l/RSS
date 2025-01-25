@@ -45,6 +45,16 @@ function setLevelGrid(levelId) {
   } else if (levelId >= 10 && levelId <= 14 ) {
     gridSize = 15;
   }
+  setAnswerArraySize(gridSize);
+}
+
+function setAnswerArraySize(size) {
+  answerArray.col_answer = fillAnswerArray(size);
+  answerArray.row_answer = fillAnswerArray(size);
+}
+
+function fillAnswerArray(size) {
+  return new Array(size).fill(null).map(() => Array(size).fill(0));
 }
 
 function addCellToMap(key, value) {
@@ -66,6 +76,7 @@ export {
   currentLevelId,
   gridSize,
   answerArray,
+  setAnswerArraySize,
   setLevelGrid,
   addCellToMap,
   removeCellFromMap,
