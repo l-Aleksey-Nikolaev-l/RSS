@@ -56,6 +56,10 @@ function checkWinnings() {
   const rowsAnswers = calcAnswers(answerArray.row_answer);
   const picColsTips = currentPicture.col_tips.flat().join('');
   const picRowsTips = currentPicture.row_tips.flat().join('');
+
+  if (picColsTips === colsAnswers && picRowsTips === rowsAnswers) {
+    showPopUp();
+  }
 }
 
 function showPopUp() {
