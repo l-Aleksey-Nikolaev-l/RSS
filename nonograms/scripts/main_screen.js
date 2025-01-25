@@ -113,7 +113,6 @@ class MainScreen {
   }
 
   #addRows(table) {
-    let cellId = 1;
     const picture = pictures[currentLevelId];
     for (let rowIndex = 0; rowIndex < gridSize; rowIndex += 1) {
       const tr = document.createElement('tr');
@@ -126,11 +125,9 @@ class MainScreen {
       for (let cellIndex = 0; cellIndex < gridSize; cellIndex += 1) {
         const td = document.createElement('td');
         td.classList.add('field__cell');
-        td.setAttribute('data-id', String(cellId));
         td.setAttribute('data-col', String(cellIndex));
         td.setAttribute('data-row', String(rowIndex));
         tr.append(td);
-        cellId += 1;
       }
       table.append(tr);
     }
