@@ -31,6 +31,10 @@ const picturesNames = {
 let currentLevelId = 0;
 const currentCellsMap = new Map();
 let gridSize = 5;
+const answerArray = {
+  col_answer: [],
+  row_answer: []
+};
 
 function setLevelGrid(levelId) {
   currentLevelId = levelId;
@@ -61,6 +65,7 @@ export {
   picturesNames,
   currentLevelId,
   gridSize,
+  answerArray,
   setLevelGrid,
   addCellToMap,
   removeCellFromMap,
