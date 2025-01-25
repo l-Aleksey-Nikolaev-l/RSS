@@ -1,5 +1,5 @@
 import { MainScreen } from './main_screen.js';
-import { clearCellsMap, setLevelGrid } from './variables.js';
+import { setLevelGrid } from './variables.js';
 import { manageCell } from './game_logic.js';
 
 const levelsMenu = document.getElementsByClassName('level__menu');
@@ -24,7 +24,6 @@ function gameListeners() {
 }
 
 function setGameLevel(event) {
-  clearCellsMap();
   const levelId = event.target.dataset.levelId;
   if (levelId) {
     setLevelGrid(levelId);
