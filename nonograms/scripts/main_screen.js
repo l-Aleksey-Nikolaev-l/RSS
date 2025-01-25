@@ -149,6 +149,7 @@ class MainScreen {
     const gameSection = this.#createGameSection();
     const footer = this.#createFooterSection();
     mainContainer.append(header, gameSection, footer);
+    setAnswerArraySize(gridSize);
     return mainContainer;
   }
 }
