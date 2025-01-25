@@ -3,6 +3,7 @@ import {
   picturesNames as picsNames,
   currentLevelId,
   gridSize,
+  setAnswerArraySize
 } from './variables.js';
 import { pictures } from './pictures.js';
 
