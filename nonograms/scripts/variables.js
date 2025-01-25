@@ -6,25 +6,25 @@ const difficultySettings = {
 
 const picturesNames = {
   0: {
-    0: 'Heart (5x5)',
-    1: 'Smile (5x5)',
-    2: 'Arrow (5x5)',
-    3: 'House (5x5)',
-    4: 'TV (5x5)'
+    0: 'A heart (5x5)',
+    1: 'A smile (5x5)',
+    2: 'An arrow (5x5)',
+    3: 'A house (5x5)',
+    4: 'A TV (5x5)'
   },
   1: {
-    0: 'TV medium 1',
-    1: 'TV medium 2',
-    2: 'TV medium 3',
-    3: 'TV medium 4',
-    4: 'TV medium 5'
+    0: 'A sandwatch (10x10)',
+    1: 'A musical note (10x10)',
+    2: 'A battery (10x10)',
+    3: 'A camera (10x10)',
+    4: 'A tree (10x10)'
   },
   2: {
-    0: 'TV hard 1',
-    1: 'TV hard 2',
-    2: 'TV hard 3',
-    3: 'TV hard 4',
-    4: 'TV hard 5'
+    0: 'A bottle (15x15)',
+    1: 'A bus (15x15)',
+    2: 'A mushroom (15x15)',
+    3: 'A ship (15x15)',
+    4: 'A fish (15x15)'
   }
 };
 
