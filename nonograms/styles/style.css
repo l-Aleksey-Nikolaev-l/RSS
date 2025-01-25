@@ -301,9 +301,10 @@
     display: flex;
     flex-direction: column;
     content: "";
-    width: 42px;
+    width: 32px;
     border-bottom: 1px solid var(--mark-color);
     transform: rotateZ(45deg);
+    z-index: 0;
 }
 
 .cross:after {
