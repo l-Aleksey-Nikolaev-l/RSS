@@ -21,7 +21,7 @@ class MainScreen {
     return header;
   }
 
-  #createLevelsList() {
+  #createLevelsMenu(picsObject) {
     const listBlock = document.createElement('ul');
     listBlock.classList.add('level__menu');
     const listItem = document.createElement('li');
@@ -33,8 +33,7 @@ class MainScreen {
     return listBlock;
   }
 
-  #createListBlock(listName, itemName, itemsObject, subItem) {
-    return listBlock;
+  #createLevelsList(picsObject) {
   }
 
   #createGameSection() {
