@@ -128,6 +128,8 @@ class MainScreen {
         const td = document.createElement('td');
         td.classList.add('field__cell');
         td.setAttribute('data-id', String(cellId));
+        td.setAttribute('data-col', String(cellIndex));
+        td.setAttribute('data-row', String(rowIndex));
         tr.append(td);
         cellId += 1;
       }
