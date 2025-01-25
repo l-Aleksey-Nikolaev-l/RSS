@@ -1,6 +1,4 @@
 import {
-  difficultySettings as diffSettings,
-  picturesNames as picsNames,
   currentLevelId,
   gridSize,
   setAnswerArraySize
@@ -8,8 +6,6 @@ import {
 import { pictures } from './pictures.js';
 
 class MainScreen {
-
-  picturesCount = 0;
 
   #createMainContainer() {
     const main = document.createElement('main');
@@ -34,39 +30,10 @@ class MainScreen {
     listText.classList.add('level__menu_text');
     listText.textContent = 'Levels ▼';
     listItem.append(listText);
-    const allImages = [];
-
-    for (let index = 0; index < 3; index += 1) {
-      const levelImages =
-        this.#createListBlock('images', 'image', picsNames[index], null);
-      allImages.push(levelImages);
-    }
-    const levelItems =
-      this.#createListBlock('items', 'item', diffSettings, allImages);
-
-    listItem.append(levelItems);
-    listBlock.append(listItem);
-    this.picturesCount = 0;
     return listBlock;
   }
 
   #createListBlock(listName, itemName, itemsObject, subItem) {
-    const listBlock = document.createElement('ul');
-    listBlock.classList.add(`level__${listName}`);
-    const itemsQuantity = Object.keys(itemsObject).length;
-    for (let index = 0; index < itemsQuantity; index += 1) {
-      const listItem = document.createElement('li');
-      listItem.classList.add(`level__${itemName}`);
-      listItem.textContent = itemsObject[index];
-      if (itemName === 'image') {
-        listItem.setAttribute('data-level-id', String(this.picturesCount));
-        this.picturesCount += 1;
-      }
-      if (subItem) {
-        listItem.append(subItem[index]);
-      }
-      listBlock.append(listItem);
-    }
     return listBlock;
   }
 
