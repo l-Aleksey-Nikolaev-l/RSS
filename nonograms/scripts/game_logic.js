@@ -10,12 +10,12 @@ function manageCell(targetCell) {
   } else {
     removeAnswer(targetCellCol, targetCellRow);
   }
-  checkWinnings();
 }
 
 function addAnswer(targetCellCol, targetCellRow) {
   answerArray.col_answer[targetCellCol][targetCellRow] += 1;
   answerArray.row_answer[targetCellRow][targetCellCol] += 1;
+  checkWinnings();
 }
 
 function removeAnswer(targetCellCol, targetCellRow) {
@@ -24,6 +24,7 @@ function removeAnswer(targetCellCol, targetCellRow) {
   if (colCell && rowCell) {
     answerArray.col_answer[targetCellCol][targetCellRow] -= 1;
     answerArray.row_answer[targetCellRow][targetCellCol] -= 1;
+    checkWinnings();
   }
 }
 
