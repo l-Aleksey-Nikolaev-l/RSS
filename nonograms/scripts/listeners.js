@@ -38,7 +38,7 @@ function setGameLevel(event) {
 
 function setCellStatus(event) {
   const cell = event.target;
-  const cellId = cell.dataset.id;
+  const cellId = cell.dataset.col + cell.dataset.row;
   const mouseButton = event.which;
   const mouseEventType = event.type;
   currentCell = cellId;
