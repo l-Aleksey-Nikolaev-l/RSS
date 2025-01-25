@@ -104,6 +104,7 @@
     background-color: var(--bg-color-second);
     border: var(--border-thin);
     border-radius: 14px;
+    z-index: 1;
 }
 
 .level__item,
