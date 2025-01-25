@@ -19,8 +19,12 @@ function addAnswer(targetCellCol, targetCellRow) {
 }
 
 function removeAnswer(targetCellCol, targetCellRow) {
-  answerArray.col_answer[targetCellCol][targetCellRow] -= 1;
-  answerArray.row_answer[targetCellRow][targetCellCol] -= 1;
+  const colCell = answerArray.col_answer[targetCellCol][targetCellRow];
+  const rowCell = answerArray.row_answer[targetCellRow][targetCellCol];
+  if (colCell && rowCell) {
+    answerArray.col_answer[targetCellCol][targetCellRow] -= 1;
+    answerArray.row_answer[targetCellRow][targetCellCol] -= 1;
+  }
 }
 
 function calcAnswers(answersData) {
