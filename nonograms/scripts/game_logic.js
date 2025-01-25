@@ -1,6 +1,4 @@
-import {
-  currentLevelId,
-} from './variables.js';
+import { currentLevelId, answerArray } from './variables.js';
 import { pictures } from './pictures.js';
 
 function manageCell(targetCell) {
