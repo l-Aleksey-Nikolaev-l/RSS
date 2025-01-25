@@ -254,10 +254,11 @@
 }
 
 .col__tips {
-    white-space: pre-line;
+    white-space: pre-wrap;
     text-align: center;
     vertical-align: bottom;
-    padding: 8px 4px 2px 4px;
+    line-height: 28px;
+    padding: 2px 4px 0 4px;
     border-top: var(--border-thick);
     border-bottom: var(--border-thick);
 }
@@ -271,10 +272,11 @@
 }
 
 .row__tips {
+    white-space: nowrap;
     text-align: end;
     vertical-align: bottom;
-    letter-spacing: 4px;
-    padding: 4px 0 4px 12px;
+    word-spacing: 4px;
+    padding: 4px 8px 4px 12px;
     border-right: var(--border-thick);
     border-left: var(--border-thick);
 }
