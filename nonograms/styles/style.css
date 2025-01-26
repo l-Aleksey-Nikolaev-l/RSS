@@ -4,8 +4,7 @@
     --font-color: #5c5c5c;
     --border-thin: 1px solid #443f41;
     --border-thick: 2px solid #443f41;
-
-
+    --border-menu: 1px solid #a0a0a0;
     --mark-color: #202020;
     --hover-color: rgba(119, 119, 119, 0.2);
     --hover-color-menu: rgb(223 231 209)
@@ -87,7 +86,7 @@
     right: anchor(--menu-anchor right);
     text-transform: none;
     text-align: left;
-    border: var(--border-thin);
+    border: var(--border-menu);
     border-top: none;
     border-radius: 0 0 14px 14px;
 }
@@ -104,7 +103,7 @@
     line-height: 48px;
     color: var(--font-color);
     background-color: var(--bg-color-second);
-    border: var(--border-thin);
+    border: var(--border-menu);
     border-radius: 14px;
     z-index: 1;
 }
@@ -114,7 +113,7 @@
     padding: 16px 20px;
     line-height: 150%;
     color: var(--font-color);
-    border-top: var(--border-thin);
+    border-top: var(--border-menu);
     background-color: var(--bg-color-second);
 }
 
@@ -131,7 +130,7 @@
     /*noinspection CssInvalidFunction*/
     right: anchor(--menu-level-anchor left);
     text-align: left;
-    border: var(--border-thin);
+    border: var(--border-menu);
     border-radius: 14px 0 14px 14px;
 }
 
