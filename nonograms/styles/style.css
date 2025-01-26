@@ -262,7 +262,7 @@
     border-collapse: collapse;
     background-color: var(--bg-color-second);
     padding: 36px;
-    border: 2px solid;
+    border: var(--border-thick);
     border-radius: 14px;
 }
 
