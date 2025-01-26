@@ -1,6 +1,7 @@
 import { MainScreen } from './main_screen.js';
 import { setLevelGrid } from './variables.js';
 import { manageCell } from './game_logic.js';
+import { resetTimer } from './timer.js';
 
 const levelsMenu = document.getElementsByClassName('level__menu');
 const table = document.getElementsByClassName('nonograms__table');
@@ -24,6 +25,7 @@ function gameListeners() {
 }
 
 function setGameLevel(event) {
+  resetTimer();
   const levelId = event.target.dataset.levelId;
   if (levelId) {
     setLevelGrid(levelId);

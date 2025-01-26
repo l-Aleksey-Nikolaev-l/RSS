@@ -1,7 +1,9 @@
 import { currentLevelId, answerArray } from './variables.js';
 import { pictures } from './pictures.js';
+import { startTimer, stopTimer } from './timer.js';
 
 function manageCell(targetCell) {
+  startTimer();
   const isCellFilled = targetCell.classList.contains('fill');
   const targetCellRow = Number(targetCell.dataset.row);
   const targetCellCol = Number(targetCell.dataset.col);
@@ -68,6 +70,7 @@ function checkWinnings() {
 }
 
 function showPopUp() {
+  stopTimer();
   console.log('Win!');
 }
 
