@@ -28,7 +28,7 @@ class MainScreen {
     listItem.classList.add('level__menu_item');
     const listText = document.createElement('span');
     listText.classList.add('level__menu_text');
-    listText.textContent = 'Levels ▼';
+    listText.textContent = 'Levels';
     const levels = this.#createLevelsList(picsObject);
     listItem.append(listText, levels);
     listBlock.append(listItem);

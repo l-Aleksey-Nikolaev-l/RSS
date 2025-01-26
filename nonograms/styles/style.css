@@ -217,6 +217,24 @@
     background-color: var(--hover-color-menu);
 }
 
+.level__menu_text {
+    display: block;
+    width: 60%;
+    text-align: start;
+    place-self: center;
+}
+
+.level__menu_text:after {
+    position: absolute;
+    content: '▾';
+    top: 48%;
+    right: 0;
+    height: 0;
+    font-size: 24px;
+    line-height: 0;
+    letter-spacing: 0;
+}
+
 .game__section {
     display: flex;
     flex-direction: column;
