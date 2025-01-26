@@ -1,11 +1,16 @@
+const indicatorsArray = document.getElementsByClassName('table__caption');
+
 let timer = null;
 let isStarted = false;
+let startTime = 0;
+let currentTime = 0;
 
 function startTimer() {
   if (isStarted) {
     return;
   }
   isStarted = true;
+  startTime = new Date().getTime();
   timer = setInterval(showTime, 1000);
 }
 
@@ -15,9 +20,26 @@ function stopTimer() {
 
 function resetTimer() {
   isStarted = false;
+  clearInterval(timer);
+  indicatorsArray[0].textContent = '00:00';
 }
 
 function showTime() {
+  indicatorsArray[0].textContent = calculateTime();
+}
+
+function calculateTime() {
+  currentTime = new Date().getTime();
+  let secondsLeft = (currentTime - startTime) * 0.001;
+  secondsLeft = Math.floor(secondsLeft);
+  return convertSecondsToTime(secondsLeft);
+}
+
+function convertSecondsToTime(seconds) {
+  let min = (seconds - ( seconds %= 60)) / 60;
+  min = (min < 10 ? '0' : '') + min;
+  const sec = ( seconds < 10 ? ':0' : ':') + seconds;
+  return min + sec;
 }
 
 export {
