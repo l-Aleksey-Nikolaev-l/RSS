@@ -47,6 +47,9 @@ class Puzzle {
     const rowCheck =
       this.checkArray(this.picRows[row], this.picSize, col, rowValue);
 
+    if (colCheck && rowCheck) {
+      return true;
+    }
   }
 
   checkArray(tipsArray, picSize, position, colRowValue) {
@@ -72,6 +75,18 @@ class Puzzle {
       }
     }
 
+    if (position === picSize - 1) {
+      if (isLastValue) {
+        return tipPivot === tipsArray.length - 1 &&
+          sequence === tipsArray[tipPivot];
+      } else {
+        return tipPivot === tipsArray.length;
+      }
+    } else {
+      if (isLastValue) {
+        return sequence <= tipsArray[tipPivot];
+      }
+    }
     return true;
   }
 
