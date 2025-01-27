@@ -50,9 +50,25 @@ class Puzzle {
   }
 
   checkArray(tipsArray, picSize, position, colRowValue) {
+    let tipPivot = 0;
+    let sequence = 0;
+    let isLastValue = false;
     for (let index = 0; index <= position; index += 1) {
       if (colRowValue(index) === 1) {
+        sequence += 1;
+        if (!isLastValue && tipPivot >= tipsArray.length) {
+          return false;
+        }
+        isLastValue = true;
       } else {
+        if (isLastValue) {
+          if (tipsArray[tipPivot] !== sequence) {
+            return false;
+          }
+          sequence = 0;
+          tipPivot++;
+        }
+        isLastValue = false;
       }
     }
 
