@@ -9,7 +9,21 @@ class Puzzle {
     });
   }
 
+  startGetting(row, col) {
+    if (row === this.picSize) {
+      return true;
+    }
 
+    const nextRow = row + (col + 1 === this.picSize ? 1 : 0);
+    const nextCol = (col + 1) % this.picSize;
+
+    this.matrix[row][col] = 1;
+    if (this.startGetting(nextRow, nextCol)) {
+    }
+
+    this.matrix[row][col] = 0;
+    if (this.startGetting(nextRow, nextCol)) {
+    }
   }
 
   calculatePicMatrix(picMatrix) {
