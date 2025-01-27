@@ -2,10 +2,8 @@ import { pictures } from './pictures.js';
 
 let currentLevelId = 0;
 let gridSize = 5;
-const answerArray = {
-  col_answer: [],
-  row_answer: []
-};
+
+const answerCells = {};
 
 function setLevelGrid(levelId) {
   currentLevelId = levelId;
@@ -16,20 +14,20 @@ function setLevelGrid(levelId) {
   } else if (levelId >= 10 && levelId <= 14 ) {
     gridSize = 15;
   }
-  setAnswerArraySize(gridSize);
+  setAnswerMatrixSize(gridSize);
 }
 
-function setAnswerArraySize(size) {
-  answerArray.col_answer = fillAnswerArray(size);
-  answerArray.row_answer = fillAnswerArray(size);
-}
+const setAnswerMatrixSize = (size) => {
+  answerCells.col_answer = fillAnswerArray(size);
+  answerCells.row_answer = fillAnswerArray(size);
+};
 
 const mainScreenParams = () => {
   return {
     currentLevelId: currentLevelId,
     gridSize: gridSize,
     pictures: pictures,
-    setAnswerArraySize: setAnswerArraySize
+    setAnswerArraySize: setAnswerMatrixSize
   };
 };
 
@@ -40,8 +38,7 @@ function fillAnswerArray(size) {
 export {
   currentLevelId,
   gridSize,
-  answerArray,
+  answerCells,
   mainScreenParams,
-  setAnswerArraySize,
   setLevelGrid
 };
