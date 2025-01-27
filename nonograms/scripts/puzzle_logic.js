@@ -18,12 +18,45 @@ class Puzzle {
     const nextCol = (col + 1) % this.picSize;
 
     this.matrix[row][col] = 1;
-    if (this.startGetting(nextRow, nextCol)) {
+    if (
+      this.checkMatrix(this.matrix, row, col) &&
+      this.startGetting(nextRow, nextCol)) {
+      return true;
     }
 
     this.matrix[row][col] = 0;
-    if (this.startGetting(nextRow, nextCol)) {
+    if (
+      this.checkMatrix(this.matrix, row, col) &&
+      this.startGetting(nextRow, nextCol)
+    ) {
+      return true;
     }
+  }
+
+  checkMatrix(matrix, row, col) {
+    const rowValue = (index) => {
+      return matrix[row][index];
+    };
+
+    const colValue = (index) => {
+      return matrix[index][col];
+    };
+
+    const colCheck =
+      this.checkArray(this.picCols[col], this.picSize, row, colValue);
+    const rowCheck =
+      this.checkArray(this.picRows[row], this.picSize, col, rowValue);
+
+  }
+
+  checkArray(tipsArray, picSize, position, colRowValue) {
+    for (let index = 0; index <= position; index += 1) {
+      if (colRowValue(index) === 1) {
+      } else {
+      }
+    }
+
+    return true;
   }
 
   calculatePicMatrix(picMatrix) {
@@ -54,7 +87,7 @@ class Puzzle {
   }
 
   getPicByTips() {
-
+    return this.startGetting(0, 0) ? this.matrix : false;
   }
 
   getTipsByPic(picData) {
