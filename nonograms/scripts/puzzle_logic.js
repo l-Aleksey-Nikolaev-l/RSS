@@ -43,10 +43,6 @@ class Puzzle {
 
   }
 
-  getTipsByPic() {
-
-  }
-
   getTipsByPic(picData) {
     const tipsOfPicture = {};
     for (const dataArray in picData) {
