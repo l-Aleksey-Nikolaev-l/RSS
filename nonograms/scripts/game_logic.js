@@ -1,6 +1,7 @@
 import { currentLevelId, answerArray } from './variables.js';
 import { pictures } from './pictures.js';
 import { startTimer, stopTimer } from './timer.js';
+import { Puzzle } from './puzzle_logic.js';
 
 function manageCell(targetCell) {
   startTimer();
@@ -31,13 +32,15 @@ function removeAnswer(targetCellCol, targetCellRow) {
 }
 
 function checkWinnings() {
-  const currentPicture = pictures[currentLevelId];
-  const colsAnswers = calcAnswers(answerArray.col_answer);
-  const rowsAnswers = calcAnswers(answerArray.row_answer);
-  const picColsTips = currentPicture.col_tips.flat().join('');
-  const picRowsTips = currentPicture.row_tips.flat().join('');
+  const picToTips = new Puzzle();
+  const colsAnswers =
+    picToTips.calculatePicMatrix(answerArray.col_answer).flat().join('');
+  const rowsAnswers =
+    picToTips.calculatePicMatrix(answerArray.row_answer).flat().join('');
+  const picColsTips = pictures[currentLevelId].col_tips.flat().join('');
+  const picRowsTips = pictures[currentLevelId].row_tips.flat().join('');
 
-  if (picColsTips === colsAnswers && picRowsTips === rowsAnswers) {
+  if (colsAnswers === picColsTips && rowsAnswers === picRowsTips) {
     showPopUp();
   }
 }
