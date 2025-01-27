@@ -1,4 +1,4 @@
-import { currentLevelId, answerArray } from './variables.js';
+import { currentLevelId, answerCells } from './variables.js';
 import { pictures } from './pictures.js';
 import { startTimer, stopTimer } from './timer.js';
 import { Puzzle } from './puzzle_logic.js';
@@ -16,17 +16,17 @@ function manageCell(targetCell) {
 }
 
 function addAnswer(targetCellCol, targetCellRow) {
-  answerArray.col_answer[targetCellCol][targetCellRow] += 1;
-  answerArray.row_answer[targetCellRow][targetCellCol] += 1;
+  answerCells.col_answer[targetCellCol][targetCellRow] += 1;
+  answerCells.row_answer[targetCellRow][targetCellCol] += 1;
   checkWinnings();
 }
 
 function removeAnswer(targetCellCol, targetCellRow) {
-  const colCell = answerArray.col_answer[targetCellCol][targetCellRow];
-  const rowCell = answerArray.row_answer[targetCellRow][targetCellCol];
+  const colCell = answerCells.col_answer[targetCellCol][targetCellRow];
+  const rowCell = answerCells.row_answer[targetCellRow][targetCellCol];
   if (colCell && rowCell) {
-    answerArray.col_answer[targetCellCol][targetCellRow] -= 1;
-    answerArray.row_answer[targetCellRow][targetCellCol] -= 1;
+    answerCells.col_answer[targetCellCol][targetCellRow] -= 1;
+    answerCells.row_answer[targetCellRow][targetCellCol] -= 1;
     checkWinnings();
   }
 }
@@ -34,9 +34,9 @@ function removeAnswer(targetCellCol, targetCellRow) {
 function checkWinnings() {
   const picToTips = new Puzzle();
   const colsAnswers =
-    picToTips.calculatePicMatrix(answerArray.col_answer).flat().join('');
+    picToTips.calculatePicMatrix(answerCells.col_answer).flat().join('');
   const rowsAnswers =
-    picToTips.calculatePicMatrix(answerArray.row_answer).flat().join('');
+    picToTips.calculatePicMatrix(answerCells.row_answer).flat().join('');
   const picColsTips = pictures[currentLevelId].col_tips.flat().join('');
   const picRowsTips = pictures[currentLevelId].row_tips.flat().join('');
 
