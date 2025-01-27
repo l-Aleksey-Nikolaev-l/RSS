@@ -1,6 +1,14 @@
 class Puzzle {
 
-  constructor() {
+  constructor(picObject = {}) {
+    this.picCols = picObject.col_tips;
+    this.picRows = picObject.row_tips;
+    this.picSize = picObject.col_tips?.length;
+    this.matrix = new Array(this.picSize).fill(null).map(() => {
+      return new Array(this.picSize).fill(0);
+    });
+  }
+
 
   }
 
