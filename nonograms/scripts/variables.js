@@ -1,3 +1,5 @@
+import { pictures } from './pictures.js';
+
 let currentLevelId = 0;
 let gridSize = 5;
 const answerArray = {
@@ -22,6 +24,15 @@ function setAnswerArraySize(size) {
   answerArray.row_answer = fillAnswerArray(size);
 }
 
+const mainScreenParams = () => {
+  return {
+    currentLevelId: currentLevelId,
+    gridSize: gridSize,
+    pictures: pictures,
+    setAnswerArraySize: setAnswerArraySize
+  };
+};
+
 function fillAnswerArray(size) {
   return new Array(size).fill(null).map(() => Array(size).fill(0));
 }
@@ -30,6 +41,7 @@ export {
   currentLevelId,
   gridSize,
   answerArray,
+  mainScreenParams,
   setAnswerArraySize,
   setLevelGrid
 };
