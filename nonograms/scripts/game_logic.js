@@ -30,33 +30,6 @@ function removeAnswer(targetCellCol, targetCellRow) {
   }
 }
 
-function calcAnswers(answersData) {
-  const mainArray = [];
-  let subArray = [];
-  let cellsSum = 0;
-  answersData.forEach((cellsArr) => {
-    subArray = [];
-    cellsSum = 0;
-    for (let i = 0; i < cellsArr.length; i += 1) {
-      if (cellsArr[i] === 0 && cellsSum === 0) {
-        continue;
-      }
-      if (cellsArr[i] === 0 && cellsSum !== 0) {
-        subArray.push(cellsSum);
-        cellsSum = 0;
-        continue;
-      }
-      cellsSum += 1;
-      if (i === cellsArr.length - 1) {
-        subArray.push(cellsSum);
-        cellsSum = 0;
-      }
-    }
-    mainArray.push(subArray);
-  });
-  return mainArray.flat().join('');
-}
-
 function checkWinnings() {
   const currentPicture = pictures[currentLevelId];
   const colsAnswers = calcAnswers(answerArray.col_answer);
