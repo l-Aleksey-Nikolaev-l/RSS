@@ -7,7 +7,7 @@ import {
   effectCrossVolume,
   effectEraseState,
   effectEraseVolume
-} from './variables.js';
+} from '../variables.js';
 
 class Sidebar {
 
