@@ -1,8 +1,3 @@
-import { Table } from './ui_components/table.js';
-import { mainScreenParams, setLevelGrid } from './variables.js';
-import { manageCell } from './game_logic.js';
-import { resetTimer } from './timer.js';
-
 const levelsMenu = document.getElementsByClassName('level__menu');
 const table = document.getElementsByClassName('nonograms__table');
 import { setGameLevel, setCellStatus, mouseButtonUp } from './game_logic.js';
