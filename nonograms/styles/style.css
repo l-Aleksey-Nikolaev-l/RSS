@@ -1,20 +1,24 @@
 :root {
-    --bg-color: rgba(242, 242, 242, 1);
-    --bg-color-second: rgba(251, 242, 242, 0.98);
-    --bg-save-button: rgb(124, 145, 103);
-    --font-color: rgba(68, 63, 65, 1);
-    --border-thin: 1px solid rgba(68, 63, 65, 1);
-    --border-thick: 2px solid rgba(68, 63, 65, 1);
-    --border-menu: 1px solid rgba(160, 160, 160, 0.35);
-    --hover-color-cell: rgba(119, 119, 119, 0.2);
-    --hover-color-menu: rgb(223 231 209);
-    --hover-color-button: rgba(223, 231, 209, 1);
-    --hover-save-button: rgba(107, 127, 87, 1);
-    --active-bg-level: rgba(214, 221, 200, 1);
-    --active-color-button: rgba(209, 217, 195, 1);
-    --active-save-button: rgba(92, 102, 71, 1);
-    --overlay-color: rgba(0, 0, 0, 0.15);
-    --mark-color: rgba(32, 32, 32, 1);
+    --first-color-light: rgb(242, 242, 242);
+    --second-color-light: rgba(251, 242, 242, 0.98);
+    --third-color-light: rgba(0, 0, 0, 0.15);
+    --fourth-color-light: rgba(0, 0, 0, 0.85);
+
+    --first-gray-light: rgba(245, 247, 245, 0.3);
+    --second-gray-light: rgba(160, 160, 160, 0.35);
+    --third-gray-light: rgb(68, 63, 65);
+
+    --first-green-light:  rgb(124, 145, 103);
+    --second-green-light: rgb(107, 127, 87);
+    --third-green-light:  rgb(92, 102, 71);
+
+    --hover-green-light: rgb(223, 231, 209);
+    --active-green-light: rgb(214, 221, 200);
+
+    --border-menu: 1px solid var(--second-gray-light);
+    --border-thin: 1px solid  var(--third-gray-light);
+    --border-thick: 2px solid var(--third-gray-light);
+    --cross: 1px solid  var(--third-gray-light);
 }
 
 * {
@@ -24,13 +28,13 @@
     font-family: Arial, sans-serif;
     font-size: 1rem;
     font-weight: 100;
-    color: var(--font-color);
+    color: var(--third-gray-light);
     user-select: none;
 }
 
 
 .body {
-    background-color: var(--bg-color);
+    background-color: var(--first-color-light);
 }
 
 .bg__light:after,
@@ -79,9 +83,9 @@
     height: 48px;
     min-width: 48px;
     place-self: center;
-    color: var(--font-color);
+    color: var(--third-gray-light);
     text-align: start;
-    background-color: var(--bg-color-second);
+    background-color: var(--second-color-light);
     border: var(--border-menu);
     border-radius: 14px;
     cursor: pointer;
@@ -89,8 +93,8 @@
 
 .save_button {
     width: fit-content;
-    color: var(--bg-color);
-    background-color: var(--bg-save-button);
+    color: var(--first-color-light);
+    background-color: var(--first-green-light);
 }
 
 .save__button_text {
@@ -98,22 +102,22 @@
 }
 
 .header__button:hover {
-    background-color: var(--hover-color-button)
+    background-color: var(--hover-green-light)
 }
 
 .header__button:active {
-    color: var(--font-color);
-    background-color: var(--active-color-button);
+    color: var(--third-gray-light);
+    background-color: var(--active-green-light);
 }
 
 .save_button:hover {
-    color: var(--bg-color);
-    background-color: var(--hover-save-button);
+    color: var(--first-color-light);
+    background-color: var(--second-green-light);
 }
 
 .save_button:active {
-    color: var(--bg-color);
-    background-color: var(--active-save-button);
+    color: var(--first-color-light);
+    background-color: var(--third-green-light);
 }
 
 .random__button_text {
@@ -186,8 +190,8 @@
     text-decoration: none;
     font-size: 1rem;
     line-height: 48px;
-    color: var(--font-color);
-    background-color: var(--bg-color-second);
+    color: var(--third-gray-light);
+    background-color: var(--second-color-light);
     border: var(--border-menu);
     border-radius: 14px;
     z-index: 1;
@@ -197,9 +201,9 @@
 .level__image {
     padding: 16px 20px;
     line-height: 150%;
-    color: var(--font-color);
+    color: var(--third-gray-light);
     border-top: var(--border-menu);
-    background-color: var(--bg-color-second);
+    background-color: var(--second-color-light);
 }
 
 .level__item {
@@ -230,8 +234,8 @@
 
 .level__menu_item:hover {
     display: block;
-    background-color: var(--bg-color-second);
-    border-bottom: 2px solid var(--bg-color-second);
+    background-color: var(--second-color-light);
+    border-bottom: 2px solid var(--second-color-light);
     cursor: default;
     animation-name: levelsButton;
     animation-fill-mode: forwards;
@@ -294,17 +298,17 @@
 }
 
 .level__image:hover {
-    color: var(--mark-color);
-    background-color: var(--hover-color-menu);
+    color: var(--third-color-light);
+    background-color: var(--hover-green-light);
 }
 
 .level__item:hover {
-    color: var(--mark-color);
-    background-color: var(--hover-color-menu);
+    color: var(--third-color-light);
+    background-color: var(--hover-green-light);
 }
 
 .level__image:active {
-    background-color: var(--active-bg-level);
+    background-color: var(--active-green-light);
 }
 
 .level__menu_text {
@@ -352,7 +356,7 @@
 .nonograms__table {
     display: block;
     border-collapse: collapse;
-    background-color: var(--bg-color-second);
+    background-color: var(--second-color-light);
     padding: 36px;
     border: var(--border-thick);
     border-radius: 14px;
@@ -418,7 +422,7 @@
 }
 
 .fill {
-    background-color: var(--mark-color);
+    background-color: var(--fourth-color-light);
 }
 
 .cross:before,
@@ -428,7 +432,7 @@
     flex-direction: column;
     content: "";
     width: 32px;
-    border-bottom: 1px solid var(--mark-color);
+    border-bottom: var(--cross);
     transform: rotateZ(45deg);
     z-index: 0;
 }
@@ -449,12 +453,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--overlay-color);
+    background-color: var(--third-color-light);
     pointer-events: none;
 }
 
 @media (hover: hover){
     .field__cell:hover:not(.fill) {
-        background-color: var(--hover-color-cell);
+        background-color: var(--third-color-light);
     }
 }
