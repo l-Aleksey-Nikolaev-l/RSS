@@ -93,6 +93,7 @@ class Sidebar {
 
   #createCheckBoxElement(args) {
     const musicCheckBox = document.createElement('input');
+    musicCheckBox.classList.add('audio__checkbox');
     musicCheckBox.type = 'checkbox';
     musicCheckBox.id = `${args.name}__play`;
     musicCheckBox.name = `${args.name}__play`;
