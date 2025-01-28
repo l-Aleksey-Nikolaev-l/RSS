@@ -22,6 +22,8 @@ class Sidebar {
     this.effectEraseVolum = effectEraseVolume;
   }
 
+  #createAudioSettings() {
+  }
 
   #createBestTimeTable() {
     const bestTimeContainer = this.#createContainer('best__time');
