@@ -31,6 +31,14 @@ class Sidebar {
   #createAudioSettings() {
   }
 
+  #createSettingLabel(args) {
+    const settingLabel = document.createElement('label');
+    settingLabel.classList.add('setting__label');
+    settingLabel.setAttribute('for', `${args.name}__play`);
+    settingLabel.textContent = args.label;
+    return settingLabel;
+  }
+
   #createCheckBoxElement(args) {
     const musicCheckBox = document.createElement('input');
     musicCheckBox.type = 'checkbox';
