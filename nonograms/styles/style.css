@@ -421,6 +421,11 @@
     border-right: var(--border-thick);
 }
 
+.top__tips .col__answer:first-child {
+    vertical-align: top;
+    padding: 0 8px 8px 0;
+}
+
 .show__answer {
     display: block;
     border: var(--border-menu);
