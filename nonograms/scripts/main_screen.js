@@ -18,11 +18,10 @@ class MainScreen {
 
   createMainScreen() {
     const mainContainer = this.#createMainContainer();
-    const header = this.#createHeaderSection();
-    const gameSection = this.#createGameSection();
-    const footer = this.#createFooterSection();
-    mainContainer.append(header, gameSection, footer);
-    this.setAnswerArraySize(this.gridSize);
+    const header = this.headerSection.createHeaderSection();
+    const game = this.gameSection.createGameSection();
+    const footer = this.footerSection.createFooterSection();
+    mainContainer.append(header, game, footer);
     return mainContainer;
   }
 }
