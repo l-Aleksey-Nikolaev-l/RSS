@@ -17,14 +17,6 @@ class MainScreen {
     return main;
   }
 
-  #createGameSection() {
-    const gameSection = document.createElement('section');
-    gameSection.classList.add('game__section');
-    const table = this.#createTable();
-    gameSection.append(table);
-    return gameSection;
-  }
-
   createMainScreen() {
     const mainContainer = this.#createMainContainer();
     const header = this.#createHeaderSection();
