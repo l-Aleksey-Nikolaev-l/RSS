@@ -367,10 +367,19 @@
     right: anchor(--game-section-anchor right);
     /*noinspection CssInvalidFunction*/
     bottom: anchor(--game-section-anchor bottom);
-    width: 400px;
+    width: 0;
     border: var(--border-menu);
     border-radius: 14px 0 0 14px;
     background-color: var(--second-color-light);
+    transition-delay: 1s;
+    transition-duration: 0.5s;
+    transition-property: width;
+    transition-timing-function: ease-in-out;
+}
+
+.sidebar__active {
+    transition-delay: 0s;
+    width: 400px;
 }
 
 .nonograms__table {
