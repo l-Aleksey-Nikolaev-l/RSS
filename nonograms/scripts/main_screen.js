@@ -17,14 +17,6 @@ class MainScreen {
     return main;
   }
 
-  #createHeaderSection() {
-    const header = document.createElement('header');
-    header.classList.add('header');
-    const levelsMenu = this.#createLevelsMenu(pictures);
-    header.append(levelsMenu);
-    return header;
-  }
-
   #createGameSection() {
     const gameSection = document.createElement('section');
     gameSection.classList.add('game__section');
