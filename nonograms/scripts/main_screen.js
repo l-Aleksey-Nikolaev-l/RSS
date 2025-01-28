@@ -137,12 +137,6 @@ class MainScreen {
     }
   }
 
-  #createFooterSection() {
-    const footer = document.createElement('footer');
-    footer.classList.add('footer');
-    return footer;
-  }
-
   createMainScreen() {
     const mainContainer = this.#createMainContainer();
     const header = this.#createHeaderSection();
