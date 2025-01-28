@@ -4,15 +4,10 @@ import { Footer } from './ui_components/footer.js';
 
 class MainScreen {
 
-  constructor(args = {
-    currentLevelId: 0,
-    gridSize: 0,
-    pictures: {}
-  }) {
-    this.levelId = args.currentLevelId;
-    this.gridSize = args.gridSize;
-    this.pictures = args.pictures;
-    this.setAnswerArraySize = args.setAnswerArraySize;
+  constructor() {
+    this.headerSection = new Header();
+    this.gameSection = new GameSection();
+    this.footerSection = new Footer();
   }
 
   #createMainContainer() {
