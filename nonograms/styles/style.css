@@ -18,6 +18,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    font-size: 1rem;
     font-weight: 100;
     color: var(--font-color);
     user-select: none;
