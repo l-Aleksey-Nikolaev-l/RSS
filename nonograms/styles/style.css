@@ -93,6 +93,13 @@
     width: 20px;
     background: url('../assets/images/icons/random.svg') no-repeat;
     background-size: 20px;
+    transform: rotateX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.header__button:hover .random__button_text {
+    transform: rotateX(180deg);
+    transition: transform 0.2s ease-in-out;
 }
 
 .level__menu * {
