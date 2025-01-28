@@ -354,6 +354,23 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    anchor-name: --game-section-anchor;
+}
+
+.sidebar {
+    /*display: none;*/
+    position: fixed;
+    position-anchor: --game-section-anchor;
+    /*noinspection CssInvalidFunction*/
+    top: anchor(--game-section-anchor top);
+    /*noinspection CssInvalidFunction*/
+    right: anchor(--game-section-anchor right);
+    /*noinspection CssInvalidFunction*/
+    bottom: anchor(--game-section-anchor bottom);
+    width: 400px;
+    border: var(--border-menu);
+    border-radius: 14px 0 0 14px;
+    background-color: var(--second-color-light);
 }
 
 .nonograms__table {
