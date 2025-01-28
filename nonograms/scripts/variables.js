@@ -40,5 +40,6 @@ export {
   gridSize,
   answerCells,
   mainScreenParams,
+  setAnswerMatrixSize,
   setLevelGrid
 };
