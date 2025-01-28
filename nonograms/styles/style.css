@@ -397,7 +397,8 @@
     padding: 14px 8px;
 }
 
-.audio__container {
+.audio__container,
+.best__time__container {
     display: flex;
     flex-direction: column;
     row-gap: 8px;
@@ -406,7 +407,8 @@
     border-radius: 8px;
 }
 
-.audio__setting__container {
+.audio__setting__container,
+.best__time__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -468,12 +470,51 @@
     cursor: pointer;
 }
 
-.settings__container__title {
+.settings__container__title,
+.time__container__title {
     position: absolute;
     top: 13px;
     left: 44px;
     padding: 0 8px;
     background-color: var(--second-color-light);
+}
+
+.best__time__container {
+    flex-direction: column;
+    justify-content: start;
+    padding: 18px 14px 12px 14px;
+}
+
+.time__container__title {
+    top: 171px;
+}
+
+.time__table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--second-color-light);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.time__table_header_cell {
+    padding: 0 0 4px 0;
+    border-left: var(--border-menu);
+}
+
+.time__table_header_cell:first-child {
+    padding: 0 0 4px 0;
+    border: none;
+}
+
+.time__table_win_cell {
+    padding: 4px 0;
+    border-top: var(--border-menu);;
+    border-left: var(--border-menu);
+}
+
+.time__table_win_cell:first-child {
+    border-left: none;
 }
 
 .nonograms__table {
