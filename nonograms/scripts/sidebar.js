@@ -58,6 +58,17 @@ class Sidebar {
       volume: this.effectEraseVolum
     };
 
+    const musicSetting = this.#createAudioSetting(musicSet);
+    const fillEffectSetting = this.#createAudioSetting(fillEffectSet);
+    const crossEffectSetting = this.#createAudioSetting(crossEffectSet);
+    const eraseEffectSetting = this.#createAudioSetting(eraseEffectSet);
+    audioContainer.append(
+      containerTitle,
+      musicSetting,
+      fillEffectSetting,
+      crossEffectSetting,
+      eraseEffectSetting
+    );
     return audioContainer;
   }
 
