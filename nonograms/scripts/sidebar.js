@@ -31,6 +31,18 @@ class Sidebar {
   #createAudioSettings() {
   }
 
+  #createRangeElement(args) {
+    const rangeSetting = document.createElement('input');
+    rangeSetting.type = 'range';
+    rangeSetting.id = `audio__${args.name}__setting`;
+    rangeSetting.name = `audio__${args.name}__setting`;
+    rangeSetting.min = '0';
+    rangeSetting.max = '1';
+    rangeSetting.step = '0.1';
+    rangeSetting.value = args.volume;
+    return rangeSetting;
+  }
+
   #createBestTimeTable() {
     const bestTimeContainer = this.#createContainer('best__time');
     return bestTimeContainer;
