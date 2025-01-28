@@ -9,6 +9,7 @@
     --hover-color-cell: rgba(119, 119, 119, 0.2);
     --hover-color-menu: rgb(223 231 209);
     --hover-save-button: rgba(107, 127, 87, 1);
+    --active-bg-level: rgba(214, 221, 200, 1);
     --active-save-button: rgba(92, 102, 71, 1);
     --mark-color: rgba(32, 32, 32, 1);
 }
@@ -282,6 +283,10 @@
 .level__item:hover {
     color: var(--mark-color);
     background-color: var(--hover-color-menu);
+}
+
+.level__image:active {
+    background-color: var(--active-bg-level);
 }
 
 .level__menu_text {
