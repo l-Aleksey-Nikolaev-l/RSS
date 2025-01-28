@@ -43,6 +43,40 @@ function fillAnswerArray(size) {
   return new Array(size).fill(null).map(() => Array(size).fill(0));
 }
 
+function setAudioState(audio, state) {
+  if (audio === 'music') {
+    musicState = state;
+  }
+
+  if (audio === 'fill') {
+    effectFillState = state;
+  }
+  if (audio === 'cross') {
+    effectCrossState = state;
+  }
+
+  if (audio === 'erase') {
+    effectEraseState = state;
+  }
+}
+
+function setAudioVolume(audio, value) {
+  if (audio === 'music') {
+    musicVolume = value;
+  }
+
+  if (audio === 'fill') {
+    effectFillVolume = value;
+  }
+  if (audio === 'cross') {
+    effectCrossVolume = value;
+  }
+
+  if (audio === 'erase') {
+    effectEraseVolume = value;
+  }
+}
+
 export {
   musicState,
   musicVolume,
@@ -57,5 +91,7 @@ export {
   answerCells,
   mainScreenParams,
   setAnswerMatrixSize,
-  setLevelGrid
+  setLevelGrid,
+  setAudioState,
+  setAudioVolume
 };
