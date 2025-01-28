@@ -12,7 +12,14 @@ import {
 class Sidebar {
 
   constructor() {
-
+    this.musicState = musicState;
+    this.musicVolume = musicVolume;
+    this.effectFillState = effectFillState;
+    this.effectFillVolume = effectFillVolume;
+    this.effectCrossState = effectCrossState;
+    this.effectCrossVolume = effectCrossVolume;
+    this.effectEraseState = effectEraseState;
+    this.effectEraseVolum = effectEraseVolume;
   }
 
   createSidebar() {
