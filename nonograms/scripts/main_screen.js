@@ -1,3 +1,7 @@
+import { Header } from './ui_components/header.js';
+import { GameSection } from './ui_components/game_section.js';
+import { Footer } from './ui_components/footer.js';
+
 class MainScreen {
 
   constructor(args = {
