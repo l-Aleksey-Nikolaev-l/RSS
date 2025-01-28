@@ -5,7 +5,7 @@ import { resetTimer } from './timer.js';
 
 const levelsMenu = document.getElementsByClassName('level__menu');
 const table = document.getElementsByClassName('nonograms__table');
-import { setGameLevel, setCellStatus } from './game_logic.js';
+import { setGameLevel, setCellStatus, mouseButtonUp } from './game_logic.js';
 
 function gameListeners() {
   levelsMenu[0].addEventListener('click', (event) => {
@@ -14,10 +14,7 @@ function gameListeners() {
 
   table[0].addEventListener('mousedown', setCellStatus);
 
-  table[0].addEventListener('mouseup', () => {
-    currentCell = null;
-    prevCell = null;
-  });
+  table[0].addEventListener('mouseup', mouseButtonUp);
 
   table[0].addEventListener('contextmenu', (event) => event.preventDefault());
 

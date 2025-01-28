@@ -59,6 +59,10 @@ function showPopUp() {
   console.log('Win!');
 }
 
+function mouseButtonUp() {
+  currentCell = null;
+  prevCell = null;
+}
 
 function setGameLevel(event, table) {
   resetTimer();
@@ -102,6 +106,7 @@ function setCellStatus(event) {
 }
 
 export {
+  mouseButtonUp,
   setCellStatus,
   setGameLevel,
 };
