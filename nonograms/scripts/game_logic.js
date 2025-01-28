@@ -1,7 +1,14 @@
-import { currentLevelId, answerCells } from './variables.js';
+import {
+  currentLevelId,
+  answerCells,
+  setLevelGrid,
+  mainScreenParams
+} from './variables.js';
 import { pictures } from './pictures.js';
-import { startTimer, stopTimer } from './timer.js';
+import { resetTimer, startTimer, stopTimer } from './timer.js';
 import { Puzzle } from './puzzle_logic.js';
+import { Table } from './ui_components/table.js';
+
 let currentCell = null;
 let prevCell = null;
 
