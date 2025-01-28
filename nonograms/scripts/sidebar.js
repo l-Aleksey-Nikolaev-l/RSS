@@ -61,6 +61,17 @@ class Sidebar {
     return audioContainer;
   }
 
+  #createAudioSetting(args) {
+    const audioContainer = this.#createContainer('audio__setting');
+    const audioTurnContainer = this.#createContainer('audio__turn');
+    const audioCheckBox = this.#createCheckBoxElement(args);
+    const audioLabel = this.#createSettingLabel(args);
+    const audioVolumeRange = this.#createRangeElement(args);
+    audioTurnContainer.append(audioCheckBox, audioLabel);
+    audioContainer.append(audioTurnContainer, audioVolumeRange);
+    return audioContainer;
+  }
+
   #createSettingLabel(args) {
     const settingLabel = document.createElement('label');
     settingLabel.classList.add('setting__label');
