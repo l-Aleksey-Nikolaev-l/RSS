@@ -78,6 +78,15 @@
     cursor: pointer;
 }
 
+.header__button:hover {
+    background-color: #dfe7d1;
+}
+
+.header__button:active {
+    color: var(--font-color);
+    background-color: #d1d9c3;
+}
+
 .level__menu * {
     position: relative;
     list-style: none;
