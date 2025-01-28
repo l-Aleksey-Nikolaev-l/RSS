@@ -370,8 +370,6 @@
     top: anchor(--game-section-anchor top);
     /*noinspection CssInvalidFunction*/
     right: anchor(--game-section-anchor right);
-    /*noinspection CssInvalidFunction*/
-    bottom: anchor(--game-section-anchor bottom);
     width: 400px;
     padding: 8px;
     border: var(--border-menu);
