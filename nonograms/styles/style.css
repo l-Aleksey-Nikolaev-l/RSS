@@ -124,8 +124,9 @@
     position: absolute;
     height: 20px;
     width: 20px;
-    background: url('../assets/images/icons/random.svg') no-repeat;
-    background-size: 20px;
+    background-color: var(--third-gray-light);
+    mask: url('../assets/images/icons/random.svg') no-repeat;
+    mask-size: cover;
     transform: rotateX(0);
     transition: transform 0.2s ease-in-out;
 }
@@ -139,8 +140,9 @@
     position: absolute;
     height: 20px;
     width: 20px;
-    background: url('../assets/images/icons/settings.svg') no-repeat;
-    background-size: 20px;
+    background-color: var(--third-gray-light);
+    mask: url('../assets/images/icons/settings.svg') no-repeat;
+    mask-size: cover;
     transform: rotateZ(0);
     transition: transform 0.2s ease-in-out;
 }
@@ -328,8 +330,9 @@
     font-size: 36px;
     line-height: 0;
     letter-spacing: 0;
-    background: url('../assets/images/icons/chevron_down.svg') no-repeat;
-    background-size: 20px;
+    background-color: var(--third-gray-light);
+    mask: url('../assets/images/icons/chevron_down.svg') no-repeat;
+    mask-size: cover;
     transform: rotateX(0deg);
     transition-duration: 0.2s;
     transition-property: transform;
