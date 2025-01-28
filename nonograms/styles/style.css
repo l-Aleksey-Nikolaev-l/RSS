@@ -8,6 +8,8 @@
     --border-menu: 1px solid rgba(160, 160, 160, 0.35);
     --hover-color-cell: rgba(119, 119, 119, 0.2);
     --hover-color-menu: rgb(223 231 209);
+    --hover-save-button: rgba(107, 127, 87, 1);
+    --active-save-button: rgba(92, 102, 71, 1);
     --mark-color: rgba(32, 32, 32, 1);
 }
 
@@ -96,6 +98,16 @@
 .header__button:active {
     color: var(--font-color);
     background-color: var(--active-color-button);
+}
+
+.save_button:hover {
+    color: var(--bg-color);
+    background-color: var(--hover-save-button);
+}
+
+.save_button:active {
+    color: var(--bg-color);
+    background-color: var(--active-save-button);
 }
 
 .random__button_text {
