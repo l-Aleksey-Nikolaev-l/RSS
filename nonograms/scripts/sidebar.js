@@ -120,6 +120,10 @@ class Sidebar {
   createSidebar() {
     const sidebar = document.createElement('div');
     sidebar.classList.add('sidebar');
+    const sidebarContainer = this.#createContainer('sidebar');
+    const audioSettings = this.#createAudioSettings();
+    sidebarContainer.append(audioSettings);
+    sidebar.append(sidebarContainer);
     return sidebar;
   }
 
