@@ -87,6 +87,14 @@
     background-color: #d1d9c3;
 }
 
+.random__button_text {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: url('../assets/images/icons/random.svg') no-repeat;
+    background-size: 20px;
+}
+
 .level__menu * {
     position: relative;
     list-style: none;
