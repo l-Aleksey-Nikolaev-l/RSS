@@ -435,6 +435,22 @@
     cursor: pointer;
     color: var(--third-color-light);
     background-color: var(--first-gray-light);
+    transition:
+            border 0.05s ease-in-out,
+            color 0.05s ease-in-out,
+            background-color 0.05s ease-in-out;
+}
+
+.show__answer:hover {
+    border: var(--border-menu);
+    color: var(--third-gray-light);
+    background-color: var(--hover-green-light);
+}
+
+.show__answer:active {
+    border: var(--border-thin);
+    color: var(--second-color-light);
+    background-color: var(--fourth-color-light);
 }
 
 .fill {
