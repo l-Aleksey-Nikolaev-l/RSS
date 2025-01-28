@@ -1,5 +1,14 @@
 import { pictures } from './pictures.js';
 
+let musicState = false;
+let effectFillState = true;
+let effectCrossState = true;
+let effectEraseState = true;
+let musicVolume = 0.2;
+let effectFillVolume = 0.2;
+let effectCrossVolume = 0.2;
+let effectEraseVolume = 0.2;
+
 let currentLevelId = 0;
 let gridSize = 5;
 
@@ -35,6 +44,14 @@ function fillAnswerArray(size) {
 }
 
 export {
+  musicState,
+  musicVolume,
+  effectFillState,
+  effectFillVolume,
+  effectCrossState,
+  effectCrossVolume,
+  effectEraseState,
+  effectEraseVolume,
   currentLevelId,
   gridSize,
   answerCells,
