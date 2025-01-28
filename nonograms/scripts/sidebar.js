@@ -22,6 +22,12 @@ class Sidebar {
     this.effectEraseVolum = effectEraseVolume;
   }
 
+
+  #createBestTimeTable() {
+    const bestTimeContainer = this.#createContainer('best__time');
+    return bestTimeContainer;
+  }
+
   createSidebar() {
     const sidebar = document.createElement('div');
     sidebar.classList.add('sidebar');
