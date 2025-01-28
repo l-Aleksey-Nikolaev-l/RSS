@@ -1,4 +1,4 @@
-import { MainScreen } from './main_screen.js';
+import { Table } from './ui_components/table.js';
 import { mainScreenParams, setLevelGrid } from './variables.js';
 import { manageCell } from './game_logic.js';
 import { resetTimer } from './timer.js';
@@ -29,11 +29,11 @@ function setGameLevel(event) {
   const levelId = event.target.dataset.levelId;
   if (levelId) {
     setLevelGrid(levelId);
-    const mainScreen = new MainScreen(mainScreenParams());
+    const newGrid = new Table(mainScreenParams());
     while (table[0].rows.length) {
       table[0].deleteRow(0);
     }
-    mainScreen.createTableGrid(table[0]);
+    newGrid.createTableGrid(table[0]);
   }
 }
 
