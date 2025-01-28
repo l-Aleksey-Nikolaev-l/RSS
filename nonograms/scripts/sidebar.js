@@ -103,6 +103,7 @@ class Sidebar {
 
   #createRangeElement(args) {
     const rangeSetting = document.createElement('input');
+    rangeSetting.classList.add('audio__volume');
     rangeSetting.type = 'range';
     rangeSetting.id = `audio__${args.name}__setting`;
     rangeSetting.name = `audio__${args.name}__setting`;
