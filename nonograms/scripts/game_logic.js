@@ -2,6 +2,8 @@ import { currentLevelId, answerCells } from './variables.js';
 import { pictures } from './pictures.js';
 import { startTimer, stopTimer } from './timer.js';
 import { Puzzle } from './puzzle_logic.js';
+let currentCell = null;
+let prevCell = null;
 
 function manageCell(targetCell) {
   startTimer();
@@ -50,6 +52,47 @@ function showPopUp() {
   console.log('Win!');
 }
 
+
+function setGameLevel(event, table) {
+  resetTimer();
+  const levelId = event.target.dataset.levelId;
+  if (levelId) {
+    setLevelGrid(levelId);
+    const newGrid = new Table(mainScreenParams());
+    while (table.rows.length) {
+      table.deleteRow(0);
+    }
+    newGrid.createTableGrid(table);
+  }
+}
+
+function setCellStatus(event) {
+  const cell = event.target;
+  const cellId = cell.dataset.col + cell.dataset.row;
+  const mouseButton = event.which;
+  const mouseEventType = event.type;
+  currentCell = cellId;
+  if (!cellId || currentCell === prevCell || !mouseButton) {
+    return;
+  }
+
+  if (
+    mouseButton === 1 ||
+    (mouseButton === 1 && mouseEventType === 'mousemove')
+  ) {
+    prevCell = currentCell;
+    cell.classList.toggle('fill');
+    cell.classList.remove('cross');
+  } else if (
+    mouseButton === 3 ||
+    (mouseButton === 3 && mouseEventType === 'mousemove')
+  ) {
+    prevCell = currentCell;
+    cell.classList.toggle('cross');
+    cell.classList.remove('fill');
+  }
+  manageCell(cell);
+}
 export {
   manageCell
 };
