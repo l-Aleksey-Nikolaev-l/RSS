@@ -298,13 +298,16 @@
 
 .level__menu_text:after {
     position: absolute;
-    content: '▾';
-    top: 48%;
+    content: '';
+    top: 30%;
     right: 0;
-    height: 0;
-    font-size: 24px;
+    height: 20px;
+    width: 20px;
+    font-size: 36px;
     line-height: 0;
     letter-spacing: 0;
+    background: url('../assets/images/icons/chevron_down.svg') no-repeat;
+    background-size: 20px;
     transform: rotateX(0deg);
     transition-duration: 0.2s;
     transition-property: transform;
