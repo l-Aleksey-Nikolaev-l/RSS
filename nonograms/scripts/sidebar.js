@@ -22,6 +22,12 @@ class Sidebar {
     this.effectEraseVolum = effectEraseVolume;
   }
 
+  #createContainer(name) {
+    const settingContainer = document.createElement('div');
+    settingContainer.classList.add(`${name}__container`);
+    return settingContainer;
+  }
+
   #createAudioSettings() {
   }
 
