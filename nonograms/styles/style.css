@@ -421,6 +421,17 @@
     border-right: var(--border-thick);
 }
 
+.show__answer {
+    display: block;
+    border: var(--border-menu);
+    margin: 0 8px 8px 0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--third-color-light);
+    background-color: var(--first-gray-light);
+}
+
 .fill {
     background-color: var(--fourth-color-light);
 }
