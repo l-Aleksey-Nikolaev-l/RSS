@@ -100,6 +100,8 @@ function setCellStatus(event) {
   }
   manageCell(cell);
 }
+
 export {
-  manageCell
+  setCellStatus,
+  setGameLevel,
 };
