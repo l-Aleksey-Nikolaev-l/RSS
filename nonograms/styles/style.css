@@ -61,6 +61,7 @@
     flex-direction: row;
     justify-content: end;
     align-items: center;
+    column-gap: 14px;
     min-height: 70px;
     padding: 0 24px;
 }
