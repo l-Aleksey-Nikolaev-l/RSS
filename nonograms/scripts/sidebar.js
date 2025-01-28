@@ -29,6 +29,36 @@ class Sidebar {
   }
 
   #createAudioSettings() {
+    const audioContainer = this.#createContainer('audio');
+    const containerTitle = document.createElement('p');
+    containerTitle.classList.add('settings__container__title');
+    containerTitle.textContent = 'Audio';
+    const musicSet = {
+      name: 'music',
+      label: 'Background music',
+      state: this.musicState,
+      volume: this.musicVolume
+    };
+    const fillEffectSet = {
+      name: 'fill',
+      label: 'Cell fill',
+      state: this.effectFillState,
+      volume: this.effectFillVolume
+    };
+    const crossEffectSet = {
+      name: 'cross',
+      label: 'Cell cross',
+      state: this.effectCrossState,
+      volume: this.effectCrossVolume
+    };
+    const eraseEffectSet = {
+      name: 'erase',
+      label: 'Cell erase',
+      state: this.effectEraseState,
+      volume: this.effectEraseVolum
+    };
+
+    return audioContainer;
   }
 
   #createSettingLabel(args) {
