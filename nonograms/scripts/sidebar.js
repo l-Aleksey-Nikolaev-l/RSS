@@ -116,7 +116,28 @@ class Sidebar {
 
   #createBestTimeTable() {
     const bestTimeContainer = this.#createContainer('best__time');
+    const containerTitle = document.createElement('p');
+    containerTitle.classList.add('time__container__title');
+    containerTitle.textContent = 'Best time';
+    const timeTable = this.#createTable();
+    bestTimeContainer.append(containerTitle, timeTable);
     return bestTimeContainer;
+  }
+
+  #createTable() {
+    const timeTable = document.createElement('table');
+    timeTable.classList.add('time__table');
+    const headerRow = document.createElement('tr');
+    headerRow.classList.add('time__table_header');
+    const headerTitles = ['Place', 'Picture name', 'Level', 'Time'];
+    headerTitles.forEach((cellName) => {
+      const headerCell = document.createElement('th');
+      headerCell.classList.add('time__table_header_cell');
+      headerCell.textContent = cellName;
+      headerRow.append(headerCell);
+    });
+    timeTable.append(headerRow);
+    return timeTable;
   }
 
   createSidebar() {
@@ -124,7 +145,8 @@ class Sidebar {
     sidebar.classList.add('sidebar');
     const sidebarContainer = this.#createContainer('sidebar');
     const audioSettings = this.#createAudioSettings();
-    sidebarContainer.append(audioSettings);
+    const bestTime = this.#createBestTimeTable();
+    sidebarContainer.append(audioSettings, bestTime);
     sidebar.append(sidebarContainer);
     return sidebar;
   }
