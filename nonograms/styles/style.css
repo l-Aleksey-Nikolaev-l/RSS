@@ -128,6 +128,15 @@
     transition: transform 0.2s ease-in-out;
 }
 
+.settings__button_text {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: url('../assets/images/icons/settings.svg') no-repeat;
+    background-size: 20px;
+}
+
+
 .level__menu * {
     position: relative;
     list-style: none;
