@@ -61,6 +61,23 @@
     padding: 0 24px;
 }
 
+.header__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    text-transform: capitalize;
+    height: 48px;
+    min-width: 48px;
+    place-self: center;
+    color: var(--font-color);
+    text-align: start;
+    background-color: var(--bg-color-second);
+    border: var(--border-menu);
+    border-radius: 14px;
+    cursor: pointer;
+}
+
 .level__menu * {
     position: relative;
     list-style: none;
