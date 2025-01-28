@@ -395,6 +395,36 @@
     padding: 14px 8px;
 }
 
+.audio__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding: 18px 14px;
+    border: var(--border-menu);
+    border-radius: 8px;
+}
+
+.audio__setting__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.audio__turn__container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+}
+
+.settings__container__title {
+    position: absolute;
+    top: 13px;
+    left: 44px;
+    padding: 0 8px;
+    background-color: var(--second-color-light);
+}
+
 .nonograms__table {
     display: block;
     border-collapse: collapse;
