@@ -12,10 +12,9 @@ const setAnswerMatrixSize = (size) => {
 
 const mainScreenParams = () => {
   return {
-    currentLevelId: currentLevelId,
+    levelId: currentLevelId,
     gridSize: gridSize,
-    pictures: pictures,
-    setAnswerArraySize: setAnswerMatrixSize
+    pictures: pictures
   };
 };
 
