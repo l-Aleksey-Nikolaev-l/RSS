@@ -137,8 +137,14 @@
     width: 20px;
     background: url('../assets/images/icons/settings.svg') no-repeat;
     background-size: 20px;
+    transform: rotateZ(0);
+    transition: transform 0.2s ease-in-out;
 }
 
+.header__button:hover .settings__button_text {
+    transform: rotateZ(45deg);
+    transition: transform 0.2s ease-in-out;
+}
 
 .level__menu * {
     position: relative;
