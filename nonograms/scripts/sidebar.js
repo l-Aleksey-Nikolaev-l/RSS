@@ -31,6 +31,15 @@ class Sidebar {
   #createAudioSettings() {
   }
 
+  #createCheckBoxElement(args) {
+    const musicCheckBox = document.createElement('input');
+    musicCheckBox.type = 'checkbox';
+    musicCheckBox.id = `${args.name}__play`;
+    musicCheckBox.name = `${args.name}__play`;
+    musicCheckBox.checked = args.state;
+    return musicCheckBox;
+  }
+
   #createRangeElement(args) {
     const rangeSetting = document.createElement('input');
     rangeSetting.type = 'range';
