@@ -7,10 +7,12 @@
     --first-gray-light: rgba(245, 247, 245, 0.3);
     --second-gray-light: rgba(160, 160, 160, 0.35);
     --third-gray-light: rgb(68, 63, 65);
+    --fourth-gray-light: rgba(160, 160, 160, 0.5);
 
     --first-green-light:  rgb(124, 145, 103);
     --second-green-light: rgb(107, 127, 87);
     --third-green-light:  rgb(92, 102, 71);
+    --fourth-green-light: rgb(109, 165, 43);
 
     --hover-green-light: rgb(223, 231, 209);
     --active-green-light: rgb(214, 221, 200);
@@ -415,6 +417,31 @@
     display: flex;
     flex-direction: row;
     column-gap: 8px;
+}
+
+.audio__checkbox {
+    appearance: none;
+}
+
+.audio__checkbox:after {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: var(--fourth-gray-light);
+    mask: url('../assets/images/icons/unchecked.svg') no-repeat;
+    mask-size: cover;
+}
+
+.audio__checkbox:checked:after {
+    content: '';
+    background-color: var(--fourth-green-light);
+    mask: url('../assets/images/icons/checked.svg') no-repeat;
+    mask-size: cover;
+}
+
+.audio__label {
+    margin-left: 14px;
 }
 
 .settings__container__title {

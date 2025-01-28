@@ -85,7 +85,7 @@ class Sidebar {
 
   #createSettingLabel(args) {
     const settingLabel = document.createElement('label');
-    settingLabel.classList.add('setting__label');
+    settingLabel.classList.add('audio__label');
     settingLabel.setAttribute('for', `${args.name}__play`);
     settingLabel.textContent = args.label;
     return settingLabel;
