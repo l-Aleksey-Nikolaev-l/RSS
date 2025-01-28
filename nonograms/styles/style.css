@@ -358,8 +358,11 @@
 }
 
 .sidebar {
-    /*display: none;*/
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
     position-anchor: --game-section-anchor;
     /*noinspection CssInvalidFunction*/
     top: anchor(--game-section-anchor top);
@@ -367,7 +370,8 @@
     right: anchor(--game-section-anchor right);
     /*noinspection CssInvalidFunction*/
     bottom: anchor(--game-section-anchor bottom);
-    width: 0;
+    width: 400px;
+    padding: 8px;
     border: var(--border-menu);
     border-radius: 14px 0 0 14px;
     background-color: var(--second-color-light);
