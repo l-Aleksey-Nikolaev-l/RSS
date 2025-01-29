@@ -738,6 +738,14 @@
     }
 }
 
+.body:has(.sidebar__active) .level__menu_item {
+    z-index: 0;
+}
+
+.body:has(.sidebar__active) .settings_button {
+    z-index: 1;
+}
+
 @media (hover: hover) {
     .header__button:hover {
         background-color: var(--hover-green-light);
