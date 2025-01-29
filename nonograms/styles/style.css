@@ -685,7 +685,8 @@
     min-height: 50px;
 }
 
-.body:has(.level__menu:hover) main:after {
+.overlay {
+    display: none;
     position: absolute;
     content: '';
     top: 0;
