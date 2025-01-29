@@ -30,6 +30,13 @@ function setGameLevel(event, table) {
   }
 }
 
+function getPuzzleNameLevel() {
+  const regex = /\(.*\)/g;
+  const puzzleName = pictures[currentLevelId].name.replace(regex, '').trim();
+  const puzzleLevel = pictures[currentLevelId].level.replace(regex, '').trim();
+  return `${puzzleName} - ${puzzleLevel}`;
+}
+
 function setCellStatus(event) {
   const cell = event.target;
   const cellId = cell.dataset.col + cell.dataset.row;
@@ -109,4 +116,5 @@ export {
   mouseButtonUp,
   setCellStatus,
   setGameLevel,
+  getPuzzleNameLevel
 };
