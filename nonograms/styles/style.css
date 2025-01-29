@@ -474,6 +474,7 @@
 
 .audio__checkbox {
     appearance: none;
+    cursor: pointer;
 }
 
 .audio__checkbox:after {
@@ -495,6 +496,7 @@
 
 .audio__label {
     margin-left: 14px;
+    cursor: pointer;
 }
 
 .audio__volume {
