@@ -1,4 +1,4 @@
-const indicatorsArray = document.getElementsByClassName('table__caption');
+const indicatorsArray = document.getElementsByClassName('puzzle__spend_time');
 
 let timer = null;
 let isStarted = false;
