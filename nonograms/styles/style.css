@@ -702,6 +702,18 @@
     z-index: 1;
 }
 
+.body:has(.level__menu:hover) .overlay {
+    display: block;
+    animation-name: showOverlay;
+    animation-play-state: running;
+}
+
+.body:has(.sidebar__active) .overlay {
+    display: block;
+    animation-name: showOverlay;
+    animation-play-state: running;
+}
+
 @keyframes hideOverlay {
     0% {
         display: block;
@@ -711,6 +723,18 @@
     100% {
         display: none;
         background-color: transparent;
+    }
+}
+
+@keyframes showOverlay {
+    0% {
+        display: none;
+        background-color: transparent;
+    }
+
+    100% {
+        display: block;
+        background-color: var(--third-color-light);
     }
 }
 
