@@ -7,6 +7,8 @@ import {
   effectCrossVolume,
   effectEraseState,
   effectEraseVolume,
+  effectPopupState,
+  effectPopupVolume,
   isDarkTheme
 } from '../variables.js';
 
@@ -21,6 +23,8 @@ class Sidebar {
     this.effectCrossVolume = effectCrossVolume;
     this.effectEraseState = effectEraseState;
     this.effectEraseVolum = effectEraseVolume;
+    this.effectPopupState = effectPopupState;
+    this.effectPopupVolum = effectPopupVolume;
     this.isDarkTheme = isDarkTheme;
   }
 
@@ -59,17 +63,25 @@ class Sidebar {
       state: this.effectEraseState,
       volume: this.effectEraseVolum
     };
+    const popupEffectSet = {
+      name: 'popup',
+      label: 'PopUp',
+      state: this.effectPopupState,
+      volume: this.effectPopupVolum
+    };
 
     const musicSetting = this.#createAudioSetting(musicSet);
     const fillEffectSetting = this.#createAudioSetting(fillEffectSet);
     const crossEffectSetting = this.#createAudioSetting(crossEffectSet);
     const eraseEffectSetting = this.#createAudioSetting(eraseEffectSet);
+    const popupEffectSetting = this.#createAudioSetting(popupEffectSet);
     audioContainer.append(
       containerTitle,
       musicSetting,
       fillEffectSetting,
       crossEffectSetting,
-      eraseEffectSetting
+      eraseEffectSetting,
+      popupEffectSetting
     );
     return audioContainer;
   }
