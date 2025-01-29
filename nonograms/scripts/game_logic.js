@@ -8,6 +8,7 @@ import { pictures } from './pictures.js';
 import { resetTimer, startTimer, stopTimer } from './timer.js';
 import { Puzzle } from './puzzle_logic.js';
 import { Table } from './ui_components/table.js';
+import { Sidebar } from './ui_components/sidebar.js';
 
 let currentCell = null;
 let prevCell = null;
@@ -19,6 +20,12 @@ function mouseButtonUp() {
 
 function toggleSidebar() {
   const sidebar = document.getElementsByClassName('sidebar');
+  if (!sidebar[0]) {
+    const gameSection = document.getElementsByClassName('game__section');
+    const newSidebar = new Sidebar().createSidebar();
+    gameSection[0].append(newSidebar);
+    return;
+  }
   sidebar[0].classList.toggle('sidebar__active');
 }
 
