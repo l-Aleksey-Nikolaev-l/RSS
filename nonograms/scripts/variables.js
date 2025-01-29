@@ -12,6 +12,8 @@ let effectEraseVolume = 0.2;
 let currentLevelId = 0;
 let gridSize = 5;
 
+let isDarkTheme = false;
+
 const answerCells = {};
 
 const setAnswerMatrixSize = (size) => {
@@ -77,6 +79,10 @@ function setAudioVolume(audio, value) {
   }
 }
 
+function setTheme(state) {
+  isDarkTheme = state;
+}
+
 export {
   musicState,
   musicVolume,
@@ -88,10 +94,12 @@ export {
   effectEraseVolume,
   currentLevelId,
   gridSize,
+  isDarkTheme,
   answerCells,
   mainScreenParams,
   setAnswerMatrixSize,
   setLevelGrid,
   setAudioState,
-  setAudioVolume
+  setAudioVolume,
+  setTheme
 };
