@@ -94,6 +94,7 @@
     background-color: var(--second-color-light);
     border: var(--border-menu);
     border-radius: 14px;
+    transition: background-color 0.15s ease-in-out;
     cursor: pointer;
 }
 
@@ -103,7 +104,8 @@
     background-color: var(--first-green-light);
 }
 
-.save__button_text {
+.save__button_text,
+.repeat__button_text {
     color: inherit;
 }
 
