@@ -347,19 +347,38 @@
     /*noinspection CssInvalidFunction*/
     right: anchor(--game-section-anchor right);
     width: 400px;
+    height: 254px;
     padding: 8px;
     border: var(--border-menu);
     border-radius: 14px 0 0 14px;
     background-color: var(--second-color-light);
-    transition-delay: 1s;
-    transition-duration: 0.5s;
-    transition-property: width;
-    transition-timing-function: ease-in-out;
+    animation-name: hideSidebar;
+    animation-delay: 0.1s;
+    animation-duration: 0.35s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    pointer-events: all;
 }
 
 .sidebar__active {
     transition-delay: 0s;
     width: 400px;
+@keyframes hideSidebar {
+    0% {
+        display: flex;
+        width: 400px;
+    }
+
+    70% {
+        display: none;
+    }
+
+    100% {
+        width: 0;
+        display: none;
+    }
+}
+
 }
 
 .sidebar__container {
