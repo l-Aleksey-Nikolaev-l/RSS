@@ -10,12 +10,30 @@ import { Puzzle } from './puzzle_logic.js';
 import { Table } from './ui_components/table.js';
 import { Sidebar } from './ui_components/sidebar.js';
 
+const overlay = document.getElementsByClassName('overlay');
+const sidebar = document.getElementsByClassName('sidebar');
+const table = document.getElementsByClassName('nonograms__table');
+
+let isOverlayShown = false;
 let currentCell = null;
 let prevCell = null;
 
 function mouseButtonUp() {
   currentCell = null;
   prevCell = null;
+}
+
+function manageHeader(event) {
+  const levelId = event.target.dataset.levelId;
+  const buttonId = event.target.dataset.id;
+
+  if (levelId) {
+    setGameLevel(event, table[0]);
+  }
+
+  if (buttonId === 'settings') {
+    toggleSidebar(event);
+  }
 }
 
 function toggleSidebar() {
@@ -128,6 +146,7 @@ function showPopUp() {
 export {
   mouseButtonUp,
   toggleSidebar,
+  manageHeader,
   setCellStatus,
   setGameLevel,
   getPuzzleNameLevel
