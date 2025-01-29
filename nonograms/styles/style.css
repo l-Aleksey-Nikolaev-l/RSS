@@ -693,8 +693,25 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--third-color-light);
-    pointer-events: none;
+    background-color: transparent;
+    animation-duration: 0.25s;
+    animation-name: hideOverlay;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    z-index: 1;
+}
+
+@keyframes hideOverlay {
+    0% {
+        display: block;
+        background-color: var(--third-color-light);
+    }
+
+    100% {
+        display: none;
+        background-color: transparent;
+    }
 }
 
 @media (hover: hover) {
