@@ -17,6 +17,11 @@ function mouseButtonUp() {
   prevCell = null;
 }
 
+function toggleSidebar() {
+  const sidebar = document.getElementsByClassName('sidebar');
+  sidebar[0].classList.toggle('sidebar__active');
+}
+
 function setGameLevel(event, table) {
   resetTimer();
   const levelId = event.target.dataset.levelId;
@@ -115,6 +120,7 @@ function showPopUp() {
 
 export {
   mouseButtonUp,
+  toggleSidebar,
   setCellStatus,
   setGameLevel,
   getPuzzleNameLevel
