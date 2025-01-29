@@ -9,6 +9,7 @@ import { resetTimer, startTimer, stopTimer } from './timer.js';
 import { Puzzle } from './puzzle_logic.js';
 import { Table } from './ui_components/table.js';
 import { Sidebar } from './ui_components/sidebar.js';
+import { startSidebarListeners } from './listeners.js';
 
 const overlay = document.getElementsByClassName('overlay');
 const sidebar = document.getElementsByClassName('sidebar');
@@ -59,6 +60,7 @@ function toggleSidebar() {
     const gameSection = document.getElementsByClassName('game__section');
     const newSidebar = new Sidebar().createSidebar();
     gameSection[0].append(newSidebar);
+    startSidebarListeners();
     return;
   }
   sidebar[0].classList.toggle('sidebar__active');
@@ -160,11 +162,25 @@ function showPopUp() {
   console.log('Win!');
 }
 
+function sidebarSettings(event) {
+
+  const inputType = event.target.type;
+  console.dir(event.target);
+  if (inputType === 'checkbox') {
+    const state = event.target.checked;
+
+  } else if (inputType === 'range') {
+    const value = event.target.value;
+  }
+
+}
+
 export {
   mouseButtonUp,
   toggleSidebar,
   manageHeader,
   setCellStatus,
   setGameLevel,
-  getPuzzleNameLevel
+  getPuzzleNameLevel,
+  sidebarSettings
 };
