@@ -1,11 +1,10 @@
-const levelsMenu = document.getElementsByClassName('level__menu');
+const header = document.getElementsByClassName('header');
 const table = document.getElementsByClassName('nonograms__table');
-import { setGameLevel, setCellStatus, mouseButtonUp } from './game_logic.js';
+
+import { manageHeader ,setCellStatus, mouseButtonUp } from './game_logic.js';
 
 function startListeners() {
-  levelsMenu[0].addEventListener('click', (event) => {
-    setGameLevel(event, table[0]);
-  });
+  header[0].addEventListener('click', manageHeader);
 
   table[0].addEventListener('mousedown', setCellStatus);
 
