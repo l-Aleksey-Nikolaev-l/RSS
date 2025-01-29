@@ -361,8 +361,18 @@
 }
 
 .sidebar__active {
-    transition-delay: 0s;
-    width: 400px;
+    display: flex;
+    width: 0;
+    padding: 8px;
+    border: var(--border-menu);
+    animation-name: showSidebar;
+    animation-delay: 0s;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    z-index: 1;
+}
+
 @keyframes hideSidebar {
     0% {
         display: flex;
@@ -379,6 +389,16 @@
     }
 }
 
+@keyframes showSidebar {
+    0% {
+        display: none;
+        width: 0;
+    }
+
+    100% {
+        display: flex;
+        width: 400px;
+    }
 }
 
 .sidebar__container {
