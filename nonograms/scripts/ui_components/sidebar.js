@@ -144,8 +144,8 @@ class Sidebar {
     const rangeSetting = document.createElement('input');
     rangeSetting.classList.add('audio__volume');
     rangeSetting.type = 'range';
-    rangeSetting.id = `audio__${args.name}__setting`;
-    rangeSetting.name = `audio__${args.name}__setting`;
+    rangeSetting.id = `${args.name}__volume`;
+    rangeSetting.name = `${args.name}__volume`;
     rangeSetting.min = '0';
     rangeSetting.max = '1';
     rangeSetting.step = '0.1';
