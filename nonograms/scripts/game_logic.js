@@ -34,12 +34,23 @@ function manageHeader(event) {
 
   if (buttonId === 'settings') {
     toggleSidebar(event);
+    isOverlayShown ? removeOverlay() : setOverlay();
   }
 }
 
 function setOverlay() {
   isOverlayShown = true;
   overlay[0].style.display = 'block';
+  overlay[0].addEventListener('click', removeOverlay);
+  table[0].addEventListener('mousemove', removeOverlay);
+}
+
+function removeOverlay() {
+  isOverlayShown = false;
+  sidebar[0]?.classList.remove('sidebar__active');
+  overlay[0].style.removeProperty('display');
+  overlay[0].removeEventListener('click', removeOverlay);
+  table[0].removeEventListener('mousemove', removeOverlay);
 }
 
 function toggleSidebar() {
