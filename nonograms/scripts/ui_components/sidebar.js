@@ -6,7 +6,8 @@ import {
   effectCrossState,
   effectCrossVolume,
   effectEraseState,
-  effectEraseVolume
+  effectEraseVolume,
+  isDarkTheme
 } from '../variables.js';
 
 class Sidebar {
@@ -20,6 +21,7 @@ class Sidebar {
     this.effectCrossVolume = effectCrossVolume;
     this.effectEraseState = effectEraseState;
     this.effectEraseVolum = effectEraseVolume;
+    this.isDarkTheme = isDarkTheme;
   }
 
   #createContainer(name) {
@@ -70,6 +72,31 @@ class Sidebar {
       eraseEffectSetting
     );
     return audioContainer;
+  }
+
+  #createThemeSettings() {
+    const themesContainer = this.#createContainer('themes');
+    const switchContainer = this.#createContainer('themes__switch');
+    const containerTitle = document.createElement('p');
+    containerTitle.classList.add('theme__container__title');
+    containerTitle.textContent = 'Themes';
+    const leftText = document.createElement('p');
+    leftText.textContent = 'Light';
+    const rightText = document.createElement('p');
+    rightText.textContent = 'Dark';
+    const switchLabel = document.createElement('label');
+    switchLabel.classList.add('themes__switch_label');
+    const themeSwitch = document.createElement('input');
+    themeSwitch.classList.add('themes__switch');
+    themeSwitch.type = 'checkbox';
+    themeSwitch.id = 'themes__switch';
+    themeSwitch.checked = this.isDarkTheme;
+    const span = document.createElement('span');
+    span.classList.add('switch__slider', 'switch__round');
+    switchLabel.append(themeSwitch, span);
+    switchContainer.append(leftText, switchLabel, rightText);
+    themesContainer.append(containerTitle, switchContainer);
+    return themesContainer;
   }
 
   #createAudioSetting(args) {
@@ -144,9 +171,10 @@ class Sidebar {
     const sidebar = document.createElement('div');
     sidebar.classList.add('sidebar', 'sidebar__active');
     const sidebarContainer = this.#createContainer('sidebar');
+    const themeSetting = this.#createThemeSettings();
     const audioSettings = this.#createAudioSettings();
     const bestTime = this.#createBestTimeTable();
-    sidebarContainer.append(audioSettings, bestTime);
+    sidebarContainer.append(themeSetting ,audioSettings, bestTime);
     sidebar.append(sidebarContainer);
     return sidebar;
   }
