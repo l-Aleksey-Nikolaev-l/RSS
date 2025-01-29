@@ -107,25 +107,7 @@
 .save__button_text,
 .repeat__button_text {
     color: inherit;
-}
-
-.header__button:hover {
-    background-color: var(--hover-green-light)
-}
-
-.header__button:active {
-    color: var(--third-gray-light);
-    background-color: var(--active-green-light);
-}
-
-.save_button:hover {
-    color: var(--first-color-light);
-    background-color: var(--second-green-light);
-}
-
-.save_button:active {
-    color: var(--first-color-light);
-    background-color: var(--third-green-light);
+    pointer-events: none;
 }
 
 .random__button_text {
@@ -137,11 +119,7 @@
     mask-size: cover;
     transform: rotateX(0);
     transition: transform 0.2s ease-in-out;
-}
-
-.header__button:hover .random__button_text {
-    transform: rotateX(180deg);
-    transition: transform 0.2s ease-in-out;
+    pointer-events: none;
 }
 
 .settings__button_text {
@@ -153,11 +131,7 @@
     mask-size: cover;
     transform: rotateZ(0);
     transition: transform 0.2s ease-in-out;
-}
-
-.header__button:hover .settings__button_text {
-    transform: rotateZ(45deg);
-    transition: transform 0.2s ease-in-out;
+    pointer-events: none;
 }
 
 .level__menu * {
@@ -614,18 +588,6 @@
             background-color 0.05s ease-in-out;
 }
 
-.show__answer:hover {
-    border: var(--border-menu);
-    color: var(--third-gray-light);
-    background-color: var(--hover-green-light);
-}
-
-.show__answer:active {
-    border: var(--border-thin);
-    color: var(--second-color-light);
-    background-color: var(--fourth-color-light);
-}
-
 .fill {
     background-color: var(--fourth-color-light);
 }
@@ -662,8 +624,31 @@
     pointer-events: none;
 }
 
-@media (hover: hover){
-    .field__cell:hover:not(.fill) {
-        background-color: var(--third-color-light);
+@media (hover: hover) {
+    .header__button:hover {
+        background-color: var(--hover-green-light);
+        transition: background-color 0.15s ease-in-out;
+    }
+
+    .header__button:hover .random__button_text {
+        transform: rotateX(180deg);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .header__button:hover .settings__button_text {
+        transform: rotateZ(45deg);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .save_button:hover {
+        color: var(--first-color-light);
+        background-color: var(--second-green-light);
+    }
+
+    .show__answer:hover {
+        border: var(--border-menu);
+        color: var(--third-gray-light);
+        background-color: var(--hover-green-light);
+        transition: background-color 0.15s ease-in-out;
     }
 }
