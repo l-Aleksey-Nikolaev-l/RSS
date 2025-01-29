@@ -1,28 +1,30 @@
 :root {
-    --first-color-light: rgb(242, 242, 242);
-    --second-color-light: rgba(251, 242, 242, 0.98);
-    --third-color-light: rgba(0, 0, 0, 0.15);
-    --fourth-color-light: rgba(0, 0, 0, 0.85);
 
-    --bg-switch: rgb(224, 224, 224);
 
-    --first-gray-light: rgba(245, 247, 245, 0.3);
-    --second-gray-light: rgba(160, 160, 160, 0.35);
-    --third-gray-light: rgb(68, 63, 65);
-    --fourth-gray-light: rgba(160, 160, 160, 0.5);
+    --light-first-color: rgb(242, 242, 242);
+    --light-second-color: rgba(251, 242, 242, 0.98);
+    --light-third-color: rgba(0, 0, 0, 0.15);
+    --light-fourth-color: rgba(0, 0, 0, 0.85);
 
-    --first-green-light:  rgb(124, 145, 103);
-    --second-green-light: rgb(107, 127, 87);
-    --third-green-light:  rgb(92, 102, 71);
-    --fourth-green-light: rgb(109, 165, 43);
+    --light-bg-switch: rgb(224, 224, 224);
 
-    --hover-green-light: rgb(223, 231, 209);
-    --active-green-light: rgb(214, 221, 200);
+    --light-first-gray: rgba(245, 247, 245, 0.3);
+    --light-second-gray: rgba(160, 160, 160, 0.35);
+    --light-third-gray: rgb(68, 63, 65);
+    --light-fourth-gray: rgba(160, 160, 160, 0.5);
 
-    --border-menu: 1px solid var(--second-gray-light);
-    --border-thin: 1px solid  var(--third-gray-light);
-    --border-thick: 2px solid var(--third-gray-light);
-    --cross: 1px solid  var(--third-gray-light);
+    --light-first-green:  rgb(124, 145, 103);
+    --light-second-green: rgb(107, 127, 87);
+    --light-third-green:  rgb(92, 102, 71);
+    --light-fourth-green: rgb(109, 165, 43);
+
+    --light-hover-green: rgb(223, 231, 209);
+    --light-active-green: rgb(214, 221, 200);
+
+    --border-menu: 1px solid var(--light-second-gray);
+    --border-thin: 1px solid  var(--light-third-gray);
+    --border-thick: 2px solid var(--light-third-gray);
+    --cross: 1px solid  var(--light-third-gray);
 }
 
 * {
@@ -32,7 +34,7 @@
     font-family: Arial, sans-serif;
     font-size: 1rem;
     font-weight: 100;
-    color: var(--third-gray-light);
+    color: var(--light-third-gray);
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -41,7 +43,7 @@
 
 
 .body {
-    background-color: var(--first-color-light);
+    background-color: var(--light-first-color);
     overflow: hidden;
 }
 
@@ -91,9 +93,9 @@
     height: 48px;
     min-width: 48px;
     place-self: center;
-    color: var(--third-gray-light);
+    color: var(--light-third-gray);
     text-align: start;
-    background-color: var(--second-color-light);
+    background-color: var(--light-second-color);
     border: var(--border-menu);
     border-radius: 14px;
     transition: background-color 0.15s ease-in-out;
@@ -102,8 +104,8 @@
 
 .save_button {
     width: fit-content;
-    color: var(--first-color-light);
-    background-color: var(--first-green-light);
+    color: var(--light-first-color);
+    background-color: var(--light-first-green);
 }
 
 .save__button_text,
@@ -116,7 +118,7 @@
     position: absolute;
     height: 20px;
     width: 20px;
-    background-color: var(--third-gray-light);
+    background-color: var(--light-third-gray);
     mask: url('../assets/images/icons/random.svg') no-repeat;
     mask-size: cover;
     transform: rotateX(0);
@@ -128,7 +130,7 @@
     position: absolute;
     height: 20px;
     width: 20px;
-    background-color: var(--third-gray-light);
+    background-color: var(--light-third-gray);
     mask: url('../assets/images/icons/settings.svg') no-repeat;
     mask-size: cover;
     transform: rotateZ(0);
@@ -176,8 +178,8 @@
     text-decoration: none;
     font-size: 1rem;
     line-height: 48px;
-    color: var(--third-gray-light);
-    background-color: var(--second-color-light);
+    color: var(--light-third-gray);
+    background-color: var(--light-second-color);
     border: var(--border-menu);
     border-radius: 14px;
 }
@@ -186,9 +188,9 @@
 .level__image {
     padding: 16px 20px;
     line-height: 150%;
-    color: var(--third-gray-light);
+    color: var(--light-third-gray);
     border-top: var(--border-menu);
-    background-color: var(--second-color-light);
+    background-color: var(--light-second-color);
 }
 
 .level__item {
@@ -219,8 +221,8 @@
 
 .level__menu_item:hover {
     display: block;
-    background-color: var(--second-color-light);
-    border-bottom: 2px solid var(--second-color-light);
+    background-color: var(--light-second-color);
+    border-bottom: 2px solid var(--light-second-color);
     cursor: default;
     animation-name: levelsButton;
     animation-fill-mode: forwards;
@@ -284,13 +286,13 @@
 }
 
 .level__image:hover {
-    color: var(--fourth-color-light);
-    background-color: var(--hover-green-light);
+    color: var(--light-fourth-color);
+    background-color: var(--light-hover-green);
 }
 
 .level__item:hover {
-    color: var(--fourth-color-light);
-    background-color: var(--hover-green-light);
+    color: var(--light-fourth-color);
+    background-color: var(--light-hover-green);
 }
 
 .level__menu_text {
@@ -311,7 +313,7 @@
     font-size: 36px;
     line-height: 0;
     letter-spacing: 0;
-    background-color: var(--third-gray-light);
+    background-color: var(--light-third-gray);
     mask: url('../assets/images/icons/chevron_down.svg') no-repeat;
     mask-size: cover;
     transform: rotateX(0deg);
@@ -354,7 +356,7 @@
     padding: 8px;
     border: var(--border-menu);
     border-radius: 14px 0 0 14px;
-    background-color: var(--second-color-light);
+    background-color: var(--light-second-color);
     animation-name: hideSidebar;
     animation-delay: 0.1s;
     animation-duration: 0.35s;
@@ -485,7 +487,7 @@
     justify-content: start;
     align-items: center;
     padding: 0 8px;
-    background-color: var(--second-color-light);
+    background-color: var(--light-second-color);
 }
 
 .theme__container__title {
@@ -537,8 +539,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border: 1px solid var(--bg-switch);
-    background-color: var(--bg-switch);
+    border: 1px solid var(--light-bg-switch);
+    background-color: var(--light-bg-switch);
     transition: 0.4s;
     cursor: pointer;
 }
@@ -548,13 +550,13 @@
     content: '';
     width: 10px;
     height: 10px;
-    border: 2px solid var(--first-green-light);
-    background-color: var(--first-color-light);
+    border: 2px solid var(--light-first-green);
+    background-color: var(--light-first-color);
     transition: 0.4s ease-in-out;
 }
 
 .themes__switch:checked + .switch__slider {
-    background-color: var(--first-green-light);
+    background-color: var(--light-first-green);
 }
 
 .themes__switch:checked + .switch__slider:before {
@@ -592,14 +594,14 @@
     content: '';
     width: 14px;
     height: 14px;
-    background-color: var(--fourth-gray-light);
+    background-color: var(--light-fourth-gray);
     mask: url('../assets/images/icons/unchecked.svg') no-repeat;
     mask-size: cover;
 }
 
 .audio__checkbox:checked:after {
     content: '';
-    background-color: var(--fourth-green-light);
+    background-color: var(--light-fourth-green);
     mask: url('../assets/images/icons/checked.svg') no-repeat;
     mask-size: cover;
 }
@@ -619,7 +621,7 @@
 
 .audio__volume::-webkit-slider-runnable-track {
     height: 14px;
-    background-color: var(--second-gray-light);
+    background-color: var(--light-second-gray);
     border-radius: 7px;
 }
 
@@ -627,17 +629,17 @@
     -webkit-appearance: none;
     width: 14px;
     height: 14px;
-    border: 2px solid var(--first-green-light);
+    border: 2px solid var(--light-first-green);
     border-radius: 7px;
-    background-color: var(--first-color-light);
-    box-shadow: -62px 0 0 56px var(--first-green-light);
+    background-color: var(--light-first-color);
+    box-shadow: -62px 0 0 56px var(--light-first-green);
     cursor: pointer;
 }
 
 .time__table {
     width: 100%;
     border-collapse: collapse;
-    background-color: var(--second-color-light);
+    background-color: var(--light-second-color);
     border-radius: 4px;
     text-align: center;
 }
@@ -665,7 +667,7 @@
 .nonograms__table {
     display: block;
     border-collapse: collapse;
-    background-color: var(--second-color-light);
+    background-color: var(--light-second-color);
     padding: 36px;
     border: var(--border-thick);
     border-radius: 14px;
@@ -746,8 +748,8 @@
     padding: 4px 8px;
     border-radius: 4px;
     cursor: pointer;
-    color: var(--third-color-light);
-    background-color: var(--first-gray-light);
+    color: var(--light-third-color);
+    background-color: var(--light-first-gray);
     transition:
             border 0.15s ease-in-out,
             color 0.15s ease-in-out,
@@ -755,7 +757,7 @@
 }
 
 .fill {
-    background-color: var(--fourth-color-light);
+    background-color: var(--light-fourth-color);
 }
 
 .cross:before,
@@ -811,7 +813,7 @@
 @keyframes hideOverlay {
     0% {
         display: block;
-        background-color: var(--third-color-light);
+        background-color: var(--light-third-color);
     }
 
     100% {
@@ -828,7 +830,7 @@
 
     100% {
         display: block;
-        background-color: var(--third-color-light);
+        background-color: var(--light-third-color);
     }
 }
 
@@ -842,7 +844,7 @@
 
 @media (hover: hover) {
     .header__button:hover {
-        background-color: var(--hover-green-light);
+        background-color: var(--light-hover-green);
         transition: background-color 0.15s ease-in-out;
     }
 
@@ -857,14 +859,14 @@
     }
 
     .save_button:hover {
-        color: var(--first-color-light);
-        background-color: var(--second-green-light);
+        color: var(--light-first-color);
+        background-color: var(--light-second-green);
     }
 
     .show__answer:hover {
         border: var(--border-menu);
-        color: var(--third-gray-light);
-        background-color: var(--hover-green-light);
+        color: var(--light-third-gray);
+        background-color: var(--light-hover-green);
         transition: background-color 0.15s ease-in-out;
     }
 
@@ -874,25 +876,25 @@
 }
 
 .header__button:active {
-    color: var(--second-color-light);
-    background-color: var(--third-green-light);
+    color: var(--light-second-color);
+    background-color: var(--light-third-green);
 }
 
 .save_button:active {
-    color: var(--first-color-light);
-    background-color: var(--third-green-light);
+    color: var(--light-first-color);
+    background-color: var(--light-third-green);
 }
 
 .level__image:active {
-    background-color: var(--active-green-light);
+    background-color: var(--light-active-green);
 }
 
 .show__answer:active {
     border: var(--border-menu);
-    color: var(--second-color-light);
-    background-color: var(--third-green-light);
+    color: var(--light-second-color);
+    background-color: var(--light-third-green);
 }
 
 .header__button:active :where(.random__button_text, .settings__button_text) {
-    background-color: var(--second-color-light);
+    background-color: var(--light-second-color);
 }
