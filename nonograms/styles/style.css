@@ -350,7 +350,7 @@
     /*noinspection CssInvalidFunction*/
     right: anchor(--game-section-anchor right);
     width: 400px;
-    height: 338px;
+    height: 100%;
     padding: 8px;
     border: var(--border-menu);
     border-radius: 14px 0 0 14px;
