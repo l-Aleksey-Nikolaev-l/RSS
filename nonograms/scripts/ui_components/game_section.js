@@ -20,8 +20,7 @@ class GameSection {
     const gameSection = document.createElement('section');
     gameSection.classList.add('game__section');
     const table = this.table.createTable();
-    const sidebar = this.sidebar.createSidebar();
-    gameSection.append(table, sidebar);
+    gameSection.append(table);
     return gameSection;
   }
 
