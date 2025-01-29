@@ -33,7 +33,7 @@ class Sidebar {
   #createAudioSettings() {
     const audioContainer = this.#createContainer('audio');
     const containerTitle = document.createElement('p');
-    containerTitle.classList.add('settings__container__title');
+    containerTitle.classList.add('audio__container__title');
     containerTitle.textContent = 'Audio';
     const musicSet = {
       name: 'music',
