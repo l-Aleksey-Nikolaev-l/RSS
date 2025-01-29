@@ -10,9 +10,9 @@ class MainScreen {
     this.footerSection = new Footer();
   }
 
-  #createMainContainer() {
-    const main = document.createElement('main');
-    main.classList.add('main');
+  #createContainer(name) {
+    const main = document.createElement(name);
+    main.classList.add(name);
     return main;
   }
 
