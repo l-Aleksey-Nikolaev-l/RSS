@@ -3,7 +3,7 @@ import {
   answerCells,
   setLevelGrid,
   mainScreenParams,
-  setTheme,
+  setThemeState,
   setAudioState,
   setAudioVolume
 } from './variables.js';
@@ -170,7 +170,7 @@ function sidebarSettings(event) {
   const inputId = event.target.id;
   if (inputType === 'checkbox' && inputId === 'themes__switch') {
     const state = event.target.checked;
-    setTheme(state);
+    setThemeState(state);
   } else if (inputType === 'checkbox') {
     const state = event.target.checked;
     setAudioState(inputId, state);

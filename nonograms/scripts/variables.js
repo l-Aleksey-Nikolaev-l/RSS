@@ -89,7 +89,7 @@ function setAudioVolume(audio, value) {
   }
 }
 
-function setTheme(state) {
+function setThemeState(state) {
   isDarkTheme = state;
 }
 
@@ -113,5 +113,5 @@ export {
   setLevelGrid,
   setAudioState,
   setAudioVolume,
-  setTheme
+  setThemeState
 };
