@@ -2,7 +2,10 @@ import {
   currentLevelId,
   answerCells,
   setLevelGrid,
-  mainScreenParams
+  mainScreenParams,
+  setTheme,
+  setAudioState,
+  setAudioVolume
 } from './variables.js';
 import { pictures } from './pictures.js';
 import { resetTimer, startTimer, stopTimer } from './timer.js';
@@ -163,16 +166,18 @@ function showPopUp() {
 }
 
 function sidebarSettings(event) {
-
   const inputType = event.target.type;
-  console.dir(event.target);
-  if (inputType === 'checkbox') {
+  const inputId = event.target.id;
+  if (inputType === 'checkbox' && inputId === 'themes__switch') {
     const state = event.target.checked;
-
+    setTheme(state);
+  } else if (inputType === 'checkbox') {
+    const state = event.target.checked;
+    setAudioState(inputId, state);
   } else if (inputType === 'range') {
     const value = event.target.value;
+    setAudioVolume(inputId, value);
   }
-
 }
 
 export {
