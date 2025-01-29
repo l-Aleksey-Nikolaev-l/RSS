@@ -1,4 +1,5 @@
 import { gridSize, setAnswerMatrixSize } from '../variables.js';
+import { getPuzzleNameLevel } from '../game_logic.js';
 
 class Table {
 
@@ -11,11 +12,7 @@ class Table {
 
   createTable() {
     const table = document.createElement('table');
-    const caption = document.createElement('caption');
     table.classList.add('nonograms__table');
-    caption.classList.add('table__caption');
-    caption.textContent = '00:00';
-    table.append(caption);
     return this.createTableGrid(table);
   }
 
@@ -23,9 +20,24 @@ class Table {
     if (!newTable) {
       return;
     }
+    const newCaption = this.#createTableCaption();
+    newTable.append(newCaption);
     this.#addTopTips(newTable);
     this.#addRows(newTable);
     return newTable;
+  }
+
+  #createTableCaption() {
+    const caption = document.createElement('caption');
+    caption.classList.add('table__caption');
+    const puzzleNameLevel = document.createElement('p');
+    puzzleNameLevel.classList.add('puzzle__name_level');
+    puzzleNameLevel.textContent = getPuzzleNameLevel();
+    const spendTime = document.createElement('p');
+    spendTime.classList.add('puzzle__spend_time');
+    spendTime.textContent = '00:00';
+    caption.append(puzzleNameLevel, spendTime);
+    return caption;
   }
 
   #addTopTips(table) {
@@ -70,8 +82,6 @@ class Table {
       table.append(tr);
     }
   }
-
-
 }
 
 export {
