@@ -1,7 +1,17 @@
+import {
+  manageHeader,
+  setCellStatus,
+  mouseButtonUp,
+  sidebarSettings
+} from './game_logic.js';
+
 const header = document.getElementsByClassName('header');
+const sidebar = document.getElementsByClassName('sidebar');
 const table = document.getElementsByClassName('nonograms__table');
 
-import { manageHeader ,setCellStatus, mouseButtonUp } from './game_logic.js';
+function startSidebarListeners() {
+  sidebar[0].addEventListener('input', sidebarSettings);
+}
 
 function startListeners() {
   header[0].addEventListener('click', manageHeader);
@@ -16,5 +26,6 @@ function startListeners() {
 }
 
 export {
-  startListeners
+  startListeners,
+  startSidebarListeners
 };
