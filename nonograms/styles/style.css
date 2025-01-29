@@ -513,7 +513,7 @@
 }
 
 .themes__switch__container {
-    /*display: flex;*/
+    display: flex;
     flex-direction: row;
     column-gap: 8px;
 }
