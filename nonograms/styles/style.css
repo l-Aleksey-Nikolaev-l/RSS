@@ -658,9 +658,9 @@
     color: var(--third-color-light);
     background-color: var(--first-gray-light);
     transition:
-            border 0.05s ease-in-out,
-            color 0.05s ease-in-out,
-            background-color 0.05s ease-in-out;
+            border 0.15s ease-in-out,
+            color 0.15s ease-in-out,
+            background-color 0.15s ease-in-out;
 }
 
 .fill {
