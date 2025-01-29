@@ -5,6 +5,7 @@ class Button {
   createButton(buttonName, buttonText = '') {
     const button = document.createElement('button');
     button.classList.add('header__button', `${buttonName}_button`);
+    button.setAttribute('data-id', buttonName);
     const buttonSpan = document.createElement('span');
     buttonSpan.classList.add(`${buttonName}__button_text`);
     buttonSpan.textContent = buttonText;
