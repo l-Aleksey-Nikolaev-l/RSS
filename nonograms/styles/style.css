@@ -451,6 +451,67 @@
     }
 }
 
+.themes__container,
+.audio__container,
+.best__time__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding: 18px 14px;
+    border: var(--border-menu);
+    border-radius: 8px;
+}
+
+.themes__container {
+    flex-direction: row;
+    justify-content: right;
+    anchor-name: --theme-anchor;
+}
+
+.audio__container {
+    anchor-name: --audio-anchor;
+}
+
+.best__time__container {
+    anchor-name: --time-anchor;
+}
+
+.theme__container__title,
+.audio__container__title,
+.time__container__title {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 0 8px;
+    background-color: var(--second-color-light);
+}
+
+.theme__container__title {
+    position-anchor: --theme-anchor;
+    /*noinspection CssInvalidFunction*/
+    top: calc(anchor(--theme-anchor top) - 8px);
+    /*noinspection CssInvalidFunction*/
+    left: calc(anchor(--theme-anchor left) + 18px);
+}
+
+.audio__container__title {
+    position-anchor: --audio-anchor;
+    /*noinspection CssInvalidFunction*/
+    top: calc(anchor(--audio-anchor top) - 8px);
+    /*noinspection CssInvalidFunction*/
+    left: calc(anchor(--audio-anchor left) + 18px);
+}
+
+.time__container__title {
+    position-anchor: --time-anchor;
+    /*noinspection CssInvalidFunction*/
+    top: calc(anchor(--time-anchor top) - 8px);
+    /*noinspection CssInvalidFunction*/
+    left: calc(anchor(--time-anchor left) + 18px);
+}
+
 .themes__switch__container {
     /*display: flex;*/
     flex-direction: row;
@@ -571,25 +632,6 @@
     background-color: var(--first-color-light);
     box-shadow: -62px 0 0 56px var(--first-green-light);
     cursor: pointer;
-}
-
-.settings__container__title,
-.time__container__title {
-    position: absolute;
-    top: 13px;
-    left: 44px;
-    padding: 0 8px;
-    background-color: var(--second-color-light);
-}
-
-.best__time__container {
-    flex-direction: column;
-    justify-content: start;
-    padding: 18px 14px 12px 14px;
-}
-
-.time__container__title {
-    top: 171px;
 }
 
 .time__table {
