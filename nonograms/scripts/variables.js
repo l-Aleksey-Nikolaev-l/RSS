@@ -48,43 +48,43 @@ function fillAnswerArray(size) {
 }
 
 function setAudioState(audio, state) {
-  if (audio === 'music') {
+  if (audio === 'music__play') {
     musicState = state;
   }
 
-  if (audio === 'fill') {
+  if (audio === 'fill__play') {
     effectFillState = state;
   }
-  if (audio === 'cross') {
+  if (audio === 'cross__play') {
     effectCrossState = state;
   }
 
-  if (audio === 'erase') {
+  if (audio === 'erase__play') {
     effectEraseState = state;
   }
 
-  if (audio === 'popup') {
+  if (audio === 'popup__play') {
     effectPopupState = state;
   }
 }
 
 function setAudioVolume(audio, value) {
-  if (audio === 'music') {
+  if (audio === 'music__volume') {
     musicVolume = value;
   }
 
-  if (audio === 'fill') {
+  if (audio === 'fill__volume') {
     effectFillVolume = value;
   }
-  if (audio === 'cross') {
+  if (audio === 'cross__volume') {
     effectCrossVolume = value;
   }
 
-  if (audio === 'erase') {
+  if (audio === 'erase__volume') {
     effectEraseVolume = value;
   }
 
-  if (audio === 'popup') {
+  if (audio === 'popup__volume') {
     effectPopupVolume = value;
   }
 }
