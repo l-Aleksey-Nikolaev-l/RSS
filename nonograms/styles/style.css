@@ -291,10 +291,6 @@
     background-color: var(--hover-green-light);
 }
 
-.level__image:active {
-    background-color: var(--active-green-light);
-}
-
 .level__menu_text {
     display: block;
     width: 60%;
@@ -651,4 +647,32 @@
         background-color: var(--hover-green-light);
         transition: background-color 0.15s ease-in-out;
     }
+
+    .body:has(.level__image:hover) .level__menu_item {
+        pointer-events: all;
+    }
+}
+
+.header__button:active {
+    color: var(--second-color-light);
+    background-color: var(--third-green-light);
+}
+
+.save_button:active {
+    color: var(--first-color-light);
+    background-color: var(--third-green-light);
+}
+
+.level__image:active {
+    background-color: var(--active-green-light);
+}
+
+.show__answer:active {
+    border: var(--border-menu);
+    color: var(--second-color-light);
+    background-color: var(--third-green-light);
+}
+
+.header__button:active :where(.random__button_text, .settings__button_text) {
+    background-color: var(--second-color-light);
 }
