@@ -142,7 +142,7 @@ class Sidebar {
 
   createSidebar() {
     const sidebar = document.createElement('div');
-    sidebar.classList.add('sidebar');
+    sidebar.classList.add('sidebar', 'sidebar__active');
     const sidebarContainer = this.#createContainer('sidebar');
     const audioSettings = this.#createAudioSettings();
     const bestTime = this.#createBestTimeTable();
