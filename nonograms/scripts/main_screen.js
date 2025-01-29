@@ -17,11 +17,12 @@ class MainScreen {
   }
 
   createMainScreen() {
-    const mainContainer = this.#createMainContainer();
+    const mainContainer = this.#createContainer('main');
+    const overlay = this.#createContainer('overlay');
     const header = this.headerSection.createHeaderSection();
     const game = this.gameSection.createGameSection();
     const footer = this.footerSection.createFooterSection();
-    mainContainer.append(header, game, footer);
+    mainContainer.append(overlay, header, game, footer);
     return mainContainer;
   }
 }
