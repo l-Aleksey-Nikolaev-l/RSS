@@ -302,12 +302,12 @@
 }
 
 .level__image:hover {
-    color: var(--third-color-light);
+    color: var(--fourth-color-light);
     background-color: var(--hover-green-light);
 }
 
 .level__item:hover {
-    color: var(--third-color-light);
+    color: var(--fourth-color-light);
     background-color: var(--hover-green-light);
 }
 
