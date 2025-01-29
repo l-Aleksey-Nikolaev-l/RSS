@@ -416,6 +416,16 @@
     animation-timing-function: ease-in-out;
 }
 
+.sidebar__active .sidebar__container {
+    display: flex;
+    opacity: 0;
+    animation-name: showSideContainer;
+    animation-delay: 0.15s;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
 @keyframes hideSideContainer {
     0% {
         opacity: 1;
@@ -427,6 +437,16 @@
     }
 }
 
+@keyframes showSideContainer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        display: flex;
+        opacity: 1;
+    }
+}
 
 .audio__container,
 .best__time__container {
