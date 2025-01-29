@@ -4,10 +4,12 @@ let musicState = false;
 let effectFillState = true;
 let effectCrossState = true;
 let effectEraseState = true;
+let effectPopupState = true;
 let musicVolume = 0.2;
 let effectFillVolume = 0.2;
 let effectCrossVolume = 0.2;
 let effectEraseVolume = 0.2;
+let effectPopupVolume = 0.2;
 
 let currentLevelId = 0;
 let gridSize = 5;
@@ -60,6 +62,10 @@ function setAudioState(audio, state) {
   if (audio === 'erase') {
     effectEraseState = state;
   }
+
+  if (audio === 'popup') {
+    effectPopupState = state;
+  }
 }
 
 function setAudioVolume(audio, value) {
@@ -77,6 +83,10 @@ function setAudioVolume(audio, value) {
   if (audio === 'erase') {
     effectEraseVolume = value;
   }
+
+  if (audio === 'popup') {
+    effectPopupVolume = value;
+  }
 }
 
 function setTheme(state) {
@@ -92,6 +102,8 @@ export {
   effectCrossVolume,
   effectEraseState,
   effectEraseVolume,
+  effectPopupState,
+  effectPopupVolume,
   currentLevelId,
   gridSize,
   isDarkTheme,
