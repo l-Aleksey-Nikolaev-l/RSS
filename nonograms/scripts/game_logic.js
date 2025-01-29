@@ -22,10 +22,11 @@ function setGameLevel(event, table) {
   const levelId = event.target.dataset.levelId;
   if (levelId) {
     setLevelGrid(levelId);
-    const newGrid = new Table(mainScreenParams());
+    table.deleteCaption();
     while (table.rows.length) {
       table.deleteRow(0);
     }
+    const newGrid = new Table(mainScreenParams());
     newGrid.createTableGrid(table);
   }
 }
