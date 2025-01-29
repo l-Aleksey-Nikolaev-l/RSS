@@ -296,6 +296,7 @@
     width: 60%;
     text-align: start;
     place-self: center;
+    pointer-events: none;
 }
 
 .level__menu_text:after {
