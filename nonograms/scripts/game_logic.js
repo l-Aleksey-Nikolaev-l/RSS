@@ -29,11 +29,17 @@ function manageHeader(event) {
 
   if (levelId) {
     setGameLevel(event, table[0]);
+    !isOverlayShown ? setOverlay() : null;
   }
 
   if (buttonId === 'settings') {
     toggleSidebar(event);
   }
+}
+
+function setOverlay() {
+  isOverlayShown = true;
+  overlay[0].style.display = 'block';
 }
 
 function toggleSidebar() {
