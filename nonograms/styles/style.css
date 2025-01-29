@@ -611,23 +611,24 @@
 
 .audio__volume {
     -webkit-appearance: none;
-    border-radius: 7px;
+    height: 16px;
+    border-radius: 8px;
     border: var(--border-menu);
     overflow: hidden;
 }
 
 .audio__volume::-webkit-slider-runnable-track {
-    height: 12px;
-    background: var(--second-gray-light);
+    height: 14px;
+    background-color: var(--second-gray-light);
     border-radius: 7px;
 }
 
 .audio__volume::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border: 2px solid var(--first-green-light);
-    border-radius: 6px;
+    border-radius: 7px;
     background-color: var(--first-color-light);
     box-shadow: -62px 0 0 56px var(--first-green-light);
     cursor: pointer;
