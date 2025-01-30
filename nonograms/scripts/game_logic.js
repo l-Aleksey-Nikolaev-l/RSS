@@ -112,8 +112,10 @@ function fillTable(picArray) {
   picArray.forEach((value, index) => {
     setTimeout(() => {
       if (value !== 0) {
+        cellsArray[index].classList.remove('cross');
         cellsArray[index].classList.add('fill');
       } else {
+        cellsArray[index].classList.remove('fill');
         cellsArray[index].classList.add('cross');
       }
     }, 30 * index);
