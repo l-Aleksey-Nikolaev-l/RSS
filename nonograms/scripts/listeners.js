@@ -1,5 +1,6 @@
 import {
   manageHeader,
+  solvePuzzle,
   setCellStatus,
   mouseButtonUp,
   sidebarSettings
@@ -15,6 +16,8 @@ function startSidebarListeners() {
 
 function startListeners() {
   header[0].addEventListener('click', manageHeader);
+
+  table[0].addEventListener('click', solvePuzzle);
 
   table[0].addEventListener('mousedown', setCellStatus);
 
