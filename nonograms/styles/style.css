@@ -44,7 +44,7 @@
     font-family: Arial, sans-serif;
     font-size: 1rem;
     font-weight: 100;
-    color: var(--light-third-gray);
+    color: light-dark(var(--light-third-color), var(--light-second-color));
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -111,9 +111,9 @@
     height: 48px;
     min-width: 48px;
     place-self: center;
-    color: var(--light-third-gray);
+    color: light-dark(var(--light-third-gray), var(--dark-third-gray));
     text-align: start;
-    background-color: var(--light-second-color);
+    background-color: light-dark(var(--light-second-color), var(--dark-second-color));
     border: var(--border-menu);
     border-radius: 14px;
     transition: background-color 0.15s ease-in-out;
@@ -136,7 +136,7 @@
     position: absolute;
     height: 20px;
     width: 20px;
-    background-color: var(--light-third-gray);
+    background-color: light-dark(var(--light-third-gray), var(--dark-third-gray));
     mask: url('../assets/images/icons/random.svg') no-repeat;
     mask-size: cover;
     transform: rotateX(0);
@@ -148,7 +148,7 @@
     position: absolute;
     height: 20px;
     width: 20px;
-    background-color: var(--light-third-gray);
+    background-color: light-dark(var(--light-third-gray), var(--dark-third-gray));
     mask: url('../assets/images/icons/settings.svg') no-repeat;
     mask-size: cover;
     transform: rotateZ(0);
@@ -196,8 +196,8 @@
     text-decoration: none;
     font-size: 1rem;
     line-height: 48px;
-    color: var(--light-third-gray);
-    background-color: var(--light-second-color);
+    color: light-dark(var(--light-third-gray), var(--dark-third-gray));
+    background-color: light-dark(var(--light-second-color), var(--dark-second-color));
     border: var(--border-menu);
     border-radius: 14px;
 }
@@ -206,9 +206,9 @@
 .level__image {
     padding: 16px 20px;
     line-height: 150%;
-    color: var(--light-third-gray);
+    color: light-dark(var(--light-third-gray), var(--dark-third-gray));
+    background-color: light-dark(var(--light-second-color), var(--dark-second-color));
     border-top: var(--border-menu);
-    background-color: var(--light-second-color);
 }
 
 .level__item {
@@ -239,8 +239,7 @@
 
 .level__menu_item:hover {
     display: block;
-    background-color: var(--light-second-color);
-    border-bottom: 2px solid var(--light-second-color);
+    border-bottom: 2px solid light-dark(var(--light-second-color), var(--dark-second-color));
     cursor: default;
     animation-name: levelsButton;
     animation-fill-mode: forwards;
@@ -304,12 +303,12 @@
 }
 
 .level__image:hover {
-    color: var(--light-fourth-color);
+    color: var(--light-third-color);
     background-color: var(--light-hover-green);
 }
 
 .level__item:hover {
-    color: var(--light-fourth-color);
+    color: var(--light-third-color);
     background-color: var(--light-hover-green);
 }
 
@@ -331,7 +330,7 @@
     font-size: 36px;
     line-height: 0;
     letter-spacing: 0;
-    background-color: var(--light-third-gray);
+    background-color: light-dark(var(--light-third-gray), var(--dark-third-gray));
     mask: url('../assets/images/icons/chevron_down.svg') no-repeat;
     mask-size: cover;
     transform: rotateX(0deg);
@@ -374,7 +373,7 @@
     padding: 8px;
     border: var(--border-menu);
     border-radius: 14px 0 0 14px;
-    background-color: var(--light-second-color);
+    background-color: light-dark(var(--light-second-color), var(--dark-second-color));
     animation-name: hideSidebar;
     animation-delay: 0.1s;
     animation-duration: 0.35s;
@@ -505,7 +504,7 @@
     justify-content: start;
     align-items: center;
     padding: 0 8px;
-    background-color: var(--light-second-color);
+    background-color: light-dark(var(--light-second-color), var(--dark-second-color));
 }
 
 .theme__container__title {
@@ -557,8 +556,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border: 1px solid var(--light-bg-switch);
-    background-color: var(--light-bg-switch);
+    border: 1px solid light-dark(var(--light-bg-switch), var(--dark-bg-switch));
+    background-color: light-dark(var(--light-bg-switch), var(--dark-bg-switch));
     transition: 0.4s;
     cursor: pointer;
 }
@@ -568,13 +567,13 @@
     content: '';
     width: 10px;
     height: 10px;
-    border: 2px solid var(--light-first-green);
-    background-color: var(--light-first-color);
+    border: 2px solid light-dark(var(--light-first-green), var(--dark-first-green));
+    background-color: light-dark(var(--light-first-color), var(--light-active-green));
     transition: 0.4s ease-in-out;
 }
 
 .themes__switch:checked + .switch__slider {
-    background-color: var(--light-first-green);
+    background-color: light-dark(var(--light-first-green), var(--dark-first-green));
 }
 
 .themes__switch:checked + .switch__slider:before {
@@ -612,14 +611,14 @@
     content: '';
     width: 14px;
     height: 14px;
-    background-color: var(--light-fourth-gray);
+    background-color: light-dark(var(--light-fourth-gray), var(--dark-fourth-gray));
     mask: url('../assets/images/icons/unchecked.svg') no-repeat;
     mask-size: cover;
 }
 
 .audio__checkbox:checked:after {
     content: '';
-    background-color: var(--light-fourth-green);
+    background-color: light-dark(var(--light-fourth-green), var(--dark-fourth-green));
     mask: url('../assets/images/icons/checked.svg') no-repeat;
     mask-size: cover;
 }
@@ -639,7 +638,7 @@
 
 .audio__volume::-webkit-slider-runnable-track {
     height: 14px;
-    background-color: var(--light-second-gray);
+    background-color: light-dark(var(--light-second-gray), var(--dark-second-gray));
     border-radius: 7px;
 }
 
@@ -647,17 +646,17 @@
     -webkit-appearance: none;
     width: 14px;
     height: 14px;
-    border: 2px solid var(--light-first-green);
+    border: 2px solid light-dark(var(--light-first-green), var(--dark-first-green));
     border-radius: 7px;
-    background-color: var(--light-first-color);
-    box-shadow: -62px 0 0 56px var(--light-first-green);
+    background-color: light-dark(var(--light-first-color), var(--light-active-green));
+    box-shadow: -62px 0 0 56px light-dark(var(--light-first-green), var(--dark-first-green));
     cursor: pointer;
 }
 
 .time__table {
     width: 100%;
     border-collapse: collapse;
-    background-color: var(--light-second-color);
+    background-color: light-dark(var(--light-second-color), var(--dark-second-color));
     border-radius: 4px;
     text-align: center;
 }
@@ -685,7 +684,7 @@
 .nonograms__table {
     display: block;
     border-collapse: collapse;
-    background-color: var(--light-second-color);
+    background-color: light-dark(var(--light-second-color), var(--dark-second-color));
     padding: 36px;
     border: var(--border-thick);
     border-radius: 14px;
@@ -767,7 +766,7 @@
     border-radius: 4px;
     cursor: pointer;
     color: var(--light-third-color);
-    background-color: var(--light-first-gray);
+    background-color: light-dark(var(--light-first-gray), var(--dark-second-gray));
     transition:
             border 0.15s ease-in-out,
             color 0.15s ease-in-out,
@@ -775,7 +774,7 @@
 }
 
 .fill {
-    background-color: var(--light-fourth-color);
+    background-color: light-dark(var(--light-third-color), var(--dark-third-color));
 }
 
 .cross:before,
@@ -831,7 +830,7 @@
 @keyframes hideOverlay {
     0% {
         display: block;
-        background-color: var(--light-third-color);
+        background-color: var(--dark-first-gray);
     }
 
     100% {
@@ -848,7 +847,7 @@
 
     100% {
         display: block;
-        background-color: var(--light-third-color);
+        background-color: var(--dark-first-gray);
     }
 }
 
@@ -861,24 +860,31 @@
 }
 
 @media (hover: hover) {
+    .field__cell:hover:not(.fill) {
+        background-color: light-dark(var(--light-first-gray), var(--dark-second-gray));
+    }
+
     .header__button:hover {
+        color: var(--light-third-gray);
         background-color: var(--light-hover-green);
         transition: background-color 0.15s ease-in-out;
     }
 
     .header__button:hover .random__button_text {
+        background-color: var(--light-third-gray);
         transform: rotateX(180deg);
         transition: transform 0.2s ease-in-out;
     }
 
     .header__button:hover .settings__button_text {
+        background-color: var(--light-third-gray);
         transform: rotateZ(45deg);
         transition: transform 0.2s ease-in-out;
     }
 
     .save_button:hover {
-        color: var(--light-first-color);
-        background-color: var(--light-second-green);
+        color: var(--light-third-gray);
+        background-color: var(--light-hover-green);
     }
 
     .show__answer:hover {
