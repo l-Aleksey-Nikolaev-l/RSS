@@ -794,6 +794,13 @@
     background-color: light-dark(var(--light-third-color), var(--dark-third-color));
 }
 
+.fill,
+.cross {
+    transition-property:background-color;
+    transition-duration: 0.10s;
+    transition-timing-function: ease-out;
+}
+
 .cross:before,
 .cross:after {
     position: absolute;
