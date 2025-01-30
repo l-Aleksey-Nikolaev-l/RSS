@@ -57,6 +57,14 @@
     overflow: hidden;
 }
 
+.bg__light {
+    color-scheme: light;
+}
+
+.bg__dark {
+    color-scheme: dark;
+}
+
 .bg__light:after,
 .bg__dark:after {
     position: absolute;
