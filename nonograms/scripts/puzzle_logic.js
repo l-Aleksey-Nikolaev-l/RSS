@@ -9,7 +9,7 @@ class Puzzle {
     });
   }
 
-  startGetting(row, col) {
+  #startGetting(row, col) {
     if (row === this.picSize) {
       return true;
     }
@@ -19,21 +19,21 @@ class Puzzle {
 
     this.matrix[row][col] = 1;
     if (
-      this.checkMatrix(this.matrix, row, col) &&
-      this.startGetting(nextRow, nextCol)) {
+      this.#checkMatrix(this.matrix, row, col) &&
+      this.#startGetting(nextRow, nextCol)) {
       return true;
     }
 
     this.matrix[row][col] = 0;
     if (
-      this.checkMatrix(this.matrix, row, col) &&
-      this.startGetting(nextRow, nextCol)
+      this.#checkMatrix(this.matrix, row, col) &&
+      this.#startGetting(nextRow, nextCol)
     ) {
       return true;
     }
   }
 
-  checkMatrix(matrix, row, col) {
+  #checkMatrix(matrix, row, col) {
     const rowValue = (index) => {
       return matrix[row][index];
     };
@@ -43,16 +43,16 @@ class Puzzle {
     };
 
     const colCheck =
-      this.checkArray(this.picCols[col], this.picSize, row, colValue);
+      this.#checkArray(this.picCols[col], this.picSize, row, colValue);
     const rowCheck =
-      this.checkArray(this.picRows[row], this.picSize, col, rowValue);
+      this.#checkArray(this.picRows[row], this.picSize, col, rowValue);
 
     if (colCheck && rowCheck) {
       return true;
     }
   }
 
-  checkArray(tipsArray, picSize, position, colRowValue) {
+  #checkArray(tipsArray, picSize, position, colRowValue) {
     let tipPivot = 0;
     let sequence = 0;
     let isLastValue = false;
@@ -118,7 +118,7 @@ class Puzzle {
   }
 
   getPicByTips() {
-    return this.startGetting(0, 0) ? this.matrix : false;
+    return this.#startGetting(0, 0) ? this.matrix : false;
   }
 
   getTipsByPic(picData) {
