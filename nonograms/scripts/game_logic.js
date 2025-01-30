@@ -41,6 +41,12 @@ function manageHeader(event) {
     setGameByLevel(currentLevelId, table[0]);
   }
 
+  if (buttonId === 'random') {
+    const numberOfLevels = Object.keys(pictures).length;
+    const randomLevelId = Math.floor(Math.random() * numberOfLevels);
+    setGameByLevel(randomLevelId, table[0]);
+  }
+
   if (buttonId === 'settings') {
     toggleSidebar(event);
     isOverlayShown ? removeOverlay() : setOverlay();
