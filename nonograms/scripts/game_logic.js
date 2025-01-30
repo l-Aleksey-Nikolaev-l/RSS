@@ -14,6 +14,7 @@ import { Table } from './ui_components/table.js';
 import { Sidebar } from './ui_components/sidebar.js';
 import { startSidebarListeners } from './listeners.js';
 
+const body = document.getElementsByClassName('body');
 const overlay = document.getElementsByClassName('overlay');
 const sidebar = document.getElementsByClassName('sidebar');
 const table = document.getElementsByClassName('nonograms__table');
@@ -171,6 +172,7 @@ function sidebarSettings(event) {
   if (inputType === 'checkbox' && inputId === 'themes__switch') {
     const state = event.target.checked;
     setThemeState(state);
+    setTheme();
   } else if (inputType === 'checkbox') {
     const state = event.target.checked;
     setAudioState(inputId, state);
@@ -178,6 +180,12 @@ function sidebarSettings(event) {
     const value = event.target.value;
     setAudioVolume(inputId, value);
   }
+}
+
+function setTheme() {
+  body[0].classList.toggle('bg__dark');
+  body[0].classList.toggle('bg__light');
+
 }
 
 export {
