@@ -317,6 +317,7 @@
 .level__menu_text {
     display: block;
     width: 60%;
+    color: inherit;
     text-align: start;
     place-self: center;
     pointer-events: none;
