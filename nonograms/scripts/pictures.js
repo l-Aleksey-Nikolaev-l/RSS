@@ -30,7 +30,7 @@ const pictures = {
     row_tips: [[1, 1], [1, 1], [5], [1, 1], [5]]
   },
   5: {
-    name: 'A sandwatch (10x10)',
+    name: 'A sand watch (10x10)',
     level: 'Medium (10x10)',
     col_tips: [
       [1, 1], [2, 2], [3, 3], [4, 4], [10], [10], [4, 4], [3, 3], [2, 2], [1, 1]
