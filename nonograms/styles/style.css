@@ -799,7 +799,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    content: "";
+    content: '';
     width: 32px;
     border-bottom: var(--cross);
     transform: rotateZ(45deg);
