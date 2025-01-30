@@ -21,7 +21,6 @@ function stopTimer() {
 function resetTimer() {
   isStarted = false;
   clearInterval(timer);
-  indicatorsArray[0].textContent = '00:00';
 }
 
 function showTime() {
