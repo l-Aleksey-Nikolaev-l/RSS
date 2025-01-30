@@ -8,6 +8,7 @@ class MainScreen {
     this.headerSection = new Header();
     this.gameSection = new GameSection();
     this.footerSection = new Footer();
+    this.#createMainScreen();
   }
 
   #createContainer(name) {
@@ -16,7 +17,7 @@ class MainScreen {
     return main;
   }
 
-  createMainScreen() {
+  #createWrapper() {
     const mainContainer = this.#createContainer('main');
     const overlay = this.#createContainer('overlay');
     const header = this.headerSection.createHeaderSection();
@@ -24,6 +25,13 @@ class MainScreen {
     const footer = this.footerSection.createFooterSection();
     mainContainer.append(overlay, header, game, footer);
     return mainContainer;
+  }
+
+  #createMainScreen() {
+    const body = document.getElementsByClassName('body')[0];
+    body.classList.add('bg__light');
+    const wrapper = this.#createWrapper();
+    body.append(wrapper);
   }
 }
 
