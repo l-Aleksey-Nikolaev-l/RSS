@@ -1,6 +1,6 @@
-import { Header } from './ui_components/header.js';
-import { GameSection } from './ui_components/game_section.js';
-import { Footer } from './ui_components/footer.js';
+import { Header } from './header.js';
+import { GameSection } from './game_section.js';
+import { Footer } from './footer.js';
 
 class MainScreen {
 
