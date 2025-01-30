@@ -33,7 +33,7 @@ function manageHeader(event) {
   const buttonId = event.target.dataset.id;
 
   if (levelId) {
-    setGameLevel(event, table[0]);
+    setGameByLevel(levelId, table[0]);
     !isOverlayShown ? setOverlay() : null;
   }
 
@@ -70,18 +70,15 @@ function toggleSidebar() {
   sidebar[0].classList.toggle('sidebar__active');
 }
 
-function setGameLevel(event, table) {
+function setGameByLevel(levelId, table) {
   resetTimer();
-  const levelId = event.target.dataset.levelId;
-  if (levelId) {
-    setLevelGrid(levelId);
-    table.deleteCaption();
-    while (table.rows.length) {
-      table.deleteRow(0);
-    }
-    const newGrid = new Table(mainScreenParams());
-    newGrid.createTableGrid(table);
+  setLevelGrid(levelId);
+  table.deleteCaption();
+  while (table.rows.length) {
+    table.deleteRow(0);
   }
+  const newGrid = new Table(mainScreenParams());
+  newGrid.createTableGrid(table);
 }
 
 function getPuzzleNameLevel() {
@@ -193,7 +190,6 @@ export {
   toggleSidebar,
   manageHeader,
   setCellStatus,
-  setGameLevel,
   getPuzzleNameLevel,
   sidebarSettings
 };
