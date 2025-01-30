@@ -1,4 +1,4 @@
-import { MainScreen } from './main_screen.js';
+import { MainScreen } from './ui_components/main_screen.js';
 import { startListeners } from './listeners.js';
 import { mainScreenParams } from './variables.js';
 
