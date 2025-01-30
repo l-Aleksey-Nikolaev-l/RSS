@@ -1,5 +1,6 @@
 import {
   currentLevelId,
+  gridSize,
   answerCells,
   setLevelGrid,
   mainScreenParams,
@@ -118,7 +119,7 @@ function fillTable(picArray) {
         cellsArray[index].classList.remove('fill');
         cellsArray[index].classList.add('cross');
       }
-    }, 30 * index);
+    }, (25 / gridSize) * index);
   });
 }
 
