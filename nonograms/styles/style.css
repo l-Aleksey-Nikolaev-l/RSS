@@ -946,6 +946,8 @@
 @media screen and (width >= 400px) {
     .nonograms__table,
     .table__caption,
+    .puzzle__name_level,
+    .puzzle__spend_time,
     .tips,
     .col__tips,
     .row__tips,
@@ -981,5 +983,60 @@
     .field__cell {
         width: 28px;
         height: 28px;
+    }
+}
+
+@media screen and (width < 768px) {
+    * {
+        font-size: 0.9rem;
+    }
+
+    .header {
+        transition: gap 0.5s ease-in-out;
+    }
+
+    .header__button {
+        flex-grow: 0;
+        transition: flex-grow 0.25s ease-in-out, padding 0.25s ease-in-out;
+    }
+}
+
+@media screen and (width < 650px) {
+    .header__button {
+        padding: 0 14px;
+        transition: padding 0.25s ease-in-out;
+    }
+}
+
+
+@media screen and (width <= 590px) {
+    * {
+        font-size: 0.9rem;
+    }
+
+    .header {
+        column-gap: 8px;
+        min-height: fit-content;
+        padding: 12px 12px 0 12px;
+        transition: gap 0.25s ease-in-out;
+    }
+
+    .header__button {
+        flex-grow: 1;
+        transition: flex-grow 0.25s ease-in-out;
+    }
+
+    .nonograms__table {
+        padding: 18px;
+        border-radius: 8px;
+    }
+
+    .row__tips {
+        padding: 2px 4px 2px 8px;
+    }
+
+    .field__cell {
+        width: 22px;
+        height: 22px;
     }
 }
