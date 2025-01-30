@@ -37,6 +37,10 @@ function manageHeader(event) {
     !isOverlayShown ? setOverlay() : null;
   }
 
+  if (buttonId === 'repeat') {
+    setGameByLevel(currentLevelId, table[0]);
+  }
+
   if (buttonId === 'settings') {
     toggleSidebar(event);
     isOverlayShown ? removeOverlay() : setOverlay();
