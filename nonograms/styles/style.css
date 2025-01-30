@@ -1,30 +1,40 @@
 :root {
-
+    color-scheme: light dark;
 
     --light-first-color: rgb(242, 242, 242);
     --light-second-color: rgba(251, 242, 242, 0.98);
-    --light-third-color: rgba(0, 0, 0, 0.15);
-    --light-fourth-color: rgba(0, 0, 0, 0.85);
-
+    --light-third-color: rgba(0, 0, 0, 0.85);
     --light-bg-switch: rgb(224, 224, 224);
-
-    --light-first-gray: rgba(245, 247, 245, 0.3);
+    --light-first-gray: rgb(128, 92, 82, 0.2);
     --light-second-gray: rgba(160, 160, 160, 0.35);
     --light-third-gray: rgb(68, 63, 65);
     --light-fourth-gray: rgba(160, 160, 160, 0.5);
-
-    --light-first-green:  rgb(124, 145, 103);
+    --light-first-green: rgb(124, 145, 103);
     --light-second-green: rgb(107, 127, 87);
-    --light-third-green:  rgb(92, 102, 71);
+    --light-third-green: rgb(92, 102, 71);
     --light-fourth-green: rgb(109, 165, 43);
-
     --light-hover-green: rgb(223, 231, 209);
     --light-active-green: rgb(214, 221, 200);
 
-    --border-menu: 1px solid var(--light-second-gray);
-    --border-thin: 1px solid  var(--light-third-gray);
-    --border-thick: 2px solid var(--light-third-gray);
-    --cross: 1px solid  var(--light-third-gray);
+    --dark-first-color: rgb(75, 75, 75);
+    --dark-second-color: rgba(77, 70, 67, 0.85);
+    --dark-third-color: rgba(216, 12, 12, 0.6);
+    --dark-bg-switch: rgb(111, 111, 111);
+    --dark-first-gray: rgba(73, 73, 73, 0.3);
+    --dark-second-gray: rgba(160, 160, 160, 0.35);
+    --dark-third-gray: rgb(180, 180, 180);
+    --dark-fourth-gray: rgba(160, 160, 160, 0.5);
+    --dark-first-green: rgb(180, 192, 0, 0.4);
+    --dark-second-green: rgb(163, 181, 145);
+    --dark-third-green: rgb(197, 220, 148);
+    --dark-fourth-green: rgb(190, 190, 0);
+    --dark-hover-green: rgb(223, 231, 209);
+    --dark-active-green: rgb(214, 221, 200);
+
+    --border-menu: 1px solid light-dark(var(--light-second-gray), var(--dark-second-gray));
+    --border-thin: 1px solid light-dark(var(--light-third-gray), var(--dark-third-gray));
+    --border-thick: 2px solid light-dark(var(--light-third-gray), var(--dark-third-gray));
+    --cross: 1px solid light-dark(var(--light-third-gray), var(--dark-third-gray));
 }
 
 * {
