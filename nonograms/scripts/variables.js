@@ -13,7 +13,7 @@ let effectPopupVolume = 0.2;
 
 let currentLevelId = 0;
 let gridSize = 5;
-
+let winnerTime = 0;
 let isDarkTheme = false;
 
 const answerCells = {};
@@ -89,6 +89,10 @@ function setAudioVolume(audio, value) {
   }
 }
 
+function setWinnerTime(time) {
+  winnerTime = time;
+}
+
 function setThemeState(state) {
   isDarkTheme = state;
 }
@@ -107,11 +111,13 @@ export {
   currentLevelId,
   gridSize,
   isDarkTheme,
+  winnerTime,
   answerCells,
   mainScreenParams,
   setAnswerMatrixSize,
   setLevelGrid,
   setAudioState,
   setAudioVolume,
+  setWinnerTime,
   setThemeState
 };
