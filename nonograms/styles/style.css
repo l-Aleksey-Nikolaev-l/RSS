@@ -1040,3 +1040,26 @@
         height: 22px;
     }
 }
+
+@media screen and (width < 500px) {  /* looks good on width 456, height 532 */
+    .header {
+        column-gap: 8px;
+        min-height: fit-content;
+        padding: 2px 2px 0 2px;
+        transition: gap 0.25s ease-in-out;
+    }
+
+    .header__button {
+        flex-grow: 1;
+        transition: flex-grow 0.25s ease-in-out;
+    }
+
+    .nonograms__table {
+        padding: 8px 12px 12px 12px;
+        border-radius: 8px;
+    }
+
+    .table__caption {
+        padding-bottom: 8px;
+    }
+}
