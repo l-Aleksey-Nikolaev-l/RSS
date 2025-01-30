@@ -54,6 +54,7 @@ class Table {
         th.classList.add('col__answer');
         const span = document.createElement('span');
         span.classList.add('show__answer');
+        span.setAttribute('data-id', 'solve');
         span.textContent = 'Solve';
         th.append(span);
       }
