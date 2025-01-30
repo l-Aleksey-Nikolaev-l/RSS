@@ -935,6 +935,10 @@
     background-color: var(--light-third-green);
 }
 
-.header__button:active :where(.random__button_text, .settings__button_text) {
+.header__button:active .random__button_text {
+    background-color: var(--light-second-color);
+}
+
+.header__button:active .settings__button_text {
     background-color: var(--light-second-color);
 }
