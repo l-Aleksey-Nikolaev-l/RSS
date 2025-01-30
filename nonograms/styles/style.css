@@ -79,6 +79,7 @@
     background-repeat: no-repeat;
     opacity: 0.85;
     z-index: -1;
+    transition: all 0.5s ease-in-out;
 }
 
 .bg__dark:after {
@@ -200,6 +201,7 @@
     background-color: light-dark(var(--light-second-color), var(--dark-second-color));
     border: var(--border-menu);
     border-radius: 14px;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .level__item,
@@ -379,7 +381,14 @@
     animation-duration: 0.35s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
+    transition: background-color 0.3s ease-in-out;
     pointer-events: all;
+}
+
+.sidebar * {
+    transition-duration: 0.3s;
+    transition-property: background-color, color, border;
+    transition-timing-function: ease-in-out;
 }
 
 .sidebar__active {
@@ -688,6 +697,13 @@
     padding: 36px;
     border: var(--border-thick);
     border-radius: 14px;
+    transition: border 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.nonograms__table * {
+    transition-property: color, border;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
 }
 
 .table__caption {
