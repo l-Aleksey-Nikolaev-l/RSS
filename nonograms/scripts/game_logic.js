@@ -98,6 +98,28 @@ function getPuzzleNameLevel() {
   return `${puzzleName} - ${puzzleLevel}`;
 }
 
+function solvePuzzle(event) {
+  const eventId = event.target.dataset.id;
+  if (eventId === 'solve') {
+    const currentPicture = pictures[currentLevelId];
+    const picArray = new Puzzle(currentPicture).getPicByTips().flat();
+    fillTable(picArray);
+  }
+}
+
+function fillTable(picArray) {
+  const cellsArray = document.querySelectorAll('.field__cell');
+  picArray.forEach((value, index) => {
+    setTimeout(() => {
+      if (value !== 0) {
+        cellsArray[index].classList.add('fill');
+      } else {
+        cellsArray[index].classList.add('cross');
+      }
+    }, 30 * index);
+  });
+}
+
 function setCellStatus(event) {
   const cell = event.target;
   const cellId = cell.dataset.col + cell.dataset.row;
@@ -199,6 +221,7 @@ export {
   mouseButtonUp,
   toggleSidebar,
   manageHeader,
+  solvePuzzle,
   setCellStatus,
   getPuzzleNameLevel,
   sidebarSettings
