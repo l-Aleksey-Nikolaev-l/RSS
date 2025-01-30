@@ -942,3 +942,44 @@
 .header__button:active .settings__button_text {
     background-color: var(--light-second-color);
 }
+
+@media screen and (width >= 400px) {
+    .nonograms__table,
+    .table__caption,
+    .tips,
+    .col__tips,
+    .row__tips,
+    .field__cell {
+        transition-property: width, height, padding, border, font-size, line-height, word-spacing;
+        transition-duration: 0.25s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+@media screen and (width < 1024px) {
+    .nonograms__table {
+        padding: 24px;
+        border-radius: 10px;
+    }
+
+    .table__caption {
+        padding-bottom: 14px;
+    }
+
+    .tips {
+        font-size: 1rem;
+    }
+
+    .col__tips {
+        line-height: 24px;
+    }
+
+    .row__tips {
+        word-spacing: 2px;
+    }
+
+    .field__cell {
+        width: 28px;
+        height: 28px;
+    }
+}
