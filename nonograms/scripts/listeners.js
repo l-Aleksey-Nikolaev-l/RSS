@@ -1,4 +1,5 @@
 import {
+  tapOnMenu,
   manageHeader,
   solvePuzzle,
   setCellStatus,
@@ -15,6 +16,8 @@ function startSidebarListeners() {
 }
 
 function startListeners() {
+  header[0].addEventListener('touchend', tapOnMenu);
+
   header[0].addEventListener('click', manageHeader);
 
   table[0].addEventListener('click', solvePuzzle);
