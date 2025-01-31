@@ -106,6 +106,7 @@ function getPuzzleNameLevel() {
 function solvePuzzle(event) {
   const eventId = event.target.dataset.id;
   if (eventId === 'solve') {
+    stopTimer();
     setBlock(true);
     const currentPicture = pictures[currentLevelId];
     const picArray = new Puzzle(currentPicture).getPicByTips().flat();
