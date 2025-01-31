@@ -355,6 +355,62 @@
     transition-timing-function: ease-in-out;
 }
 
+.menu__tap {
+    display: block;
+    border-bottom: 2px solid light-dark(var(--light-second-color), var(--dark-second-color));
+    cursor: default;
+    animation-name: levelsButton;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.1s;
+    z-index: 1;
+
+    .level__menu_text:after {
+        display: block;
+        cursor: default;
+        transform: rotateX(180deg);
+        transition-duration: 0.2s;
+        transition-property: transform;
+        transition-timing-function: ease-in-out;
+    }
+
+    .level__items {
+        display: block;
+        opacity: 1;
+        color: var(--light-third-color);
+        background-color: var(--light-hover-green);
+    }
+
+    .level__item:last-child {
+        border-radius: 0 0 13px 0;
+    }
+
+    .level__items {
+        border-radius: 0 0 14px 0;
+    }
+}
+
+.menu__level_hover {
+    color: var(--light-third-color);
+    background-color: var(--light-hover-green);
+
+    .level__images {
+        display: block;
+        cursor: pointer;
+        opacity: 0;
+        animation-name: subMenuItems;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.2s;
+        animation-delay: 0.15s;
+    }
+}
+
+.menu__image_hover {
+    color: var(--light-third-color);
+    background-color: var(--light-hover-green);
+}
+
 .game__section {
     display: flex;
     flex-direction: column;
@@ -848,6 +904,12 @@
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
     z-index: 1;
+}
+
+.body:has(.menu__tap) .overlay {
+    display: block;
+    animation-name: showOverlay;
+    animation-play-state: running;
 }
 
 .body:has(.level__menu:hover) .overlay {
