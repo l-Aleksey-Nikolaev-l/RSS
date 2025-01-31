@@ -9,7 +9,7 @@ class Popup {
   }
 
   #createContainer(name) {
-    const main = document.createElement(name);
+    const main = document.createElement('div');
     main.classList.add(`popup__${name}`);
     return main;
   }
