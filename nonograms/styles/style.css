@@ -821,6 +821,13 @@
     transform: rotateZ(-45deg);
 }
 
+.block__element {
+    color: var(--dark-bg-switch);
+    background-color: light-dark(var(--light-bg-block), var(--dark-bg-block));
+    transition: none;
+    pointer-events: none;
+}
+
 .footer {
     display: none;
     min-height: 50px;
