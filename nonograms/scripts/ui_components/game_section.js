@@ -1,5 +1,4 @@
-import { currentLevelId, gridSize } from '../variables.js';
-import { pictures } from '../pictures.js';
+import { currentLevelId, gridSize, pictures } from '../variables.js';
 import { Sidebar } from './sidebar.js';
 import { Table } from './table.js';
 
