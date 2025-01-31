@@ -962,7 +962,8 @@
     background-color: var(--light-second-color);
 }
 
-@media screen and (width >= 400px) {
+
+@media screen and (width < 1024px) {
     .nonograms__table,
     .table__caption,
     .puzzle__name_level,
@@ -975,9 +976,7 @@
         transition-duration: 0.25s;
         transition-timing-function: ease-in-out;
     }
-}
 
-@media screen and (width < 1024px) {
     .nonograms__table {
         padding: 24px;
         border-radius: 10px;
