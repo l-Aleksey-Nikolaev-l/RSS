@@ -1,10 +1,12 @@
 import { Header } from './header.js';
 import { GameSection } from './game_section.js';
 import { Footer } from './footer.js';
+import { getLastConfig } from '../save_load_config.js';
 
 class MainScreen {
 
   constructor() {
+    getLastConfig();
     this.headerSection = new Header();
     this.gameSection = new GameSection();
     this.footerSection = new Footer();
