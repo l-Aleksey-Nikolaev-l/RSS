@@ -19,6 +19,7 @@ import { startSidebarListeners } from './listeners.js';
 const body = document.getElementsByClassName('body');
 const overlay = document.getElementsByClassName('overlay');
 const sidebar = document.getElementsByClassName('sidebar');
+const saveButton = document.getElementsByClassName('save_button');
 const gameSection = document.getElementsByClassName('game__section');
 const table = document.getElementsByClassName('nonograms__table');
 
@@ -105,6 +106,7 @@ function getPuzzleNameLevel() {
 function solvePuzzle(event) {
   const eventId = event.target.dataset.id;
   if (eventId === 'solve') {
+    setBlock(true);
     const currentPicture = pictures[currentLevelId];
     const picArray = new Puzzle(currentPicture).getPicByTips().flat();
     fillTable(picArray);
@@ -198,6 +200,7 @@ function checkWinnings() {
 
 function showPopUp() {
   stopTimer();
+  setBlock(true);
   const popup = new Popup().createPopUp();
   gameSection[0].prepend(popup);
 }
@@ -228,6 +231,16 @@ function setTheme() {
   body[0].classList.toggle('bg__dark');
   body[0].classList.toggle('bg__light');
 
+}
+
+function setBlock(state) {
+  if(state) {
+    table[0].classList.add('block__element');
+    saveButton[0].classList.add('block__element');
+  } else {
+    table[0].classList.remove('block__element');
+    saveButton[0].classList.remove('block__element');
+  }
 }
 
 export {
