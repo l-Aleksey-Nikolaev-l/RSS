@@ -17,7 +17,6 @@ import { Popup } from './ui_components/popup.js';
 import { startSidebarListeners, setOverlayListeners } from './listeners.js';
 
 const body = document.getElementsByClassName('body');
-const overlay = document.getElementsByClassName('overlay');
 const sidebar = document.getElementsByClassName('sidebar');
 const saveButton = document.getElementsByClassName('save_button');
 const gameSection = document.getElementsByClassName('game__section');
@@ -89,21 +88,18 @@ function manageHeader(event) {
 
   if (buttonId === 'settings') {
     toggleSidebar(event);
-    isOverlayShown ? removeOverlay() : setOverlay();
+    isOverlayShown ? removeOverlay(event) : setOverlay(event);
   }
 }
 
-function setOverlay() {
+function setOverlay(event) {
   isOverlayShown = true;
-  overlay[0].style.display = 'block';
-  overlay[0].addEventListener('click', removeOverlay);
-  table[0].addEventListener('mousemove', removeOverlay);
+  setOverlayListeners(event, true);
 }
 
-function removeOverlay() {
+function removeOverlay(event) {
   isOverlayShown = false;
-  overlay[0].removeEventListener('click', removeOverlay);
-  table[0].removeEventListener('mousemove', removeOverlay);
+  setOverlayListeners(event, false);
   resetMenus();
 }
 
@@ -291,6 +287,7 @@ function setBlock(state) {
 export {
   tapOnMenu,
   mouseButtonUp,
+  removeOverlay,
   toggleSidebar,
   manageHeader,
   solvePuzzle,
