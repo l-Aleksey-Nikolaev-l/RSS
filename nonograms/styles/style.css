@@ -1005,11 +1005,6 @@
     background-color: var(--light-third-green);
 }
 
-.save_button:active {
-    color: var(--light-first-color);
-    background-color: var(--light-third-green);
-}
-
 .level__image:active {
     background-color: var(--light-active-green);
 }
