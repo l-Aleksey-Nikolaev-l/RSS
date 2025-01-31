@@ -5,6 +5,8 @@
     --light-second-color: rgba(251, 242, 242, 0.98);
     --light-third-color: rgba(0, 0, 0, 0.85);
     --light-bg-switch: rgb(224, 224, 224);
+    --light-bg-popup: rgb(251, 242, 242);
+    --light-bg-block: rgb(242, 242, 235);
     --light-first-gray: rgb(128, 92, 82, 0.2);
     --light-second-gray: rgba(160, 160, 160, 0.35);
     --light-third-gray: rgb(68, 63, 65);
@@ -20,6 +22,8 @@
     --dark-second-color: rgba(77, 70, 67, 0.85);
     --dark-third-color: rgba(216, 12, 12, 0.6);
     --dark-bg-switch: rgb(111, 111, 111);
+    --dark-bg-popup: rgb(74 68 67);
+    --dark-bg-block: rgba(86, 97, 106, 0.65);
     --dark-first-gray: rgba(73, 73, 73, 0.3);
     --dark-second-gray: rgba(160, 160, 160, 0.35);
     --dark-third-gray: rgb(180, 180, 180);
