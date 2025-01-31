@@ -85,6 +85,7 @@ function toggleSidebar() {
 
 function setGameByLevel(levelId, table) {
   resetTimer();
+  removePopup();
   setLevelGrid(levelId);
   table.deleteCaption();
   while (table.rows.length) {
@@ -201,6 +202,12 @@ function showPopUp() {
   gameSection[0].prepend(popup);
 }
 
+function removePopup() {
+  setBlock(false);
+  const popup = document.getElementsByClassName('popup__window');
+  popup[0]?.remove();
+}
+
 function sidebarSettings(event) {
   const inputType = event.target.type;
   const inputId = event.target.id;
@@ -230,5 +237,6 @@ export {
   solvePuzzle,
   setCellStatus,
   getPuzzleNameLevel,
-  sidebarSettings
+  sidebarSettings,
+  removePopup
 };
