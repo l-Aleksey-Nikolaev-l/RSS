@@ -27,7 +27,7 @@ class Popup {
     popupTime.classList.add('congrats__time');
     popupText.append(popupTime);
     popupCongrats.append(popupText);
-    popupWrapper.append(popupCloseButton, popupImage, popupCongrats);
+    popupWrapper.append(popupCloseButton, popupCongrats, popupImage);
     popupContainer.append(popupWrapper);
     return popupContainer;
   }
