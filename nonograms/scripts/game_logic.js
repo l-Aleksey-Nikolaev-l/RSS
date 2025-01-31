@@ -80,8 +80,15 @@ function manageHeader(event) {
   if (buttonId === 'resume') {
     const lastSave = resumeLastGame().game.answerCells;
     setGameByLevel(currentLevelId, table[0]);
-    const picArray = new Puzzle(lastSave).getPicByTips().flat();
-    fillTable(picArray);
+    const picArray = new Puzzle(lastSave).getPicByTips();
+    picArray.forEach((row, row_index) => {
+      row.forEach((cell, col_index) => {
+        if (cell === 1) {
+          addAnswer(col_index, row_index);
+        }
+      });
+    });
+    fillTable(picArray.flat());
   }
 
   if (buttonId === 'repeat') {
