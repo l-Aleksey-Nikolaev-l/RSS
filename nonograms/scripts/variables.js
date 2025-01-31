@@ -15,8 +15,31 @@ let currentLevelId = 0;
 let gridSize = 5;
 let winnerTime = 0;
 let isDarkTheme = false;
+let isConfigLoaded = false;
 
-const answerCells = {};
+let answerCells = {};
+
+let appConfig = {
+  theme: isDarkTheme,
+  audio: {
+    musicState: musicState,
+    effectFillState: effectFillState,
+    effectCrossState: effectCrossState,
+    effectEraseState: effectEraseState,
+    effectPopupState: effectPopupState,
+    musicVolume: musicVolume,
+    effectFillVolume: effectFillVolume,
+    effectCrossVolume: effectCrossVolume,
+    effectEraseVolume: effectEraseVolume,
+    effectPopupVolume: effectPopupVolume
+  },
+  game: {
+    currentLevelId: currentLevelId,
+    gridSize: gridSize,
+    currentTime: winnerTime,
+    answerCells: {}
+  }
+};
 
 const setAnswerMatrixSize = (size) => {
   answerCells.col_answer = fillAnswerArray(size);
@@ -114,6 +137,8 @@ export {
   isDarkTheme,
   winnerTime,
   answerCells,
+  isConfigLoaded,
+  appConfig,
   mainScreenParams,
   setAnswerMatrixSize,
   setLevelGrid,
