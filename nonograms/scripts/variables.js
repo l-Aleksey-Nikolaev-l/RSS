@@ -98,6 +98,7 @@ function setThemeState(state) {
 }
 
 export {
+  pictures,
   musicState,
   musicVolume,
   effectFillState,
