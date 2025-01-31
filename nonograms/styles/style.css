@@ -83,7 +83,7 @@
     background-repeat: no-repeat;
     opacity: 0.85;
     z-index: -1;
-    transition: all 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
 }
 
 .bg__dark:after {
