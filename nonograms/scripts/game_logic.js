@@ -16,12 +16,6 @@ import { Sidebar } from './ui_components/sidebar.js';
 import { Popup } from './ui_components/popup.js';
 import { startSidebarListeners, setOverlayListeners } from './listeners.js';
 
-const body = document.getElementsByClassName('body');
-const sidebar = document.getElementsByClassName('sidebar');
-const saveButton = document.getElementsByClassName('save_button');
-const gameSection = document.getElementsByClassName('game__section');
-const table = document.getElementsByClassName('nonograms__table');
-
 let isOverlayShown = false;
 let currentCell = null;
 let prevCell = null;
@@ -68,6 +62,7 @@ function mouseButtonUp() {
 }
 
 function manageHeader(event) {
+  const table = document.getElementsByClassName('nonograms__table');
   const levelId = event.target.dataset.levelId;
   const buttonId = event.target.dataset.id;
 
@@ -103,6 +98,7 @@ function removeOverlay(event) {
 }
 
 function resetMenus() {
+  const sidebar = document.getElementsByClassName('sidebar');
   sidebar[0]?.classList.remove('sidebar__active');
   menuLevel?.classList.remove('menu__tap');
   prevLevel?.classList.remove('menu__level_hover');
@@ -241,6 +237,7 @@ function checkWinnings() {
 function showPopUp() {
   stopTimer();
   setBlock(true);
+  const gameSection = document.getElementsByClassName('game__section');
   const popup = new Popup().createPopUp();
   gameSection[0].prepend(popup);
 }
@@ -274,6 +271,7 @@ function setTheme() {
 }
 
 function setBlock(state) {
+  const table = document.getElementsByClassName('nonograms__table');
   if(state) {
     table[0].classList.add('block__element');
     saveButton[0].classList.add('block__element');
