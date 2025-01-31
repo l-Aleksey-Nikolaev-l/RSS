@@ -166,6 +166,14 @@ function setAppConfig(config) {
   appConfig = config;
 }
 
+function resumeLastGame() {
+  currentLevelId = appConfig.game.currentLevelId;
+  gridSize = appConfig.game.gridSize;
+  winnerTime = appConfig.game.currentTime;
+  answerCells = appConfig.game.answerCells;
+  return appConfig;
+}
+
 export {
   pictures,
   musicState,
