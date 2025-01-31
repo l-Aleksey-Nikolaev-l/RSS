@@ -13,11 +13,13 @@ import { resetTimer, startTimer, stopTimer } from './timer.js';
 import { Puzzle } from './puzzle_logic.js';
 import { Table } from './ui_components/table.js';
 import { Sidebar } from './ui_components/sidebar.js';
+import { Popup } from './ui_components/popup.js';
 import { startSidebarListeners } from './listeners.js';
 
 const body = document.getElementsByClassName('body');
 const overlay = document.getElementsByClassName('overlay');
 const sidebar = document.getElementsByClassName('sidebar');
+const gameSection = document.getElementsByClassName('game__section');
 const table = document.getElementsByClassName('nonograms__table');
 
 let isOverlayShown = false;
@@ -195,7 +197,8 @@ function checkWinnings() {
 
 function showPopUp() {
   stopTimer();
-  console.log('Win!');
+  const popup = new Popup().createPopUp();
+  gameSection[0].prepend(popup);
 }
 
 function sidebarSettings(event) {
