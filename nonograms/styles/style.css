@@ -929,6 +929,10 @@
         transition: background-color 0.15s ease-in-out;
     }
 
+    .popup__close_button:hover {
+        transform: rotate(90deg);
+    }
+
     .body:has(.level__image:hover) .level__menu_item {
         pointer-events: all;
     }
@@ -1016,10 +1020,6 @@
 
 .popup__close_button:after {
     transform: rotateZ(-45deg);
-}
-
-.popup__close_button:hover {
-    transform: rotate(90deg);
 }
 
 .popup__image {
