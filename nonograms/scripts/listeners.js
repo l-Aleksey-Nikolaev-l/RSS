@@ -4,15 +4,28 @@ import {
   solvePuzzle,
   setCellStatus,
   mouseButtonUp,
+  removeOverlay,
   sidebarSettings
 } from './game_logic.js';
 
 const header = document.getElementsByClassName('header');
 const sidebar = document.getElementsByClassName('sidebar');
 const table = document.getElementsByClassName('nonograms__table');
+const overlay = document.getElementsByClassName('overlay');
 
 function startSidebarListeners() {
   sidebar[0].addEventListener('input', sidebarSettings);
+}
+
+function setOverlayListeners(event, isSet) {
+  if (isSet) {
+    overlay[0].addEventListener('click', removeOverlay);
+    overlay[0].addEventListener('touchend', removeOverlay);
+  } else {
+    overlay[0].removeEventListener('click', removeOverlay);
+    overlay[0].removeEventListener('touchend', removeOverlay);
+  }
+  event.preventDefault();
 }
 
 function startListeners() {
@@ -32,6 +45,7 @@ function startListeners() {
 }
 
 export {
-  startListeners,
-  startSidebarListeners
+  startSidebarListeners,
+  setOverlayListeners,
+  startListeners
 };
