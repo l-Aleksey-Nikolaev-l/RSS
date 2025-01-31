@@ -7,7 +7,9 @@ import {
   mainScreenParams,
   setThemeState,
   setAudioState,
-  setAudioVolume
+  setAudioVolume,
+  setAppConfig,
+  resumeLastGame
 } from './variables.js';
 import { resetTimer, startTimer, stopTimer } from './timer.js';
 import { Puzzle } from './puzzle_logic.js';
@@ -69,6 +71,17 @@ function manageHeader(event) {
 
   if (levelId) {
     setGameByLevel(levelId, table[0]);
+  }
+
+  if (buttonId === 'save') {
+    saveCurrentGame();
+  }
+
+  if (buttonId === 'resume') {
+    const lastSave = resumeLastGame().game.answerCells;
+    setGameByLevel(currentLevelId, table[0]);
+    const picArray = new Puzzle(lastSave).getPicByTips().flat();
+    fillTable(picArray);
   }
 
   if (buttonId === 'repeat') {
