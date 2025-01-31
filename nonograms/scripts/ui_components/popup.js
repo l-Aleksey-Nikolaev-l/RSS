@@ -3,7 +3,7 @@ import { winnerTime } from '../variables.js';
 class Popup {
 
   constructor() {
-    this.beginText = 'Great! You have solved the nonogram in';
+    this.beginText = 'Great!\nYou have solved\nthe nonogram\nin';
     this.time = winnerTime;
     this.endText = 'seconds!';
   }
