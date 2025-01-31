@@ -150,6 +150,22 @@ function createAppConfig() {
   return currentAnswer;
 }
 
+function setAppConfig(config) {
+  isConfigLoaded = true;
+  isDarkTheme = config.theme;
+  musicState = config.audio.musicState;
+  effectFillState = config.audio.effectFillState;
+  effectCrossState = config.audio.effectCrossState;
+  effectEraseState = config.audio.effectEraseState;
+  effectPopupState = config.audio.effectPopupState;
+  musicVolume = config.audio.musicVolume;
+  effectFillVolume = config.audio.effectFillVolume;
+  effectCrossVolume = config.audio.effectCrossVolume;
+  effectEraseVolume = config.audio.effectEraseVolume;
+  effectPopupVolume = config.audio.effectPopupVolume;
+  appConfig = config;
+}
+
 export {
   pictures,
   musicState,
