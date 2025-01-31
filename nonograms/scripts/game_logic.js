@@ -79,12 +79,19 @@ function manageHeader(event) {
     const numberOfLevels = Object.keys(pictures).length;
     const randomLevelId = Math.floor(Math.random() * numberOfLevels);
     setGameByLevel(randomLevelId, table[0]);
+    setSaveResumeButton('save');
   }
 
   if (buttonId === 'settings') {
     toggleSidebar(event);
     isOverlayShown ? removeOverlay(event) : setOverlay(event);
   }
+}
+
+function setSaveResumeButton(name) {
+  const saveResumeButton = document.querySelectorAll('[data-id]');
+  saveResumeButton[0].dataset.id = name;
+  saveResumeButton[0].textContent = name;
 }
 
 function setOverlay(event) {
@@ -174,6 +181,8 @@ function setCellStatus(event) {
   if (!cellId || currentCell === prevCell || !mouseButton) {
     return;
   }
+
+  setSaveResumeButton('save');
 
   if (
     mouseButton === 1 ||
