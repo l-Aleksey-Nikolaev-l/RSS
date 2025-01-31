@@ -279,10 +279,15 @@ function sidebarSettings(event) {
   }
 }
 
-function setTheme() {
-  body[0].classList.toggle('bg__dark');
-  body[0].classList.toggle('bg__light');
-
+function setTheme(state) {
+  const body = document.getElementsByClassName('body');
+  if (state) {
+    body[0].classList.add('bg__dark');
+    body[0].classList.remove('bg__light');
+  } else {
+    body[0].classList.add('bg__light');
+    body[0].classList.remove('bg__dark');
+  }
 }
 
 function setBlock(state) {
