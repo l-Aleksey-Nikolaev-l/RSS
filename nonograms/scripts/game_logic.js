@@ -14,7 +14,7 @@ import { Puzzle } from './puzzle_logic.js';
 import { Table } from './ui_components/table.js';
 import { Sidebar } from './ui_components/sidebar.js';
 import { Popup } from './ui_components/popup.js';
-import { startSidebarListeners } from './listeners.js';
+import { startSidebarListeners, setOverlayListeners } from './listeners.js';
 
 const body = document.getElementsByClassName('body');
 const overlay = document.getElementsByClassName('overlay');
@@ -26,6 +26,42 @@ const table = document.getElementsByClassName('nonograms__table');
 let isOverlayShown = false;
 let currentCell = null;
 let prevCell = null;
+let prevLevel = null;
+let prevPicture = null;
+let menuLevel = null;
+
+function tapOnMenu(event) {
+  const isMenu = event.target.classList.contains('level__menu_item');
+  const isMenuLevel = event.target.classList.contains('level__item');
+  const isLevelImage = event.target.classList.contains('level__image');
+
+  if (isMenu || isMenuLevel || isLevelImage) {
+    event.preventDefault();
+  }
+
+  if (isMenu) {
+    menuLevel = event.target;
+    event.target.classList.toggle('menu__tap');
+    isOverlayShown ? removeOverlay(event) : setOverlay(event);
+    return;
+  }
+
+  if (isMenuLevel && event.target !== prevLevel) {
+    event.target.classList.add('menu__level_hover');
+    prevLevel?.classList.remove('menu__level_hover');
+    prevPicture?.classList.remove('menu__image_hover');
+    prevLevel = event.target;
+    prevPicture = null;
+    return;
+  }
+
+  if (isLevelImage && event.target !== prevPicture) {
+    event.target.classList.add('menu__image_hover');
+    prevPicture?.classList.remove('menu__image_hover');
+    prevPicture = event.target;
+    manageHeader(event);
+  }
+}
 
 function mouseButtonUp() {
   currentCell = null;
@@ -245,6 +281,7 @@ function setBlock(state) {
 }
 
 export {
+  tapOnMenu,
   mouseButtonUp,
   toggleSidebar,
   manageHeader,
