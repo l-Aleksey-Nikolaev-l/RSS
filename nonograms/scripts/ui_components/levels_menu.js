@@ -1,4 +1,4 @@
-import { pictures } from '../pictures.js';
+import { pictures } from '../variables.js';
 
 class LevelsMenu {
 
