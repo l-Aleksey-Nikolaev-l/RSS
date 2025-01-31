@@ -73,7 +73,6 @@ function manageHeader(event) {
 
   if (levelId) {
     setGameByLevel(levelId, table[0]);
-    !isOverlayShown ? setOverlay() : null;
   }
 
   if (buttonId === 'repeat') {
