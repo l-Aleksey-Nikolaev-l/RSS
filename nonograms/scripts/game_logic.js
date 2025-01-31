@@ -15,6 +15,7 @@ import { Table } from './ui_components/table.js';
 import { Sidebar } from './ui_components/sidebar.js';
 import { Popup } from './ui_components/popup.js';
 import { startSidebarListeners, setOverlayListeners } from './listeners.js';
+import { saveCurrentGame } from './save_load_config.js';
 
 let isOverlayShown = false;
 let currentCell = null;
@@ -254,7 +255,7 @@ function sidebarSettings(event) {
   if (inputType === 'checkbox' && inputId === 'themes__switch') {
     const state = event.target.checked;
     setThemeState(state);
-    setTheme();
+    setTheme(state);
   } else if (inputType === 'checkbox') {
     const state = event.target.checked;
     setAudioState(inputId, state);
@@ -272,12 +273,13 @@ function setTheme() {
 
 function setBlock(state) {
   const table = document.getElementsByClassName('nonograms__table');
+  const saveResumeButton = document.querySelectorAll('[data-id]');
   if(state) {
     table[0].classList.add('block__element');
-    saveButton[0].classList.add('block__element');
+    saveResumeButton[0].classList.add('block__element');
   } else {
     table[0].classList.remove('block__element');
-    saveButton[0].classList.remove('block__element');
+    saveResumeButton[0].classList.remove('block__element');
   }
 }
 
