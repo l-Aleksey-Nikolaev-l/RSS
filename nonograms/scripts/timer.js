@@ -1,3 +1,5 @@
+import { setWinnerTime } from './variables.js';
+
 const indicatorsArray = document.getElementsByClassName('puzzle__spend_time');
 
 let timer = null;
@@ -31,6 +33,7 @@ function calculateTime() {
   currentTime = new Date().getTime();
   let secondsLeft = (currentTime - startTime) * 0.001;
   secondsLeft = Math.floor(secondsLeft);
+  setWinnerTime(secondsLeft);
   return convertSecondsToTime(secondsLeft);
 }
 
