@@ -1,4 +1,5 @@
 import {
+  pictures,
   currentLevelId,
   gridSize,
   answerCells,
@@ -8,7 +9,6 @@ import {
   setAudioState,
   setAudioVolume
 } from './variables.js';
-import { pictures } from './pictures.js';
 import { resetTimer, startTimer, stopTimer } from './timer.js';
 import { Puzzle } from './puzzle_logic.js';
 import { Table } from './ui_components/table.js';
