@@ -1,4 +1,5 @@
 import { pictures } from './pictures.js';
+import { Puzzle } from './puzzle_logic.js';
 
 let musicState = false;
 let effectFillState = true;
@@ -118,6 +119,35 @@ function setWinnerTime(time) {
 
 function setThemeState(state) {
   isDarkTheme = state;
+}
+
+function createAppConfig() {
+  const currentAnswer = structuredClone(appConfig);
+  currentAnswer.theme = isDarkTheme;
+  currentAnswer.audio.musicState = musicState;
+  currentAnswer.audio.effectFillState = effectFillState;
+  currentAnswer.audio.effectCrossState = effectCrossState;
+  currentAnswer.audio.effectEraseState = effectEraseState;
+  currentAnswer.audio.effectPopupState = effectPopupState;
+  currentAnswer.audio.musicVolume = musicVolume;
+  currentAnswer.audio.effectFillVolume = effectFillVolume;
+  currentAnswer.audio.effectCrossVolume = effectCrossVolume;
+  currentAnswer.audio.effectEraseVolume = effectEraseVolume;
+  currentAnswer.audio.effectPopupVolume = effectPopupVolume;
+  currentAnswer.game.currentLevelId = currentLevelId;
+  currentAnswer.game.gridSize = gridSize;
+  currentAnswer.game.currentTime = winnerTime;
+
+  const picToTips = new Puzzle();
+  const colsAnswers =
+    picToTips.calculatePicMatrix(answerCells.col_answer);
+  const rowsAnswers =
+    picToTips.calculatePicMatrix(answerCells.row_answer);
+
+  currentAnswer.game.answerCells.col_tips = colsAnswers;
+  currentAnswer.game.answerCells.row_tips = rowsAnswers;
+
+  return currentAnswer;
 }
 
 export {
