@@ -102,10 +102,18 @@ function setOverlay() {
 
 function removeOverlay() {
   isOverlayShown = false;
-  sidebar[0]?.classList.remove('sidebar__active');
-  overlay[0].style.removeProperty('display');
   overlay[0].removeEventListener('click', removeOverlay);
   table[0].removeEventListener('mousemove', removeOverlay);
+  resetMenus();
+}
+
+function resetMenus() {
+  sidebar[0]?.classList.remove('sidebar__active');
+  menuLevel?.classList.remove('menu__tap');
+  prevLevel?.classList.remove('menu__level_hover');
+  prevPicture?.classList.remove('menu__image_hover');
+  prevLevel = null;
+  prevPicture = null;
 }
 
 function toggleSidebar() {
