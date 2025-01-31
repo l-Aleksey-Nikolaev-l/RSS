@@ -121,7 +121,7 @@ function setThemeState(state) {
   isDarkTheme = state;
 }
 
-function createAppConfig() {
+function getAppConfig() {
   const currentAnswer = structuredClone(appConfig);
   currentAnswer.theme = isDarkTheme;
   currentAnswer.audio.musicState = musicState;
@@ -199,5 +199,8 @@ export {
   setAudioState,
   setAudioVolume,
   setWinnerTime,
-  setThemeState
+  setThemeState,
+  getAppConfig,
+  setAppConfig,
+  resumeLastGame
 };
