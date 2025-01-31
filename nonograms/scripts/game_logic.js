@@ -88,6 +88,11 @@ function manageHeader(event) {
   }
 }
 
+function loadSavedData(savedData) {
+  setAppConfig(savedData);
+  setTheme(savedData.theme);
+}
+
 function setSaveResumeButton(name) {
   const saveResumeButton = document.querySelectorAll('[data-id]');
   saveResumeButton[0].dataset.id = name;
@@ -302,5 +307,6 @@ export {
   setCellStatus,
   getPuzzleNameLevel,
   sidebarSettings,
-  removePopup
+  removePopup,
+  loadSavedData
 };
