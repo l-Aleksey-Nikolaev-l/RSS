@@ -143,6 +143,13 @@ function setSaveResumeButton(name) {
   const saveResumeButton = document.querySelectorAll('[data-id]');
   saveResumeButton[0].dataset.id = name;
   saveResumeButton[0].textContent = name;
+  if (name === 'save') {
+    saveResumeButton[0].classList.remove('resume_button');
+    saveResumeButton[0].classList.add('save_button');
+  } else if (name === 'resume') {
+    saveResumeButton[0].classList.remove('save_button');
+    saveResumeButton[0].classList.add('resume_button');
+  }
 }
 
 function setOverlay(event) {
