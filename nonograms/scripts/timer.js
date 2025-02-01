@@ -20,9 +20,12 @@ function stopTimer() {
   clearInterval(timer);
 }
 
-function resetTimer() {
+function resetTimer(isResetTime) {
   isStarted = false;
   clearInterval(timer);
+  if (isResetTime) {
+    setWinnerTime(0);
+  }
 }
 
 function showTime() {
