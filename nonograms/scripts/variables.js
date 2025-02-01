@@ -24,7 +24,6 @@ let answerCells = {};
 const appConfig = {
   theme: isDarkTheme,
   audio: {
-    musicState: musicState,
     effectFillState: effectFillState,
     effectCrossState: effectCrossState,
     effectEraseState: effectEraseState,
@@ -158,7 +157,6 @@ function setGameConfig(savedData) {
 function getAppConfig() {
   const currentConfig = structuredClone(appConfig);
   currentConfig.theme = isDarkTheme;
-  currentConfig.audio.musicState = musicState;
   currentConfig.audio.effectFillState = effectFillState;
   currentConfig.audio.effectCrossState = effectCrossState;
   currentConfig.audio.effectEraseState = effectEraseState;
@@ -173,7 +171,6 @@ function getAppConfig() {
 
 function setAppConfig(config) {
   isDarkTheme = config.theme;
-  musicState = config.audio.musicState;
   effectFillState = config.audio.effectFillState;
   effectCrossState = config.audio.effectCrossState;
   effectEraseState = config.audio.effectEraseState;
