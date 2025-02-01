@@ -1,13 +1,14 @@
 import { Header } from './header.js';
 import { GameSection } from './game_section.js';
 import { Footer } from './footer.js';
-import { getLastConfig } from '../save_load_config.js';
+import { getAppSettings, getLastConfig } from '../save_load_config.js';
 import { setTheme } from '../game_logic.js';
 import {  isDarkTheme } from '../variables.js';
 
 class MainScreen {
 
   constructor() {
+    getAppSettings();
     getLastConfig();
     this.headerSection = new Header();
     this.gameSection = new GameSection();
