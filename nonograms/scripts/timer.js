@@ -47,5 +47,6 @@ function convertSecondsToTime(seconds) {
 export {
   startTimer,
   stopTimer,
-  resetTimer
+  resetTimer,
+  convertSecondsToTime
 };
