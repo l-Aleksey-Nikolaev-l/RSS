@@ -82,16 +82,13 @@ function manageHeader(event) {
   if (buttonId === 'resume') {
     setSaveResumeButton('save');
     const lastSave = resumeLastGame().game.answerCells;
+    const colTips = lastSave.col_tips;
+    const rowTips = lastSave.row_tips;
+    const colCross = lastSave.col_cross;
+    const rowCross = lastSave.row_cross;
     setGameByLevel(currentLevelId, table[0]);
-    const picArray = new Puzzle(lastSave).getPicByTips();
-    picArray.forEach((row, row_index) => {
-      row.forEach((cell, col_index) => {
-        if (cell === 1) {
-          addAnswer(col_index, row_index);
-        }
-      });
-    });
-    fillTable(picArray.flat());
+    const picArray = new Puzzle(colTips, rowTips).getPicByTips();
+    const crossArray = new Puzzle(colCross, rowCross).getPicByTips();
   }
 
   if (buttonId === 'repeat') {
