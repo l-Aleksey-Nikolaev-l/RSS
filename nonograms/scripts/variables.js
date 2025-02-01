@@ -181,11 +181,11 @@ function setAppConfig(config) {
 }
 
 function resumeLastGame() {
-  currentLevelId = appConfig.game.currentLevelId;
-  gridSize = appConfig.game.gridSize;
-  winnerTime = appConfig.game.currentTime;
-  answerCells = appConfig.game.answerCells;
-  return appConfig;
+  currentLevelId = gameConfig.game.currentLevelId;
+  gridSize = gameConfig.game.gridSize;
+  winnerTime = gameConfig.game.currentTime;
+  answerCells = gameConfig.game.answerCells;
+  return gameConfig;
 }
 
 export {
