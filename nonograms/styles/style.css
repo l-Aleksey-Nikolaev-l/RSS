@@ -436,9 +436,9 @@
     top: anchor(--game-section-anchor top);
     /*noinspection CssInvalidFunction*/
     right: anchor(--game-section-anchor right);
-    width: 400px;
+    width: 450px;
     height: 100%;
-    padding: 8px;
+    padding: 8px 12px;
     border: var(--border-menu);
     border-radius: 14px 0 0 14px;
     background-color: light-dark(var(--light-second-color), var(--dark-second-color));
@@ -458,9 +458,9 @@
 }
 
 .sidebar__active {
-    display: flex;
+    display: block;
     width: 0;
-    padding: 8px;
+    padding: 8px 12px;
     border: var(--border-menu);
     animation-name: showSidebar;
     animation-delay: 0s;
@@ -472,8 +472,8 @@
 
 @keyframes hideSidebar {
     0% {
-        display: flex;
-        width: 400px;
+        display: block;
+        width: 450px;
     }
 
     70% {
@@ -493,8 +493,8 @@
     }
 
     100% {
-        display: flex;
-        width: 400px;
+        display: block;
+        width: 450px;
     }
 }
 
@@ -553,7 +553,7 @@
     row-gap: 8px;
     padding: 18px 14px;
     border: var(--border-menu);
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 .themes__container {
