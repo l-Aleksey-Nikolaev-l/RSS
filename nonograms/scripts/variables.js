@@ -38,6 +38,7 @@ const appConfig = {
 
 let gameConfig = {
   game: {
+    lastTime: winnerTime,
     currentLevelId: currentLevelId,
     gridSize: gridSize,
     currentTime: winnerTime,
@@ -54,6 +55,7 @@ const setAnswerMatrixSize = (size) => {
 
 const mainScreenParams = () => {
   return {
+    lastTime: winnerTime,
     levelId: currentLevelId,
     gridSize: gridSize,
     pictures: pictures

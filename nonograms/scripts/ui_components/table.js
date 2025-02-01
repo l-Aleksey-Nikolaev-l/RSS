@@ -4,6 +4,7 @@ import { getPuzzleNameLevel } from '../game_logic.js';
 class Table {
 
   constructor({...args}) {
+    this.time = args.lastTime;
     this.levelId = args.levelId;
     this.gridSize = args.gridSize;
     this.pictures = args.pictures;

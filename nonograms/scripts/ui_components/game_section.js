@@ -1,4 +1,9 @@
-import { currentLevelId, gridSize, pictures } from '../variables.js';
+import {
+  winnerTime,
+  currentLevelId,
+  gridSize,
+  pictures
+} from '../variables.js';
 import { Sidebar } from './sidebar.js';
 import { Table } from './table.js';
 
@@ -6,6 +11,7 @@ class GameSection {
 
   constructor() {
     this.tableParams = {
+      lastTime: winnerTime,
       levelId: currentLevelId,
       gridSize: gridSize,
       pictures: pictures
