@@ -77,7 +77,7 @@ function manageHeader(event) {
   const buttonId = event.target.dataset.id;
 
   if (levelId) {
-    setGameByLevel(levelId, table[0]);
+    setGameByLevel(event, levelId, table[0]);
     setSaveResumeButton('save');
   }
 
@@ -94,7 +94,7 @@ function manageHeader(event) {
     const rowTips = lastSave.row_tips;
     const colCross = lastSave.col_cross;
     const rowCross = lastSave.row_cross;
-    setGameByLevel(currentLevelId, table[0]);
+    setGameByLevel(event, currentLevelId, table[0]);
     const picArray = new Puzzle(colTips, rowTips).getPicByTips();
     const crossArray = new Puzzle(colCross, rowCross).getPicByTips();
     restoreData(['fill'], picArray);
@@ -104,14 +104,14 @@ function manageHeader(event) {
   }
 
   if (buttonId === 'repeat') {
-    setGameByLevel(currentLevelId, table[0]);
+    setGameByLevel(event, currentLevelId, table[0]);
     setSaveResumeButton('save');
   }
 
   if (buttonId === 'random') {
     const numberOfLevels = Object.keys(pictures).length;
     const randomLevelId = Math.floor(Math.random() * numberOfLevels);
-    setGameByLevel(randomLevelId, table[0]);
+    setGameByLevel(event, randomLevelId, table[0]);
     setSaveResumeButton('save');
   }
 
@@ -172,8 +172,10 @@ function toggleSidebar() {
   sidebar[0].classList.toggle('sidebar__active');
 }
 
-function setGameByLevel(levelId, table) {
-  resetTimer();
+function setGameByLevel(event, levelId, table) {
+  const eventId = event.target.dataset.id;
+  const isResetTime = eventId !== 'save';
+  resetTimer(isResetTime);
   removePopup();
   setLevelGrid(levelId);
   table.deleteCaption();
