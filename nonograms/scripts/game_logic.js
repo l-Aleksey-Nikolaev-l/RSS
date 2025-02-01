@@ -22,6 +22,7 @@ import {
 } from './listeners.js';
 import {
   getLastConfig,
+  saveAppSettings,
   saveCurrentGame
 } from './save_load_config.js';
 
@@ -347,6 +348,9 @@ function sidebarSettings(event) {
     const value = event.target.value;
     setAudioVolume(inputId, value);
   }
+  setTimeout(() => {
+    saveAppSettings();
+  }, 1000);
 }
 
 function setTheme(state) {
