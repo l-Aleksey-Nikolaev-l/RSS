@@ -10,8 +10,14 @@ import {
   effectPopupState,
   effectPopupVolume
 } from './variables.js';
+
+let isAudioBlocked = false;
 const musicPlayer = new Audio();
 musicPlayer.loop = true;
+
+function setBlockAudio(state) {
+  isAudioBlocked = state;
+}
 
 function setBackgroundVolume(value) {
   musicPlayer.volume = value;
@@ -59,6 +65,9 @@ function playGameOverAudio() {
 }
 
 function turnOnPlayer(effectPlayer) {
+  if (isAudioBlocked) {
+    return;
+  }
   const playPromise = effectPlayer.play();
   if (playPromise !== undefined) {
     playPromise.then().catch(() => {});
@@ -70,4 +79,5 @@ export {
   playBackgroundAudio,
   playCellEffectAudio,
   playGameOverAudio,
+  setBlockAudio
 };

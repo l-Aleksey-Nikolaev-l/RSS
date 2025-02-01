@@ -36,6 +36,7 @@ import {
 import {
   playCellEffectAudio,
   playGameOverAudio,
+  setBlockAudio
 } from './audio.js';
 
 let isOverlayShown = false;
@@ -100,6 +101,7 @@ function manageHeader(event) {
 
   if (buttonId === 'resume') {
     getLastConfig();
+    setBlockAudio(true);
     setSaveResumeButton('save');
     const lastSave = resumeLastGame().game.answerCells;
     const colTips = lastSave.col_tips;
@@ -276,6 +278,7 @@ function setCellStatus(event) {
     cell.classList.toggle('cross');
     cell.classList.remove('fill');
   }
+  setBlockAudio(false);
   manageCell(cell);
 }
 
