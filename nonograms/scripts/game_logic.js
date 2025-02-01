@@ -366,6 +366,22 @@ function sidebarSettings(event) {
   }, 1000);
 }
 
+function refreshBestTimeTable(isSidebarShown) {
+  const leaderTable = document.getElementsByClassName('time__table');
+  const leadersData = getLeaders();
+  if (!isSidebarShown || !leadersData) {
+    return;
+  }
+  while (leaderTable[0].rows.length !== 1) {
+    leaderTable[0].deleteRow(1);
+  }
+  const savedData = JSON.parse(leadersData);
+  savedData.forEach((leader) => {
+    const leaderItem = new Sidebar().createBestTimeItem(leader);
+    leaderTable[0].append(leaderItem);
+  });
+}
+
 function saveBestTime(winnersTime) {
   const leadersData = getLeaders();
   let savedData = JSON.parse(leadersData);
