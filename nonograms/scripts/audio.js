@@ -18,7 +18,24 @@ function playBackgroundAudio(state) {
   }
 }
 
+function playGameOverAudio() {
+  const effectPlayer = new Audio();
+  effectPlayer.loop = false;
+  if (effectPopupState) {
+    effectPlayer.src = './assets/sounds/popup.mp3';
+    effectPlayer.volume = effectPopupVolume;
+    turnOnPlayer(effectPlayer);
+  }
+}
+
+function turnOnPlayer(effectPlayer) {
+  const playPromise = effectPlayer.play();
+  if (playPromise !== undefined) {
+    playPromise.then().catch(() => {});
+  }
+}
 
 export {
   playBackgroundAudio,
+  playGameOverAudio,
 };
