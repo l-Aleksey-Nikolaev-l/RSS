@@ -33,6 +33,10 @@ import {
   getLeaders,
   saveLeaders
 } from './save_load_config.js';
+import {
+  playCellEffectAudio,
+  playGameOverAudio,
+} from './audio.js';
 
 let isOverlayShown = false;
 let currentCell = null;
@@ -292,11 +296,13 @@ function setAnswer(sign, targetCellCol, targetCellRow) {
     if (colCross && rowCross) {
       eraseDataFromMatrix(['cross'], targetCellCol, targetCellRow);
     }
+    playCellEffectAudio('fill');
     addDataToMatrix(['fill'], targetCellCol, targetCellRow);
   } else if (sign.includes('cross')) {
     if (colCell && rowCell) {
       eraseDataFromMatrix(['fill'], targetCellCol, targetCellRow);
     }
+    playCellEffectAudio('cross');
     addDataToMatrix(['cross'], targetCellCol, targetCellRow);
   } else {
     if (colCell && rowCell) {
@@ -304,6 +310,7 @@ function setAnswer(sign, targetCellCol, targetCellRow) {
     } else if (colCross && rowCross) {
       eraseDataFromMatrix(['cross'], targetCellCol, targetCellRow);
     }
+    playCellEffectAudio('erase');
   }
   checkWinnings();
 }
@@ -339,6 +346,7 @@ function checkWinnings() {
 
   if (colsAnswers === picColsTips && rowsAnswers === picRowsTips) {
     showPopUp();
+    playGameOverAudio();
   }
 }
 
