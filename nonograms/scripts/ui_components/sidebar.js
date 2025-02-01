@@ -179,6 +179,18 @@ class Sidebar {
     return timeTable;
   }
 
+  createBestTimeItem(leaderData) {
+    const leaderRow = document.createElement('tr');
+    leaderRow.classList.add('time__best_item');
+    leaderData.forEach((cellData) => {
+      const dataCell = document.createElement('td');
+      dataCell.classList.add('time__best_cell');
+      dataCell.textContent = cellData;
+      leaderRow.append(dataCell);
+    });
+    return leaderRow;
+  }
+
   createSidebar() {
     const sidebar = document.createElement('div');
     sidebar.classList.add('sidebar', 'sidebar__active');
