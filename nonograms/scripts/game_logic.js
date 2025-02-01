@@ -115,7 +115,7 @@ function restoreData(sign, dataArray) {
   dataArray.forEach((row, row_index) => {
     row.forEach((cell, col_index) => {
       if (cell === 1) {
-        addAnswer(sign, col_index, row_index);
+        setAnswer(sign, col_index, row_index);
       }
     });
   });
@@ -237,9 +237,35 @@ function setCellStatus(event) {
 
 function manageCell(targetCell) {
   startTimer();
-  const isCellFilled = targetCell.classList.contains('fill');
+  const sign =[...targetCell.classList];
   const targetCellRow = Number(targetCell.dataset.row);
   const targetCellCol = Number(targetCell.dataset.col);
+  setAnswer(sign, targetCellCol, targetCellRow);
+}
+
+function setAnswer(sign, targetCellCol, targetCellRow) {
+  const colCell = answerCells.col_answer[targetCellCol][targetCellRow];
+  const rowCell = answerCells.row_answer[targetCellRow][targetCellCol];
+  const colCross = answerCells.col_cross[targetCellCol][targetCellRow];
+  const rowCross = answerCells.row_cross[targetCellRow][targetCellCol];
+  if (sign.includes('fill')) {
+    if (colCross && rowCross) {
+      eraseDataFromMatrix(['cross'], targetCellCol, targetCellRow);
+    }
+    addDataToMatrix(['fill'], targetCellCol, targetCellRow);
+  } else if (sign.includes('cross')) {
+    if (colCell && rowCell) {
+      eraseDataFromMatrix(['fill'], targetCellCol, targetCellRow);
+    }
+    addDataToMatrix(['cross'], targetCellCol, targetCellRow);
+  } else {
+    if (colCell && rowCell) {
+      eraseDataFromMatrix(['fill'], targetCellCol, targetCellRow);
+    } else if (colCross && rowCross) {
+      eraseDataFromMatrix(['cross'], targetCellCol, targetCellRow);
+    }
+  }
+  checkWinnings();
 }
 
 function addDataToMatrix(sign, targetCellCol, targetCellRow) {
