@@ -71,13 +71,16 @@ function manageHeader(event) {
 
   if (levelId) {
     setGameByLevel(levelId, table[0]);
+    setSaveResumeButton('save');
   }
 
   if (buttonId === 'save') {
     saveCurrentGame();
+    setSaveResumeButton('resume');
   }
 
   if (buttonId === 'resume') {
+    setSaveResumeButton('save');
     const lastSave = resumeLastGame().game.answerCells;
     setGameByLevel(currentLevelId, table[0]);
     const picArray = new Puzzle(lastSave).getPicByTips();
@@ -93,6 +96,7 @@ function manageHeader(event) {
 
   if (buttonId === 'repeat') {
     setGameByLevel(currentLevelId, table[0]);
+    setSaveResumeButton('save');
   }
 
   if (buttonId === 'random') {
