@@ -184,9 +184,10 @@ function solvePuzzle(event) {
   if (eventId === 'solve') {
     stopTimer();
     setBlock(true);
-    const currentPicture = pictures[currentLevelId];
-    const picArray = new Puzzle(currentPicture).getPicByTips().flat();
-    fillTable(picArray);
+    const colTips = pictures[currentLevelId].col_tips;
+    const rowTips = pictures[currentLevelId].row_tips;
+    const picArray = new Puzzle(colTips, rowTips).getPicByTips().flat();
+    fillTable(['all'], picArray);
   }
 }
 
