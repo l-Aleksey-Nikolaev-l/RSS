@@ -972,13 +972,13 @@
         transition: background-color 0.15s ease-in-out;
     }
 
-    .header__button:hover .random__button_text {
+    .random_button:hover:after {
         background-color: var(--light-third-gray);
         transform: rotateX(180deg);
         transition: transform 0.2s ease-in-out;
     }
 
-    .header__button:hover .settings__button_text {
+    .settings_button:hover:after {
         background-color: var(--light-third-gray);
         transform: rotateZ(45deg);
         transition: transform 0.2s ease-in-out;
@@ -1026,11 +1026,11 @@
     background-color: var(--light-third-green);
 }
 
-.header__button:active .random__button_text {
+.random_button:active:after {
     background-color: var(--light-second-color);
 }
 
-.header__button:active .settings__button_text {
+.settings_button:active:after {
     background-color: var(--light-second-color);
 }
 
