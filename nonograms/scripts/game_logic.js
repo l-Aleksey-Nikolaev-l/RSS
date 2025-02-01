@@ -3,6 +3,7 @@ import {
   currentLevelId,
   gridSize,
   answerCells,
+  isDarkTheme,
   setLevelGrid,
   mainScreenParams,
   setThemeState,
@@ -167,6 +168,8 @@ function toggleSidebar() {
     startSidebarListeners();
     return;
   }
+  const themeSwitch = document.getElementById('themes__switch');
+  themeSwitch.checked = isDarkTheme;
   sidebar[0].classList.toggle('sidebar__active');
 }
 
