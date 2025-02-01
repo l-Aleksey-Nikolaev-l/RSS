@@ -240,26 +240,25 @@ function manageCell(targetCell) {
   const isCellFilled = targetCell.classList.contains('fill');
   const targetCellRow = Number(targetCell.dataset.row);
   const targetCellCol = Number(targetCell.dataset.col);
-  if (isCellFilled) {
-    addAnswer(targetCellCol, targetCellRow);
-  } else {
-    removeAnswer(targetCellCol, targetCellRow);
+}
+
+function addDataToMatrix(sign, targetCellCol, targetCellRow) {
+  if (sign.includes('fill')) {
+    answerCells.col_answer[targetCellCol][targetCellRow] += 1;
+    answerCells.row_answer[targetCellRow][targetCellCol] += 1;
+  } else if (sign.includes('cross')) {
+    answerCells.col_cross[targetCellCol][targetCellRow] += 1;
+    answerCells.row_cross[targetCellRow][targetCellCol] += 1;
   }
 }
 
-function addAnswer(targetCellCol, targetCellRow) {
-  answerCells.col_answer[targetCellCol][targetCellRow] += 1;
-  answerCells.row_answer[targetCellRow][targetCellCol] += 1;
-  checkWinnings();
-}
-
-function removeAnswer(targetCellCol, targetCellRow) {
-  const colCell = answerCells.col_answer[targetCellCol][targetCellRow];
-  const rowCell = answerCells.row_answer[targetCellRow][targetCellCol];
-  if (colCell && rowCell) {
+function eraseDataFromMatrix(sign, targetCellCol, targetCellRow) {
+  if (sign.includes('fill')) {
     answerCells.col_answer[targetCellCol][targetCellRow] -= 1;
     answerCells.row_answer[targetCellRow][targetCellCol] -= 1;
-    checkWinnings();
+  } else if (sign.includes('cross')) {
+    answerCells.col_cross[targetCellCol][targetCellRow] -= 1;
+    answerCells.row_cross[targetCellRow][targetCellCol] -= 1;
   }
 }
 
