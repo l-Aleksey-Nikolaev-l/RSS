@@ -20,7 +20,7 @@ let isConfigLoaded = false;
 
 let answerCells = {};
 
-let appConfig = {
+const appConfig = {
   theme: isDarkTheme,
   audio: {
     musicState: musicState,
@@ -33,7 +33,10 @@ let appConfig = {
     effectCrossVolume: effectCrossVolume,
     effectEraseVolume: effectEraseVolume,
     effectPopupVolume: effectPopupVolume
-  },
+  }
+};
+
+let gameConfig = {
   game: {
     currentLevelId: currentLevelId,
     gridSize: gridSize,
