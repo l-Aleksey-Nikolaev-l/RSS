@@ -34,7 +34,7 @@ class Table {
     caption.classList.add('table__caption');
     const puzzleNameLevel = document.createElement('p');
     puzzleNameLevel.classList.add('puzzle__name_level');
-    puzzleNameLevel.textContent = getPuzzleNameLevel();
+    puzzleNameLevel.textContent = getPuzzleNameLevel(true);
     const spendTime = document.createElement('p');
     spendTime.classList.add('puzzle__spend_time');
     spendTime.textContent = convertSecondsToTime(this.time);
