@@ -5,13 +5,15 @@ import {
   setCellStatus,
   mouseButtonUp,
   removeOverlay,
-  sidebarSettings
+  sidebarSettings,
+  removePopup
 } from './game_logic.js';
 
 const header = document.getElementsByClassName('header');
 const sidebar = document.getElementsByClassName('sidebar');
 const table = document.getElementsByClassName('nonograms__table');
 const overlay = document.getElementsByClassName('overlay');
+const popup = document.getElementsByClassName('popup__close_button');
 
 function startSidebarListeners() {
   sidebar[0].addEventListener('input', sidebarSettings);
@@ -26,6 +28,10 @@ function setOverlayListeners(event, isSet) {
     overlay[0].removeEventListener('touchend', removeOverlay);
   }
   event.preventDefault();
+}
+
+function startPopupListener() {
+  popup[0].addEventListener('click', removePopup);
 }
 
 function startListeners() {
@@ -47,5 +53,6 @@ function startListeners() {
 export {
   startSidebarListeners,
   setOverlayListeners,
+  startPopupListener,
   startListeners
 };
