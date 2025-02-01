@@ -2,6 +2,8 @@ import { Header } from './header.js';
 import { GameSection } from './game_section.js';
 import { Footer } from './footer.js';
 import { getLastConfig } from '../save_load_config.js';
+import { setTheme } from '../game_logic.js';
+import {  isDarkTheme } from '../variables.js';
 
 class MainScreen {
 
@@ -31,9 +33,9 @@ class MainScreen {
 
   #createMainScreen() {
     const body = document.getElementsByClassName('body')[0];
-    body.classList.add('bg__light');
     const wrapper = this.#createWrapper();
     body.append(wrapper);
+    setTheme(isDarkTheme);
   }
 }
 

@@ -390,5 +390,5 @@ export {
   getPuzzleNameLevel,
   sidebarSettings,
   removePopup,
-  loadSavedData
+  setTheme
 };
