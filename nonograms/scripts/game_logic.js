@@ -16,8 +16,14 @@ import { Puzzle } from './puzzle_logic.js';
 import { Table } from './ui_components/table.js';
 import { Sidebar } from './ui_components/sidebar.js';
 import { Popup } from './ui_components/popup.js';
-import { startSidebarListeners, setOverlayListeners } from './listeners.js';
-import { saveCurrentGame } from './save_load_config.js';
+import {
+  startSidebarListeners,
+  setOverlayListeners
+} from './listeners.js';
+import {
+  getLastConfig,
+  saveCurrentGame
+} from './save_load_config.js';
 
 let isOverlayShown = false;
 let currentCell = null;
@@ -80,6 +86,7 @@ function manageHeader(event) {
   }
 
   if (buttonId === 'resume') {
+    getLastConfig();
     setSaveResumeButton('save');
     const lastSave = resumeLastGame().game.answerCells;
     const colTips = lastSave.col_tips;
@@ -91,6 +98,8 @@ function manageHeader(event) {
     const crossArray = new Puzzle(colCross, rowCross).getPicByTips();
     restoreData(['fill'], picArray);
     restoreData(['cross'], crossArray);
+    fillTable(['fill'], picArray.flat());
+    fillTable(['cross'], crossArray.flat());
   }
 
   if (buttonId === 'repeat') {
