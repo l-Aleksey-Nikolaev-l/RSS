@@ -143,6 +143,11 @@ function getGameConfig() {
   return currentAnswer;
 }
 
+function setGameConfig(savedData) {
+  isConfigLoaded = true;
+  gameConfig = savedData;
+}
+
 function setAppConfig(config) {
   isConfigLoaded = true;
   isDarkTheme = config.theme;
