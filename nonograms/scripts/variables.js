@@ -47,7 +47,9 @@ let gameConfig = {
 
 const setAnswerMatrixSize = (size) => {
   answerCells.col_answer = fillAnswerArray(size);
+  answerCells.col_cross = fillAnswerArray(size);
   answerCells.row_answer = fillAnswerArray(size);
+  answerCells.row_cross = fillAnswerArray(size);
 };
 
 const mainScreenParams = () => {
@@ -146,6 +148,22 @@ function getGameConfig() {
 function setGameConfig(savedData) {
   isConfigLoaded = true;
   gameConfig = savedData;
+}
+
+function getAppConfig() {
+  const currentConfig = structuredClone(appConfig);
+  currentConfig.theme = isDarkTheme;
+  currentConfig.audio.musicState = musicState;
+  currentConfig.audio.effectFillState = effectFillState;
+  currentConfig.audio.effectCrossState = effectCrossState;
+  currentConfig.audio.effectEraseState = effectEraseState;
+  currentConfig.audio.effectPopupState = effectPopupState;
+  currentConfig.audio.musicVolume = musicVolume;
+  currentConfig.audio.effectFillVolume = effectFillVolume;
+  currentConfig.audio.effectCrossVolume = effectCrossVolume;
+  currentConfig.audio.effectEraseVolume = effectEraseVolume;
+  currentConfig.audio.effectPopupVolume = effectPopupVolume;
+  return currentConfig;
 }
 
 function setAppConfig(config) {
