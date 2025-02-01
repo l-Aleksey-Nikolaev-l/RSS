@@ -109,21 +109,23 @@
 }
 
 .header__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     padding: 0 24px;
-    text-transform: capitalize;
     height: 48px;
     min-width: 48px;
     place-self: center;
     color: light-dark(var(--light-third-gray), var(--dark-third-gray));
-    text-align: start;
+    text-align: center;
+    text-transform: lowercase;
     background-color: light-dark(var(--light-second-color), var(--dark-second-color));
     border: var(--border-menu);
     border-radius: 14px;
     transition: background-color 0.15s ease-in-out;
     cursor: pointer;
+}
+
+.header__button::first-letter {
+    text-transform: capitalize;
 }
 
 .save_button {
