@@ -214,6 +214,8 @@ export {
   setAudioVolume,
   setWinnerTime,
   setThemeState,
+  getGameConfig,
+  setGameConfig,
   getAppConfig,
   setAppConfig,
   resumeLastGame
