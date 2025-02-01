@@ -1,5 +1,6 @@
 import { pictures } from './pictures.js';
 import { Puzzle } from './puzzle_logic.js';
+import { playBackgroundAudio, setBackgroundVolume } from './audio.js';
 
 let musicState = false;
 let effectFillState = true;
@@ -81,6 +82,7 @@ function fillAnswerArray(size) {
 function setAudioState(audio, state) {
   if (audio === 'music__play') {
     musicState = state;
+    playBackgroundAudio(musicState);
   }
 
   if (audio === 'fill__play') {
@@ -102,6 +104,7 @@ function setAudioState(audio, state) {
 function setAudioVolume(audio, value) {
   if (audio === 'music__volume') {
     musicVolume = value;
+    setBackgroundVolume(value);
   }
 
   if (audio === 'fill__volume') {
