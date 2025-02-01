@@ -9,7 +9,6 @@ import {
   setThemeState,
   setAudioState,
   setAudioVolume,
-  setAppConfig,
   resumeLastGame
 } from './variables.js';
 import { resetTimer, startTimer, stopTimer } from './timer.js';

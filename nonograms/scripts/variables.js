@@ -206,7 +206,6 @@ export {
   winnerTime,
   answerCells,
   isConfigLoaded,
-  appConfig,
   mainScreenParams,
   setAnswerMatrixSize,
   setLevelGrid,
