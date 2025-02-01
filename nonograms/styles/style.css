@@ -140,11 +140,12 @@
     background-color: var(--dark-third-color);
 }
 
-.save__button_text,
-.repeat__button_text,
-.resume__button_text {
-    color: inherit;
-    pointer-events: none;
+.random_button,
+.settings_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-self: center;
 }
 
 .random__button_text {
