@@ -124,32 +124,22 @@ function setThemeState(state) {
   isDarkTheme = state;
 }
 
-function getAppConfig() {
-  const currentAnswer = structuredClone(appConfig);
-  currentAnswer.theme = isDarkTheme;
-  currentAnswer.audio.musicState = musicState;
-  currentAnswer.audio.effectFillState = effectFillState;
-  currentAnswer.audio.effectCrossState = effectCrossState;
-  currentAnswer.audio.effectEraseState = effectEraseState;
-  currentAnswer.audio.effectPopupState = effectPopupState;
-  currentAnswer.audio.musicVolume = musicVolume;
-  currentAnswer.audio.effectFillVolume = effectFillVolume;
-  currentAnswer.audio.effectCrossVolume = effectCrossVolume;
-  currentAnswer.audio.effectEraseVolume = effectEraseVolume;
-  currentAnswer.audio.effectPopupVolume = effectPopupVolume;
+function getGameConfig() {
+  const currentAnswer = structuredClone(gameConfig);
   currentAnswer.game.currentLevelId = currentLevelId;
   currentAnswer.game.gridSize = gridSize;
   currentAnswer.game.currentTime = winnerTime;
-
+  delete currentAnswer.game.answerCells.row_answer;
+  delete currentAnswer.game.answerCells.col_answer;
   const picToTips = new Puzzle();
-  const colsAnswers =
-    picToTips.calculatePicMatrix(answerCells.col_answer);
-  const rowsAnswers =
-    picToTips.calculatePicMatrix(answerCells.row_answer);
-
+  const colsAnswers = picToTips.calculatePicMatrix(answerCells.col_answer);
+  const rowsAnswers = picToTips.calculatePicMatrix(answerCells.row_answer);
+  const colsCross = picToTips.calculatePicMatrix(answerCells.col_cross);
+  const rowsCross = picToTips.calculatePicMatrix(answerCells.row_cross);
   currentAnswer.game.answerCells.col_tips = colsAnswers;
   currentAnswer.game.answerCells.row_tips = rowsAnswers;
-
+  currentAnswer.game.answerCells.col_cross = colsCross;
+  currentAnswer.game.answerCells.row_cross = rowsCross;
   return currentAnswer;
 }
 
