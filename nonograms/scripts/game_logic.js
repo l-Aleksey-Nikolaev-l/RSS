@@ -18,7 +18,8 @@ import { Sidebar } from './ui_components/sidebar.js';
 import { Popup } from './ui_components/popup.js';
 import {
   startSidebarListeners,
-  setOverlayListeners
+  setOverlayListeners,
+  startPopupListener
 } from './listeners.js';
 import {
   getLastConfig,
@@ -330,6 +331,7 @@ function showPopUp() {
   const gameSection = document.getElementsByClassName('game__section');
   const popup = new Popup().createPopUp();
   gameSection[0].prepend(popup);
+  startPopupListener();
 }
 
 function removePopup() {
