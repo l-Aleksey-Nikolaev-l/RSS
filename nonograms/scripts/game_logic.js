@@ -190,15 +190,22 @@ function solvePuzzle(event) {
   }
 }
 
-function fillTable(picArray) {
+function fillTable(sign, picArray) {
   const cellsArray = document.querySelectorAll('.field__cell');
   picArray.forEach((value, index) => {
     setTimeout(() => {
-      if (value !== 0) {
-        cellsArray[index].classList.remove('cross');
+      if (sign.includes('all')) {
+        if (value !== 0) {
+          cellsArray[index].classList.remove('cross');
+          cellsArray[index].classList.add('fill');
+        } else {
+          cellsArray[index].classList.remove('fill');
+          cellsArray[index].classList.add('cross');
+        }
+      }
+      if (value !== 0 && sign.includes('fill')) {
         cellsArray[index].classList.add('fill');
-      } else {
-        cellsArray[index].classList.remove('fill');
+      } else if (value !== 0 && sign.includes('cross')) {
         cellsArray[index].classList.add('cross');
       }
     }, (25 / gridSize) * index);
