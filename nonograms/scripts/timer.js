@@ -1,4 +1,5 @@
 import { setWinnerTime, winnerTime } from './variables.js';
+import { saveBestTime } from './game_logic.js';
 
 const indicatorsArray = document.getElementsByClassName('puzzle__spend_time');
 
@@ -18,8 +19,11 @@ function startTimer() {
   timer = setInterval(showTime, 1000);
 }
 
-function stopTimer() {
+function stopTimer(isWinner) {
   clearInterval(timer);
+  if (isWinner) {
+    saveBestTime(winnerTime);
+  }
 }
 
 function resetTimer(isResetTime) {

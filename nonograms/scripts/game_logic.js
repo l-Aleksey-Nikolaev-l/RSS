@@ -207,7 +207,7 @@ function getPuzzleNameLevel(isTable) {
 function solvePuzzle(event) {
   const eventId = event.target.dataset.id;
   if (eventId === 'solve') {
-    stopTimer();
+    stopTimer(false);
     setBlock(true);
     const colTips = pictures[currentLevelId].col_tips;
     const rowTips = pictures[currentLevelId].row_tips;
@@ -336,7 +336,7 @@ function checkWinnings() {
 }
 
 function showPopUp() {
-  stopTimer();
+  stopTimer(true);
   setBlock(true);
   const gameSection = document.getElementsByClassName('game__section');
   const popup = new Popup().createPopUp();
