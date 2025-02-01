@@ -34,6 +34,7 @@
     --dark-fourth-green: rgb(190, 190, 0);
     --dark-hover-green: rgb(223, 231, 209);
     --dark-active-green: rgb(214, 221, 200);
+    --dark-hover-red: rgba(172, 13, 13, 0.9);
 
     --border-menu: 1px solid light-dark(var(--light-second-gray), var(--dark-second-gray));
     --border-thin: 1px solid light-dark(var(--light-third-gray), var(--dark-third-gray));
@@ -125,11 +126,16 @@
     cursor: pointer;
 }
 
-.save_button,
-.resume_button {
+.save_button {
     width: fit-content;
     color: var(--light-first-color);
     background-color: var(--light-first-green);
+}
+
+.resume_button {
+    width: fit-content;
+    color: var(--light-first-color);
+    background-color: var(--dark-third-color);
 }
 
 .save__button_text,
@@ -983,6 +989,12 @@
     .save_button:hover {
         color: var(--light-third-gray);
         background-color: var(--light-hover-green);
+    }
+
+    .resume_button:hover {
+        width: fit-content;
+        color: var(--light-first-color);
+        background-color: var(--dark-hover-red);
     }
 
     .show__answer:hover {
