@@ -1,5 +1,6 @@
 import { gridSize, setAnswerMatrixSize } from '../variables.js';
 import { getPuzzleNameLevel } from '../game_logic.js';
+import { convertSecondsToTime } from '../timer.js';
 
 class Table {
 
@@ -36,7 +37,7 @@ class Table {
     puzzleNameLevel.textContent = getPuzzleNameLevel();
     const spendTime = document.createElement('p');
     spendTime.classList.add('puzzle__spend_time');
-    spendTime.textContent = '00:00';
+    spendTime.textContent = convertSecondsToTime(this.time);
     caption.append(puzzleNameLevel, spendTime);
     return caption;
   }
