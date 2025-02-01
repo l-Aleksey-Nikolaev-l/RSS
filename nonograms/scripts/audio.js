@@ -1,6 +1,14 @@
 import {
   musicState,
   musicVolume,
+  effectFillState,
+  effectFillVolume,
+  effectCrossState,
+  effectCrossVolume,
+  effectEraseState,
+  effectEraseVolume,
+  effectPopupState,
+  effectPopupVolume
 } from './variables.js';
 const musicPlayer = new Audio();
 musicPlayer.loop = true;
@@ -15,6 +23,24 @@ function playBackgroundAudio(state) {
     }
   } else {
     musicPlayer.pause();
+  }
+}
+
+function playCellEffectAudio(cellEvent) {
+  const effectPlayer = new Audio();
+  effectPlayer.loop = false;
+  if (cellEvent === 'fill' && effectFillState) {
+    effectPlayer.src = './assets/sounds/fill.mp3';
+    effectPlayer.volume = effectFillVolume;
+    turnOnPlayer(effectPlayer);
+  } else if (cellEvent === 'cross' && effectCrossState) {
+    effectPlayer.src = './assets/sounds/cross.mp3';
+    effectPlayer.volume = effectCrossVolume;
+    turnOnPlayer(effectPlayer);
+  } else if (cellEvent === 'erase' && effectEraseState) {
+    effectPlayer.src = './assets/sounds/erase.mp3';
+    effectPlayer.volume = effectEraseVolume;
+    turnOnPlayer(effectPlayer);
   }
 }
 
@@ -37,5 +63,6 @@ function turnOnPlayer(effectPlayer) {
 
 export {
   playBackgroundAudio,
+  playCellEffectAudio,
   playGameOverAudio,
 };
