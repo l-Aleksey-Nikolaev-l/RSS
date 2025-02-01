@@ -11,7 +11,12 @@ import {
   setAudioVolume,
   resumeLastGame
 } from './variables.js';
-import { resetTimer, startTimer, stopTimer } from './timer.js';
+import {
+  resetTimer,
+  startTimer,
+  stopTimer,
+  convertSecondsToTime
+} from './timer.js';
 import { Puzzle } from './puzzle_logic.js';
 import { Table } from './ui_components/table.js';
 import { Sidebar } from './ui_components/sidebar.js';
@@ -24,7 +29,9 @@ import {
 import {
   getLastConfig,
   saveAppSettings,
-  saveCurrentGame
+  saveCurrentGame,
+  getLeaders,
+  saveLeaders
 } from './save_load_config.js';
 
 let isOverlayShown = false;
@@ -359,6 +366,37 @@ function sidebarSettings(event) {
   }, 1000);
 }
 
+function saveBestTime(winnersTime) {
+  const leadersData = getLeaders();
+  let savedData = JSON.parse(leadersData);
+  const puzzleNameLevel = getPuzzleNameLevel();
+  const formatedTime = convertSecondsToTime(winnersTime);
+  const currentData = [1, puzzleNameLevel[0], puzzleNameLevel[1], formatedTime];
+  if (!savedData) {
+    savedData = [currentData];
+  } else {
+    for (let index = 0; index < 5; index += 1) {
+      if (!savedData[index]) {
+        savedData.push(currentData);
+        break;
+      }
+      const savedTime = Number(savedData[index][3].replace(':', ''));
+      const currentTime = Number(currentData[3].replace(':', ''));
+      savedData[index][0] = index + 1;
+
+      if (currentTime < savedTime) {
+        savedData.splice(index, 0, currentData);
+        break;
+      }
+    }
+    savedData.forEach((_, index) => {
+      savedData[index][0] = index + 1;
+    });
+  }
+  const stringData = JSON.stringify(savedData.slice(0, 5));
+  saveLeaders(stringData);
+}
+
 function setTheme(state) {
   const body = document.getElementsByClassName('body');
   if (state) {
@@ -393,5 +431,6 @@ export {
   getPuzzleNameLevel,
   sidebarSettings,
   removePopup,
-  setTheme
+  setTheme,
+  saveBestTime
 };
