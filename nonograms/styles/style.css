@@ -1036,6 +1036,7 @@
     border-radius: 14px;
     background-color: light-dark(var(--light-bg-popup), var(--dark-bg-popup));
     transition: border 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    z-index: 1;
     overflow: hidden;
 }
 
