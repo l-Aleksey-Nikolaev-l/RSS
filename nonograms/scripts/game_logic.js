@@ -368,10 +368,10 @@ function sidebarSettings(event) {
   }, 1000);
 }
 
-function refreshBestTimeTable(isSidebarShown) {
+function refreshBestTimeTable() {
   const leaderTable = document.getElementsByClassName('time__table');
   const leadersData = getLeaders();
-  if (!isSidebarShown || !leadersData) {
+  if (!leadersData) {
     return;
   }
   while (leaderTable[0].rows.length !== 1) {
