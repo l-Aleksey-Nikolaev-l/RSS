@@ -89,6 +89,8 @@ function manageHeader(event) {
     setGameByLevel(currentLevelId, table[0]);
     const picArray = new Puzzle(colTips, rowTips).getPicByTips();
     const crossArray = new Puzzle(colCross, rowCross).getPicByTips();
+    restoreData(['fill'], picArray);
+    restoreData(['cross'], crossArray);
   }
 
   if (buttonId === 'repeat') {
@@ -109,9 +111,14 @@ function manageHeader(event) {
   }
 }
 
-function loadSavedData(savedData) {
-  setAppConfig(savedData);
-  setTheme(savedData.theme);
+function restoreData(sign, dataArray) {
+  dataArray.forEach((row, row_index) => {
+    row.forEach((cell, col_index) => {
+      if (cell === 1) {
+        addAnswer(sign, col_index, row_index);
+      }
+    });
+  });
 }
 
 function setSaveResumeButton(name) {
