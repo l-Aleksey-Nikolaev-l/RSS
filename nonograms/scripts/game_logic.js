@@ -178,6 +178,7 @@ function setGameByLevel(event, levelId, table) {
   const isResetTime = eventId !== 'save';
   resetTimer(isResetTime);
   removePopup();
+  setBlock(false);
   setLevelGrid(levelId);
   table.deleteCaption();
   while (table.rows.length) {
@@ -335,7 +336,6 @@ function showPopUp() {
 }
 
 function removePopup() {
-  setBlock(false);
   const popup = document.getElementsByClassName('popup__window');
   popup[0]?.remove();
 }
