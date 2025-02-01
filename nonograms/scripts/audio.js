@@ -13,6 +13,10 @@ import {
 const musicPlayer = new Audio();
 musicPlayer.loop = true;
 
+function setBackgroundVolume(value) {
+  musicPlayer.volume = value;
+}
+
 function playBackgroundAudio(state) {
   if (state && musicState) {
     musicPlayer.volume = musicVolume;
@@ -62,6 +66,7 @@ function turnOnPlayer(effectPlayer) {
 }
 
 export {
+  setBackgroundVolume,
   playBackgroundAudio,
   playCellEffectAudio,
   playGameOverAudio,
