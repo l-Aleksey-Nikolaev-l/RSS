@@ -167,7 +167,6 @@ function getAppConfig() {
 }
 
 function setAppConfig(config) {
-  isConfigLoaded = true;
   isDarkTheme = config.theme;
   musicState = config.audio.musicState;
   effectFillState = config.audio.effectFillState;
@@ -179,7 +178,6 @@ function setAppConfig(config) {
   effectCrossVolume = config.audio.effectCrossVolume;
   effectEraseVolume = config.audio.effectEraseVolume;
   effectPopupVolume = config.audio.effectPopupVolume;
-  appConfig = config;
 }
 
 function resumeLastGame() {
