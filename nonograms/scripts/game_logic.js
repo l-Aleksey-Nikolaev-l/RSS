@@ -173,11 +173,13 @@ function toggleSidebar() {
     const newSidebar = new Sidebar().createSidebar();
     gameSection[0].append(newSidebar);
     startSidebarListeners();
-    return;
+  } else {
+    const themeSwitch = document.getElementById('themes__switch');
+    themeSwitch.checked = isDarkTheme;
+    sidebar[0].classList.toggle('sidebar__active');
   }
-  const themeSwitch = document.getElementById('themes__switch');
-  themeSwitch.checked = isDarkTheme;
-  sidebar[0].classList.toggle('sidebar__active');
+  const isSidebarShown = sidebar[0].classList.contains('sidebar__active');
+  isSidebarShown && refreshBestTimeTable();
 }
 
 function setGameByLevel(event, levelId, table) {
