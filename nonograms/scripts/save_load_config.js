@@ -33,9 +33,23 @@ function getAppSettings() {
   }
 }
 
+function saveLeaders(currentLeaders) {
+  localStorage.setItem('rss_nonograms_leaders', currentLeaders);
+}
+
+function getLeaders() {
+  const leadersData = localStorage.getItem('rss_nonograms_leaders');
+  if (leadersData) {
+    return leadersData;
+  }
+  return null;
+}
+
 export {
   saveCurrentGame,
   getLastConfig,
   saveAppSettings,
-  getAppSettings
+  getAppSettings,
+  saveLeaders,
+  getLeaders
 };
