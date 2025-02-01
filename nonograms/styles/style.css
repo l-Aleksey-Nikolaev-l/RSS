@@ -380,7 +380,6 @@
         display: block;
         opacity: 1;
         color: var(--light-third-color);
-        background-color: var(--light-hover-green);
     }
 
     .level__item:last-child {
