@@ -147,20 +147,6 @@ function manageCell(targetCell) {
   setAnswer(sign, targetCellCol, targetCellRow);
 }
 
-function showPopUp() {
-  timer.stopTimer(true);
-  setBlock(true);
-  const gameSection = document.getElementsByClassName('game__section');
-  const popup = new Popup().createPopUp();
-  gameSection[0].prepend(popup);
-  listeners.startPopupListener();
-}
-
-function removePopup() {
-  const popup = document.getElementsByClassName('popup__window');
-  popup[0]?.remove();
-}
-
 function sidebarSettings(event) {
   const inputType = event.target.type;
   const inputId = event.target.id;
