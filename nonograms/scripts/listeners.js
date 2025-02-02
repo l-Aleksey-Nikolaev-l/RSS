@@ -32,18 +32,12 @@ function startPopupListener() {
 
 function startListeners() {
   header[0].addEventListener('touchend', tapOnMenu);
-
   header[0].addEventListener('click', manageHeader);
-
   table[0].addEventListener('click', solvePuzzle);
-
   table[0].addEventListener('mousedown', setCellStatus);
-
-  table[0].addEventListener('mouseup', mouseButtonUp);
-
-  table[0].addEventListener('contextmenu', (event) => event.preventDefault());
-
   table[0].addEventListener('mousemove', setCellStatus);
+  table[0].addEventListener('mouseup', mouseButtonUp);
+  table[0].addEventListener('contextmenu', (event) => event.preventDefault());
 }
 
 export {
