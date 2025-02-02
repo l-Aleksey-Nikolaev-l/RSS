@@ -9,7 +9,6 @@ import { toggleSidebar } from './helpers/manage_sidebar.js';
 import { setAnswer } from './helpers/manage_answer.js';
 import { Table } from './ui_components/table.js';
 
-let isOverlayShown = false;
 let currentCell = null;
 let prevCell = null;
 
