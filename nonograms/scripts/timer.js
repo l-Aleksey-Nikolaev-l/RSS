@@ -1,5 +1,5 @@
 import { setWinnerTime, winnerTime } from './variables.js';
-import { saveBestTime } from './game_logic.js';
+import { saveBestTime } from './helpers/manage_best_time.js';
 
 const indicatorsArray = document.getElementsByClassName('puzzle__spend_time');
 
