@@ -1,12 +1,13 @@
 import * as vars from './variables.js';
 import * as timer from './timer.js';
-import * as listeners from './listeners.js';
-import * as slConfig from './save_load_config.js';
 import * as audio from './audio.js';
-import { Puzzle } from './puzzle_logic.js';
+import * as popup from './helpers/manage_popup.js';
+import * as overlay from './helpers/manage_overlay.js';
+import * as slConfig from './save_load_config.js';
+import { resumeGame } from './helpers/resume_game.js';
+import { toggleSidebar } from './helpers/manage_sidebar.js';
+import { setAnswer } from './helpers/manage_answer.js';
 import { Table } from './ui_components/table.js';
-import { Sidebar } from './ui_components/sidebar.js';
-import { Popup } from './ui_components/popup.js';
 
 let isOverlayShown = false;
 let currentCell = null;
@@ -147,16 +148,11 @@ function setBlock(state) {
 }
 
 export {
-  tapOnMenu,
   mouseButtonUp,
-  removeOverlay,
-  toggleSidebar,
   manageHeader,
-  solvePuzzle,
   setCellStatus,
-  getPuzzleNameLevel,
-  sidebarSettings,
-  removePopup,
+  setSaveResumeButton,
+  setGameByLevel,
   setTheme,
-  saveBestTime
+  setBlock,
 };
