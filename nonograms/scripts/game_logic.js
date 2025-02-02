@@ -94,9 +94,6 @@ function setCellStatus(event) {
   if (!cellId || currentCell === prevCell || !mouseButton) {
     return;
   }
-
-  setSaveResumeButton('save');
-
   if (
     mouseButton === 1 ||
     (mouseButton === 1 && mouseEventType === 'mousemove')
@@ -112,6 +109,7 @@ function setCellStatus(event) {
     cell.classList.toggle('cross');
     cell.classList.remove('fill');
   }
+  setSaveResumeButton('save');
   audio.setBlockAudio(false);
   manageCell(cell);
 }
