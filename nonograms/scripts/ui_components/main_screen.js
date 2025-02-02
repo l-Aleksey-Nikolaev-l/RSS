@@ -1,9 +1,8 @@
 import { Header } from './header.js';
 import { GameSection } from './game_section.js';
-import { Footer } from './footer.js';
 import { getAppSettings, getLastConfig } from '../save_load_config.js';
 import { setTheme } from '../game_logic.js';
-import {  isDarkTheme } from '../variables.js';
+import { isDarkTheme } from '../variables.js';
 
 class MainScreen {
 
@@ -12,7 +11,6 @@ class MainScreen {
     getLastConfig();
     this.headerSection = new Header();
     this.gameSection = new GameSection();
-    this.footerSection = new Footer();
     this.#createMainScreen();
   }
 
@@ -27,8 +25,7 @@ class MainScreen {
     const overlay = this.#createContainer('overlay');
     const header = this.headerSection.createHeaderSection();
     const game = this.gameSection.createGameSection();
-    const footer = this.footerSection.createFooterSection();
-    mainContainer.append(overlay, header, game, footer);
+    mainContainer.append(overlay, header, game);
     return mainContainer;
   }
 
