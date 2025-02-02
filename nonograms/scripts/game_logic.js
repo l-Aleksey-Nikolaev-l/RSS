@@ -158,34 +158,6 @@ function manageCell(targetCell) {
   setAnswer(sign, targetCellCol, targetCellRow);
 }
 
-function setAnswer(sign, targetCellCol, targetCellRow) {
-  const colCell = vars.answerCells.col_answer[targetCellCol][targetCellRow];
-  const rowCell = vars.answerCells.row_answer[targetCellRow][targetCellCol];
-  const colCross = vars.answerCells.col_cross[targetCellCol][targetCellRow];
-  const rowCross = vars.answerCells.row_cross[targetCellRow][targetCellCol];
-  if (sign.includes('fill')) {
-    if (colCross && rowCross) {
-      eraseDataFromMatrix(['cross'], targetCellCol, targetCellRow);
-    }
-    audio.playCellEffectAudio('fill');
-    addDataToMatrix(['fill'], targetCellCol, targetCellRow);
-  } else if (sign.includes('cross')) {
-    if (colCell && rowCell) {
-      eraseDataFromMatrix(['fill'], targetCellCol, targetCellRow);
-    }
-    audio.playCellEffectAudio('cross');
-    addDataToMatrix(['cross'], targetCellCol, targetCellRow);
-  } else {
-    if (colCell && rowCell) {
-      eraseDataFromMatrix(['fill'], targetCellCol, targetCellRow);
-    } else if (colCross && rowCross) {
-      eraseDataFromMatrix(['cross'], targetCellCol, targetCellRow);
-    }
-    audio.playCellEffectAudio('erase');
-  }
-  checkWinnings();
-}
-
 function addDataToMatrix(sign, targetCellCol, targetCellRow) {
   if (sign.includes('fill')) {
     vars.answerCells.col_answer[targetCellCol][targetCellRow] += 1;
@@ -203,23 +175,6 @@ function eraseDataFromMatrix(sign, targetCellCol, targetCellRow) {
   } else if (sign.includes('cross')) {
     vars.answerCells.col_cross[targetCellCol][targetCellRow] -= 1;
     vars.answerCells.row_cross[targetCellRow][targetCellCol] -= 1;
-  }
-}
-
-function checkWinnings() {
-  const picToTips = new Puzzle();
-  const colsAnswers = picToTips.calculatePicMatrix(vars.answerCells.col_answer)
-    .flat().join('');
-  const rowsAnswers = picToTips.calculatePicMatrix(vars.answerCells.row_answer)
-    .flat().join('');
-  const picColsTips = vars.pictures[vars.currentLevelId].col_tips
-    .flat().join('');
-  const picRowsTips = vars.pictures[vars.currentLevelId].row_tips
-    .flat().join('');
-
-  if (colsAnswers === picColsTips && rowsAnswers === picRowsTips) {
-    showPopUp();
-    audio.playGameOverAudio();
   }
 }
 
