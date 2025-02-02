@@ -67,17 +67,6 @@ function setSaveResumeButton(name) {
   }
 }
 
-function setOverlay(event) {
-  isOverlayShown = true;
-  listeners.setOverlayListeners(event, true);
-}
-
-function removeOverlay(event) {
-  isOverlayShown = false;
-  listeners.setOverlayListeners(event, false);
-  resetMenus();
-}
-
 function toggleSidebar() {
   const sidebar = document.getElementsByClassName('sidebar');
   if (!sidebar[0]) {
