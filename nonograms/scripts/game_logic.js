@@ -56,35 +56,6 @@ function manageHeader(event) {
   }
 }
 
-function setSaveResumeButton(name) {
-  const saveResumeButton = document.querySelectorAll('[data-id]');
-  saveResumeButton[0].dataset.id = name;
-  saveResumeButton[0].textContent = name;
-  if (name === 'save') {
-    saveResumeButton[0].classList.remove('resume_button');
-    saveResumeButton[0].classList.add('save_button');
-  } else if (name === 'resume') {
-    saveResumeButton[0].classList.remove('save_button');
-    saveResumeButton[0].classList.add('resume_button');
-  }
-}
-
-function setGameByLevel(event, levelId, table) {
-  const eventId = event.target.dataset.id;
-  const isResetTime = eventId !== 'save';
-  timer.resetTimer(isResetTime);
-  removePopup();
-  setBlock(false);
-  vars.setLevelGrid(levelId);
-  table.deleteCaption();
-  while (table.rows.length) {
-    table.deleteRow(0);
-  }
-  const newGrid = new Table(vars.mainScreenParams());
-  newGrid.createTableGrid(table);
-}
-
-
 function setCellStatus(event) {
   const cell = event.target;
   const cellId = cell.dataset.col + cell.dataset.row;
@@ -122,6 +93,33 @@ function manageCell(targetCell) {
   setAnswer(sign, targetCellCol, targetCellRow);
 }
 
+function setSaveResumeButton(name) {
+  const saveResumeButton = document.querySelectorAll('[data-id]');
+  saveResumeButton[0].dataset.id = name;
+  saveResumeButton[0].textContent = name;
+  if (name === 'save') {
+    saveResumeButton[0].classList.remove('resume_button');
+    saveResumeButton[0].classList.add('save_button');
+  } else if (name === 'resume') {
+    saveResumeButton[0].classList.remove('save_button');
+    saveResumeButton[0].classList.add('resume_button');
+  }
+}
+
+function setGameByLevel(event, levelId, table) {
+  const eventId = event.target.dataset.id;
+  const isResetTime = eventId !== 'save';
+  timer.resetTimer(isResetTime);
+  popup.removePopup();
+  setBlock(false);
+  vars.setLevelGrid(levelId);
+  table.deleteCaption();
+  while (table.rows.length) {
+    table.deleteRow(0);
+  }
+  const newGrid = new Table(vars.mainScreenParams());
+  newGrid.createTableGrid(table);
+}
 
 function setTheme(state) {
   const body = document.getElementsByClassName('body');
