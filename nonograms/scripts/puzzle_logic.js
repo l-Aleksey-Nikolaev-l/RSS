@@ -121,13 +121,6 @@ class Puzzle {
     return this.#startGetting(0, 0) ? this.matrix : false;
   }
 
-  getTipsByPic(picData) {
-    const tipsOfPicture = {};
-    for (const dataArray in picData) {
-      tipsOfPicture[dataArray] = this.calculatePicMatrix(picData[dataArray]);
-    }
-    return tipsOfPicture;
-  }
 }
 
 export {
