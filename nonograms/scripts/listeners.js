@@ -1,13 +1,9 @@
-import {
-  tapOnMenu,
-  manageHeader,
-  solvePuzzle,
-  setCellStatus,
-  mouseButtonUp,
-  removeOverlay,
-  sidebarSettings,
-  removePopup
-} from './game_logic.js';
+import { manageHeader, setCellStatus, mouseButtonUp, } from './game_logic.js';
+import { sidebarSettings } from './helpers/manage_sidebar.js';
+import { removeOverlay } from './helpers/manage_overlay.js';
+import { removePopup } from './helpers/manage_popup.js';
+import { solvePuzzle } from './helpers/solve_puzzle.js';
+import { tapOnMenu } from './helpers/manage_menu.js';
 
 const header = document.getElementsByClassName('header');
 const sidebar = document.getElementsByClassName('sidebar');
