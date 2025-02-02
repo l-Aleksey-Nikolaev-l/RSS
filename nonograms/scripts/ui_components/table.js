@@ -1,5 +1,5 @@
 import { gridSize, setAnswerMatrixSize } from '../variables.js';
-import { getPuzzleNameLevel } from '../game_logic.js';
+import { getPuzzleNameLevel } from '../helpers/puzzle_name.js';
 import { convertSecondsToTime } from '../timer.js';
 
 class Table {
