@@ -82,15 +82,6 @@ function setGameByLevel(event, levelId, table) {
   newGrid.createTableGrid(table);
 }
 
-function getPuzzleNameLevel(isTable) {
-  const regex = /\(.*\)/g;
-  const puzzleName = vars.pictures[vars.currentLevelId].name
-    .replace(regex, '').trim();
-  const puzzleLevel = vars.pictures[vars.currentLevelId].level
-    .replace(regex, '').trim();
-  return isTable ? `${puzzleName} - ${puzzleLevel}` : [puzzleName, puzzleLevel];
-}
-
 
 function setCellStatus(event) {
   const cell = event.target;
