@@ -51,7 +51,9 @@ function manageHeader(event) {
 
   if (buttonId === 'settings') {
     toggleSidebar(event);
-    isOverlayShown ? removeOverlay(event) : setOverlay(event);
+    overlay.isOverlayShown ?
+      overlay.removeOverlay(event) :
+      overlay.setOverlay(event);
   }
 }
 
