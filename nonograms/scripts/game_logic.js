@@ -118,18 +118,6 @@ function getPuzzleNameLevel(isTable) {
   return isTable ? `${puzzleName} - ${puzzleLevel}` : [puzzleName, puzzleLevel];
 }
 
-function solvePuzzle(event) {
-  const eventId = event.target.dataset.id;
-  if (eventId === 'solve') {
-    timer.stopTimer(false);
-    setBlock(true);
-    const colTips = vars.pictures[vars.currentLevelId].col_tips;
-    const rowTips = vars.pictures[vars.currentLevelId].row_tips;
-    const picArray = new Puzzle(colTips, rowTips).getPicByTips().flat();
-    fillTable(['all'], picArray);
-  }
-}
-
 function fillTable(sign, picArray) {
   const cellsArray = document.querySelectorAll('.field__cell');
   picArray.forEach((value, index) => {
