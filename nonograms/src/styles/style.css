@@ -81,7 +81,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../assets/images/backgrounds/bg_day.webp);
+    background-image: url(../../assets/images/backgrounds/bg_day.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -91,7 +91,7 @@
 }
 
 .bg__dark:after {
-    background-image: url(../assets/images/backgrounds/bg_night.webp);
+    background-image: url(../../assets/images/backgrounds/bg_night.webp);
     opacity: 0.95;
 }
 
@@ -158,7 +158,7 @@
     height: 20px;
     width: 20px;
     background-color: light-dark(var(--light-third-gray), var(--dark-third-gray));
-    mask: url('../assets/images/icons/random.svg') no-repeat;
+    mask: url('../../assets/images/icons/random.svg') no-repeat;
     mask-size: cover;
     transform: rotateX(0);
     transition: transform 0.2s ease-in-out;
@@ -166,7 +166,7 @@
 }
 
 .settings_button:after {
-    mask: url('../assets/images/icons/settings.svg') no-repeat;
+    mask: url('../../assets/images/icons/settings.svg') no-repeat;
     mask-size: cover;
 }
 
@@ -347,7 +347,7 @@
     line-height: 0;
     letter-spacing: 0;
     background-color: light-dark(var(--light-third-gray), var(--dark-third-gray));
-    mask: url('../assets/images/icons/chevron_down.svg') no-repeat;
+    mask: url('../../assets/images/icons/chevron_down.svg') no-repeat;
     mask-size: cover;
     transform: rotateX(0deg);
     transition-duration: 0.2s;
@@ -690,14 +690,14 @@
     width: 14px;
     height: 14px;
     background-color: light-dark(var(--light-fourth-gray), var(--dark-fourth-gray));
-    mask: url('../assets/images/icons/unchecked.svg') no-repeat;
+    mask: url('../../assets/images/icons/unchecked.svg') no-repeat;
     mask-size: cover;
 }
 
 .audio__checkbox:checked:after {
     content: '';
     background-color: light-dark(var(--light-fourth-green), var(--dark-fourth-green));
-    mask: url('../assets/images/icons/checked.svg') no-repeat;
+    mask: url('../../assets/images/icons/checked.svg') no-repeat;
     mask-size: cover;
 }
 
@@ -1119,7 +1119,7 @@
     min-width: 180px;
     flex-grow: 1;
     filter: saturate(0.7);
-    background-image: url('../assets/images/backgrounds/bg_popup.webp');
+    background-image: url('../../assets/images/backgrounds/bg_popup.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
