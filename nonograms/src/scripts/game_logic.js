@@ -2,11 +2,11 @@ import * as vars from './variables.js';
 import * as timer from './timer.js';
 import * as audio from './audio.js';
 import * as popup from './helpers/manage_popup.js';
+import * as answer from './helpers/manage_answer.js';
 import * as overlay from './helpers/manage_overlay.js';
 import * as slConfig from './save_load_config.js';
 import { resumeGame } from './helpers/resume_game.js';
 import { toggleSidebar } from './helpers/manage_sidebar.js';
-import { setAnswer } from './helpers/manage_answer.js';
 import { Table } from './ui_components/table.js';
 
 let currentCell = null;
@@ -28,7 +28,8 @@ function manageHeader(event) {
   }
 
   if (buttonId === 'save') {
-    slConfig.saveCurrentGame();
+    const answers = answer.collectAnswer();
+    slConfig.saveCurrentGame(answers);
     setSaveResumeButton('resume');
   }
 
