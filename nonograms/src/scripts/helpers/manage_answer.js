@@ -4,6 +4,22 @@ import * as audio from '../audio.js';
 import * as popup from '../helpers/manage_popup.js';
 import { Puzzle } from '../puzzle_logic.js';
 
+function collectAnswer() {
+  const cells = document.querySelectorAll('.field__cell');
+  const answer = {
+    fill: [],
+    cross: []
+  };
+  cells.forEach((cell, index) => {
+    if (cell.classList.contains('fill')) {
+      answer.fill.push(index);
+    } else if (cell.classList.contains('cross')) {
+      answer.cross.push(index);
+    }
+  });
+  return answer;
+}
+
 function setAnswer(sign, targetCellCol, targetCellRow) {
   const colCell = vars.answerCells.col_answer[targetCellCol][targetCellRow];
   const rowCell = vars.answerCells.row_answer[targetCellRow][targetCellCol];
@@ -50,5 +66,6 @@ function checkWinnings() {
 }
 
 export {
+  collectAnswer,
   setAnswer
 };
