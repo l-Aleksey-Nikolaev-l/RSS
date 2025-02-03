@@ -91,7 +91,7 @@ function manageCell(targetCell) {
   const sign =[...targetCell.classList];
   const targetCellRow = Number(targetCell.dataset.row);
   const targetCellCol = Number(targetCell.dataset.col);
-  setAnswer(sign, targetCellCol, targetCellRow);
+  answer.setAnswer(sign, targetCellCol, targetCellRow);
 }
 
 function setSaveResumeButton(name) {
