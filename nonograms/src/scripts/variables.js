@@ -1,5 +1,4 @@
 import { pictures } from './pictures.js';
-import { Puzzle } from './puzzle_logic.js';
 import { playBackgroundAudio, setBackgroundVolume } from './audio.js';
 
 let musicState = false;
