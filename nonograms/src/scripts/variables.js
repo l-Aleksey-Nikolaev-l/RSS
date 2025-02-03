@@ -1,5 +1,4 @@
 import { pictures } from './pictures.js';
-import { Puzzle } from './puzzle_logic.js';
 import { playBackgroundAudio, setBackgroundVolume } from './audio.js';
 
 let musicState = false;
@@ -130,22 +129,12 @@ function setThemeState(state) {
   isDarkTheme = state;
 }
 
-function getGameConfig() {
+function getGameConfig(answers) {
   const currentAnswer = structuredClone(gameConfig);
   currentAnswer.game.currentLevelId = currentLevelId;
   currentAnswer.game.gridSize = gridSize;
   currentAnswer.game.currentTime = winnerTime;
-  delete currentAnswer.game.answerCells.row_answer;
-  delete currentAnswer.game.answerCells.col_answer;
-  const picToTips = new Puzzle();
-  const colsAnswers = picToTips.calculatePicMatrix(answerCells.col_answer);
-  const rowsAnswers = picToTips.calculatePicMatrix(answerCells.row_answer);
-  const colsCross = picToTips.calculatePicMatrix(answerCells.col_cross);
-  const rowsCross = picToTips.calculatePicMatrix(answerCells.row_cross);
-  currentAnswer.game.answerCells.col_tips = colsAnswers;
-  currentAnswer.game.answerCells.row_tips = rowsAnswers;
-  currentAnswer.game.answerCells.col_cross = colsCross;
-  currentAnswer.game.answerCells.row_cross = rowsCross;
+  currentAnswer.game.answerCells = answers;
   return currentAnswer;
 }
 
@@ -187,7 +176,7 @@ function resumeLastGame() {
   gridSize = gameConfig.game.gridSize;
   winnerTime = gameConfig.game.currentTime;
   answerCells = gameConfig.game.answerCells;
-  return gameConfig;
+  return structuredClone(gameConfig);
 }
 
 export {

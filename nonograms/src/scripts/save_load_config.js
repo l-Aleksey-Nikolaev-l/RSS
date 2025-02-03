@@ -5,8 +5,8 @@ import {
   setAppConfig
 } from './variables.js';
 
-function saveCurrentGame() {
-  const currentGameConfig = getGameConfig();
+function saveCurrentGame(answers) {
+  const currentGameConfig = getGameConfig(answers);
   const stringConfig = JSON.stringify(currentGameConfig);
   localStorage.setItem('rss_nonograms', stringConfig);
 }

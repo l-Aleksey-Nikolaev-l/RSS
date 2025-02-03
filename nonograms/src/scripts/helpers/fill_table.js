@@ -13,10 +13,10 @@ function fillTable(sign, picArray) {
           cellsArray[index].classList.add('cross');
         }
       }
-      if (value !== 0 && sign.includes('fill')) {
-        cellsArray[index].classList.add('fill');
-      } else if (value !== 0 && sign.includes('cross')) {
-        cellsArray[index].classList.add('cross');
+      if (sign.includes('fill')) {
+        cellsArray[value].classList.add('fill');
+      } else if (sign.includes('cross')) {
+        cellsArray[value].classList.add('cross');
       }
     }, (25 / vars.gridSize) * index);
   });
