@@ -177,7 +177,7 @@ function resumeLastGame() {
   gridSize = gameConfig.game.gridSize;
   winnerTime = gameConfig.game.currentTime;
   answerCells = gameConfig.game.answerCells;
-  return gameConfig;
+  return structuredClone(gameConfig);
 }
 
 export {
