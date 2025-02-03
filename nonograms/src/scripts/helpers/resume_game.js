@@ -17,13 +17,13 @@ function resumeGame(event, table) {
 }
 
 function restoreData(sign, dataArray) {
-  dataArray.forEach((row, row_index) => {
-    row.forEach((cell, col_index) => {
-      if (cell === 1) {
-        setAnswer(sign, col_index, row_index);
-      }
-    });
+  const cells = document.querySelectorAll('.field__cell');
+  dataArray.forEach((cell) => {
+    const colIndex = cells[cell].dataset.col;
+    const rowIndex = cells[cell].dataset.row;
+    setAnswer(sign, colIndex, rowIndex);
   });
+  fillTable(sign, dataArray);
 }
 
 export {
