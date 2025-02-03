@@ -12,6 +12,7 @@ import {
 } from './variables.js';
 
 let isAudioBlocked = false;
+const audioPath = '../assets/sounds/';
 const musicPlayer = new Audio();
 musicPlayer.loop = true;
 
@@ -26,7 +27,7 @@ function setBackgroundVolume(value) {
 function playBackgroundAudio(state) {
   if (state && musicState) {
     musicPlayer.volume = musicVolume;
-    musicPlayer.src = '../assets/sounds/bg_sound.mp3';
+    musicPlayer.src = audioPath + 'bg_sound.mp3';
     const playPromise = musicPlayer.play();
     if (playPromise !== undefined) {
       playPromise.then().catch(() => {});
@@ -40,15 +41,15 @@ function playCellEffectAudio(cellEvent) {
   const effectPlayer = new Audio();
   effectPlayer.loop = false;
   if (cellEvent === 'fill' && effectFillState) {
-    effectPlayer.src = '../assets/sounds/fill.mp3';
+    effectPlayer.src = audioPath + 'fill.mp3';
     effectPlayer.volume = effectFillVolume;
     turnOnPlayer(effectPlayer);
   } else if (cellEvent === 'cross' && effectCrossState) {
-    effectPlayer.src = '../assets/sounds/cross.mp3';
+    effectPlayer.src = audioPath + 'cross.mp3';
     effectPlayer.volume = effectCrossVolume;
     turnOnPlayer(effectPlayer);
   } else if (cellEvent === 'erase' && effectEraseState) {
-    effectPlayer.src = '../assets/sounds/erase.mp3';
+    effectPlayer.src = audioPath + 'erase.mp3';
     effectPlayer.volume = effectEraseVolume;
     turnOnPlayer(effectPlayer);
   }
@@ -58,7 +59,7 @@ function playGameOverAudio() {
   const effectPlayer = new Audio();
   effectPlayer.loop = false;
   if (effectPopupState) {
-    effectPlayer.src = '../assets/sounds/popup.mp3';
+    effectPlayer.src = audioPath + 'popup.mp3';
     effectPlayer.volume = effectPopupVolume;
     turnOnPlayer(effectPlayer);
   }
