@@ -15,3 +15,15 @@
     
 </pre>
 </div>
+<br>
+<div style="background-color:#f6f8fa;border:1px solid #f0f0f0;border-bottom:none;border-radius:10px 10px 0 0;padding:14px">
+<span style="display:inline-block;margin:0 0 0 14px;font-weight:700;color:steelblue">CODE EXAMPLE</span>
+</div>
+
+````js
+    picArray.forEach((value, index) => {
+      setTimeout(() => {
+        ...
+      }, (25 / gridSize) * index);
+    });
+````
