@@ -8,3 +8,10 @@
 <span style="color:steelblue">Discord:</span> Aleksei (@ngInit)<span></span><br>
 <span style="color:steelblue">GitHub:</span> <a target="_blank" href="https://github.com/ngInit">Open Link</a><br>
 </div>
+<br>
+<div style="background-color:#f6f8fa;border:1px solid #f0f0f0;border-radius:10px;padding:14px">
+<span style="display:inline-block;margin:0 0 8px 14px;font-weight:700;color:steelblue">TRANSCRIPT</span>
+<pre style="background:none;padding:0;margin:0 0 0 14px">
+    
+</pre>
+</div>
