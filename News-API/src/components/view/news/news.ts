@@ -1,37 +1,49 @@
 import './news.css';
+import { NewsType } from '../../../helpers/types';
 
 class News {
-    draw(data) {
-        const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
+    draw(newsArray: NewsType[]): void {
+        let selectedNews: NewsType[];
 
-        const fragment = document.createDocumentFragment();
-        const newsItemTemp = document.querySelector('#newsItemTemp');
+        if (newsArray.length >= 10) {
+            selectedNews = newsArray.filter((_newsItem: NewsType, index: number): boolean => index < 10);
+        } else {
+            selectedNews = newsArray;
+        }
 
-        news.forEach((item, idx) => {
-            const newsClone = newsItemTemp.content.cloneNode(true);
+        const fragment: DocumentFragment = document.createDocumentFragment() as DocumentFragment;
+        const newsItemTemp: HTMLTemplateElement = document.querySelector('#newsItemTemp') as HTMLTemplateElement;
+        const newsSection: HTMLElement = document.querySelector('.news') as HTMLElement;
 
-            if (idx % 2) newsClone.querySelector('.news__item').classList.add('alt');
+        selectedNews.forEach((item: NewsType, index: number): void => {
+            const newsClone: HTMLTemplateElement = newsItemTemp.content.cloneNode(true) as HTMLTemplateElement;
+            const newsItem: HTMLElement = newsClone.querySelector('.news__item') as HTMLElement;
+            const newsImage: HTMLElement = newsClone.querySelector('.news__meta-photo') as HTMLElement;
+            const newsAuthor: HTMLElement = newsClone.querySelector('.news__meta-author') as HTMLElement;
+            const newsDate: HTMLElement = newsClone.querySelector('.news__meta-date') as HTMLElement;
+            const newsTitle: HTMLElement = newsClone.querySelector('.news__description-title') as HTMLElement;
+            const newsSource: HTMLElement = newsClone.querySelector('.news__description-source') as HTMLElement;
+            const newsDescription: HTMLElement = newsClone.querySelector('.news__description-content') as HTMLElement;
+            const newsLink: HTMLElement = newsClone.querySelector('.news__read-more a') as HTMLElement;
 
-            newsClone.querySelector('.news__meta-photo').style.backgroundImage = `url(${
-                item.urlToImage || 'img/news_placeholder.jpg'
-            })`;
-            newsClone.querySelector('.news__meta-author').textContent = item.author || item.source.name;
-            newsClone.querySelector('.news__meta-date').textContent = item.publishedAt
-                .slice(0, 10)
-                .split('-')
-                .reverse()
-                .join('-');
+            if (index % 2) {
+                newsItem.classList.add('alt');
+            }
 
-            newsClone.querySelector('.news__description-title').textContent = item.title;
-            newsClone.querySelector('.news__description-source').textContent = item.source.name;
-            newsClone.querySelector('.news__description-content').textContent = item.description;
-            newsClone.querySelector('.news__read-more a').setAttribute('href', item.url);
-
+            newsImage.style.backgroundImage = `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;
+            newsAuthor.textContent = item.author || item.source.name;
+            newsDate.textContent = item.publishedAt.slice(0, 10).split('-').reverse().join('-');
+            newsTitle.textContent = item.title;
+            newsSource.textContent = item.source.name;
+            newsDescription.textContent = item.description;
+            newsLink.setAttribute('href', item.url);
             fragment.append(newsClone);
         });
 
-        document.querySelector('.news').innerHTML = '';
-        document.querySelector('.news').appendChild(fragment);
+        while (newsSection.firstChild) {
+            newsSection.removeChild(newsSection.firstChild);
+        }
+        newsSection.appendChild(fragment);
     }
 }
 
