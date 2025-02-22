@@ -1,8 +1,13 @@
 :root {
+    --pure-white-color: rgba(255, 255, 255, 1);
     --first-color: rgb(239, 239, 239);
     --second-color: rgba(48, 197, 255, 1);
     --third-color: rgba(255 183 73);
     --bg-color: rgba(23, 24, 28, 1);
+    --overlay-details-color: rgba(0, 0, 0, 0.6);
+    --desk-text-color: rgba(51, 51, 51, 1);
+    --desk-source-color: rgba(162, 162, 162, 1);
+    --green-color: rgba(34, 135, 62, 1);
 }
 
 * {
