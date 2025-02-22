@@ -11,7 +11,7 @@ class App {
     }
 
     public start(): void {
-        const sourcesButtons: HTMLElement = document.querySelector('.sources') as HTMLElement;
+        const sourcesButtons: HTMLElement = <HTMLElement>document.querySelector('.sources');
 
         this.controller.getSources((data: any): void => {
             this.view.drawSources(data);
