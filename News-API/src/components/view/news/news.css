@@ -27,25 +27,19 @@
     transition: transform 0.2s;
 }
 
-.news__item .news__meta-details,
-.news__item .news__meta-details ul {
-    margin: auto;
-    padding: 0;
-    list-style: none;
-}
-
 .news__item .news__meta-details {
     position: absolute;
     top: 0;
     bottom: 0;
     left: -120%;
-    margin: auto;
-    transition: left 0.2s;
-    padding: 10px;
     width: 100%;
+    padding: 10px;
+    margin: auto;
     font-size: 0.9rem;
     color: var(--pure-white-color);
     background: var(--overlay-details-color);
+    list-style: none;
+    transition: left 0.2s;
 }
 
 .news__item .news__description {
