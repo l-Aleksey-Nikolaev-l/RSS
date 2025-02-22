@@ -9,7 +9,7 @@ class Loader {
         this.options = options;
     }
 
-    getResp(
+    public getResp(
         params: Parameters,
         callback: Callback = (): void => {
             console.error('No callback for GET response');
@@ -18,7 +18,7 @@ class Loader {
         this.load(params, callback);
     }
 
-    errorHandler(res: Response): Response {
+    private errorHandler(res: Response): Response {
         if (!res.ok) {
             if (res.status === 401 || res.status === 404)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
@@ -39,7 +39,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(params: Parameters, callback: Callback): void {
+    private load(params: Parameters, callback: Callback): void {
         fetch(this.makeUrl(params), { method: params.method })
             .then(this.errorHandler)
             .then((res: Response) => res.json())
