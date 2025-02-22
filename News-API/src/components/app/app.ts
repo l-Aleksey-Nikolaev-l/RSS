@@ -18,7 +18,7 @@ class App {
             this.view.drawSources(data);
         });
 
-        sourcesButtons.addEventListener('click', (event: MouseEvent): void => {
+        sourcesButtons.addEventListener('input', (event: Event): void => {
             this.controller.getNews(event, (data: ResponseObject): void => {
                 this.view.drawNews(data);
             });
