@@ -6,7 +6,7 @@ class News {
         let selectedNews: NewsType[];
 
         if (newsArray.length >= 10) {
-            selectedNews = newsArray.filter((_newsItem: NewsType, index: number): boolean => index < 10);
+            selectedNews = newsArray.filter((newsItem: NewsType, index: number) => index < 10 && newsItem);
         } else {
             selectedNews = newsArray;
         }
