@@ -2,7 +2,7 @@ import './sources.css';
 import { SourcesType } from '../../../helpers/types';
 
 class Sources {
-    draw(data: SourcesType[]): void {
+    public draw(data: SourcesType[]): void {
         const fragment: DocumentFragment = document.createDocumentFragment();
         const sourceItemTemp: HTMLTemplateElement = <HTMLTemplateElement>document.querySelector('#sourceItemTemp');
         const sources: HTMLElement = <HTMLElement>document.querySelector('.sources');
