@@ -26,6 +26,7 @@ class AppController extends AppLoader {
                             endpoint: Endpoint.Everything,
                             options: {
                                 sources: sourceId,
+                                pageSize: 10,
                             },
                         },
                         callback
