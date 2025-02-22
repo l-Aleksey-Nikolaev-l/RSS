@@ -3,8 +3,8 @@ import { AppView } from '../view/appView';
 import { ResponseObject } from '../../helpers/types';
 
 class App {
-    private controller: AppController;
-    private view: AppView;
+    private readonly controller: AppController;
+    private readonly view: AppView;
 
     constructor() {
         this.controller = new AppController();
