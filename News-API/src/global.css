@@ -12,8 +12,8 @@
 }
 
 .body {
-    color: #fff;
-    background: #17181c;
+    color: var(--first-color);
+    background: var(--bg-color);
     font-family: sans-serif;
 }
 
