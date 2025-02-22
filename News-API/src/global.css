@@ -1,19 +1,19 @@
-body {
+.body {
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
 }
 
-header {
+.header {
     padding: 10px 30px;
 }
 
-header h1 {
+.header .title {
     font-size: 40px;
     font-weight: 800;
 }
 
-footer {
+.footer {
     height: 100px;
     display: flex;
     align-items: center;
