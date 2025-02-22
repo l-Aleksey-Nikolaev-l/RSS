@@ -1,6 +1,7 @@
 import News from './news/news';
 import Sources from './sources/sources';
-import { NewsType, ResponseObject, SourcesType } from '../../helpers/types';
+import { ResponseObject } from '../../helpers/types';
+import { defineType } from '../../helpers/generics';
 
 class AppView {
     private readonly news: News;
@@ -11,13 +12,11 @@ class AppView {
     }
 
     public drawNews(data: ResponseObject): void {
-        const values: NewsType[] = data?.articles ? data?.articles : [];
-        this.news.draw(values);
+        this.news.draw(defineType(data, 'articles'));
     }
 
     public drawSources(data: ResponseObject): void {
-        const values: SourcesType[] = data?.sources ? data?.sources : [];
-        this.sources.draw(values);
+        this.sources.draw(defineType(data, 'sources'));
     }
 }
 
