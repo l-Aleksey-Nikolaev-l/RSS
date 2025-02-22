@@ -11,6 +11,10 @@ type Parameters = {
     };
 };
 
+type UrlOptions = {
+    [option: string]: string | number;
+};
+
 type SourcesType = {
     category: string;
     country: string;
@@ -44,4 +48,4 @@ type ResponseObject = {
 
 type ResponseArray = SourcesType | NewsType;
 
-export { RequestApi, Parameters, SourcesType, NewsType, ResponseObject, ResponseArray };
+export { Parameters, UrlOptions, SourcesType, NewsType, ResponseObject };
