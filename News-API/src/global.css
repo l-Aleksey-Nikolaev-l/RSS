@@ -18,7 +18,11 @@
 }
 
 .header {
+    position: sticky;
+    top: 0;
     padding: 10px 30px;
+    background: var(--bg-color);
+    z-index: 1;
 }
 
 .header .title {
