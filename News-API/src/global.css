@@ -38,3 +38,10 @@
     justify-content: center;
     color: var(--first-color);
 }
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 12px;
+}
