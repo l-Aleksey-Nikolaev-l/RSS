@@ -1,8 +1,3 @@
-type RequestApi = {
-    apiUrl: string;
-    apiKey: { apiKey: string };
-};
-
 type Parameters = {
     method?: 'GET';
     endpoint: string;
@@ -45,7 +40,5 @@ type ResponseObject = {
     status: string;
     totalResults: number;
 };
-
-type ResponseArray = SourcesType | NewsType;
 
 export { Parameters, UrlOptions, SourcesType, NewsType, ResponseObject };
