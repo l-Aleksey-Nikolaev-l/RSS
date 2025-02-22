@@ -10,12 +10,12 @@ class Loader {
     }
 
     getResp(
-        { endpoint, options }: opt,
-        callback = (): void => {
+        params: Parameters,
+        callback: Callback = (): void => {
             console.error('No callback for GET response');
         }
     ): void {
-        this.load('GET', endpoint, callback, options);
+        this.load(params, callback);
     }
 
     errorHandler(res: Response): Response {
