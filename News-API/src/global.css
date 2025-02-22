@@ -31,6 +31,10 @@
     letter-spacing: 2px;
 }
 
+.main {
+    padding: 16px;
+}
+
 .footer {
     height: 100px;
     display: flex;
