@@ -28,7 +28,11 @@ const baseConfig = {
         path: path.resolve(__dirname, './dist'),
     },
     plugins: [
-        new DotenvWebpackPlugin(),
+        new DotenvWebpackPlugin({
+            path: './.env',
+            safe: true,
+            systemvars: false,
+        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'),
             favicon: './src/assets/images/icons/favicon.png',
