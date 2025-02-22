@@ -1,3 +1,10 @@
+:root {
+    --first-color: rgb(239, 239, 239);
+    --second-color: rgba(48, 197, 255, 1);
+    --third-color: rgba(255 183 73);
+    --bg-color: rgba(23, 24, 28, 1);
+}
+
 * {
     margin: 0;
     padding: 0;
