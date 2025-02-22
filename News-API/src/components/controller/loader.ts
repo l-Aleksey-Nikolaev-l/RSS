@@ -1,3 +1,5 @@
+import { Parameters, ResponseObject, UrlOptions } from '../../helpers/types';
+import { Callback } from '../../helpers/interfaces';
 
 class Loader {
     baseLink: string;
@@ -37,11 +39,11 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: string, callback: Callback, options = {}): void {
-        fetch(this.makeUrl(options, endpoint), { method })
+    load(params: Parameters, callback: Callback): void {
+        fetch(this.makeUrl(params), { method: params.method })
             .then(this.errorHandler)
             .then((res: Response) => res.json())
-            .then((data) => callback(data))
+            .then((data: ResponseObject) => callback(data))
             .catch((err) => console.error(err));
     }
 }
