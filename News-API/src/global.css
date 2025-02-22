@@ -51,11 +51,6 @@
     transition: color 0.15s ease-in-out;
 }
 
-.footer__author:hover {
-    color: var(--third-color);
-    transition: color 0.1s ease-in-out;
-}
-
 .footer__school {
     display: inline-block;
     height: 32px;
@@ -65,8 +60,14 @@
     filter: drop-shadow(0px 0px 6px var(--third-color));
     transition: filter 0.15s ease-in-out;
 }
+@media (hover: hover) {
+    .footer__author:hover {
+        color: var(--third-color);
+        transition: color 0.1s ease-in-out;
+    }
 
-.footer__school:hover {
-    filter: drop-shadow(0px 0px 10px var(--third-color));
-    transition: filter 0.1s ease-in-out;
+    .footer__school:hover {
+        filter: drop-shadow(0px 0px 10px var(--third-color));
+        transition: filter 0.1s ease-in-out;
+    }
 }
