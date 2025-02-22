@@ -2,7 +2,7 @@ import './news.css';
 import { NewsType } from '../../../helpers/types';
 
 class News {
-    draw(newsArray: NewsType[]): void {
+    public draw(newsArray: NewsType[]): void {
         let selectedNews: NewsType[];
 
         if (newsArray.length >= 10) {
