@@ -1,5 +1,6 @@
 import News from './news/news';
 import Sources from './sources/sources';
+import { NewsType, ResponseObject, SourcesType } from '../../helpers/types';
 
 export class AppView {
     news: News;
@@ -10,12 +11,12 @@ export class AppView {
     }
 
     drawNews(data: any): void {
-        const values = data?.articles ? data?.articles : [];
+        const values: NewsType[] = data?.articles ? data?.articles : [];
         this.news.draw(values);
     }
 
     drawSources(data: any): void {
-        const values = data?.sources ? data?.sources : [];
+        const values: SourcesType[] = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }
 }
