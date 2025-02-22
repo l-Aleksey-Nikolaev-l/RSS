@@ -30,7 +30,7 @@ class News {
                 newsItem.classList.add('alt');
             }
 
-            newsImage.style.backgroundImage = `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;
+            newsImage.style.backgroundImage = `url(${item.urlToImage})`;
             newsAuthor.textContent = item.author || item.source.name;
             newsDate.textContent = item.publishedAt.slice(0, 10).split('-').reverse().join('-');
             newsTitle.textContent = item.title;
