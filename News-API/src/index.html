@@ -13,7 +13,11 @@
             <h1 class="title">News Portal</h1>
         </header>
         <main class="main">
-            <div class="sources"></div>
+            <label>
+                <select class="sources" name="sources">
+                    <option value="" selected disabled>Select source</option>
+                </select>
+            </label>
             <div class="news"></div>
         </main>
         <footer class="footer">
@@ -25,9 +29,7 @@
         </footer>
 
         <template id="sourceItemTemp">
-            <div class="source__item">
-                <span class="source__item-name"></span>
-            </div>
+            <option class="source__item"></option>
         </template>
 
         <template id="newsItemTemp">
