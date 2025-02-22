@@ -1,11 +1,3 @@
-type opt = {
-    endpoint: string;
-    options?: object;
-};
-
-interface Callback {
-    (response: Response): void;
-}
 
 class Loader {
     baseLink: string;
