@@ -45,3 +45,8 @@
     align-items: center;
     column-gap: 12px;
 }
+
+.footer__author {
+    color: inherit;
+    transition: color 0.15s ease-in-out;
+}
