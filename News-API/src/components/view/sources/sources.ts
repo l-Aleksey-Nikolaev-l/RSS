@@ -4,15 +4,15 @@ import { SourcesType } from '../../../helpers/types';
 class Sources {
     draw(data: SourcesType[]): void {
         const fragment: DocumentFragment = document.createDocumentFragment();
-        const sourceItemTemp: HTMLTemplateElement = document.querySelector('#sourceItemTemp') as HTMLTemplateElement;
-        const sources: HTMLElement = document.querySelector('.sources') as HTMLElement;
+        const sourceItemTemp: HTMLTemplateElement = <HTMLTemplateElement>document.querySelector('#sourceItemTemp');
+        const sources: HTMLElement = <HTMLElement>document.querySelector('.sources');
 
         data.forEach((item: SourcesType): void => {
-            const sourceClone: HTMLTemplateElement = sourceItemTemp.content.cloneNode(true) as HTMLTemplateElement;
-            const elName: HTMLElement = sourceClone.querySelector('.source__item-name') as HTMLElement;
+            const sourceClone: HTMLTemplateElement = <HTMLTemplateElement>sourceItemTemp.content.cloneNode(true);
+            const elName: HTMLElement = <HTMLElement>sourceClone.querySelector('.source__item-name');
             elName.textContent = item.name;
 
-            const elSpan: HTMLElement = sourceClone.querySelector('.source__item') as HTMLElement;
+            const elSpan: HTMLElement = <HTMLElement>sourceClone.querySelector('.source__item');
             elSpan.setAttribute('data-source-id', item.id);
             fragment.append(sourceClone);
         });
