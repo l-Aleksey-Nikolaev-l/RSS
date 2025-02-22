@@ -12,6 +12,9 @@
 .news__item .news__meta {
     position: relative;
     height: 200px;
+    background-image: url('../../../assets/images/pictures/news_placeholder.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .news__item .news__meta-photo {
