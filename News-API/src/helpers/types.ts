@@ -6,7 +6,9 @@ type RequestApi = {
 type Parameters = {
     method?: 'GET';
     endpoint: string;
-    options?: object;
+    options?: {
+        sources: string;
+    };
 };
 
 type SourcesType = {
