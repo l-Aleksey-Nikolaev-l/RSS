@@ -8,6 +8,7 @@ type Parameters = {
     endpoint: string;
     options?: {
         sources: string;
+        pageSize: number;
     };
 };
 
