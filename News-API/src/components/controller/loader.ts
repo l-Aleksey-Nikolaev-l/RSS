@@ -2,8 +2,8 @@ import { Parameters, ResponseObject, UrlOptions } from '../../helpers/types';
 import { Callback } from '../../helpers/interfaces';
 
 class Loader {
-    baseLink: string;
-    options: object;
+    private readonly baseLink: string;
+    private readonly options: object;
     constructor(baseLink: string, options: object) {
         this.baseLink = baseLink;
         this.options = options;
