@@ -13,7 +13,7 @@ class AppController extends AppLoader {
     }
 
     getNews(event: Event, callback: Callback): void {
-        const sourceId: string = (<HTMLSelectElement>event.currentTarget).value;
+        const sourceId: string = (event.currentTarget as HTMLSelectElement).value;
         super.getResp(
             {
                 endpoint: Endpoint.Everything,
