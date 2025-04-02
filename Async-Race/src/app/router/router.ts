@@ -19,11 +19,9 @@ class Router {
         this.fullPath = '';
         this.routes = routes;
         document.addEventListener('DOMContentLoaded', () => {
-            this.fullPath = this.getCurrentPath();
-            this.navigate(this.fullPath);
+            this.bowserChangeHandler();
         });
         window.addEventListener('popstate', this.bowserChangeHandler.bind(this));
-        window.addEventListener('hashchange', this.bowserChangeHandler.bind(this));
     }
 
     public navigate(url: string): void {
