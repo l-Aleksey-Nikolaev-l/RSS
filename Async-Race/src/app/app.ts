@@ -53,8 +53,8 @@ class App {
     }
 
     private setContent(pageName: string, page: Page): void {
-        window.location.hash = pageName;
         this.layer.setPage(page);
+        window.history.pushState({}, '', pageName);
     }
 }
 
