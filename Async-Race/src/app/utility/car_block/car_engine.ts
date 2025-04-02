@@ -6,32 +6,34 @@ type QueryParams = {
 };
 
 class CarEngine {
-    protected getEngine(): void {
+    public async getEngine(carId: number): Promise<object> {
         const query: Array<QueryParams> = [
             {
                 key: 'id',
-                value: '1',
+                value: String(carId),
             },
             {
                 key: 'status',
                 value: 'started',
             },
         ];
-        const query2: Array<QueryParams> = [
+        const newEngine: Api = new Api();
+        return await newEngine.requestEngineStatus(query);
+    }
+
+    public async driveEngine(carId: number): Promise<object> {
+        const query: Array<QueryParams> = [
             {
                 key: 'id',
-                value: '1',
+                value: String(carId),
             },
             {
                 key: 'status',
                 value: 'drive',
             },
         ];
-        // const newEngine: Api = new Api();
-        // const res1 = newEngine.requestEngineStatus(query);
-        // const res2 = newEngine.requestEngineStatus(query2);
-        // res1.then((res) => console.log(res));
-        // res2.then((res) => console.log(res));
+        const newEngine: Api = new Api();
+        return await newEngine.requestEngineStatus(query);
     }
 }
 
