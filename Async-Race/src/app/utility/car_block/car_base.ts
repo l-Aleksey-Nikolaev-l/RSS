@@ -22,7 +22,7 @@ class CarBase extends CarEngine {
         return await allCars.then((allCars: Response) => allCars);
     }
 
-    public getCarById(id: number = 0): void {
+    public async getCarById(id: number = 0): Promise<object> {
         const queryParams: Array<QueryParams> = [
             {
                 key: 'id',
@@ -30,9 +30,7 @@ class CarBase extends CarEngine {
             },
         ];
         const car: Promise<Response> = new Api().requestData('garage', queryParams);
-        car.then((response: Response): void => {
-            console.log(response);
-        });
+        return await car.then((oneCar: Response) => oneCar);
     }
 
     public createNewCar(): void {
