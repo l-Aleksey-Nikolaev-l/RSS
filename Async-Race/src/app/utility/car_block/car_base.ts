@@ -1,15 +1,12 @@
 import { Api } from '../../service/api';
-import { CarEngine } from './car_engine';
 
 type QueryParams = {
     key: string;
     value: string;
 };
 
-class CarBase extends CarEngine {
+class CarBase {
     constructor() {
-        super();
-        this.getEngine();
         this.getAllCars();
         // this.getCarById(11);
         // this.createNewCar();
