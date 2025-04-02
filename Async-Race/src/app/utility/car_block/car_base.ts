@@ -7,7 +7,7 @@ type QueryParams = {
 
 class CarBase {
     constructor() {
-        this.getAllCars();
+        // this.getAllCars();
         // this.getCarById(11);
         // this.createNewCar();
         // this.deleteCar(11);
