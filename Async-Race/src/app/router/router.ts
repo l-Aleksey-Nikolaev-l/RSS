@@ -26,8 +26,7 @@ class Router {
 
     public navigate(url: string): void {
         const request: UserRequest = this.parseUrl(url);
-        const pathForFind: string = request.resource === '' ? request.path : `${request.path}/${request.resource}`;
-        const route: Routes | undefined = this.routes.find((item: Routes) => item.path === pathForFind);
+        const route: Routes | undefined = this.routes.find((item: Routes) => item.path === request.path);
         if (!route) {
             this.redirectToNotFound();
             return;
