@@ -6,11 +6,6 @@ type QueryParams = {
 };
 
 class CarEngine {
-    public engine: Promise<Response> | null;
-    constructor() {
-        this.engine = null;
-    }
-
     protected getEngine(): void {
         const query: Array<QueryParams> = [
             {
