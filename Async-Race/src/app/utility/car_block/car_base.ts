@@ -17,13 +17,9 @@ class CarBase extends CarEngine {
         // this.updateCar(11);
     }
 
-    public getAllCars(): void {
+    public async getAllCars(): Promise<object> {
         const allCars: Promise<Response> = new Api().requestAllData('garage');
-        allCars.then((cars: Response): void => {
-            const newEngine: Promise<Response> | null = this.engine;
-            newEngine?.then((res: object) => JSON.stringify(res));
-            console.log(cars);
-        });
+        return await allCars.then((allCars: Response) => allCars);
     }
 
     public getCarById(id: number = 0): void {
