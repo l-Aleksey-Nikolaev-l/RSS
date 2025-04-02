@@ -7,11 +7,9 @@ import { CreateElement } from '../utility/create_element';
 import type { ElementParams } from '../helper/types';
 
 class Layer {
-    private readonly router: Router;
     private header: HeaderLayer;
     private main: MainLayer;
     constructor(router: Router) {
-        this.router = router;
         this.header = new HeaderLayer(router);
         this.main = new MainLayer();
     }
