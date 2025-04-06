@@ -26,6 +26,21 @@ class CarEngine {
         return Object.assign(await newEngine.requestEngineStatus(query));
     }
 
+    public async stopEngine(carId: number): Promise<Engine> {
+        const query: Array<QueryParams> = [
+            {
+                key: 'id',
+                value: String(carId),
+            },
+            {
+                key: 'status',
+                value: 'stopped',
+            },
+        ];
+        const newEngine: Api = new Api();
+        return Object.assign(await newEngine.requestEngineStatus(query));
+    }
+
     public async driveEngine(carId: number): Promise<{ status: boolean }> {
         const query: Array<QueryParams> = [
             {
