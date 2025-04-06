@@ -5,6 +5,11 @@ type QueryParams = {
     value: string;
 };
 
+type Engine = {
+    distance: number;
+    velocity: number;
+};
+
 class CarEngine {
     public async getEngine(carId: number): Promise<object> {
         const query: Array<QueryParams> = [
