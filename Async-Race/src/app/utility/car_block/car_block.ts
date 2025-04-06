@@ -100,6 +100,57 @@ class CarBlock {
         carIcon.append(carPath);
         return carIcon;
     }
+
+    private manageClick(event: MouseEvent): void {
+        if (event.target instanceof HTMLButtonElement) {
+            const currentEvent: HTMLElement = event.target;
+            const carIdStart: string | null = currentEvent.getAttribute('start_car-id');
+            const carIdStop: string | null = currentEvent.getAttribute('stop_car-id');
+            const carIdEdit: string | null = currentEvent.getAttribute('edit_car-id');
+            const carIdRemove: string | null = currentEvent.getAttribute('remove_car-id');
+            if (carIdStart !== null) {
+                const car: HTMLElement = document.querySelector(`[car-id="${carIdStart}"]`)!;
+                currentEvent.setAttribute('disabled', 'true');
+                const engineShop: CarEngine = new CarEngine();
+                const newEngine: Promise<Engine> = engineShop.startEngine(Number(carIdStart));
+                newEngine.then((engine: Engine): void => {
+                    car.firstElementChild!.classList.add('car_drive');
+                    const trackLength: number = car.parentElement!.offsetWidth - 60;
+                    let count: number = 0;
+                    const interval: NodeJS.Timeout = setInterval((): void => {
+                        if (count >= trackLength) {
+                            currentEvent.removeAttribute('disabled');
+                            car.firstElementChild!.classList.remove('car_drive');
+                            clearInterval(interval);
+                        } else {
+                            count += trackLength / engine.velocity / 10;
+                            car.style.transform = `translateX(${count}px)`;
+                        }
+                    }, 10);
+                    const breakEngine: Promise<{ status: boolean }> = engineShop.driveEngine(Number(carIdStart));
+                    breakEngine.catch((): void => {
+                        currentEvent.removeAttribute('disabled');
+                        car.firstElementChild!.classList.remove('car_drive');
+                        clearInterval(interval);
+                    });
+                });
+            } else if (carIdStop !== null) {
+                const car: HTMLElement = document.querySelector(`[car-id="${carIdStop}"]`)!;
+                const engineShop: CarEngine = new CarEngine();
+                const newEngine: Promise<Engine> = engineShop.stopEngine(Number(carIdStop));
+                newEngine.then((): void => {
+                    car.removeAttribute('style');
+                    car.firstElementChild!.classList.remove('car_drive');
+                });
+            } else if (carIdEdit !== null) {
+                const car: HTMLElement = document.querySelector(`[car-id="${carIdEdit}"]`)!;
+                console.log('edit', car);
+            } else if (carIdRemove !== null) {
+                const carBlock: HTMLElement = document.querySelector(`[data-car_block="${carIdRemove}"]`)!;
+                carBlock.remove();
+            }
+        }
+    }
 }
 
 export { CarBlock };
