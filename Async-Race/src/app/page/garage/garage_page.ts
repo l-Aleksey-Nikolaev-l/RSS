@@ -16,7 +16,7 @@ class GaragePage extends Page {
             callback: (): void => {},
         };
         const garagePage: HTMLElement = new CreateElement(params).getElement();
-        const carBlock: Promise<HTMLElement> = new CarBlock().buildCar();
+        const carBlock: Promise<HTMLElement> = new CarBlock().buildCars();
         carBlock.then((car: HTMLElement): void => {
             garagePage.append(car);
         });
