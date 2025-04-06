@@ -36,11 +36,23 @@ class HeaderLayer {
                 this.navigateToPage(event);
             },
         };
+        const raceParams: ElementParams = {
+            tag: 'button',
+            classNames: ['header__button', 'race__button'],
+            callback: (): void => {
+                const startButtons: NodeListOf<HTMLButtonElement> = document.querySelectorAll('[start_car-id]');
+                startButtons.forEach((button: HTMLButtonElement): void => {
+                    button.click();
+                });
+            },
+        };
         const garageButton: HTMLElement = new CreateElement(garageParams).getElement();
         const winnersButton: HTMLElement = new CreateElement(winnersParams).getElement();
+        const raceButton: HTMLElement = new CreateElement(raceParams).getElement();
         garageButton.textContent = 'Garage';
         winnersButton.textContent = 'Winners';
-        fragment.append(garageButton, winnersButton);
+        raceButton.textContent = 'Race';
+        fragment.append(garageButton, winnersButton, raceButton);
         return fragment;
     }
 
