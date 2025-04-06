@@ -1,3 +1,4 @@
+import './car_block.css';
 import { CarBase } from './car_base';
 import { CarEngine } from './car_engine';
 
