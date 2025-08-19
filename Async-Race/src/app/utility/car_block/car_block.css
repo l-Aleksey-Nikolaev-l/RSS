@@ -1,0 +1,82 @@
+.cars_container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    row-gap: 14px;
+}
+.car_block {
+    border-bottom: 1px dashed black;
+}
+
+.car_block__top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 8px;
+    width: max-content;
+}
+
+.car_block__bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.car_button {
+    width: 72px;
+    height: 24px;
+    margin: 4px 4px 4px 4px;
+}
+
+.car_block__track {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 24px;
+}
+
+.car {
+    width: 56px;
+    height: 56px;
+    color: #df4343;
+}
+
+.car > * {
+    width: inherit;
+    height: inherit;
+    transform: translateY(10px);
+}
+
+.car_drive {
+    animation-name: drive;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    transform: scaleY(1);
+}
+
+@keyframes drive {
+    0% {
+        transform: translateY(10px) skewX(16deg) scaleY(1);
+    }
+    50% {
+        transform: translateY(10px) skewX(16deg) scaleY(0.96);
+    }
+    100% {
+        transform: translateY(10px) skewX(16deg) scaleY(1);
+    }
+}
+
+.finish_flag {
+    width: 56px;
+    height: 56px;
+    background-image: url('../../../assets/images/icons/finish_flag.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 72px;
+}
