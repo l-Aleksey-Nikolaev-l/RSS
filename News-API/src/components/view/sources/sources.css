@@ -1,0 +1,22 @@
+.sources {
+    height: 36px;
+    width: 248px;
+    padding: 8px;
+    border-radius: 8px;
+    font: 300 1em 'Fira Sans', sans-serif;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+}
+
+.source__item {
+    font: inherit;
+    line-height: 1;
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    .sources:focus {
+        box-shadow: 0 0 3pt 2pt var(--second-color);
+    }
+}
